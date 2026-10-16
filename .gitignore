@@ -1,0 +1,22 @@
+# Dependencies and generated application output
+/node_modules/
+/.next/
+/out/
+/build/
+/coverage/
+*.tsbuildinfo
+
+# Private configuration
+.env*
+!.env.example
+/.vercel/
+*.pem
+*.key
+
+# Local tooling and temporary files
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+/tmp/
+/artifacts/

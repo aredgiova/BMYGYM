@@ -1,0 +1,378 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T18:29:04.764Z",
+  "title": "Design System: BMYGYM",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.00697 88.64)",
+          "oklch(26.43% 0.00697 88.64)",
+          "oklch(37.86% 0.00697 88.64)",
+          "oklch(49.29% 0.00697 88.64)",
+          "oklch(60.71% 0.00697 88.64)",
+          "oklch(72.14% 0.00697 88.64)",
+          "oklch(83.57% 0.00697 88.64)",
+          "oklch(95.00% 0.00697 88.64)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.00924 88.76)",
+          "oklch(26.43% 0.00924 88.76)",
+          "oklch(37.86% 0.00924 88.76)",
+          "oklch(49.29% 0.00924 88.76)",
+          "oklch(60.71% 0.00924 88.76)",
+          "oklch(72.14% 0.00924 88.76)",
+          "oklch(83.57% 0.00924 88.76)",
+          "oklch(95.00% 0.00924 88.76)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Reading taupe",
+        "tonalRamp": [
+          "oklch(15.00% 0.01520 82.38)",
+          "oklch(26.43% 0.01520 82.38)",
+          "oklch(37.86% 0.01520 82.38)",
+          "oklch(49.29% 0.01520 82.38)",
+          "oklch(60.71% 0.01520 82.38)",
+          "oklch(72.14% 0.01520 82.38)",
+          "oklch(83.57% 0.01520 82.38)",
+          "oklch(95.00% 0.01520 82.38)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Fine stone rule",
+        "tonalRamp": [
+          "oklch(15.00% 0.01636 82.79)",
+          "oklch(26.43% 0.01636 82.79)",
+          "oklch(37.86% 0.01636 82.79)",
+          "oklch(49.29% 0.01636 82.79)",
+          "oklch(60.71% 0.01636 82.79)",
+          "oklch(72.14% 0.01636 82.79)",
+          "oklch(83.57% 0.01636 82.79)",
+          "oklch(95.00% 0.01636 82.79)"
+        ]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Pale sand",
+        "tonalRamp": [
+          "oklch(15.00% 0.01612 82.79)",
+          "oklch(26.43% 0.01612 82.79)",
+          "oklch(37.86% 0.01612 82.79)",
+          "oklch(49.29% 0.01612 82.79)",
+          "oklch(60.71% 0.01612 82.79)",
+          "oklch(72.14% 0.01612 82.79)",
+          "oklch(83.57% 0.01612 82.79)",
+          "oklch(95.00% 0.01612 82.79)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Restrained taupe",
+        "tonalRamp": [
+          "oklch(15.00% 0.03785 77.24)",
+          "oklch(26.43% 0.03785 77.24)",
+          "oklch(37.86% 0.03785 77.24)",
+          "oklch(49.29% 0.03785 77.24)",
+          "oklch(60.71% 0.03785 77.24)",
+          "oklch(72.14% 0.03785 77.24)",
+          "oklch(83.57% 0.03785 77.24)",
+          "oklch(95.00% 0.03785 77.24)"
+        ]
+      },
+      "vision-surface": {
+        "role": "neutral",
+        "displayName": "Warm charcoal",
+        "tonalRamp": [
+          "oklch(15.00% 0.00905 116.17)",
+          "oklch(26.43% 0.00905 116.17)",
+          "oklch(37.86% 0.00905 116.17)",
+          "oklch(49.29% 0.00905 116.17)",
+          "oklch(60.71% 0.00905 116.17)",
+          "oklch(72.14% 0.00905 116.17)",
+          "oklch(83.57% 0.00905 116.17)",
+          "oklch(95.00% 0.00905 116.17)"
+        ]
+      },
+      "vision-ink": {
+        "role": "neutral",
+        "displayName": "Pale vision text",
+        "tonalRamp": [
+          "oklch(15.00% 0.01433 84.58)",
+          "oklch(26.43% 0.01433 84.58)",
+          "oklch(37.86% 0.01433 84.58)",
+          "oklch(49.29% 0.01433 84.58)",
+          "oklch(60.71% 0.01433 84.58)",
+          "oklch(72.14% 0.01433 84.58)",
+          "oklch(83.57% 0.01433 84.58)",
+          "oklch(95.00% 0.01433 84.58)"
+        ]
+      },
+      "vision-muted": {
+        "role": "neutral",
+        "displayName": "Muted vision text",
+        "tonalRamp": [
+          "oklch(15.00% 0.01646 102.88)",
+          "oklch(26.43% 0.01646 102.88)",
+          "oklch(37.86% 0.01646 102.88)",
+          "oklch(49.29% 0.01646 102.88)",
+          "oklch(60.71% 0.01646 102.88)",
+          "oklch(72.14% 0.01646 102.88)",
+          "oklch(83.57% 0.01646 102.88)",
+          "oklch(95.00% 0.01646 102.88)"
+        ]
+      },
+      "placeholder": {
+        "role": "neutral",
+        "displayName": "Placeholder taupe",
+        "tonalRamp": [
+          "oklch(15.00% 0.01885 79.27)",
+          "oklch(26.43% 0.01885 79.27)",
+          "oklch(37.86% 0.01885 79.27)",
+          "oklch(49.29% 0.01885 79.27)",
+          "oklch(60.71% 0.01885 79.27)",
+          "oklch(72.14% 0.01885 79.27)",
+          "oklch(83.57% 0.01885 79.27)",
+          "oklch(95.00% 0.01885 79.27)"
+        ]
+      },
+      "error": {
+        "role": "functional",
+        "displayName": "Error terracotta",
+        "tonalRamp": [
+          "oklch(15.00% 0.11535 31.69)",
+          "oklch(26.43% 0.11535 31.69)",
+          "oklch(37.86% 0.11535 31.69)",
+          "oklch(49.29% 0.11535 31.69)",
+          "oklch(60.71% 0.11535 31.69)",
+          "oklch(72.14% 0.11535 31.69)",
+          "oklch(83.57% 0.11535 31.69)",
+          "oklch(95.00% 0.11535 31.69)"
+        ]
+      },
+      "success": {
+        "role": "functional",
+        "displayName": "Success green",
+        "tonalRamp": [
+          "oklch(15.00% 0.06112 148.84)",
+          "oklch(26.43% 0.06112 148.84)",
+          "oklch(37.86% 0.06112 148.84)",
+          "oklch(49.29% 0.06112 148.84)",
+          "oklch(60.71% 0.06112 148.84)",
+          "oklch(72.14% 0.06112 148.84)",
+          "oklch(83.57% 0.06112 148.84)",
+          "oklch(95.00% 0.06112 148.84)"
+        ]
+      },
+      "focus": {
+        "role": "functional",
+        "displayName": "Focus bronze",
+        "tonalRamp": [
+          "oklch(15.00% 0.06348 75.35)",
+          "oklch(26.43% 0.06348 75.35)",
+          "oklch(37.86% 0.06348 75.35)",
+          "oklch(49.29% 0.06348 75.35)",
+          "oklch(60.71% 0.06348 75.35)",
+          "oklch(72.14% 0.06348 75.35)",
+          "oklch(83.57% 0.06348 75.35)",
+          "oklch(95.00% 0.06348 75.35)"
+        ]
+      },
+      "input-focus": {
+        "role": "functional",
+        "displayName": "Field focus bronze",
+        "tonalRamp": [
+          "oklch(15.00% 0.05133 79.27)",
+          "oklch(26.43% 0.05133 79.27)",
+          "oklch(37.86% 0.05133 79.27)",
+          "oklch(49.29% 0.05133 79.27)",
+          "oklch(60.71% 0.05133 79.27)",
+          "oklch(72.14% 0.05133 79.27)",
+          "oklch(83.57% 0.05133 79.27)",
+          "oklch(95.00% 0.05133 79.27)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Architectural display",
+        "purpose": "Expressive hero heading, with responsive size overrides."
+      },
+      "headline": {
+        "displayName": "Editorial headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Serif title",
+        "purpose": "Feature and concept titles, with component-specific sizing."
+      },
+      "body": {
+        "displayName": "Reading copy",
+        "purpose": "Global text baseline; feature copy is usually 12–13px."
+      },
+      "label": {
+        "displayName": "Section label",
+        "purpose": "Uppercase tracked wayfinding."
+      },
+      "action": {
+        "displayName": "Action label",
+        "purpose": "Uppercase buttons."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": "0.2s",
+        "purpose": "Button fills, field borders and disclosure arrows."
+      },
+      {
+        "name": "navigation-underline",
+        "value": "0.25s",
+        "purpose": "Fine navigation underline reveal."
+      },
+      {
+        "name": "image-hover",
+        "value": "transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Environment image scale from 1 to 1.035."
+      },
+      {
+        "name": "hero-arrive",
+        "value": "1.1s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "One-time opacity 0.6 to 1 and translateY(14px) to 0."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition: none; scroll-behavior: auto",
+        "purpose": "Applied when prefers-reduced-motion is reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-hero-alignment",
+        "value": "min-width: 1700px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "max-width: 1199px"
+      },
+      {
+        "name": "navigation-disclosure",
+        "value": "max-width: 1023px"
+      },
+      {
+        "name": "single-column",
+        "value": "max-width: 767px"
+      },
+      {
+        "name": "narrow-mobile",
+        "value": "max-width: 359px"
+      }
+    ],
+    "focus": {
+      "general": "2px solid #8a6f49; outline-offset: 5px",
+      "input": "2px solid #9a8666; outline-offset: 4px"
+    },
+    "provenance": {
+      "sourceFiles": [
+        "src/app/globals.css",
+        "src/app/layout.tsx",
+        "src/components/layout/header.tsx",
+        "src/components/layout/footer.tsx",
+        "src/features/enquiry/enquiry-form.tsx",
+        "src/components/shared/concept-image.tsx"
+      ],
+      "designContract": "64135187",
+      "visualAuthority": "User-pinned architectural quiet luxury brief.",
+      "tonalRamps": "Synthesized OKLCH panel metadata only; not additional application palette tokens."
+    }
+  },
+  "components": [
+    {
+      "name": "Dark enquiry button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Primary action on paper or sand surfaces.",
+      "html": "<button class=\"ds-button-dark\" type=\"button\">Submit private enquiry<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-button-dark{font-family:var(--font-manrope),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:54px;padding:16px 23px;border:1px solid transparent;border-radius:0;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:600;line-height:1.6;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s;background:var(--ink);color:var(--paper);text-decoration:none}.ds-button-dark:hover{background:#514b41}.ds-button-dark:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}.ds-button-dark:disabled{opacity:.65;cursor:wait}.ds-button-dark svg{flex-shrink:0}@media(max-width:767px){.ds-button-dark{font-size:9px;min-height:52px;padding-inline:18px}}@media(prefers-reduced-motion:reduce){.ds-button-dark{transition:none}}"
+    },
+    {
+      "name": "Ivory hero button",
+      "kind": "button",
+      "refersTo": "button-ivory",
+      "description": "Primary enquiry action over an architectural image.",
+      "html": "<a class=\"ds-button-ivory\" href=\"#enquiry\">Begin a private enquiry<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-button-ivory{font-family:var(--font-manrope),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:54px;padding:16px 23px;border:1px solid transparent;border-radius:0;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:600;line-height:1.6;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s;background:var(--paper);color:var(--ink);text-decoration:none}.ds-button-ivory:hover{background:#e4dccc}.ds-button-ivory:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}.ds-button-ivory:disabled{opacity:.65;cursor:wait}.ds-button-ivory svg{flex-shrink:0}@media(max-width:767px){.ds-button-ivory{font-size:9px;min-height:52px;padding-inline:18px}}@media(prefers-reduced-motion:reduce){.ds-button-ivory{transition:none}}"
+    },
+    {
+      "name": "Header enquiry",
+      "kind": "button",
+      "refersTo": "header-enquiry",
+      "description": "Persistent solid dark enquiry action without an arrow, on the beige header surface. Desktop minimum size is 186px by 42px; mobile minimum height is 44px.",
+      "html": "<a class=\"ds-header-enquiry\" href=\"#enquiry\">Private Enquiry</a>",
+      "css": ".ds-header-enquiry{font-family:var(--font-manrope),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:42px;min-width:186px;padding-inline:24px;border:0;border-radius:0;background:#221e1c;color:var(--paper);font-size:10px;text-transform:uppercase;letter-spacing:.35em;white-space:nowrap;text-decoration:none;transition:background-color .2s}.ds-header-enquiry:hover{background:#403a33}.ds-header-enquiry:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}@media(max-width:1199px){.ds-header-enquiry{min-width:176px;padding-inline:20px}}@media(max-width:767px){.ds-header-enquiry{min-height:44px;min-width:0;padding-inline:14px;font-size:8px;letter-spacing:.13em}}@media(max-width:359px){.ds-header-enquiry{font-size:8px;letter-spacing:.08em;padding-inline:11px}}@media(prefers-reduced-motion:reduce){.ds-header-enquiry{transition:none}}"
+    },
+    {
+      "name": "Editorial text link",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Secondary action with a hairline rule and directional arrow.",
+      "html": "<a class=\"ds-text-link\" href=\"#approach\">Explore our approach<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-text-link{font-family:var(--font-manrope),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:space-between;gap:32px;width:fit-content;min-height:44px;padding-block:10px;color:var(--ink);border-bottom:1px solid var(--accent);text-decoration:none;text-transform:uppercase;font-size:10px;font-weight:600;letter-spacing:.12em;transition:color .2s}.ds-text-link:hover{color:var(--accent)}.ds-text-link:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}.ds-text-link svg{flex-shrink:0}@media(prefers-reduced-motion:reduce){.ds-text-link{transition:none}}"
+    },
+    {
+      "name": "Enquiry text field",
+      "kind": "input",
+      "refersTo": "text-field",
+      "description": "Visible label, transparent field, underline and accessible invalid state.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-full-name\">Full name <span>*</span></label><input id=\"ds-full-name\" name=\"fullName\" autocomplete=\"name\" placeholder=\"Your full name\" required minlength=\"2\" maxlength=\"120\"/></div>",
+      "css": ".ds-field{font-family:var(--font-manrope),Arial,sans-serif;display:flex;flex-direction:column;gap:8px;margin-bottom:24px;min-width:0;color:var(--ink)}.ds-field label{font-size:10px;font-weight:500}.ds-field label span{color:#886b43}.ds-field input{font-family:var(--font-manrope),Arial,sans-serif;width:100%;min-width:0;min-height:46px;border:0;border-bottom:1px solid #b9b0a0;background:transparent;border-radius:0;padding:9px 0 13px;font-size:12px;line-height:1.7;color:var(--ink);transition:border-color .2s}.ds-field input::placeholder{color:#756e63;opacity:1}.ds-field input:focus{border-color:var(--ink);outline:2px solid #9a8666;outline-offset:4px}.ds-field input[aria-invalid=true]{border-color:#8a382a}.ds-field-error{color:#8a382a;font-size:11px;line-height:1.6}@media(max-width:767px){.ds-field input{font-size:16px}.ds-field label{font-size:11px}}@media(prefers-reduced-motion:reduce){.ds-field input{transition:none}}"
+    },
+    {
+      "name": "Desktop navigation",
+      "kind": "nav",
+      "description": "10px uppercase navigation with 0.4em tracking and a fine animated underline; the application replaces it with a disclosure below 1024px. The full-width beige #e3ded5 sticky header is 79px tall on desktop and tablet, 72px below 768px, with a centered inner width of at most 1180px. Its BMYGYM serif wordmark has no tagline and uses 21px type with 0.3em tracking, becoming 20px / 0.22em below 768px and 18px / 0.18em below 360px.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#philosophy\">Philosophy</a><a href=\"#environments\">Environments</a><a href=\"#approach\">Our Approach</a><a href=\"#vision\">Vision</a></nav>",
+      "css": ".ds-nav{font-family:var(--font-manrope),Arial,sans-serif;display:flex;align-items:center;flex-wrap:wrap;gap:42px;color:var(--ink)}.ds-nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;color:inherit;text-decoration:none;text-transform:uppercase;font-size:10px;letter-spacing:.4em}.ds-nav a::after{content:\"\";position:absolute;bottom:8px;height:1px;background:var(--accent);left:0;right:100%;transition:right .25s}.ds-nav a:hover::after{right:0}.ds-nav a:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}@media(max-width:1199px){.ds-nav{gap:22px}}@media(prefers-reduced-motion:reduce){.ds-nav a::after{transition:none}}"
+    },
+    {
+      "name": "Editorial disclosure",
+      "kind": "custom",
+      "description": "Native details with a rotating arrow and ruled reading content.",
+      "html": "<details class=\"ds-details\"><summary>Explore the concept<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></summary><p>Supporting concept information appears within the reading flow.</p></details>",
+      "css": ".ds-details{font-family:var(--font-manrope),Arial,sans-serif;color:var(--ink);border-bottom:1px solid var(--line)}.ds-details summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:48px;font-size:10px;cursor:pointer}.ds-details summary::-webkit-details-marker{display:none}.ds-details summary:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}.ds-details summary svg{width:16px;flex-shrink:0;transition:transform .2s}.ds-details[open] summary svg{transform:rotate(90deg)}.ds-details p{font-size:12px;line-height:1.85;color:var(--muted);margin:0;padding-bottom:16px}@media(prefers-reduced-motion:reduce){.ds-details summary svg{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Architectural Portfolio",
+    "overview": "An architectural portfolio for a bespoke longevity design house. Warm paper, sand, fine serif headings and generous space frame complete environments. The presentation is quiet, editorial and personal; imagery leads and interface furniture stays restrained.\n\nBodoni Moda carries the expressive voice; Manrope carries navigation, explanations and forms. Flat surfaces, hairline rules and a limited dark section create depth without ornamental effects. The user-pinned brief is the visual authority for design contract 64135187.",
+    "keyCharacteristics": [
+      "Architecture and complete environments lead the imagery.",
+      "Warm ivory and sand, with restrained taupe accents.",
+      "Fine serif headlines, compact tracked labels and generous section space.",
+      "Square controls, thin dividers and subtle accessible motion."
+    ],
+    "rules": [],
+    "dos": [
+      "Do use the supplied concept imagery with visible concept captions and meaningful alternatives.",
+      "Do preserve the locally hosted Bodoni Moda / Manrope pairing and the warm neutral palette.",
+      "Do keep Land, Sea and Air equally legible; retain the reserved aviation concept area until approved imagery exists.",
+      "Do preserve keyboard focus, labelled fields, reduced motion and honest enquiry feedback.",
+      "Do treat the text wordmark as provisional typography until final logo artwork is supplied."
+    ],
+    "donts": [
+      "Don't turn the design house into an equipment catalogue or add prices and product purchase cards.",
+      "Don't present concepts as completed projects, certified products or available production equipment.",
+      "Don't invent a production logo, aviation imagery, client testimonials or business credentials.",
+      "Don't add floating card shadows, pill controls, loud gradients or ornamental interface density."
+    ]
+  }
+}
