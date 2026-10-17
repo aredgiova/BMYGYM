@@ -3,17 +3,18 @@
 @theme inline {
   --font-sans: var(--font-manrope);
   --font-display: var(--font-bodoni);
-  --color-ivory: #f7f5f0;
+  --color-ivory: var(--paper);
   --color-ink: #302e29;
-  --color-sand: #eae4d9;
+  --color-sand: var(--sand);
 }
 
 :root {
-  --paper: #f7f5f0;
+  --paper: #f6f3ed;
   --ink: #302e29;
   --muted: #6d685f;
   --line: #d8d2c7;
-  --sand: #eae4d9;
+  --sand: #e9e3d8;
+  --stone-ink: #625b50;
   --accent: #796a54;
   --page-gutter: clamp(24px, 5.4vw, 96px);
   --header-height: 79px;
@@ -21,6 +22,7 @@
   --header-button: #221e1c;
   --text-body: 1.125rem;
   --text-small: 0.875rem;
+  --section-space: clamp(88px, 8.5vw, 148px);
 }
 * {
   box-sizing: border-box;
@@ -81,8 +83,9 @@ h3 {
   text-wrap: balance;
 }
 h2 {
-  font-size: clamp(2.5rem, 3.8vw, 3.75rem);
+  font-size: clamp(2.75rem, 4.1vw, 4.25rem);
   letter-spacing: -0.035em;
+  line-height: 1.12;
 }
 h3 {
   font-size: clamp(2rem, 2.8vw, 2.5rem);
@@ -140,35 +143,33 @@ summary {
 .section {
   width: 100%;
   max-width: 1680px;
-  padding: 110px var(--page-gutter);
+  padding: var(--section-space) var(--page-gutter);
   margin-inline: auto;
 }
 .section-heading {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  gap: 56px;
-  margin-bottom: 52px;
-}
-.section-heading .section-label {
-  margin-bottom: 20px;
-  color: var(--accent);
+  gap: 64px;
+  margin-bottom: 64px;
 }
 .section-heading > p {
   color: var(--muted);
   font-size: var(--text-body);
   margin-bottom: 5px;
+  max-width: 36ch;
+  line-height: 1.75;
 }
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  min-height: 54px;
-  padding: 16px 23px;
+  min-height: 58px;
+  padding: 17px 26px;
   border: 1px solid transparent;
   text-transform: uppercase;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   font-size: var(--text-small);
   font-weight: 600;
   line-height: 1.6;
@@ -231,9 +232,9 @@ summary {
 .concept-image figcaption {
   font-size: var(--text-small);
   line-height: 1.6;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.02em;
   color: var(--muted);
-  padding-top: 10px;
+  padding-top: 12px;
 }
 
 /* A quiet, always available point of entry. */
@@ -246,6 +247,7 @@ summary {
   align-items: center;
   padding-inline: var(--page-gutter);
   background: var(--header-surface);
+  border-bottom: 1px solid rgb(48 46 41 / 9%);
 }
 .header-inner {
   display: flex;
@@ -331,8 +333,7 @@ summary {
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: min(810px, calc(100svh - var(--header-height)));
-  min-height: clamp(680px, calc(100svh - var(--header-height)), 840px);
+  min-height: clamp(680px, calc(100svh - var(--header-height)), 920px);
   display: flex;
   align-items: center;
   color: #fffdf7;
@@ -348,76 +349,49 @@ summary {
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(
-      90deg,
-      rgb(24 22 18 / 80%) 0%,
-      rgb(24 22 18 / 70%) 35%,
-      rgb(24 22 18 / 36%) 65%,
-      rgb(24 22 18 / 12%) 100%
-    ),
-    linear-gradient(0deg, rgb(24 22 18 / 45%), transparent 32%);
+    linear-gradient(90deg, rgb(24 22 18 / 72%) 0%, rgb(24 22 18 / 53%) 36%, rgb(24 22 18 / 15%) 66%, rgb(24 22 18 / 4%) 100%), linear-gradient(0deg, rgb(24 22 18 / 48%), transparent 34%);
 }
 .hero-content {
-  padding: 70px var(--page-gutter) 140px;
-  max-width: 940px;
+  padding: 84px var(--page-gutter) 140px;
+  max-width: 1120px;
   animation: hero-arrive 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
-.hero-section-label {
-  margin-bottom: 27px;
-  font-size: var(--text-small);
-  letter-spacing: 0.14em;
-  color: #eee4d4;
-}
 .hero h1 {
-  font-size: clamp(3rem, 4.6vw, 4.5rem);
-  line-height: 1.12;
+  font-size: clamp(3.25rem, 5.4vw, 5.5rem);
+  line-height: 1.08;
   letter-spacing: -0.035em;
 }
 .hero h1 em {
   color: #eee4d4;
 }
 .hero-description {
-  max-width: 54ch;
-  font-size: var(--text-body);
-  line-height: 1.75;
-  margin-top: 28px;
-  color: #fffaf1;
+  max-width: 37ch;
+  font-size: clamp(1.625rem, 2.1vw, 2rem);
+  line-height: 1.5;
+  margin-top: 0;
+  color: var(--ink);
+  font-family: var(--font-bodoni), Georgia, serif;
+  letter-spacing: -0.015em;
 }
 .hero-secondary {
-  max-width: 54ch;
+  max-width: 45ch;
   font-size: var(--text-body);
   line-height: 1.75;
-  color: #e7dfd1;
-  margin-top: 12px;
+  color: var(--muted);
+  margin-top: 0;
 }
 .hero-actions {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 22px;
-  margin-top: 30px;
-}
-.hero-text-link {
-  font-size: var(--text-small);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  display: inline-flex;
-  gap: 12px;
-  align-items: center;
-  min-height: 44px;
-}
-.hero-text-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
-.hero-text-link svg {
-  width: 16px;
+  margin-top: 34px;
 }
 .hero-bottom {
   position: absolute;
   inset: auto var(--page-gutter) 0;
   height: 84px;
-  border-top: 1px solid rgb(255 250 240 / 30%);
+  border-top: 1px solid rgb(255 250 240 / 35%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -463,22 +437,18 @@ summary {
 .philosophy {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: clamp(50px, 9vw, 145px);
-  padding-top: 118px;
+  column-gap: clamp(60px, 8vw, 128px);
+  padding-top: var(--section-space);
   padding-bottom: 0;
 }
 .philosophy-copy {
-  padding-top: 25px;
-}
-.philosophy-copy > .section-label {
-  color: var(--accent);
-  margin-bottom: 23px;
+  padding-top: 0;
 }
 .philosophy-copy h2 {
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 .philosophy-copy
-  > p:not(.section-label):not(.philosophy-statement):not(.personal-line) {
+  > p:not(.section-label):not(.philosophy-statement):not(.philosophy-lead):not(.personal-line) {
   color: var(--muted);
   margin-bottom: 17px;
   max-width: 54ch;
@@ -486,44 +456,48 @@ summary {
 }
 .philosophy-copy .philosophy-statement {
   font-family: var(--font-bodoni), Georgia, serif;
-  font-size: clamp(1.875rem, 2.7vw, 2.6875rem);
+  font-size: clamp(2.5rem, 3.4vw, 3.5rem);
   line-height: 1.25;
   letter-spacing: -0.03em;
-  margin-top: 27px;
-  margin-bottom: 12px;
+  margin-top: 38px;
+  margin-bottom: 18px;
 }
 .personal-line {
   font-size: var(--text-body);
   color: var(--ink);
   line-height: 1.9;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 .philosophy-copy .text-link {
   margin-top: 12px;
 }
 .philosophy-visual {
   min-width: 0;
+  padding-top: 76px;
+  align-self: start;
+  position: sticky;
+  top: var(--header-height);
 }
 .philosophy-visual .image-frame {
   aspect-ratio: 0.78;
 }
 .image-note {
   font-family: var(--font-bodoni), Georgia, serif;
-  font-size: 1.8125rem;
+  font-size: 2rem;
   line-height: 1.35;
-  margin-top: 22px;
-  padding-left: 36px;
-  border-left: 1px solid #a79a84;
+  margin-top: 28px;
+  padding-left: 0;
+  text-align: center;
 }
 .philosophy-motto {
   grid-column: 1 / -1;
   text-align: center;
-  padding: 100px 0 80px;
-  margin-top: 65px;
+  padding: 100px 0 40px;
+  margin-top: 100px;
   border-top: 1px solid var(--line);
   font-family: var(--font-bodoni), Georgia, serif;
-  font-size: clamp(1.875rem, 3.05vw, 2.875rem);
-  line-height: 1.35;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.25;
   letter-spacing: -0.025em;
 }
 .philosophy-motto em {
@@ -531,20 +505,21 @@ summary {
 }
 
 .environments {
-  padding-top: 46px;
-  padding-bottom: 105px;
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
 }
 .environments-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px;
+  display: flex;
+  gap: 100px;
+  flex-direction: column;
 }
 .environment-image-link {
   display: block;
   position: relative;
 }
 .environment .image-frame {
-  height: clamp(285px, 29vw, 435px);
+  height: auto;
+  aspect-ratio: 1.05;
 }
 .environment-image-link .image-frame img {
   transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
@@ -555,68 +530,64 @@ summary {
 .land-image .image-frame img {
   object-position: center 75%;
 }
-.image-arrow {
-  position: absolute;
-  bottom: 42px;
-  right: 20px;
-  background: rgb(247 245 240 / 95%);
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-}
 .environment-title {
-  display: flex;
+  display: block;
   justify-content: space-between;
   gap: 15px;
   align-items: baseline;
-  margin-block: 26px 19px;
+  margin-block: 0 28px;
   flex-wrap: wrap;
 }
 .environment-title h3 {
-  font-size: 3rem;
+  font-size: clamp(3rem, 4.5vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 18px;
 }
 .environment-title > span {
   font-size: var(--text-small);
-  line-height: 1.85;
-  letter-spacing: 0.06em;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  text-align: right;
+  text-align: left;
+  display: block;
+  color: var(--accent);
 }
-.environment > p {
+.environment-copy > p {
   font-size: var(--text-body);
-  line-height: 1.9;
+  line-height: 1.8;
   color: var(--muted);
-  margin-top: 13px;
+  margin-top: 18px;
 }
-.environment > .environment-subtitle {
+.environment-copy > .environment-subtitle {
   color: var(--ink);
   font-size: var(--text-body);
 }
 .air-visual {
-  height: calc(clamp(285px, 29vw, 435px) + 24px);
-  background: #e9e4db;
+  height: auto;
+  background: #e8e2d7;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 25px;
   position: relative;
-  color: #716450;
+  color: var(--stone-ink);
+  aspect-ratio: 1.05;
 }
 .air-window {
-  width: 68%;
+  width: 56%;
   aspect-ratio: 0.67;
-  max-height: 75%;
+  max-height: 76%;
   border: 1px solid #bfb29d;
   border-radius: 45% 45% 42% 42%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  max-width: 260px;
+  gap: 24px;
+  max-width: 270px;
   padding: 16px 10px;
+  border-color: #a7987f;
 }
 .air-window > span {
   font-size: var(--text-small);
@@ -629,7 +600,7 @@ summary {
 }
 .air-window strong {
   font-family: var(--font-bodoni), Georgia, serif;
-  font-size: clamp(1.875rem, 3vw, 2.9375rem);
+  font-size: clamp(2.5rem, 3.5vw, 4rem);
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -637,7 +608,7 @@ summary {
 }
 .air-visual > p {
   position: absolute;
-  bottom: 15px;
+  bottom: 22px;
   font-size: var(--text-small);
   letter-spacing: 0.02em;
   text-align: center;
@@ -676,6 +647,7 @@ summary {
 
 .blueprint {
   background: var(--sand);
+  border-block: 1px solid #d8cfc0;
 }
 .blueprint-inner {
   max-width: 1680px;
@@ -683,39 +655,32 @@ summary {
   padding: 90px var(--page-gutter);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(60px, 9vw, 145px);
-}
-.blueprint .section-label {
-  color: #74634c;
-  margin-bottom: 24px;
+  gap: clamp(60px, 8vw, 128px);
+  padding-block: 120px;
 }
 .blueprint h2 {
-  font-size: clamp(2.5625rem, 4vw, 3.75rem);
-  margin-bottom: 28px;
+  font-size: clamp(2.75rem, 4.2vw, 4.25rem);
+  margin-bottom: 36px;
 }
 .blueprint-intro > p:not(.section-label) {
-  color: #625b50;
+  color: var(--stone-ink);
   font-size: var(--text-body);
-  max-width: 52ch;
+  max-width: 40ch;
 }
 .blueprint .button {
-  margin-top: 35px;
+  margin-top: 42px;
 }
 .blueprint-details {
   border-left: 1px solid #c7bdac;
-  padding-left: clamp(35px, 4vw, 64px);
-}
-.blueprint-details .section-label {
-  margin-bottom: 17px;
-  font-size: var(--text-small);
+  padding-left: clamp(40px, 5vw, 80px);
 }
 .blueprint-details h3 {
-  font-size: 2rem;
-  line-height: 1.25;
-  margin-bottom: 22px;
+  font-size: clamp(2rem, 2.6vw, 2.75rem);
+  line-height: 1.2;
+  margin-bottom: 16px;
 }
-.blueprint-details > p:not(.section-label) {
-  color: #625b50;
+.blueprint-details > p:not(.commission-caption) {
+  color: var(--stone-ink);
   font-size: var(--text-body);
   margin-bottom: 14px;
 }
@@ -727,11 +692,12 @@ summary {
 .blueprint-details li {
   font-size: var(--text-body);
   border-top: 1px solid #cfc5b6;
-  padding: 11px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: space-between;
   gap: 15px;
   align-items: center;
+  line-height: 1.6;
 }
 .blueprint-details li:last-child {
   border-bottom: 1px solid #cfc5b6;
@@ -749,12 +715,12 @@ summary {
 }
 .approach-body {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: clamp(45px, 6vw, 90px);
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(48px, 7vw, 112px);
   align-items: start;
 }
 .approach-body .image-frame {
-  aspect-ratio: 1.13;
+  aspect-ratio: 0.95;
 }
 .approach-body .image-frame img {
   object-position: 48% center;
@@ -767,9 +733,9 @@ summary {
 .approach-stages li {
   display: grid;
   grid-template-columns: 30px 1fr;
-  gap: 20px;
+  gap: 26px;
   border-top: 1px solid var(--line);
-  padding-block: 22px;
+  padding-block: 28px;
 }
 .approach-stages li:last-child {
   padding-bottom: 0;
@@ -777,29 +743,31 @@ summary {
 .stage-number {
   font-size: var(--text-small);
   color: var(--accent);
-  padding-top: 7px;
+  padding-top: 8px;
+  font-variant-numeric: tabular-nums;
 }
 .approach-stages h3 {
-  font-size: 1.8125rem;
-  margin-bottom: 10px;
+  font-size: 2.25rem;
+  margin-bottom: 14px;
 }
 .approach-stages p {
   font-size: var(--text-body);
   color: var(--muted);
-  line-height: 1.85;
+  line-height: 1.75;
 }
 
 .vision {
-  background: #292a25;
+  background: #30312b;
   color: #f5f0e6;
 }
 .vision-inner {
-  padding-top: 100px;
-  padding-bottom: 74px;
+  padding-top: var(--section-space);
+  padding-bottom: 100px;
 }
 .vision .section-heading {
   align-items: start;
-  gap: 80px;
+  gap: clamp(64px, 9vw, 144px);
+  margin-bottom: 76px;
 }
 .vision .section-label {
   color: #c1b293;
@@ -812,15 +780,15 @@ summary {
   color: #c9c8bc;
   font-size: var(--text-body);
   max-width: 48ch;
-  padding-top: 36px;
+  padding-top: 6px;
 }
 .vision-intro p + p {
   margin-top: 13px;
 }
 .vision-grid {
   display: grid;
-  grid-template-columns: 1.48fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 64px;
   align-items: start;
 }
 .vision-wall .image-frame {
@@ -830,7 +798,7 @@ summary {
   object-position: 56% center;
 }
 .vision-capsule {
-  padding-top: 80px;
+  padding-top: 112px;
 }
 .vision-capsule .image-frame {
   aspect-ratio: 0.86;
@@ -842,14 +810,15 @@ summary {
   display: block;
   font-size: var(--text-small);
   text-transform: uppercase;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.1em;
   color: #c1b293;
-  margin-top: 28px;
-  margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 22px;
 }
 .vision-grid h3 {
-  font-size: 1.9375rem;
-  margin-bottom: 13px;
+  font-size: clamp(2rem, 2.6vw, 2.625rem);
+  margin-bottom: 12px;
+  margin-top: 28px;
 }
 .vision-grid article > p {
   color: #c9c8bc;
@@ -857,13 +826,13 @@ summary {
   font-size: var(--text-body);
 }
 .future-concepts {
-  margin-top: 65px;
+  margin-top: 80px;
   border-top: 1px solid #53554a;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 38px;
   align-items: start;
-  padding-top: 25px;
+  padding-top: 32px;
 }
 .future-concepts > p {
   padding-top: 15px;
@@ -882,30 +851,26 @@ summary {
 .vision-disclaimer {
   font-size: var(--text-small);
   color: #babbb0;
-  max-width: 800px;
-  margin-top: 28px;
+  max-width: 90ch;
+  margin-top: 40px;
+  line-height: 1.8;
 }
 
 .enquiry {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  gap: clamp(65px, 8vw, 130px);
-  padding-block: 110px 100px;
-}
-.enquiry-intro > .section-label {
-  font-size: var(--text-small);
-  color: var(--accent);
-  margin-bottom: 25px;
+  gap: clamp(56px, 7vw, 112px);
+  padding-block: var(--section-space);
 }
 .enquiry h2 {
-  font-size: clamp(2.625rem, 4.3vw, 4rem);
-  margin-bottom: 28px;
+  font-size: clamp(3rem, 4.6vw, 4.75rem);
+  margin-bottom: 36px;
 }
 .enquiry-intro > p:not(.section-label):not(.founder-signature) {
   font-size: var(--text-body);
   color: var(--muted);
   margin-bottom: 15px;
-  max-width: 48ch;
+  max-width: 40ch;
 }
 .enquiry-intro > .enquiry-audience {
   font-size: var(--text-body) !important;
@@ -916,15 +881,15 @@ summary {
   align-items: center;
   gap: 32px;
   font-size: var(--text-body);
-  margin-top: 25px;
+  margin-top: 36px;
   min-height: 44px;
   border-bottom: 1px solid #b5a78f;
 }
 .founder-signature {
   font-family: var(--font-bodoni), Georgia, serif;
   font-style: italic;
-  font-size: 1.875rem;
-  margin-top: 42px;
+  font-size: 2.5rem;
+  margin-top: 52px;
   line-height: 1.3;
 }
 .founder-signature span {
@@ -939,6 +904,8 @@ summary {
 .enquiry-form {
   padding-top: 8px;
   min-width: 0;
+  border-left: 1px solid var(--line);
+  padding-left: clamp(32px, 4vw, 64px);
 }
 .enquiry-form fieldset {
   padding: 0;
@@ -959,8 +926,8 @@ summary {
 .form-field {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin-bottom: 30px;
   min-width: 0;
 }
 .form-field label {
@@ -968,7 +935,7 @@ summary {
   font-weight: 500;
 }
 .form-field label > span:not(.optional) {
-  color: #886b43;
+  color: var(--accent);
 }
 .optional {
   color: var(--muted);
@@ -1078,22 +1045,26 @@ summary {
 }
 
 .site-footer {
+  --muted: var(--stone-ink);
   border-top: 1px solid var(--line);
   padding: 48px var(--page-gutter) 25px;
+  background: var(--sand);
+  padding-top: 64px;
+  padding-bottom: 32px;
 }
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  padding-bottom: 45px;
+  padding-bottom: 56px;
   max-width: 1488px;
   margin-inline: auto;
 }
 .footer-wordmark {
   font-family: var(--font-bodoni), Georgia, serif;
-  font-size: 2.625rem;
-  letter-spacing: 0.12em;
+  font-size: clamp(3rem, 4.2vw, 4.5rem);
+  letter-spacing: 0.16em;
   line-height: 1;
 }
 .footer-top > div:first-child p {
@@ -1217,6 +1188,84 @@ summary {
   margin-top: 30px;
 }
 
+.button svg,
+.text-link svg,
+.environment-heading-link svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.button:hover svg,
+.text-link:hover svg,
+.environment-heading-link:hover svg {
+  transform: translateX(4px);
+}
+
+.hero-service {
+  font-size: var(--text-small);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-top: 30px;
+  line-height: 1.7;
+  color: #fffaf1;
+}
+
+.hero-introduction {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: clamp(60px, 9vw, 140px);
+  padding-block: 88px;
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-introduction-detail .text-link {
+  margin-top: 20px;
+}
+
+.philosophy-copy > .philosophy-lead {
+  font-size: 1.375rem;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+.environment {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: clamp(48px, 7vw, 112px);
+}
+
+.environment-copy {
+  max-width: 48ch;
+  min-width: 0;
+}
+
+.environment-heading-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 100%;
+}
+
+.environment-heading-link svg {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+}
+
+.environment .editorial-details {
+  margin-top: 24px;
+}
+
+.blueprint-details > .commission-caption {
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  margin-bottom: 30px;
+  color: var(--stone-ink);
+}
+
 @media (min-width: 1700px) {
   .hero-content {
     margin-left: calc((100vw - 1680px) / 2);
@@ -1240,16 +1289,16 @@ summary {
     padding-top: 0;
   }
   .philosophy-visual .image-frame {
-    aspect-ratio: 0.65;
+    aspect-ratio: 0.7;
   }
   .hero h1 {
-    font-size: 3.75rem;
+    font-size: clamp(3.5rem, 5.4vw, 4.25rem);
   }
   .section-heading {
     gap: 35px;
   }
   .environments-grid {
-    gap: 23px;
+    gap: 80px;
   }
   .environment-title > span {
     font-size: var(--text-small);
@@ -1322,30 +1371,24 @@ summary {
     --page-gutter: 36px;
   }
   .section {
-    padding-block: 80px;
+    padding-block: 88px;
   }
   .hero {
     min-height: 720px;
   }
   .hero-content {
-    max-width: 700px;
-    padding-top: 55px;
+    max-width: 850px;
+    padding-top: 72px;
   }
   .hero h1 {
-    font-size: 3.625rem;
+    font-size: 3.75rem;
   }
   .hero-image {
     object-position: 57% center;
   }
   .hero-shade {
     background:
-      linear-gradient(
-        90deg,
-        rgb(24 22 18 / 80%),
-        rgb(24 22 18 / 62%) 60%,
-        rgb(24 22 18 / 30%)
-      ),
-      linear-gradient(0deg, rgb(24 22 18 / 40%), transparent 35%);
+      linear-gradient(90deg, rgb(24 22 18 / 72%), rgb(24 22 18 / 48%) 60%, rgb(24 22 18 / 18%)), linear-gradient(0deg, rgb(24 22 18 / 45%), transparent 35%);
   }
   .hero-caption {
     display: block;
@@ -1370,43 +1413,46 @@ summary {
     padding-bottom: 0;
   }
   .philosophy-copy h2 {
-    font-size: 2.375rem;
+    font-size: 2.875rem;
   }
   .philosophy-visual .image-frame {
-    aspect-ratio: 0.52;
+    aspect-ratio: 0.65;
   }
   .image-note {
-    font-size: 1.625rem;
-    padding-left: 20px;
+    font-size: 1.875rem;
+    padding-left: 0;
   }
   .philosophy-motto {
-    padding: 70px 0 35px;
-    margin-top: 65px;
+    padding: 72px 0 20px;
+    margin-top: 72px;
   }
   .environments {
-    padding-top: 45px;
+    padding-top: 64px;
   }
   .environments-grid {
-    gap: 20px;
+    gap: 76px;
   }
   .environment .image-frame {
-    height: 280px;
+    height: auto;
+    aspect-ratio: 0.78;
   }
   .environment-title {
     align-items: start;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 24px;
   }
   .environment-title > span {
     text-align: left;
     font-size: var(--text-small);
   }
   .air-visual {
-    height: 330px;
+    height: auto;
+    aspect-ratio: 0.78;
   }
   .air-window {
-    width: 80%;
-    gap: 10px;
+    width: 72%;
+    gap: 18px;
   }
   .air-window strong {
     font-size: 2rem;
@@ -1418,14 +1464,14 @@ summary {
     font-size: var(--text-small);
   }
   .blueprint-inner {
-    padding-block: 70px;
+    padding-block: 80px;
     gap: 36px;
   }
   .blueprint-details {
-    padding-left: 30px;
+    padding-left: 36px;
   }
   .blueprint-details h3 {
-    font-size: 1.6875rem;
+    font-size: 2rem;
   }
   .blueprint h2 {
     font-size: 2.6875rem;
@@ -1443,19 +1489,19 @@ summary {
     aspect-ratio: 0.62;
   }
   .approach-stages li {
-    gap: 12px;
+    gap: 18px;
     grid-template-columns: 22px 1fr;
-    padding-block: 18px;
+    padding-block: 24px;
   }
   .vision .section-heading {
-    gap: 35px;
+    gap: 36px;
   }
   .vision-grid {
-    gap: 30px;
+    gap: 32px;
     grid-template-columns: 1.2fr 1fr;
   }
   .vision-grid h3 {
-    font-size: 1.6875rem;
+    font-size: 2rem;
   }
   .vision-wall .image-frame {
     aspect-ratio: 0.85;
@@ -1475,19 +1521,30 @@ summary {
     padding-top: 0;
   }
   .enquiry {
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
   }
   .form-row {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .enquiry-intro .section-label {
-    max-width: 230px;
-  }
   .footer-bottom {
     flex-direction: column-reverse;
     gap: 18px;
+  }
+  .hero-introduction {
+    gap: 40px;
+    padding-block: 64px;
+  }
+  .philosophy-visual {
+    padding-top: 48px;
+    position: static;
+  }
+  .environment {
+    gap: 36px;
+  }
+  .enquiry-form {
+    padding-left: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -1525,16 +1582,16 @@ summary {
     width: 44px;
   }
   .section {
-    padding-block: 67px;
+    padding-block: 72px;
   }
   h2 {
-    font-size: 2.4375rem;
+    font-size: 2.75rem;
   }
   .section-heading {
     flex-direction: column;
     align-items: start;
-    gap: 22px;
-    margin-bottom: 33px;
+    gap: 26px;
+    margin-bottom: 40px;
   }
   .section-heading > p {
     font-size: var(--text-body);
@@ -1549,55 +1606,46 @@ summary {
     gap: 14px;
   }
   .hero {
-    min-height: 745px;
-    align-items: start;
+    min-height: 680px;
+    align-items: center;
   }
   .hero-image {
     object-position: 62% center;
   }
   .hero-shade {
     background:
-      linear-gradient(90deg, rgb(23 21 17 / 78%), rgb(23 21 17 / 58%)),
-      linear-gradient(0deg, rgb(23 21 17 / 65%) 0%, rgb(23 21 17 / 15%) 65%);
+      linear-gradient(90deg, rgb(23 21 17 / 72%), rgb(23 21 17 / 42%)), linear-gradient(0deg, rgb(23 21 17 / 55%) 0%, transparent 70%);
   }
   .hero-content {
-    padding: 60px var(--page-gutter) 160px;
+    padding: 72px var(--page-gutter) 152px;
     width: 100%;
-    max-width: 640px;
-  }
-  .hero-section-label {
-    font-size: var(--text-small);
-    letter-spacing: 0.15em;
-    margin-bottom: 27px;
+    max-width: 680px;
   }
   .hero h1 {
-    font-size: clamp(2.625rem, 9.6vw, 3.5rem);
-    line-height: 1.17;
+    font-size: clamp(2.75rem, 10.5vw, 3.5rem);
+    line-height: 1.13;
     letter-spacing: -0.035em;
   }
   .hero-break {
     display: none;
   }
   .hero-description {
-    font-size: var(--text-body);
-    max-width: 54ch;
-    margin-top: 28px;
-    line-height: 1.75;
+    font-size: 1.625rem;
+    max-width: 37ch;
+    margin-top: 0;
+    line-height: 1.5;
   }
   .hero-secondary {
     font-size: var(--text-body);
     max-width: 54ch;
     line-height: 1.75;
-    margin-top: 13px;
+    margin-top: 0;
   }
   .hero-actions {
     align-items: start;
     flex-direction: column;
     gap: 9px;
-    margin-top: 27px;
-  }
-  .hero-text-link {
-    font-size: var(--text-small);
+    margin-top: 28px;
   }
   .hero-bottom {
     height: auto;
@@ -1623,18 +1671,19 @@ summary {
     padding-bottom: 0;
   }
   .philosophy-copy h2 {
-    font-size: 2.5rem;
-    margin-bottom: 28px;
+    font-size: 2.875rem;
+    margin-bottom: 30px;
   }
   .philosophy-copy
-    > p:not(.section-label):not(.philosophy-statement):not(.personal-line) {
+    > p:not(.section-label):not(.philosophy-statement):not(.philosophy-lead):not(.personal-line) {
     font-size: var(--text-body);
   }
   .philosophy-copy .philosophy-statement {
-    font-size: 2.25rem;
+    font-size: 2.625rem;
   }
   .philosophy-visual {
-    margin-top: 42px;
+    margin-top: 40px;
+    padding-top: 0;
   }
   .philosophy-visual .image-frame {
     aspect-ratio: 0.86;
@@ -1643,23 +1692,22 @@ summary {
     object-position: center 64%;
   }
   .image-note {
-    font-size: 1.6875rem;
+    font-size: 1.875rem;
   }
   .philosophy-motto {
-    padding: 50px 0 0;
-    margin-top: 55px;
-    font-size: clamp(1.5625rem, 6.6vw, 2.1875rem);
+    padding: 52px 0 0;
+    margin-top: 56px;
+    font-size: clamp(2rem, 7.6vw, 2.75rem);
   }
   .environments {
-    padding-top: 75px;
+    padding-top: 76px;
   }
   .environments-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
+    gap: 64px;
   }
   .environment .image-frame {
     height: auto;
-    aspect-ratio: 0.98;
+    aspect-ratio: 1.02;
   }
   .land-image .image-frame img {
     object-position: center 76%;
@@ -1667,25 +1715,27 @@ summary {
   .environment-title {
     flex-direction: column;
     align-items: start;
-    margin-top: 19px;
+    margin-top: 0;
+    margin-bottom: 22px;
   }
   .environment-title h3 {
-    font-size: 2.875rem;
+    font-size: 3.25rem;
+    margin-bottom: 14px;
   }
   .environment-title > span {
     text-align: left;
   }
-  .environment > p {
+  .environment-copy > p {
     font-size: var(--text-body);
   }
   .air-visual {
     height: auto;
-    aspect-ratio: 0.98;
+    aspect-ratio: 1.02;
   }
   .air-window {
-    width: 65%;
+    width: 62%;
     max-height: 78%;
-    gap: 16px;
+    gap: 18px;
   }
   .air-window strong {
     font-size: 2.5rem;
@@ -1699,10 +1749,11 @@ summary {
   .blueprint-inner {
     grid-template-columns: 1fr;
     padding: 62px var(--page-gutter);
-    gap: 40px;
+    gap: 44px;
+    padding-block: 72px;
   }
   .blueprint h2 {
-    font-size: 2.75rem;
+    font-size: 2.875rem;
   }
   .blueprint-intro > p:not(.section-label) {
     font-size: var(--text-body);
@@ -1710,10 +1761,10 @@ summary {
   .blueprint-details {
     border-left: 0;
     border-top: 1px solid #c7bdac;
-    padding: 35px 0 0;
+    padding: 36px 0 0;
   }
   .blueprint-details h3 {
-    font-size: 2.0625rem;
+    font-size: 2.25rem;
   }
   .blueprint .button {
     margin-top: 25px;
@@ -1734,13 +1785,14 @@ summary {
   }
   .vision .section-heading {
     gap: 20px;
+    margin-bottom: 44px;
   }
   .vision-intro {
     padding-top: 0;
   }
   .vision-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 48px;
   }
   .vision-wall .image-frame {
     aspect-ratio: 1;
@@ -1755,10 +1807,12 @@ summary {
     object-position: center 40%;
   }
   .vision-grid h3 {
-    font-size: 1.8125rem;
+    font-size: 2rem;
+    margin-top: 24px;
   }
   .concept-label {
-    margin-top: 20px;
+    margin-top: 0;
+    margin-bottom: 18px;
   }
   .future-concepts {
     grid-template-columns: 1fr;
@@ -1773,13 +1827,10 @@ summary {
   }
   .enquiry {
     grid-template-columns: 1fr;
-    gap: 38px;
+    gap: 42px;
   }
   .enquiry h2 {
-    font-size: 3.1875rem;
-  }
-  .enquiry-intro > .section-label {
-    max-width: none;
+    font-size: 3.25rem;
   }
   .enquiry-intro > p:not(.section-label):not(.founder-signature) {
     font-size: var(--text-body);
@@ -1788,11 +1839,13 @@ summary {
     margin-top: 12px;
   }
   .founder-signature {
-    margin-top: 27px;
+    margin-top: 36px;
   }
   .enquiry-form {
     padding-top: 25px;
     border-top: 1px solid var(--line);
+    border-left: 0;
+    padding: 36px 0 0;
   }
   .form-row {
     gap: 0;
@@ -1816,7 +1869,7 @@ summary {
     min-width: 0;
   }
   .site-footer {
-    padding-top: 36px;
+    padding-top: 48px;
   }
   .footer-top {
     display: grid;
@@ -1830,7 +1883,7 @@ summary {
     grid-column: 1 / -1;
   }
   .footer-wordmark {
-    font-size: 2.3125rem;
+    font-size: 3rem;
   }
   .back-top {
     font-size: var(--text-small);
@@ -1855,6 +1908,29 @@ summary {
   .legal-page {
     padding-top: 55px;
   }
+  .hero-service {
+    margin-top: 26px;
+    max-width: 28ch;
+    letter-spacing: 0.12em;
+  }
+  .hero-introduction {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-block: 48px;
+  }
+  .hero-introduction-detail .text-link {
+    margin-top: 16px;
+  }
+  .philosophy-copy > .philosophy-lead {
+    font-size: 1.25rem;
+  }
+  .environment {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .vision-inner {
+    padding-block: 76px;
+  }
 }
 @media (max-width: 359px) {
   :root {
@@ -1873,17 +1949,13 @@ summary {
     gap: 4px;
   }
   .hero {
-    min-height: 790px;
+    min-height: 700px;
   }
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.625rem;
   }
   .hero-content {
-    padding-top: 52px;
-  }
-  .hero-section-label {
-    font-size: var(--text-small);
-    letter-spacing: 0.1em;
+    padding-top: 60px;
   }
   .hero-bottom {
     font-size: var(--text-small);
@@ -1899,6 +1971,22 @@ summary {
   }
   .air-window strong {
     font-size: 2.1875rem;
+  }
+}
+@media (min-width: 768px) {
+
+  .environment:nth-child(2) {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+
+  .environment:nth-child(2) .environment-image-link {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .environment:nth-child(2) .environment-copy {
+    grid-column: 1;
+    grid-row: 1;
   }
 }
 @media (prefers-reduced-motion: reduce) {

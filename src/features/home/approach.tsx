@@ -29,7 +29,6 @@ export function Approach() {
     >
       <div className="section-heading">
         <div>
-          <p className="section-label">From vision to realisation</p>
           <h2 id="approach-title">
             Every exceptional project
             <br />

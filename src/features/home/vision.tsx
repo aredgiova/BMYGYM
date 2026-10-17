@@ -7,7 +7,6 @@ export function Vision() {
       <div className="section vision-inner">
         <div className="section-heading">
           <div>
-            <p className="section-label">Beyond the expected</p>
             <h2 id="vision-title">
               The next generation
               <br />
@@ -35,8 +34,8 @@ export function Vision() {
               alt="BMYGYM Fitness Wall concept with warm timber, champagne metal and integrated training elements"
               sizes="(max-width: 767px) 100vw, 60vw"
             />
-            <span className="concept-label">Signature concept</span>
             <h3>BMYGYM Fitness Wall</h3>
+            <span className="concept-label">Signature concept</span>
             <p>
               An integrated architectural fitness concept designed to bring
               movement into exceptional living environments.
@@ -48,8 +47,8 @@ export function Vision() {
               alt="A BMYGYM Recovery Capsule concept set into a warm architectural interior with a sea view"
               sizes="(max-width: 767px) 100vw, 35vw"
             />
-            <span className="concept-label">Signature concept</span>
             <h3>BMYGYM Recovery Capsule</h3>
+            <span className="concept-label">Signature concept</span>
             <p>
               A concept exploring the integration of personalised recovery
               experiences into private wellness environments.

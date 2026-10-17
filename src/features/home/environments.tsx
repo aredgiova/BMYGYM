@@ -10,7 +10,6 @@ export function Environments() {
     >
       <div className="section-heading">
         <div>
-          <p className="section-label">Land. Sea. Air.</p>
           <h2 id="environments-title">
             Exceptional living.
             <br />
@@ -34,29 +33,33 @@ export function Environments() {
               className="land-image"
               src="/images/land-wellness.webp"
               alt="Champagne-toned wellness and fitness concepts integrated into a light-filled architectural interior"
-              sizes="(max-width: 767px) 100vw, 33vw"
+              sizes="(max-width: 767px) 100vw, 55vw"
             />
-            <span className="image-arrow">
-              <Arrow diagonal />
-            </span>
           </a>
-          <div className="environment-title">
-            <h3>Land</h3>
-            <span>
-              Private residences
-              <br />& luxury hospitality
-            </span>
+          <div className="environment-copy">
+            <div className="environment-title">
+              <h3>
+                <a className="environment-heading-link" href="#enquiry">
+                  Land
+                  <Arrow diagonal />
+                </a>
+              </h3>
+              <span>
+                Private residences
+                <br />& luxury hospitality
+              </span>
+            </div>
+            <p>
+              Bespoke longevity environments for exceptional residences, private
+              villas, penthouses, boutique hotels and luxury hospitality
+              destinations.
+            </p>
+            <p>
+              Thoughtfully integrated movement, recovery and wellness solutions
+              designed around the architecture, lifestyle and individual
+              requirements of each project.
+            </p>
           </div>
-          <p>
-            Bespoke longevity environments for exceptional residences, private
-            villas, penthouses, boutique hotels and luxury hospitality
-            destinations.
-          </p>
-          <p>
-            Thoughtfully integrated movement, recovery and wellness solutions
-            designed around the architecture, lifestyle and individual
-            requirements of each project.
-          </p>
         </article>
         <article className="environment">
           <a
@@ -67,29 +70,33 @@ export function Environments() {
             <ConceptImage
               src="/images/sea-yacht.webp"
               alt="A dark timber BMYGYM fitness wall and recovery concept integrated into a yacht overlooking the sea"
-              sizes="(max-width: 767px) 100vw, 33vw"
+              sizes="(max-width: 767px) 100vw, 55vw"
             />
-            <span className="image-arrow">
-              <Arrow diagonal />
-            </span>
           </a>
-          <div className="environment-title">
-            <h3>Sea</h3>
-            <span>
-              Superyachts
-              <br />& private yachts
-            </span>
+          <div className="environment-copy">
+            <div className="environment-title">
+              <h3>
+                <a className="environment-heading-link" href="#enquiry">
+                  Sea
+                  <Arrow diagonal />
+                </a>
+              </h3>
+              <span>
+                Superyachts
+                <br />& private yachts
+              </span>
+            </div>
+            <p>
+              Bespoke wellness and recovery environments conceived for life at
+              sea.
+            </p>
+            <p>
+              From private owner’s wellness suites to integrated fitness and
+              recovery concepts, BMYGYM explores individual solutions in
+              collaboration with yacht designers, architects and specialised
+              marine partners.
+            </p>
           </div>
-          <p>
-            Bespoke wellness and recovery environments conceived for life at
-            sea.
-          </p>
-          <p>
-            From private owner’s wellness suites to integrated fitness and
-            recovery concepts, BMYGYM explores individual solutions in
-            collaboration with yacht designers, architects and specialised
-            marine partners.
-          </p>
         </article>
         <article className="environment">
           <div
@@ -108,34 +115,41 @@ export function Environments() {
             </div>
             <p>Concept visual forthcoming</p>
           </div>
-          <div className="environment-title">
-            <h3>Air</h3>
-            <span>
-              Private
-              <br />
-              aviation
-            </span>
-          </div>
-          <p className="environment-subtitle">Longevity Above the Clouds.</p>
-          <p>
-            BMYGYM explores bespoke recovery and longevity concepts for
-            exceptional private aircraft interiors.
-          </p>
-          <details className="editorial-details">
-            <summary>
-              Explore the aviation vision
-              <Arrow />
-            </summary>
+          <div className="environment-copy">
+            <div className="environment-title">
+              <h3>
+                <a className="environment-heading-link" href="#enquiry">
+                  Air
+                  <Arrow diagonal />
+                </a>
+              </h3>
+              <span>
+                Private
+                <br />
+                aviation
+              </span>
+            </div>
+            <p className="environment-subtitle">Longevity Above the Clouds.</p>
             <p>
-              From transformable recovery lounges to future integrated wellness
-              environments, our vision is to bring personalised comfort, privacy
-              and restoration into private aviation.
+              BMYGYM explores bespoke recovery and longevity concepts for
+              exceptional private aircraft interiors.
             </p>
-            <p className="small-note">
-              Every aviation concept is subject to aircraft-specific technical
-              feasibility, safety and certification requirements.
-            </p>
-          </details>
+            <details className="editorial-details">
+              <summary>
+                Explore the aviation vision
+                <Arrow />
+              </summary>
+              <p>
+                From transformable recovery lounges to future integrated wellness
+                environments, our vision is to bring personalised comfort, privacy
+                and restoration into private aviation.
+              </p>
+              <p className="small-note">
+                Every aviation concept is subject to aircraft-specific technical
+                feasibility, safety and certification requirements.
+              </p>
+            </details>
+          </div>
         </article>
       </div>
     </section>

@@ -18,7 +18,6 @@ export function Blueprint() {
     >
       <div className="blueprint-inner">
         <div className="blueprint-intro">
-          <p className="section-label">Start with your space</p>
           <h2 id="blueprint-title">
             Your vision.
             <br />
@@ -34,12 +33,12 @@ export function Blueprint() {
           </a>
         </div>
         <div className="blueprint-details">
-          <p className="section-label">A private commission</p>
           <h3>
             BMYGYM Private
             <br />
             Longevity Blueprint
           </h3>
+          <p className="commission-caption">A private commission</p>
           <p>
             The first bespoke project phase — translating your vision into a
             tailored movement, recovery and longevity concept.

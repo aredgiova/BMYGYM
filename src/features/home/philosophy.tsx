@@ -9,13 +9,12 @@ export function Philosophy() {
       aria-labelledby="philosophy-title"
     >
       <div className="philosophy-copy">
-        <p className="section-label">Designed around you</p>
         <h2 id="philosophy-title">
           Beyond conventional
           <br />
           <em>wellness.</em>
         </h2>
-        <p>
+        <p className="philosophy-lead">
           BMYGYM is an independent, founder-led luxury longevity concept house.
         </p>
         <p>

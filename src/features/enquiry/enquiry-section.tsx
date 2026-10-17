@@ -9,7 +9,6 @@ export function EnquirySection() {
       aria-labelledby="enquiry-title"
     >
       <div className="enquiry-intro">
-        <p className="section-label">Let’s create something exceptional</p>
         <h2 id="enquiry-title">
           Your vision
           <br />

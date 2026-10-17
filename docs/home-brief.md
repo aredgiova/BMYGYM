@@ -2,12 +2,16 @@
 
 Mode: Persuade. One landing page, English content from the supplied brief.
 
-Pinned direction: an architectural portfolio for a bespoke design house. Warm ivory, large photographic spaces, fine serif headings and restrained sans-serif navigation. A complete environment opens the page; editorial whitespace follows. No catalogue, prices or equipment cards.
+Pinned direction: an architectural portfolio for a bespoke design house serving private clients accustomed to exceptional spaces and personal service. The user selected discreet luxury: ivory, stone and photography as the protagonist. Warm ivory (`#f6f3ed`), pale stone (`#e9e3d8`), Bodoni Moda headings and restrained Manrope navigation establish the visual language. A complete environment opens the page; generous editorial whitespace follows. No catalogue, prices or equipment cards.
 
-Journey: environment and offer → personal philosophy → Land / Sea / Air → paid Private Longevity Blueprint → four-stage approach → signature design visions → private enquiry.
+Journey: photographic environment and concise offer → editorial introduction → personal philosophy → Land / Sea / Air → paid Private Longevity Blueprint → four-stage approach → signature design visions → private enquiry.
 
-First viewport: discreet ivory sticky navigation; full-width architectural image below; generous left-aligned headline and clear primary enquiry CTA over a darkened left image region. The right image remains open so the complete spatial concept is legible. A thin context line closes the image.
+First viewport: discreet beige sticky navigation (`#e3ded5`); full-width architectural image below; generous left-aligned headline, short service description and primary enquiry CTA over a darkened left image region. The right image remains open so the complete spatial concept is legible. A thin context line closes the image and retains the visible concept caption. Longer offer paragraphs and the approach link occupy an ivory introduction immediately below the hero, leaving the photograph less crowded.
 
-Signature: a quiet alternating image-and-type rhythm, with the Blueprint set apart on sand and a clear path into the same enquiry form. Aviation retains an equally sized reserved concept area without fabricated aircraft imagery.
+Signature: Land, Sea and Air each occupy a generous editorial row, rather than three narrow columns. Land and Air place the visual on the left; Sea reverses image and copy from 768px upward. Every mobile row returns to image then text. Chapter titles and supplied photographs lead into the same private enquiry. Aviation retains an equally sized reserved concept area without fabricated aircraft imagery; its disclosure keeps the technical, safety and certification conditions explicit.
 
-Scope: functional local preview, configured email API, responsive and accessible. No publication. Legal texts remain identified drafts awaiting factual information and review.
+Rhythm: the 1680px maximum editorial container uses fluid gutters and `clamp(88px, 8.5vw, 148px)` general vertical spacing. Environment rows are separated by 100px on desktop and 64px on mobile. The Blueprint sits on stone with a clear paid-service scope; signature visions sit on muted charcoal (`#30312b`) with offset imagery. Fine rules, square controls and a single restrained hero arrival support the photography without ornamental cards or shadows. Redundant headings above headings are removed; factual concept captions remain.
+
+Readability: body and form text remain 18px on desktop and 17px below 768px, with supporting labels, actions and captions never smaller than 14px. The editorial introduction uses a 26–32px serif lead. Preserve responsive wrapping, image alternatives, visible focus, reduced motion, the mobile-menu interactions and honest enquiry feedback.
+
+Scope: refine the existing responsive Next.js site while preserving the supplied English business content, founder-led positioning, paid Blueprint and accessible enquiry flow. Keep provider-dependent email delivery truthful; this visual refinement does not establish successful mail delivery. Legal texts remain identified drafts awaiting factual information and review. Publication follows the user's deployment authorization; no new business claims, prices, client endorsements or unapproved aviation images are introduced.
