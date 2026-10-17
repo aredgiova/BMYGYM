@@ -475,8 +475,6 @@ summary {
   min-width: 0;
   padding-top: 76px;
   align-self: start;
-  position: sticky;
-  top: var(--header-height);
 }
 .philosophy-visual .image-frame {
   aspect-ratio: 0.78;
@@ -1538,7 +1536,6 @@ summary {
   }
   .philosophy-visual {
     padding-top: 48px;
-    position: static;
   }
   .environment {
     gap: 36px;
