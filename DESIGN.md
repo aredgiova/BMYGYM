@@ -21,39 +21,39 @@ colors:
 typography:
   display:
     fontFamily: "Bodoni Moda, Georgia, serif"
-    fontSize: "clamp(45px, 4.35vw, 68px)"
+    fontSize: "clamp(3rem, 4.6vw, 4.5rem)"
     fontWeight: 400
     lineHeight: 1.12
     letterSpacing: "-0.035em"
   headline:
     fontFamily: "Bodoni Moda, Georgia, serif"
-    fontSize: "clamp(37px, 3.6vw, 56px)"
+    fontSize: "clamp(2.5rem, 3.8vw, 3.75rem)"
     fontWeight: 400
     lineHeight: 1.14
     letterSpacing: "-0.035em"
   title:
     fontFamily: "Bodoni Moda, Georgia, serif"
-    fontSize: "clamp(28px, 2.6vw, 38px)"
+    fontSize: "clamp(2rem, 2.8vw, 2.5rem)"
     fontWeight: 400
     lineHeight: 1.14
     letterSpacing: "-0.025em"
   body:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "14px"
+    fontSize: "1.125rem"
     fontWeight: 400
-    lineHeight: 1.85
+    lineHeight: 1.75
   label:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "10px"
+    fontSize: "0.875rem"
     fontWeight: 500
     lineHeight: 1.6
-    letterSpacing: "0.2em"
+    letterSpacing: "0.14em"
   action:
     fontFamily: "Manrope, Arial, sans-serif"
-    fontSize: "10px"
+    fontSize: "0.875rem"
     fontWeight: 600
     lineHeight: 1.6
-    letterSpacing: "0.14em"
+    letterSpacing: "0.09em"
 rounded:
   square: "0"
 spacing:
@@ -126,9 +126,16 @@ The Air reservation uses a related pale stone field (`#e9e4db`) and dark taupe t
 
 Both families are local WOFF2 assets loaded with `next/font/local` and `display: swap`. Bodoni Moda includes normal and italic variable files; Manrope provides the sans-serif variable file. Keep Georgia and Arial as respective fallbacks.
 
-The frontmatter records global defaults. Headings use balanced wrapping and normal weight; italic serif phrases add editorial emphasis. Copy commonly uses 12–13px text with 1.85–1.9 line height and widths around 365–480px. Section labels and actions are uppercase and tracked. The typographic BMYGYM wordmark is not supplied final logo artwork.
+The frontmatter records global defaults. Headings use balanced wrapping and normal weight; italic serif phrases add editorial emphasis. Font sizes use `rem` so the reading scale follows the browser's base font preference. The typographic BMYGYM wordmark is not supplied final logo artwork.
 
-The hero display becomes 57px below 1200px, 55px below 1024px, then `clamp(39px, 9.3vw, 52px)` below 768px with a 1.17 line height. Below 360px it is 38px. Mobile body text is 13px; form controls increase to 16px. Individual section headings intentionally vary within the same serif system.
+| Role | Implemented scale |
+| --- | --- |
+| Reading copy and form controls | `--text-body: 1.125rem` (18px at the default 16px root), becoming `1.0625rem` (17px) below 768px. Body and hero copy use 1.75 line height; individual editorial sections retain 1.85–1.9. |
+| Labels, actions, captions, notes and legal navigation | `--text-small: 0.875rem` (14px) across desktop and mobile. This is the floor for visible auxiliary text; narrow screens reflow it instead of reducing its size. Section labels remain uppercase with 0.14em tracking; buttons use 0.09em. |
+| Form labels and privacy consent | `1rem` (16px), with optional-field notes and error text at the auxiliary size. |
+| Headings | Bodoni Moda retains its editorial hierarchy; global h2 spans 40–60px and global h3 spans 32–40px at the default root. Individual section headings vary within the same serif system. |
+
+The hero display spans 48–72px on desktop, becomes `3.75rem` (60px) below 1200px and `3.625rem` (58px) below 1024px, then uses `clamp(2.625rem, 9.6vw, 3.5rem)` (42–56px) below 768px with a 1.17 line height. Below 360px it is `2.5rem` (40px). Reading widths commonly use 48–54ch, keeping longer text comfortable as its size grows.
 
 ## Layout
 
@@ -137,12 +144,12 @@ The editorial container is centered with a maximum width of 1680px and fluid gut
 | Query | Implemented change |
 | --- | --- |
 | min-width 1700px | Hero copy aligns with the centered 1680px content field. |
-| max-width 1199px | Tighter navigation, column gaps and image crops. |
-| max-width 1023px | Header remains 79px, gutters are 36px, general section rhythm is 80px, desktop navigation becomes a disclosure; form rows become single-column. |
-| max-width 767px | Header is 72px, gutters are 24px, general section rhythm is 67px; main feature grids stack, form submit spans the width, Cookie Settings content flows inline at full width. |
-| max-width 359px | Gutters are 18px and header / hero type compresses for narrow screens. |
+| max-width 1199px | Desktop navigation becomes a disclosure; column gaps and image crops tighten. The header's JavaScript media query returns to desktop navigation at 1200px. |
+| max-width 1023px | Header remains 79px, gutters are 36px, general section rhythm is 80px; form rows become single-column. The hero's bottom strip becomes a two-column grid with its caption on a separate row. |
+| max-width 767px | Header is 72px, gutters are 24px, body copy becomes 17px and general section rhythm is 67px. Main feature grids and footer content stack; environment subtitles sit below their titles, form submit spans the width, and Cookie Settings content flows inline at full width. |
+| max-width 359px | Gutters are 18px and wordmark / hero headings compress for narrow screens; auxiliary text keeps its 14px floor. |
 
-The desktop and tablet header is 79px tall and sticky, with a centered inner width of at most 1180px. Anchor scrolling reserves its height plus 20px. The hero uses a full-bleed environment image and an image-legibility overlay, with a minimum height of 745px on mobile and 790px below 360px. Its mobile image source requests 1200px to support the tall crop. The concept caption remains visible at narrow widths.
+The desktop and tablet header is 79px tall and sticky, with a centered inner width of at most 1280px. Anchor scrolling reserves its height plus 20px. The hero uses a full-bleed environment image and an image-legibility overlay, with a minimum height of 745px on mobile and 790px below 360px; its content can grow beyond that minimum. Copy reserves 140px beneath it on desktop and 160px on mobile for the bottom strip. The mobile image source requests 1200px to support the tall crop. The concept caption remains visible at narrow widths. The Air window is wider, and its internal gaps are adjusted to accommodate the larger supporting text.
 
 ## Elevation & Depth
 
@@ -156,15 +163,15 @@ Buttons, input fields, image frames and section panels are square. Fine one-pixe
 
 ## Components
 
-- **Buttons:** dark on pale surfaces and ivory over the hero. Minimum height is 54px, becoming 52px on mobile. Hover fills are `#514b41` and `#e4dccc` respectively. Sending disables the submit control and fieldset; button opacity becomes 0.65.
-- **Header:** the BMYGYM serif wordmark has no tagline and uses 21px type with 0.3em tracking; below 768px it becomes 20px / 0.22em and below 360px 18px / 0.18em. Desktop navigation uses uppercase 10px type with 0.4em tracking and 42px gaps, reducing to 22px gaps below 1200px.
-- **Header enquiry:** a solid dark action with pale text and no arrow remains beside desktop or mobile navigation. Desktop type is 10px with 0.35em tracking. Its desktop minimum size is 186px by 42px, narrowing to 176px below 1200px; below 768px the width follows its content and minimum height becomes 44px. It uses a `#403a33` hover fill. Mobile navigation closes on selection, outside pointer, Escape, or returning to desktop width; Escape restores focus to its trigger.
-- **Text links:** uppercase microtype, a thin taupe underline and an inline arrow. A 44px minimum height provides a larger interaction area than the label alone.
-- **Inputs:** visible labels above transparent, underline-only fields. Focus changes the border to ink and adds a 2px input-focus outline with 4px offset. Invalid fields have a red border and associated text. General interactive focus uses a 2px focus outline with 5px offset.
+- **Buttons:** dark on pale surfaces and ivory over the hero. Minimum height is 54px, becoming 56px on mobile. Text is 14px with enough room to wrap inside the available width. Hover fills are `#514b41` and `#e4dccc` respectively. Sending disables the submit control and fieldset; button opacity becomes 0.65.
+- **Header:** the BMYGYM serif wordmark has no tagline and uses 1.3125rem (21px) type with 0.3em tracking; below 768px it becomes 1.25rem (20px) / 0.22em and below 360px 1.125rem (18px) / 0.18em. Desktop navigation uses uppercase 14px type with 0.16em tracking and 28px gaps. Below 1200px the disclosure menu uses 2rem (32px) serif links.
+- **Header enquiry:** a solid dark action with pale text and no arrow remains beside desktop or mobile navigation. Desktop type is 14px with 0.12em tracking. Its desktop minimum size is 186px by 46px, narrowing to 176px below 1200px; below 768px it is 7rem wide with a 44px minimum height and a two-line label. It uses a `#403a33` hover fill. Mobile navigation closes on selection, outside pointer, Escape, or returning to desktop width; Escape restores focus to its trigger.
+- **Text links:** uppercase 14px type with 0.08em tracking, a thin taupe underline and an inline arrow. A 44px minimum height provides a larger interaction area than the label alone; maximum width follows the container.
+- **Inputs:** visible 16px labels above transparent, underline-only fields; input text follows the 17–18px reading scale. Focus changes the border to ink and adds a 2px input-focus outline with 4px offset. Invalid fields have a red border and associated text. General interactive focus uses a 2px focus outline with 5px offset.
 - **Enquiry feedback:** keep idle, sending, error and success states distinct. The form exposes busy status, announces results politely, focuses the first server-invalid field or status, and retains values on failure. Errors provide an email fallback. Success follows confirmed API success; it must never be simulated for presentation.
 - **Concept imagery:** `ConceptImage` accepts source, alternative text, optional class, caption and sizes. The default visible caption is “BMYGYM concept visualisation.” Use the supplied assets honestly; the Air reservation communicates a concept awaiting its final visual.
 - **Editorial disclosures:** native `details` / `summary`, a hairline boundary and an arrow rotating 90 degrees when open. Keep supporting descriptions in the reading flow.
-- **Footer and legal pages:** restrained links and reusable typography. Legal draft notices use sand; factual and approval requirements remain explicit.
+- **Footer and legal pages:** restrained links and reusable typography. Footer navigation and notes use 14px, while contact details follow the reading scale; footer groups wrap and stack on mobile. Legal copy uses the reading scale within a 1040px maximum page width. Legal draft notices use sand; factual and approval requirements remain explicit.
 
 ## Do's and Don'ts
 

@@ -31,7 +31,7 @@ export function Header({ isHome = true }: { isHome?: boolean }) {
       )
         setOpen(false);
     }
-    const media = window.matchMedia("(min-width: 1024px)");
+    const media = window.matchMedia("(min-width: 1200px)");
     const onResize = () => {
       if (media.matches) setOpen(false);
     };
