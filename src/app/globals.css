@@ -560,58 +560,6 @@ summary {
   color: var(--ink);
   font-size: var(--text-body);
 }
-.air-visual {
-  height: auto;
-  background: #e8e2d7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  position: relative;
-  color: var(--stone-ink);
-  aspect-ratio: 1.05;
-}
-.air-window {
-  width: 56%;
-  aspect-ratio: 0.67;
-  max-height: 76%;
-  border: 1px solid #bfb29d;
-  border-radius: 45% 45% 42% 42%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  max-width: 270px;
-  padding: 16px 10px;
-  border-color: #a7987f;
-}
-.air-window > span {
-  font-size: var(--text-small);
-  letter-spacing: 0.08em;
-  text-align: center;
-}
-.air-window > span:last-child {
-  font-size: var(--text-small);
-  letter-spacing: 0.02em;
-}
-.air-window strong {
-  font-family: var(--font-bodoni), Georgia, serif;
-  font-size: clamp(2.5rem, 3.5vw, 4rem);
-  font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
-.air-visual > p {
-  position: absolute;
-  bottom: 22px;
-  font-size: var(--text-small);
-  letter-spacing: 0.02em;
-  text-align: center;
-  padding-inline: 12px;
-}
 .editorial-details {
   border-bottom: 1px solid var(--line);
 }
@@ -1444,23 +1392,6 @@ summary {
     text-align: left;
     font-size: var(--text-small);
   }
-  .air-visual {
-    height: auto;
-    aspect-ratio: 0.78;
-  }
-  .air-window {
-    width: 72%;
-    gap: 18px;
-  }
-  .air-window strong {
-    font-size: 2rem;
-  }
-  .air-window > span {
-    font-size: var(--text-small);
-  }
-  .air-window > span:last-child {
-    font-size: var(--text-small);
-  }
   .blueprint-inner {
     padding-block: 80px;
     gap: 36px;
@@ -1725,24 +1656,6 @@ summary {
   .environment-copy > p {
     font-size: var(--text-body);
   }
-  .air-visual {
-    height: auto;
-    aspect-ratio: 1.02;
-  }
-  .air-window {
-    width: 62%;
-    max-height: 78%;
-    gap: 18px;
-  }
-  .air-window strong {
-    font-size: 2.5rem;
-  }
-  .air-window > span {
-    font-size: var(--text-small);
-  }
-  .air-window > span:last-child {
-    font-size: var(--text-small);
-  }
   .blueprint-inner {
     grid-template-columns: 1fr;
     padding: 62px var(--page-gutter);
@@ -1965,9 +1878,6 @@ summary {
   }
   .enquiry h2 {
     font-size: 2.875rem;
-  }
-  .air-window strong {
-    font-size: 2.1875rem;
   }
 }
 @media (min-width: 768px) {

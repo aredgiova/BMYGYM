@@ -123,7 +123,7 @@ The palette resembles warm paper, pale stone and muted metal.
 - **Dark section — vision-surface / vision-ink / vision-muted:** the design vision section uses a warm charcoal field, pale headings and subdued supporting copy.
 - **Functional — placeholder / error / success / focus / input-focus:** retain the implemented contrast for empty inputs, validation, submission results and keyboard focus. Error and success messages always include text.
 
-The Air reservation uses a related pale stone field (`#e8e2d7`), dark taupe type (`#625b50`) and an aircraft-window outline (`#a7987f`). These are local treatments, not a second brand palette. Hero image shading is an image-legibility treatment. The `stone-ink` tone carries secondary text on stone surfaces, the Blueprint commission caption and the Air reservation; the footer scopes its muted text to this darker tone to keep small text above 4.5:1 contrast. Required-field markers use the accent tone.
+The Air concept image extends the warm palette through an ivory fitness studio, pale wood and restrained champagne details inside a private jet. A Pilates reformer leads the composition, supported by integrated cable training and neatly arranged dumbbells; the exercise purpose must remain visually clear. It is a generated visualisation requested by the user, not evidence of an installed or certified aviation environment. Hero image shading is an image-legibility treatment. The `stone-ink` tone carries secondary text on stone surfaces and the Blueprint commission caption; the footer scopes its muted text to this darker tone to keep small text above 4.5:1 contrast. Required-field markers use the accent tone.
 
 ## Typography
 
@@ -145,7 +145,7 @@ The hero display uses `clamp(3.25rem, 5.4vw, 5.5rem)` (52–88px) with 1.08 line
 
 The editorial container is centered with a maximum width of 1680px and fluid gutters. General vertical section spacing is `--section-space: clamp(88px, 8.5vw, 148px)`; individual features tune that rhythm. Desktop compositions pair image and copy, give each environment its own full-width chapter, and retain an asymmetric two-image vision grid. Imagery is cropped within explicit aspect ratios with `object-fit: cover`; preserve each existing crop when replacing assets.
 
-The introduction below the hero has `1.3fr 1fr` columns, an adjustable 60–140px gap and 88px vertical padding. Land and Air use image / copy columns of `1.15fr 0.85fr`; Sea reverses them at widths of at least 768px. Each chapter has a 48–112px column gap, with 100px between chapters on desktop. The environment photographs and reserved Air visual share a 1.05 aspect ratio. The Blueprint has 120px vertical padding and a single hairline division between its introduction and paid-service scope. The Vision surface uses `#30312b`, a `1.35fr 1fr` image grid, a 64px gap and a 112px offset on the capsule column. The enquiry form has a fine vertical division on desktop and a horizontal division when stacked.
+The introduction below the hero has `1.3fr 1fr` columns, an adjustable 60–140px gap and 88px vertical padding. Land and Air use image / copy columns of `1.15fr 0.85fr`; Sea reverses them at widths of at least 768px. Each chapter has a 48–112px column gap, with 100px between chapters on desktop. All three environment images use the same `ConceptImage` component and share a 1.05 aspect ratio. The Blueprint has 120px vertical padding and a single hairline division between its introduction and paid-service scope. The Vision surface uses `#30312b`, a `1.35fr 1fr` image grid, a 64px gap and a 112px offset on the capsule column. The enquiry form has a fine vertical division on desktop and a horizontal division when stacked.
 
 | Query | Implemented change |
 | --- | --- |
@@ -155,7 +155,7 @@ The introduction below the hero has `1.3fr 1fr` columns, an adjustable 60–140p
 | max-width 767px | Header is 72px, gutters are 24px, body copy becomes 17px and general section rhythm is 72px. The introduction stacks with 48px vertical padding. Every environment follows image then copy, with 26px between them, 64px between chapters and a 1.02 image aspect ratio. Other main grids and footer content stack; form submit spans the width and Cookie Settings flows inline at full width. |
 | max-width 359px | Gutters are 18px and wordmark / hero headings compress for narrow screens; auxiliary text keeps its 14px floor. |
 
-The philosophy image and its caption stay in normal flow at every breakpoint, reserving their full height before the motto row so scrolling cannot overlap the text. The desktop and tablet header is 79px tall and sticky, with a centered inner width of at most 1280px. Anchor scrolling reserves its height plus 20px. The full-bleed hero keeps only its headline, short service description and primary enquiry action over the photography; the longer offer paragraphs sit in the following ivory introduction. Its desktop minimum height is `clamp(680px, calc(100svh - var(--header-height)), 920px)`, becoming 720px below 1024px, 680px below 768px and 700px below 360px. Content may grow beyond these minimums. The hero copy reserves 140px beneath it on desktop and 152px on mobile for the context strip. The mobile image source requests 1200px to support the tall crop. The concept caption remains visible at narrow widths, and the Air placeholder retains readable text without fabricated aviation photography.
+The philosophy image and its caption stay in normal flow at every breakpoint, reserving their full height before the motto row so scrolling cannot overlap the text. The desktop and tablet header is 79px tall and sticky, with a centered inner width of at most 1280px. Anchor scrolling reserves its height plus 20px. The full-bleed hero keeps only its headline, short service description and primary enquiry action over the photography; the longer offer paragraphs sit in the following ivory introduction. Its desktop minimum height is `clamp(680px, calc(100svh - var(--header-height)), 920px)`, becoming 720px below 1024px, 680px below 768px and 700px below 360px. Content may grow beyond these minimums. The hero copy reserves 140px beneath it on desktop and 152px on mobile for the context strip. The mobile image source requests 1200px to support the tall crop. Concept captions remain visible at narrow widths, including the Air caption identifying the generated AERO ONE visualisation.
 
 ## Elevation & Depth
 
@@ -165,7 +165,7 @@ Motion is small and purposeful: button and field transitions use 0.2s, navigatio
 
 ## Shapes
 
-Buttons, input fields, image frames and section panels are square. Fine one-pixel lines establish structure. Thin inline SVG arrows mark direction. The rounded aircraft-window outline in the reserved Air visual is a semantic motif; it does not establish a rounded control system.
+Buttons, input fields, image frames and section panels are square. Fine one-pixel lines establish structure. Thin inline SVG arrows mark direction. The oval aircraft windows belong to the Air concept image; they do not establish a rounded control system.
 
 ## Components
 
@@ -175,8 +175,8 @@ Buttons, input fields, image frames and section panels are square. Fine one-pixe
 - **Text links:** uppercase 14px type with 0.08em tracking, a thin taupe underline and an inline arrow. A 44px minimum height provides a larger interaction area than the label alone; maximum width follows the container.
 - **Inputs:** visible 16px labels above transparent, underline-only fields; input text follows the 17–18px reading scale. Focus changes the border to ink and adds a 2px input-focus outline with 4px offset. Invalid fields have a red border and associated text. General interactive focus uses a 2px focus outline with 5px offset.
 - **Enquiry feedback:** keep idle, sending, error and success states distinct. The form exposes busy status, announces results politely, focuses the first server-invalid field or status, and retains values on failure. Errors provide an email fallback. Success follows confirmed API success; it must never be simulated for presentation.
-- **Concept imagery:** `ConceptImage` accepts source, alternative text, optional class, caption and sizes. The default visible caption is “BMYGYM concept visualisation.” Use the supplied assets honestly; the Air reservation communicates a concept awaiting its final visual.
-- **Environment chapters:** image and `.environment-copy` are sibling elements within each article. All three chapter titles link to the enquiry with a consistent inline arrow; Land and Sea photographs are also links with descriptive accessible names. Desktop image requests use `55vw`, changing to `100vw` below 768px. Preserve the aviation disclosure and its technical-feasibility and certification qualification.
+- **Concept imagery:** `ConceptImage` accepts source, alternative text, optional class, caption and sizes. The default visible caption is “BMYGYM concept visualisation.” Use the supplied assets honestly. Air uses `/images/air-aviation-fitness.webp`, a generated private-jet fitness studio with an ivory Pilates reformer, integrated cable training, arranged dumbbells and oval windows above the clouds, created at the user's request. Its visible caption is “BMYGYM AERO ONE · Concept visualisation.”
+- **Environment chapters:** image and `.environment-copy` are sibling elements within each article. All three chapter titles link to the enquiry with a consistent inline arrow; all three concept images are also links with descriptive accessible names. Desktop image requests use `55vw`, changing to `100vw` below 768px. Preserve the aviation disclosure and its technical-feasibility and certification qualification.
 - **Editorial disclosures:** native `details` / `summary`, a hairline boundary and an arrow rotating 90 degrees when open. Keep supporting descriptions in the reading flow.
 - **Footer and legal pages:** restrained links and reusable typography. Footer navigation and notes use 14px, while contact details follow the reading scale; footer groups wrap and stack on mobile. Legal copy uses the reading scale within a 1040px maximum page width. Legal draft notices use sand; factual and approval requirements remain explicit.
 
@@ -184,9 +184,9 @@ Buttons, input fields, image frames and section panels are square. Fine one-pixe
 
 ### Do:
 
-- Do use the supplied concept imagery with visible concept captions and meaningful alternatives.
+- Do use the supplied concept imagery and the user-requested generated Air visual with visible concept captions and meaningful alternatives.
 - Do preserve the locally hosted Bodoni Moda / Manrope pairing and the warm neutral palette.
-- Do keep Land, Sea and Air equally legible; retain the reserved aviation concept area until approved imagery exists.
+- Do keep Land, Sea and Air equally legible, with matching image treatment and an explicit concept caption for AERO ONE.
 - Do preserve keyboard focus, labelled fields, reduced motion and honest enquiry feedback.
 - Do treat the text wordmark as provisional typography until final logo artwork is supplied.
 
@@ -194,5 +194,5 @@ Buttons, input fields, image frames and section panels are square. Fine one-pixe
 
 - Don't turn the design house into an equipment catalogue or add prices and product purchase cards.
 - Don't present concepts as completed projects, certified products or available production equipment.
-- Don't invent a production logo, aviation imagery, client testimonials or business credentials.
+- Don't invent a production logo, client testimonials or business credentials, or present generated aviation imagery as a real or certified installation.
 - Don't add floating card shadows, pill controls, loud gradients or ornamental interface density.

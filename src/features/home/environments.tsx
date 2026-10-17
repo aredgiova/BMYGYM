@@ -99,22 +99,19 @@ export function Environments() {
           </div>
         </article>
         <article className="environment">
-          <div
-            className="air-visual"
-            role="img"
-            aria-label="Reserved visual area for the forthcoming BMYGYM AERO ONE private aviation concept"
+          <a
+            className="environment-image-link"
+            href="#enquiry"
+            aria-label="Enquire about a private aviation project"
           >
-            <div className="air-window">
-              <span>BMYGYM</span>
-              <strong>
-                AERO
-                <br />
-                <em>ONE</em>
-              </strong>
-              <span>A new perspective.</span>
-            </div>
-            <p>Concept visual forthcoming</p>
-          </div>
+            <ConceptImage
+              className="air-image"
+              src="/images/air-aviation-fitness.webp"
+              alt="Private jet fitness studio concept with a Pilates reformer, integrated cable training, dumbbells and oval windows above the clouds"
+              caption="BMYGYM AERO ONE · Concept visualisation"
+              sizes="(max-width: 767px) 100vw, 55vw"
+            />
+          </a>
           <div className="environment-copy">
             <div className="environment-title">
               <h3>
