@@ -1,51 +1,25 @@
 import Link from "next/link";
 import { Arrow } from "@/components/ui/arrow";
+import { localePath, type Locale } from "@/i18n/config";
+import type { CommonCopy } from "@/i18n/types";
 
-export function Footer() {
+export function Footer({locale, copy, homeLabel}: {locale: Locale; copy: CommonCopy["footer"]; homeLabel: string}) {
+  const home = localePath(locale);
   return (
     <footer className="site-footer">
       <div className="footer-top">
-        <div>
-          <Link
-            href="/#home"
-            className="footer-wordmark"
-            aria-label="BMYGYM home"
-          >
-            BMYGYM
-          </Link>
-          <p>Bespoke Longevity Environments</p>
-        </div>
-        <div className="footer-contact">
-          <span>Valencia, Spain</span>
-          <a href="mailto:hello@bmygym.com">
-            hello@bmygym.com
-            <Arrow diagonal />
-          </a>
-        </div>
-        <Link href="/#home" className="back-top">
-          Back to top
-          <Arrow diagonal />
-        </Link>
+        <div><Link href={home + "#home"} className="footer-wordmark" aria-label={homeLabel}>BMYGYM</Link><p>{copy.tagline}</p></div>
+        <div className="footer-contact"><span>{copy.location}</span><a href="mailto:hello@bmygym.com">hello@bmygym.com<Arrow diagonal /></a></div>
+        <Link href={home + "#home"} className="back-top">{copy.top}<Arrow diagonal /></Link>
       </div>
       <div className="footer-bottom">
-        <small>© 2026 BMYGYM. All rights reserved.</small>
-        <nav aria-label="Legal information">
-          <Link href="/legal">Legal Notice</Link>
-          <Link href="/privacy">Privacy Policy</Link>
-          <Link href="/cookies">Cookie Policy</Link>
-          <details className="cookie-settings">
-            <summary>Cookie Settings</summary>
-            <div>
-              <strong>Your privacy, by design.</strong>
-              <p>
-                This site currently uses no analytics, advertising or other
-                non-essential cookies. There are no optional cookies to accept
-                or reject.
-              </p>
-              <Link href="/cookies">Read the cookie policy</Link>
-            </div>
-          </details>
-          <Link href="/accessibility">Accessibility</Link>
+        <small>{copy.rights}</small>
+        <nav aria-label={copy.legalNav}>
+          <Link href={localePath(locale, "legal")}>{copy.legal}</Link>
+          <Link href={localePath(locale, "privacy")}>{copy.privacy}</Link>
+          <Link href={localePath(locale, "cookies")}>{copy.cookies}</Link>
+          <details className="cookie-settings"><summary>{copy.cookieSettings}</summary><div><strong>{copy.cookieTitle}</strong><p>{copy.cookieBody}</p><Link href={localePath(locale, "cookies")}>{copy.cookieLink}</Link></div></details>
+          <Link href={localePath(locale, "accessibility")}>{copy.accessibility}</Link>
         </nav>
       </div>
     </footer>

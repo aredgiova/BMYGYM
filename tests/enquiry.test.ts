@@ -3,10 +3,13 @@ import test from "node:test";
 import { POST } from "../src/app/api/v1/contact/route.ts";
 import { readEnquiryMailConfig, sendEnquiry } from "../src/services/enquiry.ts";
 import { validateEnquiry } from "../src/validations/enquiry.ts";
+import { getCommonCopy } from "../src/i18n/common.ts";
+import { locales } from "../src/i18n/config.ts";
 
 const validInput = {
   fullName: "Jane Smith",
   email: "jane@example.com",
+  clientType: "Private Client",
   projectType: "Private Residence",
   message: "I would like to discuss a private wellness space.",
   privacy: true,
@@ -78,6 +81,8 @@ test("validates and trims a genuine enquiry while discarding unexpected fields",
   assert.equal(result.data.company, undefined);
   assert.ok(!("to" in result.data));
   assert.ok(!("website" in result.data));
+  assert.equal(result.data.locale, "en");
+  assert.equal(result.data.clientType, "Private Client");
 });
 
 test("rejects primitive payloads and missing explicit consent", () => {
@@ -95,6 +100,11 @@ test("rejects injected headers, invalid categories, excessive text and populated
     ["email", "person@example.com\r\nBcc: someone@example.com"],
     ["fullName", "Jane\nSmith"],
     ["projectType", "Unlisted Project"],
+    ["clientType", "Unlisted Profile"],
+    ["clientType", undefined],
+    ["locale", "it"],
+    ["locale", { language: "en" }],
+    ["locale", null],
     ["message", "x".repeat(5001)],
     ["company", "x".repeat(161)],
     ["location", { city: "London" }],
@@ -141,6 +151,8 @@ test("sends plain text to a fixed recipient with the visitor only in Reply-To", 
     assert.equal(body.reply_to, "jane@example.com");
     assert.ok(!("html" in body));
     assert.match(String(body.text), /<script>plain text<\/script>/);
+    assert.match(String(body.text), /Client profile: Private Client/);
+    assert.match(String(body.text), /Website language: en/);
     return Response.json({ id: "mock-message-id" });
   };
   assert.deepEqual(await sendEnquiry(validated.data, mailConfig, fetcher), {
@@ -278,12 +290,12 @@ test("requires JSON, enforces byte limits without Content-Length, and rejects ma
     );
     assert.equal((await POST(request("{"))).status, 400);
     assert.equal(
-      (await POST(request({ ...validInput, message: "é".repeat(9000) })))
+      (await POST(request({ ...validInput, message: "é".repeat(17000) })))
         .status,
       413,
     );
     assert.equal(
-      (await POST(request(validInput, { "Content-Length": "17000" }))).status,
+      (await POST(request(validInput, { "Content-Length": "33000" }))).status,
       413,
     );
   });
@@ -346,5 +358,109 @@ test("the route hides provider errors and secrets", async (context) => {
     assert.ok(!body.includes("private provider detail"));
     assert.ok(!body.includes("test_key_not_real"));
     assert.match(body, /DELIVERY_FAILED/);
+  });
+});
+
+test("validates both client profiles and all five languages with localized field errors", () => {
+  for (const locale of locales) {
+    const copy = getCommonCopy(locale);
+    for (const clientType of ["Private Client", "Professional Partner"]) {
+      const result = validateEnquiry({ ...validInput, locale, clientType }, copy.validation);
+      assert.ok(result.success);
+      assert.equal(result.data.locale, locale);
+      assert.equal(result.data.clientType, clientType);
+    }
+    const invalid = validateEnquiry({ ...validInput, fullName: "", email: "", clientType: "", projectType: "", message: "", privacy: false }, copy.validation);
+    assert.equal(invalid.success, false);
+    if (!invalid.success) {
+      for (const field of ["fullName", "email", "clientType", "projectType", "message", "privacy"] as const) {
+        assert.equal(invalid.errors[field], copy.validation[field]);
+      }
+    }
+  }
+});
+
+test("API uses the selected language for validation, early failures, success and delivery errors", async (context) => {
+  let providerFails = false;
+  let calls = 0;
+  context.mock.method(globalThis, "fetch", async (_url: unknown, init?: RequestInit) => {
+    calls += 1;
+    const mail = JSON.parse(String(init?.body));
+    assert.match(mail.text, /Client profile: Professional Partner/);
+    return providerFails
+      ? Response.json({ message: "private provider error" }, { status: 403 })
+      : Response.json({ id: "mock-localized-message" });
+  });
+
+  await withEnvironment(environment, async () => {
+    for (const locale of locales) {
+      const copy = getCommonCopy(locale);
+      const headers = { "X-BMYGYM-Locale": locale };
+      const localizedInput = { ...validInput, locale, clientType: "Professional Partner" };
+      const callsBeforeValidation = calls;
+      const invalid = await POST(request({ ...localizedInput, email: "invalid" }, headers));
+      assert.equal(invalid.status, 400);
+      const invalidBody = await invalid.json();
+      assert.equal(invalidBody.message, copy.api.validation);
+      assert.equal(invalidBody.error.fields.email, copy.validation.email);
+
+      for (const [payload, extraHeaders, status, message] of [
+        ["{", {}, 400, copy.api.invalid],
+        [localizedInput, { Origin: "https://untrusted.example" }, 403, copy.api.origin],
+        [localizedInput, { "Content-Type": "text/plain" }, 415, copy.api.origin],
+        [localizedInput, { "Content-Length": "33000" }, 413, copy.api.tooLong],
+      ] as const) {
+        const result = await POST(request(payload, { ...headers, ...extraHeaders }));
+        assert.equal(result.status, status);
+        assert.equal((await result.json()).message, message);
+      }
+      assert.equal(calls, callsBeforeValidation);
+
+      providerFails = false;
+      const success = await POST(request(localizedInput, headers));
+      assert.equal(success.status, 200);
+      assert.equal((await success.json()).message, copy.api.success);
+
+      providerFails = true;
+      const deliveryError = await POST(request(localizedInput, headers));
+      assert.equal(deliveryError.status, 502);
+      assert.equal((await deliveryError.json()).message, copy.api.delivery);
+    }
+  });
+  assert.equal(calls, locales.length * 2);
+});
+
+test("API rejects unsupported locale and client profile without accepting caller-supplied messages", async (context) => {
+  context.mock.method(globalThis, "fetch", async () => {
+    assert.fail("Invalid enquiries must not contact the mail provider");
+  });
+  await withEnvironment(environment, async () => {
+    const response = await POST(request({
+      ...validInput,
+      clientType: "Administrator",
+      locale: "../en",
+      messages: { locale: "caller-controlled message" },
+    }, { "X-BMYGYM-Locale": "es" }));
+    assert.equal(response.status, 400);
+    const result = await response.json();
+    assert.equal(result.error.fields.locale, getCommonCopy("es").validation.locale);
+    assert.equal(result.error.fields.clientType, getCommonCopy("es").validation.clientType);
+    assert.ok(!JSON.stringify(result).includes("caller-controlled"));
+  });
+});
+
+test("accepts a full-length Cyrillic message even when JSON encodes each character as a Unicode escape", async (context) => {
+  context.mock.method(globalThis, "fetch", async (_url: unknown, init?: RequestInit) => {
+    const mail = JSON.parse(String(init?.body));
+    assert.match(mail.text, /Website language: ru/);
+    assert.ok(mail.text.endsWith("Ж".repeat(5000)));
+    return Response.json({ id: "mock-cyrillic-message" });
+  });
+  await withEnvironment(environment, async () => {
+    const payload = JSON.stringify({ ...validInput, locale: "ru", message: "Ж".repeat(5000) })
+      .replaceAll("Ж", "\\u0416");
+    const response = await POST(request(payload, { "X-BMYGYM-Locale": "ru" }));
+    assert.equal(response.status, 200);
+    assert.equal((await response.json()).message, getCommonCopy("ru").api.success);
   });
 });

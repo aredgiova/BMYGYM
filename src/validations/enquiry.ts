@@ -1,3 +1,10 @@
+import en from "../i18n/en-common.json" with { type: "json" };
+import { isLocale, type Locale } from "../i18n/config.ts";
+import type { CommonCopy } from "../i18n/types.ts";
+
+export const CLIENT_TYPES = ["Private Client", "Professional Partner"] as const;
+export type ClientType = (typeof CLIENT_TYPES)[number];
+
 export const PROJECT_TYPES = [
   "Private Residence",
   "Superyacht / Yacht",
@@ -11,6 +18,8 @@ export type ProjectType = (typeof PROJECT_TYPES)[number];
 export type Enquiry = {
   fullName: string;
   email: string;
+  clientType: ClientType;
+  locale: Locale;
   projectType: ProjectType;
   message: string;
   privacy: true;
@@ -39,11 +48,14 @@ export function isEmailAddress(value: string): boolean {
   );
 }
 
-export function validateEnquiry(input: unknown): EnquiryValidation {
+export function validateEnquiry(
+  input: unknown,
+  messages: CommonCopy["validation"] = en.validation,
+): EnquiryValidation {
   if (typeof input !== "object" || input === null || Array.isArray(input)) {
     return {
       success: false,
-      errors: { message: "Please complete the enquiry form." },
+      errors: { message: messages.message },
     };
   }
 
@@ -54,6 +66,8 @@ export function validateEnquiry(input: unknown): EnquiryValidation {
 
   const fullName = text("fullName");
   const email = text("email");
+  const clientType = text("clientType");
+  const locale = values.locale === undefined ? "en" : values.locale;
   const projectType = text("projectType");
   const message = text("message");
   const company = text("company");
@@ -64,24 +78,29 @@ export function validateEnquiry(input: unknown): EnquiryValidation {
     fullName.length > 120 ||
     hasControlCharacter(fullName)
   ) {
-    errors.fullName = "Please enter your name (2–120 characters).";
+    errors.fullName = messages.fullName;
   }
   if (!isEmailAddress(email)) {
-    errors.email = "Please enter a valid email address.";
+    errors.email = messages.email;
+  }
+  if (!CLIENT_TYPES.some((type) => type === clientType)) {
+    errors.clientType = messages.clientType;
+  }
+  if (typeof locale !== "string" || !isLocale(locale)) {
+    errors.locale = messages.locale;
   }
   if (!PROJECT_TYPES.some((type) => type === projectType)) {
-    errors.projectType = "Please select a project type.";
+    errors.projectType = messages.projectType;
   }
   if (
     message.length < 20 ||
     message.length > 5000 ||
     message.includes("\u0000")
   ) {
-    errors.message =
-      "Please tell us about your project in 20–5,000 characters.";
+    errors.message = messages.message;
   }
   if (values.privacy !== true) {
-    errors.privacy = "Please agree to the privacy notice to send your enquiry.";
+    errors.privacy = messages.privacy;
   }
 
   for (const field of ["company", "location"] as const) {
@@ -90,14 +109,13 @@ export function validateEnquiry(input: unknown): EnquiryValidation {
       text(field).length > 160 ||
       hasControlCharacter(text(field))
     ) {
-      errors[field] = "Please use no more than 160 characters.";
+      errors[field] = messages[field];
     }
   }
 
   // This hidden field is never needed by visitors; reject automated submissions.
   if (values.website !== undefined && values.website !== "") {
-    errors.website =
-      "Unable to process this enquiry. Please contact hello@bmygym.com.";
+    errors.website = messages.website;
   }
 
   if (Object.keys(errors).length > 0) return { success: false, errors };
@@ -107,6 +125,8 @@ export function validateEnquiry(input: unknown): EnquiryValidation {
     data: {
       fullName,
       email,
+      clientType: clientType as ClientType,
+      locale: locale as Locale,
       projectType: projectType as ProjectType,
       message,
       privacy: true,

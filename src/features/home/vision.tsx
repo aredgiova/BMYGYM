@@ -1,90 +1,66 @@
 import { ConceptImage } from "@/components/shared/concept-image";
 import { Arrow } from "@/components/ui/arrow";
+import type { HomeCopy } from "@/i18n/types";
 
-export function Vision() {
+export function Vision({ copy }: { copy: HomeCopy }) {
+  const content = copy.vision;
   return (
     <section id="vision" className="vision" aria-labelledby="vision-title">
       <div className="section vision-inner">
         <div className="section-heading">
           <div>
             <h2 id="vision-title">
-              The next generation
+              {content.title}
               <br />
-              of <em>personalised longevity.</em>
+              <em>{content.titleEmphasis}</em>
             </h2>
           </div>
           <div className="vision-intro">
-            <p>Our vision extends beyond conventional wellness environments.</p>
-            <p>
-              BMYGYM explores signature concepts that bring together
-              architectural integration, innovative design and personalised
-              recovery experiences.
-            </p>
-            <p>
-              From integrated fitness and recovery solutions to future private
-              aviation concepts, we believe exceptional environments should
-              evolve around the individual.
-            </p>
+            {content.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
         </div>
         <div className="vision-grid">
           <article className="vision-wall">
             <ConceptImage
               src="/images/fitness-wall.webp"
-              alt="BMYGYM Fitness Wall concept with warm timber, champagne metal and integrated training elements"
+              alt={content.wall.imageAlt}
+              caption={content.wall.imageCaption}
               sizes="(max-width: 767px) 100vw, 60vw"
             />
-            <h3>BMYGYM Fitness Wall</h3>
-            <span className="concept-label">Signature concept</span>
-            <p>
-              An integrated architectural fitness concept designed to bring
-              movement into exceptional living environments.
-            </p>
+            <h3>{content.wall.name}</h3>
+            <span className="concept-label">{content.wall.label}</span>
+            <p>{content.wall.description}</p>
           </article>
           <article className="vision-capsule">
             <ConceptImage
               src="/images/recovery-capsule.webp"
-              alt="A BMYGYM Recovery Capsule concept set into a warm architectural interior with a sea view"
+              alt={content.capsule.imageAlt}
+              caption={content.capsule.imageCaption}
               sizes="(max-width: 767px) 100vw, 35vw"
             />
-            <h3>BMYGYM Recovery Capsule</h3>
-            <span className="concept-label">Signature concept</span>
-            <p>
-              A concept exploring the integration of personalised recovery
-              experiences into private wellness environments.
-            </p>
+            <h3>{content.capsule.name}</h3>
+            <span className="concept-label">{content.capsule.label}</span>
+            <p>{content.capsule.description}</p>
           </article>
         </div>
         <div className="future-concepts">
-          <p className="section-label">A horizon of possibilities</p>
+          <p className="section-label">{content.futureLabel}</p>
           <details className="editorial-details">
             <summary>
-              <span>BMYGYM AERO ONE</span>
+              <span>{content.aeroOneName}</span>
               <Arrow diagonal />
             </summary>
-            <p>
-              A transformable luxury recovery lounge concept for private
-              aircraft, envisioned to transition from an open seating
-              environment into a more private recovery space.
-            </p>
+            <p>{content.aeroOneDescription}</p>
           </details>
           <details className="editorial-details">
             <summary>
-              <span>BMYGYM AERO SIGNATURE</span>
+              <span>{content.aeroSignatureName}</span>
               <Arrow diagonal />
             </summary>
-            <p>
-              A future concept exploring a fully enclosed bespoke longevity and
-              recovery capsule for larger VIP aircraft interiors.
-            </p>
+            <p>{content.aeroSignatureDescription}</p>
           </details>
         </div>
-        <p className="vision-disclaimer">
-          Design visions, presented as concept visualisations. These concepts
-          are not represented as manufactured products or certified aircraft
-          equipment. Aviation concepts are subject to aircraft-specific
-          technical feasibility, safety and certification requirements.
-        </p>
+        <p className="vision-disclaimer">{content.disclaimer}</p>
       </div>
     </section>
   );

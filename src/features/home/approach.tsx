@@ -1,26 +1,9 @@
 import { ConceptImage } from "@/components/shared/concept-image";
 import { TextLink } from "@/components/ui/text-link";
+import type { HomeCopy } from "@/i18n/types";
 
-const stages = [
-  {
-    name: "Discover",
-    copy: "We listen, explore your vision and understand the environment, objectives and individual requirements.",
-  },
-  {
-    name: "Conceive",
-    copy: "We develop a bespoke concept, bringing together architectural thinking, wellness expertise and creative possibilities.",
-  },
-  {
-    name: "Curate",
-    copy: "We identify suitable products, technologies, materials and specialist partners — or explore the development of new solutions where required.",
-  },
-  {
-    name: "Coordinate",
-    copy: "Depending on the agreed project scope, we collaborate with architects, manufacturers and project partners to support the concept’s realisation.",
-  },
-];
-
-export function Approach() {
+export function Approach({ copy }: { copy: HomeCopy }) {
+  const content = copy.approach;
   return (
     <section
       id="approach"
@@ -30,21 +13,21 @@ export function Approach() {
       <div className="section-heading">
         <div>
           <h2 id="approach-title">
-            Every exceptional project
+            {content.title}
             <br />
-            begins with <em>a conversation.</em>
+            <em>{content.titleEmphasis}</em>
           </h2>
         </div>
-        <TextLink href="#enquiry">Discuss your project</TextLink>
+        <TextLink href="#enquiry">{content.action}</TextLink>
       </div>
       <div className="approach-body">
         <ConceptImage
           src="/images/approach-concept.webp"
-          alt="An architectural concept model showing an integrated BMYGYM wellness environment on a yacht deck"
-          caption="An exploration of space, material and possibility · Concept visualisation"
+          alt={content.imageAlt}
+          caption={content.imageCaption}
         />
         <ol className="approach-stages">
-          {stages.map((stage, index) => (
+          {content.stages.map((stage, index) => (
             <li key={stage.name}>
               <span className="stage-number">0{index + 1}</span>
               <div>

@@ -34,10 +34,12 @@ export function readEnquiryMailConfig(
 
 export function enquiryMailText(enquiry: Enquiry): string {
   return [
-    "New BMYGYM private enquiry",
+    "New BMYGYM project enquiry",
     "",
     `Name: ${enquiry.fullName}`,
     `Email: ${enquiry.email}`,
+    `Client profile: ${enquiry.clientType}`,
+    `Website language: ${enquiry.locale}`,
     `Project: ${enquiry.projectType}`,
     `Company: ${enquiry.company || "Not provided"}`,
     `Location: ${enquiry.location || "Not provided"}`,
@@ -64,7 +66,7 @@ export async function sendEnquiry(
         from: `BMYGYM <${config.from}>`,
         to: [config.to],
         reply_to: enquiry.email,
-        subject: `BMYGYM private enquiry · ${enquiry.projectType}`,
+        subject: `BMYGYM project enquiry · ${enquiry.projectType}`,
         text: enquiryMailText(enquiry),
       }),
       signal: AbortSignal.timeout(8000),

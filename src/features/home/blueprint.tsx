@@ -1,15 +1,8 @@
 import { Arrow } from "@/components/ui/arrow";
+import type { HomeCopy } from "@/i18n/types";
 
-const scope = [
-  "Client & lifestyle briefing",
-  "Spatial & functional analysis",
-  "Movement, recovery & longevity strategy",
-  "Concept & visual direction",
-  "Curated technologies & bespoke elements",
-  "Next-stage implementation roadmap",
-];
-
-export function Blueprint() {
+export function Blueprint({ copy }: { copy: HomeCopy }) {
+  const content = copy.blueprint;
   return (
     <section
       id="blueprint"
@@ -19,45 +12,27 @@ export function Blueprint() {
       <div className="blueprint-inner">
         <div className="blueprint-intro">
           <h2 id="blueprint-title">
-            Your vision.
+            {content.title}
             <br />
-            <em>A considered beginning.</em>
+            <em>{content.titleEmphasis}</em>
           </h2>
-          <p>
-            Every exceptional environment begins with a clear understanding of
-            the person, the architecture and the purpose of the space.
-          </p>
+          <p>{content.intro}</p>
           <a className="button button-dark" href="#enquiry">
-            Begin your project
+            {content.action}
             <Arrow diagonal />
           </a>
         </div>
         <div className="blueprint-details">
-          <h3>
-            BMYGYM Private
-            <br />
-            Longevity Blueprint
-          </h3>
-          <p className="commission-caption">A private commission</p>
-          <p>
-            The first bespoke project phase — translating your vision into a
-            tailored movement, recovery and longevity concept.
-          </p>
-          <p>
-            From spatial strategy and curated technologies to visual direction
-            and future implementation, the Blueprint creates the foundation for
-            what comes next.
-          </p>
+          <h3>{content.name}</h3>
+          <p className="commission-caption">{content.caption}</p>
+          <p>{content.description}</p>
+          <p>{content.agreement}</p>
           <ul>
-            {scope.map((item) => (
+            {content.scope.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <p className="blueprint-note">
-            A professional, paid concept service. The scope is individually
-            defined around your project, before manufacturing or implementation
-            begins.
-          </p>
+          <p className="blueprint-note">{content.note}</p>
         </div>
       </div>
     </section>

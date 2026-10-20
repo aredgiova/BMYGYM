@@ -1,0 +1,162 @@
+{
+  "hero": {
+    "imageAlt": "BMYGYM Wohnkonzept mit integrierter Fitness Wall, Recovery Capsule und Pilates-Reformer neben einem Innenpool",
+    "title": "Auf Sie abgestimmt.",
+    "titleEmphasis": "Für außergewöhnliche Räume geschaffen.",
+    "service": "Maßgeschneiderte Longevity-Umgebungen",
+    "positioning": "BMYGYM konzipiert und integriert maßgeschneiderte Longevity-Umgebungen für außergewöhnliche Objekte – an Land, auf See und in der Luft.",
+    "enquiry": "Über Ihr Projekt sprechen",
+    "worlds": ["Land", "See", "Luft"],
+    "caption": "BMYGYM Konzeptvisualisierung",
+    "discover": "BMYGYM entdecken",
+    "discoverAria": "Die Philosophie von BMYGYM entdecken",
+    "introductionLabel": "Individuelle Longevity-Umgebungen, für Sie konzipiert und integriert",
+    "introduction": "Wir konzipieren, gestalten, wählen aus und koordinieren – für ganzheitliche Umgebungen, die Bewegung, Regeneration und Longevity verbinden.",
+    "detail": "Unsere eigenen Gestaltungskonzepte, die Signature Concepts, verbinden sich mit sorgfältig ausgewählten Premiumprodukten spezialisierter Hersteller. Gemeinsam mit Architekten, Innenarchitekten und Fachpartnern stimmen wir jede Umgebung auf ihren Ort und die Menschen ab, die sie nutzen werden.",
+    "approachLink": "Unseren Ansatz entdecken"
+  },
+  "workWithUs": {
+    "title": "Zwei Wege der Zusammenarbeit",
+    "clients": [
+      {
+        "title": "Privatkunden",
+        "description": "Maßgeschneiderte Longevity-Umgebungen für private Residenzen, Superyachten und die Privatluftfahrt.",
+        "action": "Über Ihr privates Projekt sprechen",
+        "imageAlt": "Ein integrierter Pilates-Reformer in einer ruhigen privaten Residenz mit weitem Meerblick",
+        "imageCaption": "BMYGYM Konzeptvisualisierung"
+      },
+      {
+        "title": "Professionelle Partner",
+        "description": "Gestaltung und Integration im Bereich Longevity für Immobilienentwickler, Architekten, Yachtdesigner und luxuriöse Hospitality-Projekte.",
+        "action": "Über ein professionelles Projekt sprechen",
+        "imageAlt": "Ein architektonisches Konzeptmodell eines integrierten BMYGYM Wellnessbereichs auf einem Yachtdeck",
+        "imageCaption": "BMYGYM Konzeptvisualisierung"
+      }
+    ]
+  },
+  "philosophy": {
+    "title": "Über klassische Wellness",
+    "titleEmphasis": "hinaus.",
+    "lead": "BMYGYM ist ein unabhängiges, von seiner Gründerin geführtes Unternehmen, das maßgeschneiderte Longevity-Umgebungen konzipiert und integriert.",
+    "opening": "Unser Ausgangspunkt sind der Mensch, die Architektur und die Bestimmung des Raumes.",
+    "statement": "Am Anfang stehen Sie.",
+    "personalLines": ["Ihre Vision. Ihr Lebensstil.", "Ihr Raum. Ihre Vorstellungen."],
+    "body": "Wir verbinden unsere eigenen Signature Concepts mit Premiumprodukten und Technologien ausgewählter Spezialhersteller. Diese Freiheit erlaubt es uns, jedes Projekt individuell zu betrachten und passende Lösungen zu einem stimmigen Ganzen zusammenzuführen.",
+    "collaboration": "Gemeinsam mit Architekten, Innenarchitekten, Herstellern und weiteren Fachpartnern entwickeln wir das Konzept, wählen seine Elemente aus und koordinieren die Integration im vereinbarten Projektumfang.",
+    "link": "Den Private Longevity Blueprint entdecken",
+    "imageAlt": "Ein integrierter Pilates-Reformer in einer ruhigen privaten Residenz mit weitem Meerblick",
+    "imageCaption": "BMYGYM Konzeptvisualisierung",
+    "imageNote": "Ein Raum, der sich",
+    "imageNoteEmphasis": "ganz nach Ihnen anfühlt.",
+    "motto": "Als Ganzes konzipiert.",
+    "mottoEmphasis": "Bis ins Detail durchdacht."
+  },
+  "environments": {
+    "title": "Außergewöhnlich leben.",
+    "titleEmphasis": "Ohne Grenzen.",
+    "introLines": ["Drei Welten. Eine individuelle Vision.", "Longevity, in jeder Dimension durchdacht."],
+    "land": {
+      "name": "Land",
+      "audience": "Private Residenzen und luxuriöse Hospitality-Projekte",
+      "enquiryAria": "Über ein privates Wohn- oder Hospitality-Projekt sprechen",
+      "imageAlt": "Wellness- und Fitnesskonzepte in Champagnertönen, integriert in eine lichtdurchflutete Innenarchitektur",
+      "imageCaption": "BMYGYM Konzeptvisualisierung",
+      "description": "Maßgeschneiderte Longevity-Umgebungen für außergewöhnliche Residenzen, Privatvillen, Penthäuser, Boutiquehotels und luxuriöse Hospitality-Destinationen.",
+      "detail": "Vom privaten Rückzugsort bis zum integrierten Konzept für eine größere Projektentwicklung bringen wir Bewegung, Regeneration und Wellness in Einklang mit der Architektur und den Anforderungen des jeweiligen Projekts."
+    },
+    "sea": {
+      "name": "See",
+      "audience": "Superyachten und private Yachten",
+      "enquiryAria": "Über ein Superyacht- oder privates Yachtprojekt sprechen",
+      "imageAlt": "Eine BMYGYM Fitness Wall aus dunklem Holz und ein Regenerationskonzept, integriert in eine Yacht mit Meerblick",
+      "imageCaption": "BMYGYM Konzeptvisualisierung",
+      "description": "Maßgeschneiderte Umgebungen für Bewegung und Regeneration, konzipiert für das Leben auf See.",
+      "detail": "Von der privaten Wellness-Suite des Eigners bis zum integrierten Fitness- und Regenerationsbereich erkunden wir gemeinsam mit Yachtdesignern, Architekten und spezialisierten maritimen Partnern Lösungen für das Leben an Bord."
+    },
+    "air": {
+      "name": "Luft",
+      "audience": "Privatluftfahrt",
+      "enquiryAria": "Über ein Konzept für die Privatluftfahrt sprechen",
+      "imageAlt": "AERO ONE Konzept: ein wandelbarer Regenerationssessel aus cremefarbenem Leder in einem Privatflugzeug, mit ausgefahrener Beinstütze und integrierten Leuchtpaneelen",
+      "imageCaption": "BMYGYM AERO ONE · Konzeptvisualisierung",
+      "subtitle": "AERO ONE – Longevity über den Wolken.",
+      "description": "Unser Konzept eines wandelbaren Regenerations- und Longevity-Sessels für die Privatluftfahrt erkundet ein persönlicheres Erleben von Komfort, Privatsphäre und Erholung während des Fluges.",
+      "status": "Konzept in Entwicklung. AERO ONE ist weder zertifiziert noch im Handel erhältlich. Entwicklung und Integration unterliegen den Anforderungen an technische Machbarkeit, Sicherheit und luftfahrtrechtliche Zertifizierung des jeweiligen Luftfahrzeugs.",
+      "detailsLabel": "Unsere Vision für die Luftfahrt entdecken",
+      "detail": "Im Dialog mit der Kabinenarchitektur untersucht AERO ONE, wie sich eine elegante Sitzumgebung in einen persönlichen Regenerationsbereich verwandeln könnte. Im Verlauf der Konzeptentwicklung werden spezialisierte Luftfahrtpartner einbezogen."
+    }
+  },
+  "blueprint": {
+    "title": "Ihre Vision.",
+    "titleEmphasis": "Ein durchdachter Anfang.",
+    "intro": "Jede außergewöhnliche Umgebung beginnt mit einem klaren Verständnis des Menschen, der Architektur und der Bestimmung des Raumes.",
+    "action": "Eine Blueprint-Beauftragung besprechen",
+    "name": "BMYGYM Private Longevity Blueprint",
+    "caption": "Eine professionelle, vergütete Beauftragung",
+    "description": "Der Private Longevity Blueprint ist unsere erste professionelle Phase der Konzeption und Gestaltung: eine individuelle Grundlage für Ihre Bewegungs-, Regenerations- und Longevity-Umgebung.",
+    "agreement": "Die Gestaltung beginnt nach Vereinbarung einer formellen, vergüteten Beauftragung. Leistungsumfang, Ergebnisse und Honorar legen wir gemeinsam mit Ihnen fest, bevor diese Arbeit beginnt.",
+    "scope": [
+      "Briefing zu Kundenwünschen, Lebensstil und Projekt",
+      "Räumliche und funktionale Analyse",
+      "Strategie für Bewegung, Regeneration und Longevity",
+      "Konzept und gestalterische Ausrichtung",
+      "Erste Auswahl von Technologien und maßgeschneiderten Elementen",
+      "Fahrplan für die weiteren Projektphasen"
+    ],
+    "note": "Die Ergebnisse richten sich nach dem vereinbarten Leistungsumfang. Weitere Gestaltung, Produktauswahl, Fertigungskoordination und Integration können entsprechend den Projektanforderungen in nachfolgenden Phasen beauftragt werden."
+  },
+  "approach": {
+    "title": "Jedes außergewöhnliche Projekt",
+    "titleEmphasis": "beginnt mit einem Gespräch.",
+    "action": "Über Ihr Projekt sprechen",
+    "imageAlt": "Ein architektonisches Konzeptmodell eines integrierten BMYGYM Wellnessbereichs auf einem Yachtdeck",
+    "imageCaption": "Eine Erkundung von Raum, Material und Möglichkeiten · Konzeptvisualisierung",
+    "stages": [
+      {
+        "name": "Verstehen",
+        "copy": "In einem ersten Gespräch erfassen wir Ihre Vision, das Umfeld und die Anforderungen des Projekts. Anschließend vereinbaren wir den Leistungsumfang, die Ergebnisse und das Honorar für Ihren Private Longevity Blueprint."
+      },
+      {
+        "name": "Konzipieren",
+        "copy": "Im Rahmen des beauftragten Blueprint entwickeln wir die räumliche Strategie, das Konzept und die gestalterische Ausrichtung. Dabei verbinden wir architektonisches Denken mit Bewegung, Regeneration und Longevity."
+      },
+      {
+        "name": "Auswählen",
+        "copy": "In einer vereinbarten Folgephase verfeinern wir die Auswahl von Premiumprodukten, Technologien, Materialien und Fachpartnern sowie gegebenenfalls passenden Signature Concepts."
+      },
+      {
+        "name": "Koordinieren",
+        "copy": "Im Rahmen der beauftragten Leistungen koordinieren wir die Zusammenarbeit mit Architekten, Innenarchitekten, spezialisierten Herstellern und Projektteams, um Fertigung und Integration zu begleiten."
+      }
+    ]
+  },
+  "vision": {
+    "title": "Die nächste Generation",
+    "titleEmphasis": "individueller Longevity.",
+    "intro": [
+      "Signature Concepts bringen die eigene Gestaltungsvision von BMYGYM für Bewegung, Regeneration und Longevity zum Ausdruck.",
+      "Zusammen mit sorgfältig ausgewählten Premiumprodukten spezialisierter Hersteller werden sie als Teil einer ganzheitlichen, auf den einzelnen Menschen abgestimmten Umgebung betrachtet.",
+      "Architektonische Integration, Materialcharakter und das Raumerlebnis prägen jedes Konzept."
+    ],
+    "wall": {
+      "name": "BMYGYM Fitness Wall",
+      "label": "Signature Concepts · Gestaltungskonzept",
+      "imageAlt": "BMYGYM Fitness Wall Konzept mit warmem Holz, champagnerfarbenem Metall und integrierten Trainingselementen",
+      "imageCaption": "BMYGYM Fitness Wall · Konzeptvisualisierung",
+      "description": "Ein architektonisches Fitnesskonzept, das untersucht, wie Bewegung und Training zum integralen Bestandteil einer außergewöhnlichen Wohnumgebung werden können."
+    },
+    "capsule": {
+      "name": "BMYGYM Recovery Capsule",
+      "label": "Signature Concepts · Gestaltungskonzept",
+      "imageAlt": "Ein BMYGYM Recovery Capsule Konzept, eingebettet in eine warme Innenarchitektur mit Meerblick",
+      "imageCaption": "BMYGYM Recovery Capsule · Konzeptvisualisierung",
+      "description": "Ein Gestaltungskonzept für ein eigenständiges, individuelles Regenerationserlebnis innerhalb einer privaten Longevity-Umgebung."
+    },
+    "futureLabel": "Ein Horizont voller Möglichkeiten",
+    "aeroOneName": "BMYGYM AERO ONE",
+    "aeroOneDescription": "Ein Konzept für einen wandelbaren Regenerations- und Longevity-Sessel in Privatflugzeugen, gedacht als Übergang von einer eleganten Sitzumgebung zu einem geschützteren Regenerationsbereich.",
+    "aeroSignatureName": "BMYGYM AERO SIGNATURE",
+    "aeroSignatureDescription": "Ein Zukunftskonzept für eine vollständig geschlossene, maßgeschneiderte Longevity- und Regenerationskapsel in größeren VIP-Flugzeugkabinen.",
+    "disclaimer": "Signature Concepts sind Gestaltungsvisionen in Entwicklung. Sie werden als Konzeptvisualisierungen gezeigt und sind keine im Handel erhältlichen Produkte. AERO ONE und andere Luftfahrtkonzepte sind keine zertifizierte Luftfahrzeugausstattung. Entwicklung und Integration unterliegen weiterhin den Anforderungen an technische Machbarkeit, Sicherheit und luftfahrtrechtliche Zertifizierung des jeweiligen Luftfahrzeugs."
+  }
+}

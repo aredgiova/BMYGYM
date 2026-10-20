@@ -2,19 +2,21 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Arrow } from "@/components/ui/arrow";
+import { LanguageSelector } from "./language-selector";
+import { localePath, type Locale } from "@/i18n/config";
+import type { CommonCopy } from "@/i18n/types";
 
-const links = [
-  { href: "#philosophy", label: "Philosophy" },
-  { href: "#environments", label: "Environments" },
-  { href: "#approach", label: "Our Approach" },
-  { href: "#vision", label: "Vision" },
-];
-
-export function Header({ isHome = true }: { isHome?: boolean }) {
+export function Header({ isHome = true, locale, copy }: { isHome?: boolean; locale: Locale; copy: CommonCopy["nav"] }) {
+  const links = [
+    { href: "#philosophy", label: copy.philosophy },
+    { href: "#environments", label: copy.environments },
+    { href: "#approach", label: copy.approach },
+    { href: "#vision", label: copy.vision },
+  ];
   const [open, setOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const headerRef = useRef<HTMLElement>(null);
-  const prefix = isHome ? "" : "/";
+  const prefix = isHome ? "" : localePath(locale);
 
   useEffect(() => {
     if (!open) return;
@@ -31,7 +33,7 @@ export function Header({ isHome = true }: { isHome?: boolean }) {
       )
         setOpen(false);
     }
-    const media = window.matchMedia("(min-width: 1200px)");
+    const media = window.matchMedia("(min-width: 1440px)");
     const onResize = () => {
       if (media.matches) setOpen(false);
     };
@@ -51,12 +53,12 @@ export function Header({ isHome = true }: { isHome?: boolean }) {
         <a
           className="wordmark"
           href={`${prefix}#home`}
-          aria-label="BMYGYM home"
+          aria-label={copy.home}
           onClick={() => setOpen(false)}
         >
           BMYGYM
         </a>
-        <nav className="desktop-nav" aria-label="Main navigation">
+        <nav className="desktop-nav" aria-label={copy.main}>
           {links.map((link) => (
             <a key={link.href} href={`${prefix}${link.href}`}>
               {link.label}
@@ -64,18 +66,19 @@ export function Header({ isHome = true }: { isHome?: boolean }) {
           ))}
         </nav>
         <div className="header-actions">
+          <LanguageSelector locale={locale} label={copy.language} />
           <a
             className="header-enquiry"
             href={`${prefix}#enquiry`}
             onClick={() => setOpen(false)}
           >
-            Private Enquiry
+            {copy.enquiry}
           </a>
           <button
             ref={toggleRef}
             type="button"
             className={`menu-toggle${open ? " is-open" : ""}`}
-            aria-label={open ? "Close navigation" : "Open navigation"}
+            aria-label={open ? copy.close : copy.open}
             aria-expanded={open}
             aria-controls="mobile-navigation"
             onClick={() => setOpen(!open)}
@@ -88,7 +91,7 @@ export function Header({ isHome = true }: { isHome?: boolean }) {
       <nav
         id="mobile-navigation"
         className="mobile-nav"
-        aria-label="Mobile navigation"
+        aria-label={copy.mobile}
         hidden={!open}
       >
         {links.map((link) => (
@@ -102,13 +105,11 @@ export function Header({ isHome = true }: { isHome?: boolean }) {
           </a>
         ))}
         <a href={`${prefix}#enquiry`} onClick={() => setOpen(false)}>
-          Private Enquiry
+          {copy.enquiry}
           <Arrow diagonal />
         </a>
         <p>
-          Designed around you.
-          <br />
-          Created for exceptional spaces.
+          {copy.tagline}
         </p>
       </nav>
     </header>

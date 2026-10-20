@@ -6,12 +6,13 @@ import {
   validateEnquiry,
   type EnquiryErrors,
 } from "../../../../validations/enquiry.ts";
+import { getCommonCopy } from "../../../../i18n/common.ts";
+import { isLocale } from "../../../../i18n/config.ts";
+import type { CommonCopy } from "../../../../i18n/types.ts";
 
 export const runtime = "nodejs";
 
-const MAX_BODY_BYTES = 16 * 1024;
-const FALLBACK_MESSAGE =
-  "Our enquiry service is temporarily unavailable. Please contact hello@bmygym.com.";
+const MAX_BODY_BYTES = 32 * 1024;
 
 function failure(
   status: number,
@@ -73,7 +74,10 @@ function trustedOrigins(request: Request): Set<string> {
   return origins;
 }
 
-async function readBoundedBody(request: Request): Promise<string | Response> {
+async function readBoundedBody(
+  request: Request,
+  messages: CommonCopy["api"],
+): Promise<string | Response> {
   const length = request.headers.get("content-length");
   if (
     length !== null &&
@@ -82,12 +86,12 @@ async function readBoundedBody(request: Request): Promise<string | Response> {
     return failure(
       413,
       "PAYLOAD_TOO_LARGE",
-      "Your enquiry is too long. Please shorten it and try again.",
+      messages.tooLong,
     );
   }
 
   if (!request.body)
-    return failure(400, "INVALID_JSON", "Please complete the enquiry form.");
+    return failure(400, "INVALID_JSON", messages.invalid);
 
   const reader = request.body.getReader();
   const chunks: Uint8Array[] = [];
@@ -103,7 +107,7 @@ async function readBoundedBody(request: Request): Promise<string | Response> {
         return failure(
           413,
           "PAYLOAD_TOO_LARGE",
-          "Your enquiry is too long. Please shorten it and try again.",
+          messages.tooLong,
         );
       }
       chunks.push(chunk.value);
@@ -120,7 +124,7 @@ async function readBoundedBody(request: Request): Promise<string | Response> {
     return failure(
       400,
       "INVALID_JSON",
-      "We could not read your enquiry. Please try again.",
+      messages.invalid,
     );
   } finally {
     reader.releaseLock();
@@ -128,14 +132,16 @@ async function readBoundedBody(request: Request): Promise<string | Response> {
 }
 
 export async function POST(request: Request): Promise<Response> {
+  const requestedLocale = request.headers.get("x-bmygym-locale") || "en";
+  let copy = getCommonCopy(isLocale(requestedLocale) ? requestedLocale : "en");
   const origins = trustedOrigins(request);
   if (!origins.size)
-    return failure(503, "SERVICE_UNAVAILABLE", FALLBACK_MESSAGE);
+    return failure(503, "SERVICE_UNAVAILABLE", copy.api.unavailable);
   if (!origins.has(request.headers.get("origin") || "")) {
     return failure(
       403,
       "ORIGIN_NOT_ALLOWED",
-      "Please send your enquiry using the form on this website.",
+      copy.api.origin,
     );
   }
   if (
@@ -145,11 +151,11 @@ export async function POST(request: Request): Promise<Response> {
     return failure(
       415,
       "UNSUPPORTED_MEDIA_TYPE",
-      "Please send your enquiry using the form on this website.",
+      copy.api.origin,
     );
   }
 
-  const body = await readBoundedBody(request);
+  const body = await readBoundedBody(request, copy.api);
   if (body instanceof Response) return body;
 
   let input: unknown;
@@ -159,29 +165,35 @@ export async function POST(request: Request): Promise<Response> {
     return failure(
       400,
       "INVALID_JSON",
-      "We could not read your enquiry. Please try again.",
+      copy.api.invalid,
     );
   }
 
-  const validation = validateEnquiry(input);
+  if (
+    typeof input === "object" && input !== null && !Array.isArray(input) &&
+    "locale" in input && typeof input.locale === "string" && isLocale(input.locale)
+  ) {
+    copy = getCommonCopy(input.locale);
+  }
+  const validation = validateEnquiry(input, copy.validation);
   if (!validation.success) {
     return failure(
       400,
       "VALIDATION_ERROR",
-      "Please review the highlighted fields.",
+      copy.api.validation,
       validation.errors,
     );
   }
 
   const config = readEnquiryMailConfig(process.env);
-  if (!config) return failure(503, "SERVICE_UNAVAILABLE", FALLBACK_MESSAGE);
+  if (!config) return failure(503, "SERVICE_UNAVAILABLE", copy.api.unavailable);
 
   const delivery = await sendEnquiry(validation.data, config);
   if (!delivery.success) {
     return failure(
       delivery.reason === "unavailable" ? 503 : 502,
       "DELIVERY_FAILED",
-      "We could not confirm your enquiry was sent. Please contact hello@bmygym.com.",
+      copy.api.delivery,
     );
   }
 
@@ -189,8 +201,7 @@ export async function POST(request: Request): Promise<Response> {
     {
       success: true,
       data: { submitted: true },
-      message:
-        "Thank you for your enquiry. Your message has been received. We look forward to exploring your vision.",
+      message: copy.api.success,
       error: null,
     },
     {

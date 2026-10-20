@@ -13,7 +13,7 @@ export const siteConfig = {
   name: "BMYGYM",
   title: "BMYGYM | Bespoke Longevity Environments for Land, Sea & Air",
   description:
-    "BMYGYM conceives bespoke wellness, recovery and longevity environments for luxury residences, superyachts, hospitality and private aviation.",
+    "BMYGYM creates and integrates bespoke longevity environments for exceptional residences, superyachts, luxury hospitality and private aviation.",
   url: canonicalUrl.origin,
   email: "hello@bmygym.com",
 } as const;

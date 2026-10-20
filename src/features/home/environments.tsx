@@ -1,7 +1,9 @@
 import { ConceptImage } from "@/components/shared/concept-image";
 import { Arrow } from "@/components/ui/arrow";
+import type { HomeCopy } from "@/i18n/types";
 
-export function Environments() {
+export function Environments({ copy }: { copy: HomeCopy }) {
+  const content = copy.environments;
   return (
     <section
       id="environments"
@@ -11,15 +13,18 @@ export function Environments() {
       <div className="section-heading">
         <div>
           <h2 id="environments-title">
-            Exceptional living.
+            {content.title}
             <br />
-            <em>Without boundaries.</em>
+            <em>{content.titleEmphasis}</em>
           </h2>
         </div>
         <p>
-          Three worlds. One individual vision.
-          <br />
-          Longevity, considered in every dimension.
+          {content.introLines.map((line, index) => (
+            <span key={line}>
+              {index > 0 && <br />}
+              {line}
+            </span>
+          ))}
         </p>
       </div>
       <div className="environments-grid">
@@ -27,12 +32,13 @@ export function Environments() {
           <a
             className="environment-image-link"
             href="#enquiry"
-            aria-label="Enquire about a private residence or hospitality project"
+            aria-label={content.land.enquiryAria}
           >
             <ConceptImage
               className="land-image"
               src="/images/land-wellness.webp"
-              alt="Champagne-toned wellness and fitness concepts integrated into a light-filled architectural interior"
+              alt={content.land.imageAlt}
+              caption={content.land.imageCaption}
               sizes="(max-width: 767px) 100vw, 55vw"
             />
           </a>
@@ -40,36 +46,26 @@ export function Environments() {
             <div className="environment-title">
               <h3>
                 <a className="environment-heading-link" href="#enquiry">
-                  Land
+                  {content.land.name}
                   <Arrow diagonal />
                 </a>
               </h3>
-              <span>
-                Private residences
-                <br />& luxury hospitality
-              </span>
+              <span>{content.land.audience}</span>
             </div>
-            <p>
-              Bespoke longevity environments for exceptional residences, private
-              villas, penthouses, boutique hotels and luxury hospitality
-              destinations.
-            </p>
-            <p>
-              Thoughtfully integrated movement, recovery and wellness solutions
-              designed around the architecture, lifestyle and individual
-              requirements of each project.
-            </p>
+            <p>{content.land.description}</p>
+            <p>{content.land.detail}</p>
           </div>
         </article>
         <article className="environment">
           <a
             className="environment-image-link"
             href="#enquiry"
-            aria-label="Enquire about a superyacht or private yacht project"
+            aria-label={content.sea.enquiryAria}
           >
             <ConceptImage
               src="/images/sea-yacht.webp"
-              alt="A dark timber BMYGYM fitness wall and recovery concept integrated into a yacht overlooking the sea"
+              alt={content.sea.imageAlt}
+              caption={content.sea.imageCaption}
               sizes="(max-width: 767px) 100vw, 55vw"
             />
           </a>
@@ -77,38 +73,27 @@ export function Environments() {
             <div className="environment-title">
               <h3>
                 <a className="environment-heading-link" href="#enquiry">
-                  Sea
+                  {content.sea.name}
                   <Arrow diagonal />
                 </a>
               </h3>
-              <span>
-                Superyachts
-                <br />& private yachts
-              </span>
+              <span>{content.sea.audience}</span>
             </div>
-            <p>
-              Bespoke wellness and recovery environments conceived for life at
-              sea.
-            </p>
-            <p>
-              From private owner’s wellness suites to integrated fitness and
-              recovery concepts, BMYGYM explores individual solutions in
-              collaboration with yacht designers, architects and specialised
-              marine partners.
-            </p>
+            <p>{content.sea.description}</p>
+            <p>{content.sea.detail}</p>
           </div>
         </article>
         <article className="environment">
           <a
             className="environment-image-link"
             href="#enquiry"
-            aria-label="Enquire about a private aviation project"
+            aria-label={content.air.enquiryAria}
           >
             <ConceptImage
               className="air-image"
-              src="/images/air-aviation-fitness.webp"
-              alt="Private jet fitness studio concept with a Pilates reformer, integrated cable training, dumbbells and oval windows above the clouds"
-              caption="BMYGYM AERO ONE · Concept visualisation"
+              src="/images/aero-one-private-aviation.webp"
+              alt={content.air.imageAlt}
+              caption={content.air.imageCaption}
               sizes="(max-width: 767px) 100vw, 55vw"
             />
           </a>
@@ -116,35 +101,21 @@ export function Environments() {
             <div className="environment-title">
               <h3>
                 <a className="environment-heading-link" href="#enquiry">
-                  Air
+                  {content.air.name}
                   <Arrow diagonal />
                 </a>
               </h3>
-              <span>
-                Private
-                <br />
-                aviation
-              </span>
+              <span>{content.air.audience}</span>
             </div>
-            <p className="environment-subtitle">Longevity Above the Clouds.</p>
-            <p>
-              BMYGYM explores bespoke recovery and longevity concepts for
-              exceptional private aircraft interiors.
-            </p>
+            <p className="environment-subtitle">{content.air.subtitle}</p>
+            <p>{content.air.description}</p>
+            <p className="environment-status">{content.air.status}</p>
             <details className="editorial-details">
               <summary>
-                Explore the aviation vision
+                {content.air.detailsLabel}
                 <Arrow />
               </summary>
-              <p>
-                From transformable recovery lounges to future integrated wellness
-                environments, our vision is to bring personalised comfort, privacy
-                and restoration into private aviation.
-              </p>
-              <p className="small-note">
-                Every aviation concept is subject to aircraft-specific technical
-                feasibility, safety and certification requirements.
-              </p>
+              <p>{content.air.detail}</p>
             </details>
           </div>
         </article>

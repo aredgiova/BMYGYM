@@ -1,7 +1,9 @@
 import { ConceptImage } from "@/components/shared/concept-image";
 import { TextLink } from "@/components/ui/text-link";
+import type { HomeCopy } from "@/i18n/types";
 
-export function Philosophy() {
+export function Philosophy({ copy }: { copy: HomeCopy }) {
+  const content = copy.philosophy;
   return (
     <section
       id="philosophy"
@@ -10,51 +12,41 @@ export function Philosophy() {
     >
       <div className="philosophy-copy">
         <h2 id="philosophy-title">
-          Beyond conventional
+          {content.title}
           <br />
-          <em>wellness.</em>
+          <em>{content.titleEmphasis}</em>
         </h2>
-        <p className="philosophy-lead">
-          BMYGYM is an independent, founder-led luxury longevity concept house.
-        </p>
-        <p>
-          We do not begin with a catalogue, a predefined collection or a
-          standard solution.
-        </p>
-        <p className="philosophy-statement">We begin with you.</p>
+        <p className="philosophy-lead">{content.lead}</p>
+        <p>{content.opening}</p>
+        <p className="philosophy-statement">{content.statement}</p>
         <p className="personal-line">
-          Your vision. Your lifestyle.
-          <br />
-          Your space. Your ambitions.
+          {content.personalLines.map((line, index) => (
+            <span key={line}>
+              {index > 0 && <br />}
+              {line}
+            </span>
+          ))}
         </p>
-        <p>
-          Every project is approached individually — whether integrating
-          exceptional existing technologies, reimagining conventional solutions
-          or conceiving something entirely new.
-        </p>
-        <p>
-          Working alongside architects, designers and specialised partners, we
-          bring together creativity, expertise and carefully selected solutions
-          to develop environments that are as individual as the people they are
-          created for.
-        </p>
-        <TextLink href="#blueprint">Discover your possibilities</TextLink>
+        <p>{content.body}</p>
+        <p>{content.collaboration}</p>
+        <TextLink href="#blueprint">{content.link}</TextLink>
       </div>
       <div className="philosophy-visual">
         <ConceptImage
           src="/images/philosophy-residence.webp"
-          alt="An integrated Pilates reformer in a calm private residence with a panoramic sea view"
+          alt={content.imageAlt}
+          caption={content.imageCaption}
         />
         <p className="image-note">
-          A space that feels
+          {content.imageNote}
           <br />
-          <em>entirely your own.</em>
+          <em>{content.imageNoteEmphasis}</em>
         </p>
       </div>
       <div className="philosophy-motto">
-        Not Defined by Products.
+        {content.motto}
         <br />
-        <em>Driven by Possibilities.</em>
+        <em>{content.mottoEmphasis}</em>
       </div>
     </section>
   );
