@@ -22,7 +22,7 @@ export function Vision({ copy }: { copy: HomeCopy }) {
         <div className="vision-grid">
           <article className="vision-wall">
             <ConceptImage
-              src="/images/fitness-wall.webp"
+              src="/images/fitness-wall-ivory.webp"
               alt={content.wall.imageAlt}
               caption={content.wall.imageCaption}
               sizes="(max-width: 767px) 100vw, 60vw"

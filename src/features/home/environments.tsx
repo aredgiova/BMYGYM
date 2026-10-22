@@ -36,7 +36,7 @@ export function Environments({ copy }: { copy: HomeCopy }) {
           >
             <ConceptImage
               className="land-image"
-              src="/images/land-wellness.webp"
+              src="/images/longevity-suite-ivory.webp"
               alt={content.land.imageAlt}
               caption={content.land.imageCaption}
               sizes="(max-width: 767px) 100vw, 55vw"

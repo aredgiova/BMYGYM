@@ -1,6 +1,6 @@
 {
   "hero": {
-    "imageAlt": "Concept de résidence BMYGYM intégrant une Fitness Wall, une Recovery Capsule et un reformer Pilates à côté d’une piscine intérieure",
+    "imageAlt": "Fitness Wall BMYGYM en noyer intégrée à l’architecture intérieure, avec accessoires de fitness, tapis ivoire et vue sur la mer",
     "title": "Pensés pour vous.",
     "titleEmphasis": "Créés pour des lieux d’exception.",
     "service": "Espaces de longévité sur mesure",
@@ -22,7 +22,7 @@
         "title": "Clients privés",
         "description": "Des espaces de longévité sur mesure pour les résidences privées, les superyachts et l’aviation privée.",
         "action": "Parlons de votre projet privé",
-        "imageAlt": "Un reformer Pilates intégré dans une résidence privée paisible avec une vue panoramique sur la mer",
+        "imageAlt": "Concept de résidence côtière avec Fitness Wall BMYGYM, tapis de course, espace de récupération et piscine face à la mer",
         "imageCaption": "Visualisation conceptuelle BMYGYM"
       },
       {
@@ -59,7 +59,7 @@
       "name": "Terre",
       "audience": "Résidences privées et hospitalité de luxe",
       "enquiryAria": "Parler d’un projet de résidence privée ou d’hospitalité",
-      "imageAlt": "Des concepts de bien-être et de fitness aux tons champagne intégrés dans un intérieur architectural baigné de lumière",
+      "imageAlt": "Un espace BMYGYM aux tons ivoire avec Fitness Wall, Recovery Capsule, reformer Pilates et piscine intérieure",
       "imageCaption": "Visualisation conceptuelle BMYGYM",
       "description": "Des espaces de longévité sur mesure pour des résidences d’exception, des villas privées, des penthouses, des hôtels de charme et des destinations d’hospitalité de luxe.",
       "detail": "D’un refuge privé à un concept intégré dans un programme plus vaste, nous faisons dialoguer mouvement, récupération et bien-être avec l’architecture et les besoins de chaque projet."
@@ -141,7 +141,7 @@
     "wall": {
       "name": "BMYGYM Fitness Wall",
       "label": "Signature Concepts · Concept de design",
-      "imageAlt": "Concept BMYGYM Fitness Wall associant bois chaleureux, métal champagne et éléments d’entraînement intégrés",
+      "imageAlt": "Fitness Wall BMYGYM en finition ivoire avec accessoires d’entraînement et vue sur la mer",
       "imageCaption": "BMYGYM Fitness Wall · Visualisation conceptuelle",
       "description": "Un concept architectural de fitness qui explore la manière dont le mouvement et l’entraînement peuvent devenir partie intégrante d’un cadre de vie d’exception."
     },

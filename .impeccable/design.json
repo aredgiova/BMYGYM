@@ -1,133 +1,119 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-16T18:29:04.764Z",
+  "generatedAt": "2026-10-22T16:58:06.772Z",
   "title": "Design System: BMYGYM",
   "extensions": {
     "colorMeta": {
       "paper": {
         "role": "neutral",
-        "displayName": "Warm paper",
+        "displayName": "Neutral ivory paper",
         "tonalRamp": [
-          "oklch(15.00% 0.00697 88.64)",
-          "oklch(26.43% 0.00697 88.64)",
-          "oklch(37.86% 0.00697 88.64)",
-          "oklch(49.29% 0.00697 88.64)",
-          "oklch(60.71% 0.00697 88.64)",
-          "oklch(72.14% 0.00697 88.64)",
-          "oklch(83.57% 0.00697 88.64)",
-          "oklch(95.00% 0.00697 88.64)"
+          "oklch(15.00% 0.00411 91.45)",
+          "oklch(26.43% 0.00411 91.45)",
+          "oklch(37.86% 0.00411 91.45)",
+          "oklch(49.29% 0.00411 91.45)",
+          "oklch(60.71% 0.00411 91.45)",
+          "oklch(72.14% 0.00411 91.45)",
+          "oklch(83.57% 0.00411 91.45)",
+          "oklch(95.00% 0.00411 91.45)"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Warm ink",
+        "displayName": "Soft charcoal ink",
         "tonalRamp": [
-          "oklch(15.00% 0.00924 88.76)",
-          "oklch(26.43% 0.00924 88.76)",
-          "oklch(37.86% 0.00924 88.76)",
-          "oklch(49.29% 0.00924 88.76)",
-          "oklch(60.71% 0.00924 88.76)",
-          "oklch(72.14% 0.00924 88.76)",
-          "oklch(83.57% 0.00924 88.76)",
-          "oklch(95.00% 0.00924 88.76)"
+          "oklch(15.00% 0.00709 95.28)",
+          "oklch(26.43% 0.00709 95.28)",
+          "oklch(37.86% 0.00709 95.28)",
+          "oklch(49.29% 0.00709 95.28)",
+          "oklch(60.71% 0.00709 95.28)",
+          "oklch(72.14% 0.00709 95.28)",
+          "oklch(83.57% 0.00709 95.28)",
+          "oklch(95.00% 0.00709 95.28)"
         ]
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Reading taupe",
+        "displayName": "Reading stone",
         "tonalRamp": [
-          "oklch(15.00% 0.01520 82.38)",
-          "oklch(26.43% 0.01520 82.38)",
-          "oklch(37.86% 0.01520 82.38)",
-          "oklch(49.29% 0.01520 82.38)",
-          "oklch(60.71% 0.01520 82.38)",
-          "oklch(72.14% 0.01520 82.38)",
-          "oklch(83.57% 0.01520 82.38)",
-          "oklch(95.00% 0.01520 82.38)"
+          "oklch(15.00% 0.00956 91.56)",
+          "oklch(26.43% 0.00956 91.56)",
+          "oklch(37.86% 0.00956 91.56)",
+          "oklch(49.29% 0.00956 91.56)",
+          "oklch(60.71% 0.00956 91.56)",
+          "oklch(72.14% 0.00956 91.56)",
+          "oklch(83.57% 0.00956 91.56)",
+          "oklch(95.00% 0.00956 91.56)"
         ]
       },
       "line": {
         "role": "neutral",
-        "displayName": "Fine stone rule",
+        "displayName": "Fine neutral rule",
         "tonalRamp": [
-          "oklch(15.00% 0.01636 82.79)",
-          "oklch(26.43% 0.01636 82.79)",
-          "oklch(37.86% 0.01636 82.79)",
-          "oklch(49.29% 0.01636 82.79)",
-          "oklch(60.71% 0.01636 82.79)",
-          "oklch(72.14% 0.01636 82.79)",
-          "oklch(83.57% 0.01636 82.79)",
-          "oklch(95.00% 0.01636 82.79)"
+          "oklch(15.00% 0.00876 84.57)",
+          "oklch(26.43% 0.00876 84.57)",
+          "oklch(37.86% 0.00876 84.57)",
+          "oklch(49.29% 0.00876 84.57)",
+          "oklch(60.71% 0.00876 84.57)",
+          "oklch(72.14% 0.00876 84.57)",
+          "oklch(83.57% 0.00876 84.57)",
+          "oklch(95.00% 0.00876 84.57)"
         ]
       },
       "sand": {
         "role": "neutral",
-        "displayName": "Pale sand",
+        "displayName": "Pale neutral beige",
         "tonalRamp": [
-          "oklch(15.00% 0.01612 82.79)",
-          "oklch(26.43% 0.01612 82.79)",
-          "oklch(37.86% 0.01612 82.79)",
-          "oklch(49.29% 0.01612 82.79)",
-          "oklch(60.71% 0.01612 82.79)",
-          "oklch(72.14% 0.01612 82.79)",
-          "oklch(83.57% 0.01612 82.79)",
-          "oklch(95.00% 0.01612 82.79)"
+          "oklch(15.00% 0.00702 88.64)",
+          "oklch(26.43% 0.00702 88.64)",
+          "oklch(37.86% 0.00702 88.64)",
+          "oklch(49.29% 0.00702 88.64)",
+          "oklch(60.71% 0.00702 88.64)",
+          "oklch(72.14% 0.00702 88.64)",
+          "oklch(83.57% 0.00702 88.64)",
+          "oklch(95.00% 0.00702 88.64)"
+        ]
+      },
+      "stone-ink": {
+        "role": "neutral",
+        "displayName": "Stone reading ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.00976 91.58)",
+          "oklch(26.43% 0.00976 91.58)",
+          "oklch(37.86% 0.00976 91.58)",
+          "oklch(49.29% 0.00976 91.58)",
+          "oklch(60.71% 0.00976 91.58)",
+          "oklch(72.14% 0.00976 91.58)",
+          "oklch(83.57% 0.00976 91.58)",
+          "oklch(95.00% 0.00976 91.58)"
         ]
       },
       "accent": {
         "role": "primary",
         "displayName": "Restrained taupe",
         "tonalRamp": [
-          "oklch(15.00% 0.03785 77.24)",
-          "oklch(26.43% 0.03785 77.24)",
-          "oklch(37.86% 0.03785 77.24)",
-          "oklch(49.29% 0.03785 77.24)",
-          "oklch(60.71% 0.03785 77.24)",
-          "oklch(72.14% 0.03785 77.24)",
-          "oklch(83.57% 0.03785 77.24)",
-          "oklch(95.00% 0.03785 77.24)"
+          "oklch(15.00% 0.02215 80.02)",
+          "oklch(26.43% 0.02215 80.02)",
+          "oklch(37.86% 0.02215 80.02)",
+          "oklch(49.29% 0.02215 80.02)",
+          "oklch(60.71% 0.02215 80.02)",
+          "oklch(72.14% 0.02215 80.02)",
+          "oklch(83.57% 0.02215 80.02)",
+          "oklch(95.00% 0.02215 80.02)"
         ]
       },
       "vision-surface": {
         "role": "neutral",
-        "displayName": "Warm charcoal",
+        "displayName": "Pale vision stone",
         "tonalRamp": [
-          "oklch(15.00% 0.00905 116.17)",
-          "oklch(26.43% 0.00905 116.17)",
-          "oklch(37.86% 0.00905 116.17)",
-          "oklch(49.29% 0.00905 116.17)",
-          "oklch(60.71% 0.00905 116.17)",
-          "oklch(72.14% 0.00905 116.17)",
-          "oklch(83.57% 0.00905 116.17)",
-          "oklch(95.00% 0.00905 116.17)"
-        ]
-      },
-      "vision-ink": {
-        "role": "neutral",
-        "displayName": "Pale vision text",
-        "tonalRamp": [
-          "oklch(15.00% 0.01433 84.58)",
-          "oklch(26.43% 0.01433 84.58)",
-          "oklch(37.86% 0.01433 84.58)",
-          "oklch(49.29% 0.01433 84.58)",
-          "oklch(60.71% 0.01433 84.58)",
-          "oklch(72.14% 0.01433 84.58)",
-          "oklch(83.57% 0.01433 84.58)",
-          "oklch(95.00% 0.01433 84.58)"
-        ]
-      },
-      "vision-muted": {
-        "role": "neutral",
-        "displayName": "Muted vision text",
-        "tonalRamp": [
-          "oklch(15.00% 0.01646 102.88)",
-          "oklch(26.43% 0.01646 102.88)",
-          "oklch(37.86% 0.01646 102.88)",
-          "oklch(49.29% 0.01646 102.88)",
-          "oklch(60.71% 0.01646 102.88)",
-          "oklch(72.14% 0.01646 102.88)",
-          "oklch(83.57% 0.01646 102.88)",
-          "oklch(95.00% 0.01646 102.88)"
+          "oklch(15.00% 0.00543 95.10)",
+          "oklch(26.43% 0.00543 95.10)",
+          "oklch(37.86% 0.00543 95.10)",
+          "oklch(49.29% 0.00543 95.10)",
+          "oklch(60.71% 0.00543 95.10)",
+          "oklch(72.14% 0.00543 95.10)",
+          "oklch(83.57% 0.00543 95.10)",
+          "oklch(95.00% 0.00543 95.10)"
         ]
       },
       "placeholder": {
@@ -199,6 +185,34 @@
           "oklch(83.57% 0.05133 79.27)",
           "oklch(95.00% 0.05133 79.27)"
         ]
+      },
+      "header-surface": {
+        "role": "neutral",
+        "displayName": "Paper header",
+        "tonalRamp": [
+          "oklch(15.00% 0.00411 91.45)",
+          "oklch(26.43% 0.00411 91.45)",
+          "oklch(37.86% 0.00411 91.45)",
+          "oklch(49.29% 0.00411 91.45)",
+          "oklch(60.71% 0.00411 91.45)",
+          "oklch(72.14% 0.00411 91.45)",
+          "oklch(83.57% 0.00411 91.45)",
+          "oklch(95.00% 0.00411 91.45)"
+        ]
+      },
+      "header-button": {
+        "role": "neutral",
+        "displayName": "Header hover ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.00709 95.28)",
+          "oklch(26.43% 0.00709 95.28)",
+          "oklch(37.86% 0.00709 95.28)",
+          "oklch(49.29% 0.00709 95.28)",
+          "oklch(60.71% 0.00709 95.28)",
+          "oklch(72.14% 0.00709 95.28)",
+          "oklch(83.57% 0.00709 95.28)",
+          "oklch(95.00% 0.00709 95.28)"
+        ]
       }
     },
     "typographyMeta": {
@@ -216,15 +230,15 @@
       },
       "body": {
         "displayName": "Reading copy",
-        "purpose": "Global text baseline; feature copy is usually 12–13px."
+        "purpose": "Reading copy and form controls: 18px at the default root, 17px below 768px."
       },
       "label": {
         "displayName": "Section label",
-        "purpose": "Uppercase tracked wayfinding."
+        "purpose": "Uppercase tracked wayfinding and supporting captions at a 14px minimum."
       },
       "action": {
         "displayName": "Action label",
-        "purpose": "Uppercase buttons."
+        "purpose": "Uppercase 14px action labels with responsive wrapping."
       }
     },
     "shadows": [],
@@ -257,20 +271,20 @@
     ],
     "breakpoints": [
       {
-        "name": "wide-hero-alignment",
-        "value": "min-width: 1700px"
-      },
-      {
-        "name": "compact-desktop",
-        "value": "max-width: 1199px"
-      },
-      {
         "name": "navigation-disclosure",
+        "value": "max-width: 1439px"
+      },
+      {
+        "name": "hero-image-first",
         "value": "max-width: 1023px"
       },
       {
         "name": "single-column",
         "value": "max-width: 767px"
+      },
+      {
+        "name": "compact-header-actions",
+        "value": "max-width: 600px"
       },
       {
         "name": "narrow-mobile",
@@ -284,15 +298,20 @@
     "provenance": {
       "sourceFiles": [
         "src/app/globals.css",
-        "src/app/layout.tsx",
+        "src/app/[locale]/layout.tsx",
         "src/components/layout/header.tsx",
         "src/components/layout/footer.tsx",
+        "src/features/home/hero.tsx",
+        "src/features/home/work-with-us.tsx",
+        "src/features/home/environments.tsx",
+        "src/features/home/vision.tsx",
         "src/features/enquiry/enquiry-form.tsx",
         "src/components/shared/concept-image.tsx"
       ],
       "designContract": "64135187",
-      "visualAuthority": "User-pinned architectural quiet luxury brief.",
-      "tonalRamps": "Synthesized OKLCH panel metadata only; not additional application palette tokens."
+      "visualAuthority": "User-authorised refinement on 22 October 2026: retain the architectural identity, prioritise the first supplied reference and use luminous neutral ivory, off-white and beige associated with Aman / Four Seasons elegance.",
+      "tonalRamps": "Synthesized OKLCH panel metadata only; not additional application palette tokens.",
+      "validation": "Extracted from the local implementation; no runtime or visual validation is asserted by this sidecar. Local preview precedes repository upload and publication."
     }
   },
   "components": [
@@ -300,25 +319,25 @@
       "name": "Dark enquiry button",
       "kind": "button",
       "refersTo": "button-dark",
-      "description": "Primary action on paper or sand surfaces.",
+      "description": "Primary action on paper or sand surfaces, including the current hero; 14px label with a 58px minimum height.",
       "html": "<button class=\"ds-button-dark\" type=\"button\">Submit private enquiry<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
-      "css": ".ds-button-dark{font-family:var(--font-manrope),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:54px;padding:16px 23px;border:1px solid transparent;border-radius:0;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:600;line-height:1.6;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s;background:var(--ink);color:var(--paper);text-decoration:none}.ds-button-dark:hover{background:#514b41}.ds-button-dark:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}.ds-button-dark:disabled{opacity:.65;cursor:wait}.ds-button-dark svg{flex-shrink:0}@media(max-width:767px){.ds-button-dark{font-size:9px;min-height:52px;padding-inline:18px}}@media(prefers-reduced-motion:reduce){.ds-button-dark{transition:none}}"
+      "css": ".ds-button-dark{font-family:var(--font-manrope),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-height:58px;max-width:100%;padding:17px 26px;border:1px solid transparent;border-radius:0;text-transform:uppercase;letter-spacing:.1em;font-size:.875rem;font-weight:600;line-height:1.6;overflow-wrap:anywhere;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s;background:var(--ink);color:var(--paper);text-decoration:none}.ds-button-dark:hover{background:#514b41}.ds-button-dark:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}.ds-button-dark:disabled{opacity:.65;cursor:wait}.ds-button-dark svg{flex-shrink:0;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-button-dark:hover svg{transform:translateX(4px)}@media(max-width:767px){.ds-button-dark{min-height:56px;padding-inline:16px;gap:14px}}@media(prefers-reduced-motion:reduce){.ds-button-dark,.ds-button-dark svg{transition:none}}"
     },
     {
-      "name": "Ivory hero button",
+      "name": "Ivory button variant",
       "kind": "button",
       "refersTo": "button-ivory",
-      "description": "Primary enquiry action over an architectural image.",
+      "description": "Existing pale button variant; the current hero uses the dark primary action.",
       "html": "<a class=\"ds-button-ivory\" href=\"#enquiry\">Begin a private enquiry<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 18 18 6M6 6h12v12\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
-      "css": ".ds-button-ivory{font-family:var(--font-manrope),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:54px;padding:16px 23px;border:1px solid transparent;border-radius:0;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:600;line-height:1.6;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s;background:var(--paper);color:var(--ink);text-decoration:none}.ds-button-ivory:hover{background:#e4dccc}.ds-button-ivory:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}.ds-button-ivory:disabled{opacity:.65;cursor:wait}.ds-button-ivory svg{flex-shrink:0}@media(max-width:767px){.ds-button-ivory{font-size:9px;min-height:52px;padding-inline:18px}}@media(prefers-reduced-motion:reduce){.ds-button-ivory{transition:none}}"
+      "css": ".ds-button-ivory{font-family:var(--font-manrope),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-height:58px;max-width:100%;padding:17px 26px;border:1px solid transparent;border-radius:0;text-transform:uppercase;letter-spacing:.1em;font-size:.875rem;font-weight:600;line-height:1.6;overflow-wrap:anywhere;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s;background:var(--paper);color:var(--ink);text-decoration:none}.ds-button-ivory:hover{background:#e8e6e0}.ds-button-ivory:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}.ds-button-ivory:disabled{opacity:.65;cursor:wait}.ds-button-ivory svg{flex-shrink:0;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-button-ivory:hover svg{transform:translateX(4px)}@media(max-width:767px){.ds-button-ivory{min-height:56px;padding-inline:16px;gap:14px}}@media(prefers-reduced-motion:reduce){.ds-button-ivory,.ds-button-ivory svg{transition:none}}"
     },
     {
       "name": "Header enquiry",
       "kind": "button",
       "refersTo": "header-enquiry",
-      "description": "Persistent solid dark enquiry action without an arrow, on the beige header surface. Desktop minimum size is 186px by 42px; mobile minimum height is 44px.",
+      "description": "Ink-outlined enquiry action without an arrow on the paper header; 46px minimum desktop height and 44px on mobile, hidden at 600px and below.",
       "html": "<a class=\"ds-header-enquiry\" href=\"#enquiry\">Private Enquiry</a>",
-      "css": ".ds-header-enquiry{font-family:var(--font-manrope),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:42px;min-width:186px;padding-inline:24px;border:0;border-radius:0;background:#221e1c;color:var(--paper);font-size:10px;text-transform:uppercase;letter-spacing:.35em;white-space:nowrap;text-decoration:none;transition:background-color .2s}.ds-header-enquiry:hover{background:#403a33}.ds-header-enquiry:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}@media(max-width:1199px){.ds-header-enquiry{min-width:176px;padding-inline:20px}}@media(max-width:767px){.ds-header-enquiry{min-height:44px;min-width:0;padding-inline:14px;font-size:8px;letter-spacing:.13em}}@media(max-width:359px){.ds-header-enquiry{font-size:8px;letter-spacing:.08em;padding-inline:11px}}@media(prefers-reduced-motion:reduce){.ds-header-enquiry{transition:none}}"
+      "css": ".ds-header-enquiry{font-family:var(--font-manrope),Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:46px;min-width:0;padding-inline:18px;border:1px solid var(--ink);border-radius:0;background:transparent;color:var(--ink);font-size:.875rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap;text-decoration:none;transition:background-color .2s}.ds-header-enquiry:hover{background:var(--header-button);color:var(--paper)}.ds-header-enquiry:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}@media(max-width:1439px){.ds-header-enquiry{min-width:176px;padding-inline:20px;letter-spacing:.12em}}@media(max-width:767px){.ds-header-enquiry{width:7rem;min-height:44px;min-width:0;padding-inline:10px;letter-spacing:.05em;white-space:normal;line-height:1.3;text-align:center}}@media(max-width:600px){.ds-header-enquiry{display:none}}@media(prefers-reduced-motion:reduce){.ds-header-enquiry{transition:none}}"
     },
     {
       "name": "Editorial text link",
@@ -339,9 +358,9 @@
     {
       "name": "Desktop navigation",
       "kind": "nav",
-      "description": "10px uppercase navigation with 0.4em tracking and a fine animated underline; the application replaces it with a disclosure below 1024px. The full-width beige #e3ded5 sticky header is 79px tall on desktop and tablet, 72px below 768px, with a centered inner width of at most 1180px. Its BMYGYM serif wordmark has no tagline and uses 21px type with 0.3em tracking, becoming 20px / 0.22em below 768px and 18px / 0.18em below 360px.",
+      "description": "14px uppercase navigation with 0.08em tracking and fine animated underlines; replaced by a disclosure below 1440px. The paper header is sticky, 79px tall on desktop and tablet and 72px below 768px, with a 1488px maximum inner width. Its serif wordmark has no tagline.",
       "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#philosophy\">Philosophy</a><a href=\"#environments\">Environments</a><a href=\"#approach\">Our Approach</a><a href=\"#vision\">Vision</a></nav>",
-      "css": ".ds-nav{font-family:var(--font-manrope),Arial,sans-serif;display:flex;align-items:center;flex-wrap:wrap;gap:42px;color:var(--ink)}.ds-nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;color:inherit;text-decoration:none;text-transform:uppercase;font-size:10px;letter-spacing:.4em}.ds-nav a::after{content:\"\";position:absolute;bottom:8px;height:1px;background:var(--accent);left:0;right:100%;transition:right .25s}.ds-nav a:hover::after{right:0}.ds-nav a:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}@media(max-width:1199px){.ds-nav{gap:22px}}@media(prefers-reduced-motion:reduce){.ds-nav a::after{transition:none}}"
+      "css": ".ds-nav{font-family:var(--font-manrope),Arial,sans-serif;display:flex;align-items:center;flex-wrap:wrap;gap:20px;color:var(--ink)}.ds-nav a{position:relative;display:inline-flex;align-items:center;min-height:44px;color:inherit;text-decoration:none;text-transform:uppercase;font-size:.875rem;font-weight:500;letter-spacing:.08em;white-space:nowrap}.ds-nav a::after{content:\"\";position:absolute;bottom:8px;height:1px;background:var(--accent);left:0;right:100%;transition:right .25s}.ds-nav a:hover::after{right:0}.ds-nav a:focus-visible{outline:2px solid #8a6f49;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-nav a::after{transition:none}}"
     },
     {
       "name": "Editorial disclosure",
@@ -353,25 +372,37 @@
   ],
   "narrative": {
     "northStar": "The Architectural Portfolio",
-    "overview": "An architectural portfolio for a bespoke longevity design house. Warm paper, sand, fine serif headings and generous space frame complete environments. The presentation is quiet, editorial and personal; imagery leads and interface furniture stays restrained.\n\nBodoni Moda carries the expressive voice; Manrope carries navigation, explanations and forms. Flat surfaces, hairline rules and a limited dark section create depth without ornamental effects. The user-pinned brief is the visual authority for design contract 64135187.",
+    "overview": "An architectural portfolio for a creator and integrator of bespoke longevity environments, shaped for private clients and professional partners. Neutral ivory, off-white, pale beige, fine serif headings and generous space frame complete environments. The user-confirmed refinement seeks the luminous, minimal elegance associated with Aman and Four Seasons, prioritising the first supplied visual reference. Photography remains the protagonist. The presentation is quiet, editorial and personal; the opening makes BMYGYM's creative and integrative role explicit, and the editorial introduction addresses the two client profiles within one site.\n\nBodoni Moda carries the Latin expressive voice; Cormorant Garamond supplies Cyrillic serif characters in Russian. Manrope carries navigation, explanations and forms in Latin and Cyrillic. Flat pale surfaces, hairline rules and photography create depth without ornamental effects. The existing architectural direction remains the foundation; the refinement removes yellow casts and dark decorative section fields while preserving readable ink and the warmth present in supplied materials.",
     "keyCharacteristics": [
       "Architecture and complete environments lead the imagery.",
-      "Warm ivory and sand, with restrained taupe accents.",
-      "Fine serif headlines, compact tracked labels and generous section space.",
+      "Neutral ivory, off-white and pale beige, with restrained taupe accents and no yellow cast.",
+      "Fine serif headlines, readable supporting text and generous section space.",
+      "A two-column editorial opening with the complete supplied photograph, followed by a separate introduction.",
+      "A discreet language selector and fully localised content in English, German, French, Spanish and Russian.",
+      "Clear private-client and professional-partner profiles, with a formal paid Blueprint commission.",
+      "Three generous Land, Sea and Air chapters, alternating image and copy on desktop.",
       "Square controls, thin dividers and subtle accessible motion."
     ],
-    "rules": [],
+    "rules": [
+      {
+        "name": "The Neutral Light Rule",
+        "body": "Keep the principal surfaces pale and neutral; retain contrast through ink, spacing and fine rules rather than yellow washes or charcoal section backgrounds.",
+        "section": "colors"
+      }
+    ],
     "dos": [
-      "Do use the supplied concept imagery with visible concept captions and meaningful alternatives.",
-      "Do preserve the locally hosted Bodoni Moda / Manrope pairing and the warm neutral palette.",
-      "Do keep Land, Sea and Air equally legible; retain the reserved aviation concept area until approved imagery exists.",
+      "Do use supplied concept imagery with localised visible concept captions and meaningful alternatives, preserving the complete hero photograph.",
+      "Do preserve the locally hosted Bodoni Moda / Manrope pairing, the Cyrillic Cormorant Garamond fallback and the luminous neutral palette.",
+      "Do keep Land, Sea and Air equally legible, with shared component treatment, the intended image ratios and an explicit concept caption and status for AERO ONE.",
+      "Do preserve the creator-and-integrator positioning, both client profiles and the formal paid Blueprint terms in every language.",
       "Do preserve keyboard focus, labelled fields, reduced motion and honest enquiry feedback.",
       "Do treat the text wordmark as provisional typography until final logo artwork is supplied."
     ],
     "donts": [
       "Don't turn the design house into an equipment catalogue or add prices and product purchase cards.",
       "Don't present concepts as completed projects, certified products or available production equipment.",
-      "Don't invent a production logo, aviation imagery, client testimonials or business credentials.",
+      "Don't invent a production logo, client testimonials or business credentials, or present aviation concept imagery as a real or certified installation.",
+      "Don't introduce yellow interface tints, dark hero overlays or charcoal decorative section fields.",
       "Don't add floating card shadows, pill controls, loud gradients or ornamental interface density."
     ]
   }

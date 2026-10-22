@@ -51,14 +51,14 @@ export async function generateMetadata({params}: {params: Promise<{locale:string
     robots: {index:isIndexingEnabled, follow:isIndexingEnabled},
     openGraph: {title, description:common.meta.description, url:path, siteName:siteConfig.name,
       locale: {en:"en_GB",de:"de_DE",fr:"fr_FR",es:"es_ES",ru:"ru_RU"}[locale], type:"website",
-      images:[{url:"/images/hero-residence.webp",width:1536,height:1024,alt:home.hero.imageAlt}]},
-    twitter:{card:"summary_large_image",title,description:common.meta.description,images:["/images/hero-residence.webp"]}
+      images:[{url:"/images/fitness-wall-walnut.webp",width:1402,height:1122,alt:home.hero.imageAlt}]},
+    twitter:{card:"summary_large_image",title,description:common.meta.description,images:["/images/fitness-wall-walnut.webp"]}
   };
 }
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f7f5f0",
+  themeColor: "#faf9f6",
 };
 
 export default async function RootLayout({children, params}: Readonly<{children: React.ReactNode; params:Promise<{locale:string}>}>) {

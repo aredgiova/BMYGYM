@@ -1,12 +1,31 @@
 # BMYGYM asset manifest
 
-Prepared on 16 October 2026; updated on 20 October 2026 for the supplied AERO ONE replacement and five-language typography.
+Prepared on 16 October 2026; updated on 22 October 2026 for the supplied architectural wellness imagery and a lighter, neutral visual direction. The AERO ONE replacement and five-language typography were added on 20 October 2026.
 
 ## Image provenance and treatment
 
-The active project images are supplied BMYGYM concept visualisations. They must not be described as photographs of completed installations or client projects. The original seven selected images were encoded as WebP at quality 90 with effort 6 using Sharp. The AERO ONE replacement is also delivered as WebP, preserving the source dimensions and artwork. Layout crops belong to the presentation layer; the replacement does not add, remove or generate image content.
+The active project images are supplied BMYGYM concept visualisations. They must not be described as photographs of completed installations or client projects. The original seven selected images and the four additions below were encoded as WebP at quality 90 with effort 6 using Sharp. The AERO ONE replacement is also delivered as WebP, preserving the source dimensions and artwork. Layout crops belong to the presentation layer; the conversions do not add, remove or generate image content.
 
 Source files remain in the user's Downloads directory. The duplicate recovery image ending in ` (1).jpeg` is intentionally omitted.
+
+### Selection of 22 October 2026
+
+All five references were supplied by the user in this update. Four were selected, with the first reference given the principal hero placement. The files below preserve the source pixel dimensions and sRGB colour space. Encoding is the only image operation: no colour correction, retouching, crop or generative edit was applied to the source artwork. WebP is a lossy delivery format.
+
+| Public asset | Supplied source in `C:/Users/User/Downloads/` | Source bytes | Dimensions | WebP bytes | Selected placement |
+| --- | --- | ---: | --- | ---: | --- |
+| `/images/fitness-wall-walnut.webp` | `DDAE9953-28E1-4FC1-9C92-75EAD5D9D7F8.png` | 3,568,350 | 1402 × 1122 | 268,226 | First reference; main hero |
+| `/images/fitness-wall-ivory.webp` | `9896A454-C34F-4F0B-9927-48F0515D33E0.png` | 3,292,067 | 1402 × 1122 | 182,884 | Fourth reference; Fitness Wall Signature |
+| `/images/longevity-suite-ivory.webp` | `AFE4C5A9-2CAE-4D2E-A6E7-C73F479A4455.png` | 3,475,570 | 1536 × 1024 | 246,292 | Third reference; Land |
+| `/images/coastal-longevity-residence.webp` | `1263A8DB-743A-402D-9776-FC41F0724F36.jpeg` | 512,136 | 1672 × 941 | 386,100 | Fifth reference; Private Clients |
+
+The four additions total 1,083,502 bytes. The second reference, `5B90F4AF-6DB9-4613-A57A-227DB4219E7A.png`, was not added to the website: its decorative red and gold palette is less consistent with the selected neutral direction. Its exclusion does not change the supplied source.
+
+The interface uses ivory, off-white and neutral beige as its visual direction, with restrained typography and spacing. This describes the presentation around the imagery, not a colour correction of the image files; the lighting and material colours supplied by the user remain in the artwork.
+
+The former `/images/hero-residence.webp`, `/images/fitness-wall.webp` and `/images/land-wellness.webp` remain available in the repository but are replaced in the main hero, Fitness Wall Signature and Land placements respectively. Private Clients now uses the coastal residence reference. The remaining existing imagery continues in its relevant sections.
+
+### Previously supplied assets retained in the repository
 
 | Public asset                        | Supplied source                             | Dimensions  |   Bytes | Intended context                        |
 | ----------------------------------- | ------------------------------------------- | ----------- | ------: | --------------------------------------- |
@@ -19,13 +38,13 @@ Source files remain in the user's Downloads directory. The duplicate recovery im
 | `/images/recovery-capsule.webp`     | `DAF825F9-5F2D-452F-85C1-F247788B1590.jpeg` | 1086 × 1448 | 124,494 | Recovery equipment concept              |
 | `/images/aero-one-private-aviation.webp` | `3DED3D79-2582-4355-ADCA-3BA333281259.png` | 1536 × 1024 | 287,132 | AERO ONE transformable recovery and longevity chair concept for private aviation |
 
-The eight active WebP assets total 2,581,630 bytes. Responsive delivery is handled by Next.js Image.
+The eight previously selected WebP assets listed above total 2,581,630 bytes. Their inclusion in this provenance record does not imply that all remain active in their former placements. Responsive delivery is handled by Next.js Image.
 
 The `land-wellness` source includes embedded text at its upper edge. That text remains intact in the asset. The `fitness-wall` source also includes a BMYGYM ORVÉA mark, which is retained.
 
 The new aviation image was supplied by the user at `C:/Users/User/Downloads/3DED3D79-2582-4355-ADCA-3BA333281259.png` (2,505,722 bytes). It replaces `/images/air-aviation-fitness.webp` in the AIR section. The previous generated private-jet fitness-studio asset remains in the repository but is not the active AIR illustration. AERO ONE is a concept in development, not certified or commercially available. Development and integration remain subject to aircraft-specific technical feasibility, safety and aeronautical certification requirements. The image retains a visible, localised concept caption and an adjacent status notice. Its 3:2 presentation preserves the chair composition.
 
-No new complete-environment image or virtual tour was produced for this update; those are later-phase requests.
+No new image artwork or virtual tour was generated for the 22 October update; the new delivery files are encodings of the supplied concept references.
 
 ## Locally served fonts
 

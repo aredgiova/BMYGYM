@@ -1,5 +1,36 @@
 # Validación
 
+## Refinamiento luminoso e imágenes suministradas — 22 de octubre de 2026
+
+La portada presenta la primera imagen completa junto al texto sobre marfil, sin oscurecerla. Se incorporaron cuatro visualizaciones suministradas y se aclararon cabecera, fondos y Signature Concepts. Las alternativas de imagen están actualizadas en los cinco idiomas; OpenGraph y Twitter usan la nueva portada.
+
+| Comprobación | Resultado |
+| --- | --- |
+| Compilación, TypeScript y ESLint | Correctos |
+| Pruebas existentes | 22 aprobadas |
+| Responsive | 25 combinaciones EN/DE/FR/ES/RU a 320, 375, 768, 1024 y 1440 px, sin desbordamiento horizontal |
+| Rutas | 30 comprobaciones de páginas informativas y rutas inexistentes con estado e idioma correctos |
+| Navegación | Menú móvil, selector de idioma, Escape, foco y conservación de URL verificados |
+| Formulario | Validación, retención tras fallo y reinicio tras éxito simulados en los cinco idiomas; sin envíos reales |
+| Imágenes y consola | Imágenes cargadas y sin errores JavaScript en el recorrido |
+
+Comprobación final contra `next start` en `http://127.0.0.1:3100`. Capturas e informe local en `artifacts/luxury-2026-10-22/`; recorrido en `artifacts/luxury-qa-2026-10-22.cjs`. La primera pasada en desarrollo leía el idioma de algunas páginas 404 antes de terminar la navegación; la comprobación final espera la carga y pasa en producción. Las capturas finales esperan también la decodificación de imágenes tras cambios de tamaño.
+
+El detector se ejecutó una vez: 40 avisos orientativos de documentación de colores y tamaños tipográficos; ningún hallazgo funcional. La documentación visual se actualiza a la implementación. Las cuatro imágenes nuevas suman 1.083.502 bytes en WebP; no se retocaron colores ni contenido.
+
+La revisión independiente de nueve capturas, código e informe cerró sin hallazgos materiales. Contrastes calculados: texto secundario sobre papel 5,14:1, secundario sobre Vision 4,74:1, etiquetas sobre Vision 4,61:1 y placeholders sobre papel 4,79:1. No constituye una auditoría exhaustiva de accesibilidad.
+
+| Área | Disposición | Alcance |
+| --- | --- | --- |
+| Dirección e identidad | Aprobado | Brief y selección de imágenes |
+| Composición visual | Aprobado | Nueve capturas indicadas |
+| Adaptación multilingüe | Aprobado | EN, DE y RU visuales; informe de cinco idiomas |
+| Accesibilidad comprobable | Aprobado | Contraste, semántica y estilos de foco/movimiento |
+| Correcciones | Ninguna requerida | Sin hallazgos materiales |
+| Publicación | Fuera de alcance | Revisión realizada solo en lectura |
+
+Tras la vista previa local, el usuario autorizó el 22 de octubre de 2026 subir esta entrega al repositorio `aredgiova/BMYGYM`. Esta validación corresponde al código local y no acredita un despliegue de hosting ni entrega real de correo.
+
 ## Two Ways to Work With Us — 20 de octubre de 2026
 
 Sección incorporada entre la introducción y la filosofía, antes de LAND / SEA / AIR, sustituyendo los perfiles de texto anteriores. Título, categorías, descripciones, botones y textos de imagen están localizados en los cinco idiomas. **Las tres referencias mencionadas por el usuario no llegaron adjuntas: las imágenes de los dos bloques son provisionales y reutilizan recursos existentes.**

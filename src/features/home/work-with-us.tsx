@@ -3,9 +3,9 @@ import { Arrow } from "@/components/ui/arrow";
 import { ProfileLink } from "@/features/enquiry/profile-link";
 import type { HomeCopy } from "@/i18n/types";
 
-// Existing concept images are provisional until the two requested assets arrive.
+// Supplied residential concept paired with the architectural design study.
 const profiles = [
-  { type: "private", image: "/images/philosophy-residence.webp" },
+  { type: "private", image: "/images/coastal-longevity-residence.webp" },
   { type: "professional", image: "/images/approach-concept.webp" },
 ] as const;
 
