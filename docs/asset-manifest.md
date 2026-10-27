@@ -4,9 +4,13 @@ Prepared on 16 October 2026; updated on 22 October 2026 for the supplied archite
 
 ## Image provenance and treatment
 
-The active project images are supplied BMYGYM concept visualisations. They must not be described as photographs of completed installations or client projects. The original seven selected images and the four additions below were encoded as WebP at quality 90 with effort 6 using Sharp. The AERO ONE replacement is also delivered as WebP, preserving the source dimensions and artwork. Layout crops belong to the presentation layer; the conversions do not add, remove or generate image content.
+The environment and product images are supplied BMYGYM concept visualisations. They must not be described as photographs of completed installations or client projects. The original seven selected images and the four additions below were encoded as WebP at quality 90 with effort 6 using Sharp. The AERO ONE replacement is also delivered as WebP, preserving the source dimensions and artwork. Layout crops belong to the presentation layer; the conversions do not add, remove or generate image content.
 
 Source files remain in the user's Downloads directory. The duplicate recovery image ending in ` (1).jpeg` is intentionally omitted.
+
+### Founder photograph · 27 October 2026
+
+`/images/bojana-pesic.jpeg` is an unchanged copy of the user's supplied `C:/Users/User/Downloads/IMG_0335.jpeg` (1034 × 973 pixels, 180,111 bytes). It appears alongside Bojana Pesic's existing signature in the enquiry block in all five languages. This personal photograph is separate from the concept visualisations above. Next.js Image supplies responsive optimisation and lazy loading; CSS presents a right-aligned 4:5 crop at 96 × 120px on desktop and 72 × 90px below 1024px. No retouching, colour filters or generated imagery were applied.
 
 ### Selection of 22 October 2026
 
