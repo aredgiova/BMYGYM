@@ -13,8 +13,10 @@ Usar esta lista antes de abrir el sitio al público. El despliegue y la activaci
 
 - [x] Integrar titular y dirección profesional facilitados: Bojana Pesic, Avda. Primado Reig 129, Entlo. D, 46020 Valencia, España.
 - [x] Sustituir los cuatro textos provisionales por los documentos facilitados con fecha 28 de octubre de 2026 y sus traducciones; conservar los enlaces del pie y retirar los avisos de borrador.
+- [x] Implementar localmente el [aviso informativo propio de cookies](cookie-notice.md) en cinco idiomas, con política enlazada, cierre recordado durante 180 días y reapertura desde el pie; el cierre no consiente seguimiento.
+- [x] Verificar el aviso en la compilación local: 20 combinaciones de idioma/ancho, teclado, recarga, vigencia, sincronización entre pestañas y almacenamiento no disponible; resultados en [Validación](validation.md).
 - [ ] Confirmar en la operación real la gestión y retención de consultas, acceso del equipo, acuerdos con proveedores y transferencias descritos en la política de privacidad.
-- [ ] Comprobar las cookies y los servicios del hosting definitivo. La versión inicial no carga seguimiento opcional.
+- [ ] Comprobar las cookies y los servicios del hosting definitivo. La aplicación actual no carga seguimiento opcional; las comprobaciones locales no acreditan la infraestructura publicada.
 - [ ] Si se incorpora analítica, publicidad o contenido externo con seguimiento, bloquearlo hasta obtener la elección del visitante y permitir rechazar o cambiar preferencias posteriormente.
 
 ## Correo y protección del formulario
@@ -48,4 +50,4 @@ Usar esta lista antes de abrir el sitio al público. El despliegue y la activaci
 - [ ] Obtener la aprobación final de contenido, diseño y publicación; activar `ENABLE_INDEXING=true` en producción cuando corresponda.
 - [ ] Publicar, comprobar el dominio y el formulario de nuevo, y conservar una versión anterior recuperable.
 
-Referencias: [README](../README.md), [configuración del correo](contact-setup.md) y [manifiesto de recursos](asset-manifest.md).
+Referencias: [README](../README.md), [configuración del correo](contact-setup.md), [aviso de cookies](cookie-notice.md) y [manifiesto de recursos](asset-manifest.md).

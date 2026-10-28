@@ -1,6 +1,30 @@
 # Validación
 
+## Aviso informativo de cookies — 28 de octubre de 2026
+
+Se incorporó un aviso propio y ligero, fijo en la parte inferior y no modal, en los cinco idiomas. Incluye enlace a la política, botón de cierre y reapertura desde “Cookie Settings” en el pie. Mantiene el sistema visual existente. No añade analítica, publicidad, CMP ni servicios externos. El cierre guarda únicamente la preferencia técnica descrita en [Aviso de cookies](cookie-notice.md); no consiente seguimiento.
+
+| Comprobación | Resultado |
+| --- | --- |
+| ESLint y TypeScript | Correctos |
+| `npm test` | 22 pruebas Node existentes aprobadas |
+| Compilación de producción local | Correcta con `CIRCLE_NODE_TOTAL=2`, que limita esta ejecución a un worker por la memoria disponible de la máquina; sin cambiar la configuración del repositorio |
+| Responsive | 20 combinaciones EN/DE/FR/ES/RU a 320, 375, 768 y 1440 px, sin desbordamiento horizontal; espacio inferior reservado según la altura del aviso |
+| Interacción en cinco idiomas | Aparición inicial, enlace a la política local, cierre, recarga, reapertura, foco de teclado y Escape correctos |
+| Persistencia | Registro compartido entre idiomas; vigencia próxima al límite de 180 días y caducidad verificadas |
+| Datos inválidos | Fechas futuras, valores malformados, versión o marca temporal incorrectas y `null` restauran el aviso y se eliminan al volver |
+| Pestañas y fallos de almacenamiento | Sincronización de cierre y eliminación entre pestañas; cierre y reapertura utilizables con almacenamiento bloqueado o cuota agotada |
+| Sin JavaScript | Política de cookies accesible |
+| Consola y red | Cero errores JavaScript, cookies y peticiones externas observados en el recorrido; `localStorage` se usa al cerrar el aviso |
+| Revisión visual independiente | Contrato visual aprobado, sin hallazgos materiales; contraste del texto del aviso medido en 5,14:1 |
+
+Recorrido contra la compilación de producción servida localmente en `http://127.0.0.1:3104`, mediante `artifacts/cookie-qa-2026-10-28.cjs`. Informe en `artifacts/cookies-2026-10-28/report.json` y capturas en el mismo directorio. Son evidencias locales; `artifacts/` está excluida de Git. La revisión independiente queda resumida en [cookie-notice.md](cookie-notice.md).
+
+Esta validación corresponde a la aplicación local; la subida al repositorio se acredita por el historial de Git. No verifica el despliegue, las cookies o servicios del hosting definitivo, la entrega de correo ni el cumplimiento legal automático. La verificación del sitio publicado y los controles necesarios si se añade seguimiento opcional siguen pendientes en la [lista de publicación](launch-checklist.md).
+
 ## Páginas legales — 28 de octubre de 2026
+
+Esta sección conserva la revisión anterior a la incorporación del aviso. La ausencia de `localStorage` y el acceso de Cookie Settings directamente a la política corresponden a ese estado previo; el comportamiento actual se documenta en la sección de aviso informativo anterior.
 
 Los cuatro documentos facilitados se incorporaron a `/legal`, `/privacy`, `/cookies` y `/accessibility`, con sus equivalentes en alemán, francés, español y ruso. Cada documento conserva su propia página y los enlaces existentes del footer. Se añadieron titular, dirección profesional y fecha, se retiraron los avisos de borrador y se adaptó la información técnica al formulario y al almacenamiento reales del código. No se modificaron el diseño ni los textos de la landing.
 

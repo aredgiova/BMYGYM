@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { isLocale, locales, localePath } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { LocaleProvider } from "@/i18n/provider";
+import { CookieNoticeProvider } from "@/components/privacy/cookie-notice";
 
 const bodoni = localFont({
   src: [
@@ -69,7 +70,9 @@ export default async function RootLayout({children, params}: Readonly<{children:
     <html lang={locale} className={`${bodoni.variable} ${manrope.variable}`}>
       <body>
         <a href="#main-content" className="skip-link">{common.nav.skip}</a>
-        <LocaleProvider locale={locale} common={common}>{children}</LocaleProvider>
+        <LocaleProvider locale={locale} common={common}>
+          <CookieNoticeProvider>{children}</CookieNoticeProvider>
+        </LocaleProvider>
       </body>
     </html>
   );

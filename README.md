@@ -40,7 +40,7 @@ En integración continua, usar `npm ci` con el archivo de bloqueo versionado. La
 - Next.js con App Router y ejecución Node.js; React para la interfaz.
 - TypeScript con `strict: true` y alias `@/` para `src/`.
 - Tailwind CSS y estilos globales para el sistema visual y la adaptación a distintos tamaños de pantalla.
-- Componentes de servidor por defecto, con componentes de cliente para navegación móvil, selector de idioma, preferencias de cookies y formulario.
+- Componentes de servidor por defecto, con componentes de cliente para navegación móvil, selector de idioma, aviso informativo de cookies y formulario.
 - Páginas bajo `src/app/[locale]/`; `src/proxy.ts` sirve el inglés en URLs sin prefijo. Los otros idiomas usan `/de`, `/fr`, `/es` y `/ru`, sin cambiar automáticamente el idioma del visitante.
 - Diccionarios tipados `src/i18n/{idioma}-home.json` y `{idioma}-common.json`. `dictionaries.ts` carga el contenido de las páginas; `common.ts` proporciona los mensajes de API; `config.ts` define idiomas y rutas. Los nombres de marca se conservan y su significado se explica en el contexto de cada idioma.
 - Sharp para la optimización de imágenes. Las imágenes conceptuales se entregan desde `public/images/`; Bodoni Moda y Manrope se sirven localmente desde `public/fonts/`.
@@ -125,4 +125,4 @@ La nueva visualización de un entorno BMYGYM completo y una experiencia inmersiv
 
 Las imágenes son visualizaciones conceptuales, sin afirmaciones de instalaciones realizadas, productos fabricados o certificación aeronáutica. Su procedencia, tamaños y licencias tipográficas están en el [manifiesto de recursos](docs/asset-manifest.md).
 
-Esta versión no carga analítica, publicidad, píxeles ni servicios opcionales de seguimiento. “Cookie Settings” permite consultar ese estado. Si se añaden servicios opcionales, se debe incorporar un sistema de consentimiento que permita aceptar, rechazar y cambiar preferencias antes de su carga, junto con la política correspondiente.
+Esta versión no carga analítica, publicidad, píxeles ni servicios opcionales de seguimiento. El aviso propio y ligero de cookies aparece en la parte inferior, enlaza a la política y recuerda su cierre durante 180 días en `localStorage`; “Cookie Settings” permite reabrirlo. Está disponible en los cinco idiomas, sin CMP ni dependencias externas. Cerrar el aviso no otorga consentimiento a seguimiento. Su contrato y mantenimiento están en [Aviso de cookies](docs/cookie-notice.md), y las comprobaciones locales en [Validación](docs/validation.md). Si se añaden servicios opcionales, se debe incorporar un sistema de consentimiento que permita aceptar, rechazar y cambiar preferencias antes de su carga, junto con la política correspondiente.

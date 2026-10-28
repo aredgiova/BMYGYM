@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Arrow } from "@/components/ui/arrow";
 import { localePath, type Locale } from "@/i18n/config";
 import type { CommonCopy } from "@/i18n/types";
+import { CookieSettingsButton } from "@/components/privacy/cookie-notice";
 
 export function Footer({locale, copy, homeLabel}: {locale: Locale; copy: CommonCopy["footer"]; homeLabel: string}) {
   const home = localePath(locale);
@@ -18,7 +19,7 @@ export function Footer({locale, copy, homeLabel}: {locale: Locale; copy: CommonC
           <Link href={localePath(locale, "legal")}>{copy.legal}</Link>
           <Link href={localePath(locale, "privacy")}>{copy.privacy}</Link>
           <Link href={localePath(locale, "cookies")}>{copy.cookies}</Link>
-          <details className="cookie-settings"><summary>{copy.cookieSettings}</summary><div><strong>{copy.cookieTitle}</strong><p>{copy.cookieBody}</p><Link href={localePath(locale, "cookies")}>{copy.cookieLink}</Link></div></details>
+          <CookieSettingsButton>{copy.cookieSettings}</CookieSettingsButton>
           <Link href={localePath(locale, "accessibility")}>{copy.accessibility}</Link>
         </nav>
       </div>
