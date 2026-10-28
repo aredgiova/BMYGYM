@@ -21,7 +21,7 @@ export function EnquirySection({locale, copy}: {locale: Locale; copy: CommonCopy
             alt="Bojana Pesic"
             width={1034}
             height={973}
-            sizes="(max-width: 1023px) 72px, 96px"
+            unoptimized
           />
           <p className="founder-signature">Bojana Pesic<span>{text.founder}</span></p>
         </div>

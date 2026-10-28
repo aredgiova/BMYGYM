@@ -10,7 +10,7 @@ Source files remain in the user's Downloads directory. The duplicate recovery im
 
 ### Founder photograph · 27 October 2026
 
-`/images/bojana-pesic.jpeg` is an unchanged copy of the user's supplied `C:/Users/User/Downloads/IMG_0335.jpeg` (1034 × 973 pixels, 180,111 bytes). It appears alongside Bojana Pesic's existing signature in the enquiry block in all five languages. This personal photograph is separate from the concept visualisations above. Next.js Image supplies responsive optimisation and lazy loading; CSS presents a right-aligned 4:5 crop at 96 × 120px on desktop and 72 × 90px below 1024px. No retouching, colour filters or generated imagery were applied.
+`/images/bojana-pesic.jpeg` is an unchanged copy of the user's supplied `C:/Users/User/Downloads/IMG_0335.jpeg` (1034 × 973 pixels, 180,111 bytes). It appears alongside Bojana Pesic's existing signature in the enquiry block in all five languages. This personal photograph is separate from the concept visualisations above. As of 28 October 2026, this portrait uses Next.js Image with `unoptimized` to deliver the original JPEG without a second lossy encoding or a small responsive derivative being enlarged by the crop. Lazy loading is retained. CSS presents a right-aligned 4:5 crop at 96 × 120px on desktop and 72 × 90px below 1024px. No retouching, colour filters or generated imagery were applied.
 
 ### Selection of 22 October 2026
 
