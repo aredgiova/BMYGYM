@@ -11,9 +11,9 @@ Usar esta lista antes de abrir el sitio al público. El despliegue y la activaci
 
 ## Información legal y privacidad
 
-- [ ] Completar entidad o titular, dirección postal, identificación fiscal y datos registrales aplicables.
-- [ ] Revisar y aprobar aviso legal, privacidad y cookies; retirar su estado de borrador únicamente después de completar la información.
-- [ ] Definir responsable del tratamiento, fundamento aplicable, retención de consultas, acceso del equipo, encargados y transferencias que correspondan al funcionamiento real.
+- [x] Integrar titular y dirección profesional facilitados: Bojana Pesic, Avda. Primado Reig 129, Entlo. D, 46020 Valencia, España.
+- [x] Sustituir los cuatro textos provisionales por los documentos facilitados con fecha 28 de octubre de 2026 y sus traducciones; conservar los enlaces del pie y retirar los avisos de borrador.
+- [ ] Confirmar en la operación real la gestión y retención de consultas, acceso del equipo, acuerdos con proveedores y transferencias descritos en la política de privacidad.
 - [ ] Comprobar las cookies y los servicios del hosting definitivo. La versión inicial no carga seguimiento opcional.
 - [ ] Si se incorpora analítica, publicidad o contenido externo con seguimiento, bloquearlo hasta obtener la elección del visitante y permitir rechazar o cambiar preferencias posteriormente.
 

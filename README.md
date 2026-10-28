@@ -71,10 +71,10 @@ docs/                    Guías de configuración, recursos y publicación
 | ---------------------- | --------------------------------------------------------------------- |
 | `/`                    | Inicio, filosofía, entornos, Blueprint, proceso, conceptos y consulta |
 | `/de`, `/fr`, `/es`, `/ru` | La misma experiencia en alemán, francés, español y ruso             |
-| `/legal`               | Borrador explícito del aviso legal                                    |
-| `/privacy`             | Borrador explícito de la política de privacidad                       |
-| `/cookies`             | Borrador explícito de la política de cookies y estado actual          |
-| `/accessibility`       | Información de accesibilidad y canal de contacto                      |
+| `/legal`               | Aviso legal y datos profesionales de Bojana Pesic                     |
+| `/privacy`             | Política de privacidad y tratamiento de consultas                    |
+| `/cookies`             | Política de cookies y funcionamiento actual                          |
+| `/accessibility`       | Declaración de accesibilidad y canal de contacto                     |
 | `GET /api/health`      | Estado básico del servidor; no comprueba la entrega de correo         |
 | `POST /api/v1/contact` | Validación de la consulta y envío mediante Resend                     |
 
@@ -119,7 +119,7 @@ Una conexión de hosting puede desplegar automáticamente al actualizar su rama 
 
 ## Contenido pendiente de aprobación
 
-Los textos legales son borradores identificados. Faltan la entidad o titular legal, identificación fiscal y registral aplicable, dirección, tratamiento de datos, retención de consultas y revisión de los textos definitivos. El contenido comercial y las traducciones deben recibir la aprobación editorial final de BMYGYM antes de publicar la revisión.
+Las cuatro páginas legales incorporan los textos facilitados por BMYGYM el 28 de octubre de 2026, la titular Bojana Pesic y la dirección profesional de Avda. Primado Reig 129, Entlo. D, 46020 Valencia, España. Se retiraron los avisos provisionales y se actualizaron los cinco idiomas. La privacidad describe los campos reales del formulario, el idioma y la confirmación de lectura, el envío mediante Resend cuando está configurado y la ausencia de una base de datos de consultas en la aplicación. La política de cookies describe la configuración del código; esta revisión no acredita la configuración del hosting ni una publicación en producción. El contenido comercial y las traducciones deben recibir la aprobación editorial final de BMYGYM antes de publicar la revisión.
 
 La nueva visualización de un entorno BMYGYM completo y una experiencia inmersiva quedan para una fase posterior, conforme al alcance solicitado.
 

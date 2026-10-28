@@ -1,5 +1,15 @@
 # Validación
 
+## Páginas legales — 28 de octubre de 2026
+
+Los cuatro documentos facilitados se incorporaron a `/legal`, `/privacy`, `/cookies` y `/accessibility`, con sus equivalentes en alemán, francés, español y ruso. Cada documento conserva su propia página y los enlaces existentes del footer. Se añadieron titular, dirección profesional y fecha, se retiraron los avisos de borrador y se adaptó la información técnica al formulario y al almacenamiento reales del código. No se modificaron el diseño ni los textos de la landing.
+
+ESLint, TypeScript, compilación de producción y las 22 pruebas existentes pasaron. La comprobación de navegador contra `http://127.0.0.1:3101` verificó las veinte rutas legales con HTTP 200, fecha, títulos, contenido completo, enlaces de email y AEPD, metadatos y ausencia de avisos provisionales. Se siguieron los veinte enlaces del footer y se abrieron las cinco políticas desde el formulario; Cookie Settings accede a la política correspondiente.
+
+Las cuarenta combinaciones de documento/idioma con anchos de 320 y 1440 px no presentan desbordamiento horizontal. El recorrido no registró errores JavaScript, solicitudes externas, cookies ni datos en localStorage/sessionStorage. Capturas e informe local en `artifacts/legal-2026-10-28/`; recorrido en `artifacts/legal-qa-2026-10-28.cjs`. La revisión visual independiente de tres capturas EN/RU no encontró problemas de lectura o recorte. Las traducciones DE/FR y ES/RU recibieron revisión cruzada sin hallazgos materiales; no se afirma revisión humana nativa.
+
+La comprobación corresponde a la aplicación local. No se ha desplegado esta revisión, verificado la infraestructura de producción ni enviado correo real.
+
 ## Refinamiento luminoso e imágenes suministradas — 22 de octubre de 2026
 
 La portada presenta la primera imagen completa junto al texto sobre marfil, sin oscurecerla. Se incorporaron cuatro visualizaciones suministradas y se aclararon cabecera, fondos y Signature Concepts. Las alternativas de imagen están actualizadas en los cinco idiomas; OpenGraph y Twitter usan la nueva portada.

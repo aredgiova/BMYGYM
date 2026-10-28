@@ -28,10 +28,15 @@ export default async function InformationPage({params}: Props) {
   const {common} = await getDictionary(locale);
   const content = common.legal[page];
   return (
-    <LegalLayout locale={locale} copy={common} title={content.title} draft={page !== "accessibility"}>
+    <LegalLayout locale={locale} copy={common} title={content.title} lastUpdated={common.legal.lastUpdated}>
       {content.sections.map(section => <section key={section.title}>
         <h2>{section.title}</h2>
-        {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph.split("hello@bmygym.com").map((part,index) => <span key={index}>{index > 0 && <a href="mailto:hello@bmygym.com">hello@bmygym.com</a>}{part}</span>)}</p>)}
+        {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph.split(/(hello@bmygym\.com|www\.aepd\.es|\n)/).map((part,index) => {
+          if (part === "\n") return <br key={index} />;
+          if (part === "hello@bmygym.com") return <a key={index} href="mailto:hello@bmygym.com">{part}</a>;
+          if (part === "www.aepd.es") return <a key={index} href="https://www.aepd.es/">{part}</a>;
+          return part;
+        })}</p>)}
       </section>)}
     </LegalLayout>
   );

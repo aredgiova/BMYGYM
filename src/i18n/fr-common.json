@@ -7,31 +7,283 @@
   "validation": {"fullName": "Veuillez saisir votre nom (entre 2 et 120 caractères).", "email": "Veuillez saisir une adresse e-mail valide.", "clientType": "Veuillez indiquer si vous êtes un client privé ou un partenaire professionnel.", "projectType": "Veuillez sélectionner un type de projet.", "message": "Veuillez décrire votre projet en 20 à 5 000 caractères.", "privacy": "Veuillez confirmer avoir pris connaissance de la politique de confidentialité pour envoyer votre demande.", "company": "Veuillez ne pas dépasser 160 caractères.", "location": "Veuillez ne pas dépasser 160 caractères.", "website": "Impossible de traiter cette demande. Veuillez contacter hello@bmygym.com.", "locale": "Veuillez choisir l’une des langues disponibles."},
   "api": {"unavailable": "Notre service de demande est temporairement indisponible. Veuillez contacter hello@bmygym.com.", "tooLong": "Votre demande est trop longue. Veuillez la raccourcir et réessayer.", "invalid": "Nous n’avons pas pu lire votre demande. Veuillez remplir le formulaire et réessayer.", "origin": "Veuillez envoyer votre demande à l’aide du formulaire de ce site.", "validation": "Veuillez vérifier les champs signalés.", "delivery": "Nous n’avons pas pu confirmer l’envoi. Veuillez réessayer ou contacter directement hello@bmygym.com.", "success": "Merci pour votre demande. Votre message a été envoyé à BMYGYM. Nous nous réjouissons de découvrir votre vision."},
   "legal": {
-    "draft": "Document provisoire. Les informations sur l’entreprise et ce texte doivent être complétés et vérifiés avant publication.",
+    "lastUpdated": "Dernière mise à jour : 28 octobre 2026",
     "back": "Revenir à la demande de projet",
-    "legal": {"title": "Mentions légales", "sections": [
-      {"title": "BMYGYM", "paragraphs": ["Espaces de longévité sur mesure. Fondatrice : Bojana Pesic. Valence, Espagne. Contact : hello@bmygym.com."]},
-      {"title": "Informations sur l’entreprise à compléter", "paragraphs": ["Les informations d’immatriculation de la personne morale ou de l’exploitant, l’adresse postale, l’identifiant fiscal et toute information applicable relative au registre doivent être fournis avant la finalisation de ces mentions."]},
-      {"title": "Visualisations conceptuelles", "paragraphs": ["Les espaces architecturaux et les Signature Concepts présentés sur ce site sont des visualisations de conception. Ils ne permettent pas de conclure qu’un produit a été fabriqué, qu’un projet a été réalisé ou qu’un équipement aéronautique a été certifié.", "AERO ONE est un concept de fauteuil transformable dédié à la récupération et à la longévité, en cours de développement pour l’aviation privée. Il n’est ni certifié ni commercialisé. Les concepts destinés à l’aviation restent soumis aux exigences de faisabilité technique, de sécurité et de certification propres à chaque aéronef."]},
-      {"title": "Missions de projet", "paragraphs": ["Le Private Longevity Blueprint est une prestation professionnelle de conceptualisation et de conception qui débute par une commande formalisée et rémunérée. Le périmètre, les livrables et les honoraires sont convenus avant le début de la conception. Les phases ultérieures de conception, de sélection de produits, de coordination de fabrication et d’intégration font l’objet de commandes distinctes selon les besoins. Aucun achat ni paiement n’est effectué par l’intermédiaire de ce site."]}
-    ]},
-    "privacy": {"title": "Politique de confidentialité", "sections": [
-      {"title": "À propos de cette politique", "paragraphs": ["Ce document provisoire décrit la fonctionnalité de demande préparée pour BMYGYM. Il ne constitue pas une politique de confidentialité définitive et approuvée."]},
-      {"title": "Les informations que vous fournissez", "paragraphs": ["Le formulaire de demande de projet recueille votre nom complet, votre adresse e-mail, votre profil client, le type de projet et sa description. Vous pouvez également indiquer votre entreprise et la localisation du projet. La langue sélectionnée sur le site accompagne votre demande afin de faciliter notre réponse. Merci de ne pas inclure de données de santé sensibles."]},
-      {"title": "Finalité et transmission", "paragraphs": ["Les informations sont utilisées pour répondre à votre demande de projet. Lorsque l’envoi par e-mail est configuré, le formulaire les transmet via Resend à BMYGYM, à l’adresse hello@bmygym.com. Ce site ne conserve pas les demandes dans une base de données applicative."]},
-      {"title": "Contact", "paragraphs": ["Pour toute question concernant les informations que vous partagez, contactez hello@bmygym.com."]},
-      {"title": "Informations à compléter avant publication", "paragraphs": ["La politique définitive doit préciser l’identité du responsable du traitement et son adresse de contact, la base juridique applicable, les durées de conservation, les dispositions relatives aux sous-traitants, les garanties éventuelles concernant les transferts internationaux, ainsi que les modalités d’exercice des droits applicables et de contact avec l’autorité de contrôle compétente.", "Ces informations n’ont pas encore été fournies ni approuvées. La politique définitive reposera sur la réalité de l’entreprise et sur ses modalités de traitement des demandes."]}
-    ]},
-    "cookies": {"title": "Politique relative aux cookies", "sections": [
-      {"title": "Configuration actuelle du site", "paragraphs": ["Cette version n’installe aucun service d’analyse, de publicité, pixel de suivi, module social intégré ni autre service facultatif reposant sur des cookies. Les polices et les images sont servies directement par le site. Le choix de la langue figure dans l’URL et ne nécessite pas de cookie."]},
-      {"title": "Vos préférences", "paragraphs": ["Aucun cookie non essentiel n’est actuellement à accepter ou à refuser. Vous pouvez consulter la situation à tout moment via les paramètres des cookies dans le pied de page."]},
-      {"title": "Avant l’ajout de services facultatifs", "paragraphs": ["Si des services facultatifs de suivi ou des contenus intégrés sont ajoutés, cette politique et les dispositifs de consentement devront être mis à jour. Les visiteurs devront pouvoir accepter, refuser ou modifier ultérieurement leurs préférences avant le chargement de ces services.", "La configuration finale de l’hébergement en production et l’inventaire des cookies doivent être vérifiés avant publication."]}
-    ]},
-    "accessibility": {"title": "Accessibilité", "sections": [
-      {"title": "Notre démarche", "paragraphs": ["BMYGYM souhaite rendre son site clair et utilisable sur différents appareils et avec différents modes de navigation, en anglais, allemand, français, espagnol et russe."]},
-      {"title": "Utiliser ce site", "paragraphs": ["Vous pouvez parcourir les liens et les commandes des formulaires à l’aide du clavier. Un lien d’accès direct au contenu est disponible au début de chaque page. La navigation mobile et le sélecteur de langue peuvent être fermés avec la touche Échap. Les images disposent d’alternatives textuelles descriptives, les formulaires utilisent des libellés visibles et le site respecte votre préférence de réduction des animations."]},
-      {"title": "Nous contacter", "paragraphs": ["Si vous rencontrez un obstacle ou préférez nous adresser une demande directement, écrivez à hello@bmygym.com. Indiquez la page concernée et toute information nous permettant de comprendre le problème.", "Ces informations ne constituent pas une certification formelle d’accessibilité."]}
-    ]}
+    "legal": {
+      "title": "Mentions légales",
+      "sections": [
+        {
+          "title": "Éditrice du site",
+          "paragraphs": [
+            "Ce site internet, www.bmygym.com, est exploité par :",
+            "Bojana Pesic, exerçant sous le nom commercial BMYGYM\nAvda. Primado Reig 129, Entlo. D\n46020 Valencia, Espagne\nE-mail : hello@bmygym.com",
+            "BMYGYM est une entreprise indépendante dirigée par sa fondatrice, spécialisée dans la direction créative, le développement de concepts et la coordination d’espaces de longévité et de bien-être sur mesure pour des propriétés d’exception, des résidences privées, l’hôtellerie de luxe, les superyachts et l’aviation privée."
+          ]
+        },
+        {
+          "title": "Objet du site",
+          "paragraphs": [
+            "Le site présente BMYGYM, sa philosophie de conception, ses services et ses projets conceptuels.",
+            "Le contenu est destiné à l’information générale et aux demandes professionnelles. Il ne constitue ni une offre commerciale ferme, ni une spécification technique, ni un engagement contractuel.",
+            "Chaque projet est développé individuellement en fonction des exigences du client, de sa faisabilité, des réglementations applicables et de conditions contractuelles convenues séparément."
+          ]
+        },
+        {
+          "title": "Conceptions et visualisations conceptuelles",
+          "paragraphs": [
+            "Les images, rendus, représentations architecturales et concepts de produits présentés sur ce site visent à communiquer la vision créative et l’orientation de conception de BMYGYM.",
+            "Certaines représentations peuvent être générées ou améliorées numériquement.",
+            "Sauf indication expresse contraire, elles ne doivent pas être interprétées comme des photographies d’installations achevées ni comme la preuve qu’un produit donné a été fabriqué, testé, certifié ou commercialisé.",
+            "Les conceptions définitives, les matériaux, les spécifications, les fonctionnalités, les modalités de fabrication et les autorisations réglementaires dépendent de chaque projet."
+          ]
+        },
+        {
+          "title": "Propriété intellectuelle",
+          "paragraphs": [
+            "Sauf indication contraire, les contenus originaux, concepts créatifs, conceptions, supports visuels, éléments de marque et autres éléments protégés présentés sur ce site appartiennent à BMYGYM ou sont utilisés avec les autorisations appropriées.",
+            "Tous droits réservés.",
+            "Toute reproduction, distribution, modification ou exploitation commerciale non autorisée de supports protégés est interdite, sauf dans les cas permis par la législation applicable ou expressément autorisés par écrit.",
+            "Les marques et supports de tiers demeurent la propriété de leurs titulaires respectifs."
+          ]
+        },
+        {
+          "title": "Demandes professionnelles et accords",
+          "paragraphs": [
+            "L’envoi d’une demande par l’intermédiaire de ce site ne crée aucune relation contractuelle ni aucune obligation pour BMYGYM d’accepter un projet.",
+            "Toutes les missions professionnelles, y compris le BMYGYM Private Longevity Blueprint, sont soumises à des conditions, un périmètre de travail, des honoraires et des modalités de paiement convenus individuellement.",
+            "Les obligations de confidentialité et les dispositions relatives à la propriété intellectuelle propres à chaque projet peuvent être définies dans des accords écrits distincts."
+          ]
+        },
+        {
+          "title": "Responsabilité",
+          "paragraphs": [
+            "BMYGYM met en œuvre des efforts raisonnables pour s’assurer que les informations publiées sur ce site sont exactes et à jour.",
+            "Le contenu du site peut toutefois évoluer avec les concepts, les services et les projets.",
+            "BMYGYM n’est pas responsable des décisions prises uniquement sur la base des informations générales du site.",
+            "Aucune disposition des présentes mentions n’exclut une responsabilité ou des droits légaux dont l’exclusion serait interdite par la loi."
+          ]
+        },
+        {
+          "title": "Liens externes",
+          "paragraphs": [
+            "Ce site peut contenir des liens vers des sites tiers. BMYGYM ne contrôle ni leur contenu ni leurs pratiques en matière de confidentialité."
+          ]
+        },
+        {
+          "title": "Droit applicable",
+          "paragraphs": [
+            "Ce site est régi par le droit espagnol applicable et le droit de l’Union européenne directement applicable.",
+            "Tout litige relève des juridictions compétentes désignées par le droit applicable, y compris les règles impératives de protection des consommateurs lorsqu’elles s’appliquent."
+          ]
+        },
+        {
+          "title": "Contact",
+          "paragraphs": [
+            "Pour toute question juridique ou professionnelle :",
+            "hello@bmygym.com"
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "sections": [
+        {
+          "title": "1. Responsable du traitement",
+          "paragraphs": [
+            "Les données personnelles transmises par l’intermédiaire de www.bmygym.com sont traitées par :",
+            "Bojana Pesic, exerçant sous le nom commercial BMYGYM\nAvda. Primado Reig 129, Entlo. D\n46020 Valencia, Espagne\nE-mail : hello@bmygym.com",
+            "BMYGYM respecte la vie privée des visiteurs de son site, de ses clients et de ses partenaires professionnels et traite les informations personnelles conformément à la législation applicable en matière de protection des données, notamment le Règlement général sur la protection des données (RGPD)."
+          ]
+        },
+        {
+          "title": "2. Informations collectées",
+          "paragraphs": [
+            "Lorsque les visiteurs contactent BMYGYM ou soumettent une demande de projet, les informations suivantes peuvent être collectées :",
+            "Le formulaire de demande de projet exige votre nom complet, votre adresse e-mail, votre catégorie de client, le type de projet et votre message. L’entreprise et le lieu du projet sont facultatifs. La langue du site sélectionnée et votre confirmation de lecture de la Politique de confidentialité accompagnent la demande.",
+            "Nom et adresse e-mail.\nEntreprise ou affiliation professionnelle, si ces informations sont fournies.\nCatégorie de client et type de projet.\nLieu du projet et informations générales le concernant.\nInformations communiquées volontairement dans les messages ou la correspondance.\nInformations techniques nécessaires au fonctionnement et à la sécurité du site.\nIl est demandé aux visiteurs de ne pas transmettre de données personnelles sensibles par le formulaire de contact général."
+          ]
+        },
+        {
+          "title": "3. Finalités du traitement",
+          "paragraphs": [
+            "Les informations personnelles sont utilisées pour :",
+            "Répondre aux demandes et aux demandes d’information.\nÉvaluer les projets et collaborations professionnelles potentiels.\nCommuniquer avec les clients potentiels et existants.\nPréparer et gérer les missions professionnelles.\nMaintenir la sécurité et le fonctionnement du site.\nRespecter les obligations légales applicables.\nLes données personnelles transmises par le formulaire de contact ne sont pas automatiquement utilisées pour des abonnements marketing."
+          ]
+        },
+        {
+          "title": "4. Base juridique",
+          "paragraphs": [
+            "Selon les circonstances, les données personnelles sont traitées sur les bases suivantes :",
+            "Mesures prises à la demande d’une personne avant la conclusion d’un contrat.\nExécution d’un contrat existant.\nRespect des obligations légales applicables.\nIntérêts légitimes à répondre aux demandes professionnelles et à maintenir la sécurité du site.\nConsentement lorsque la loi l’exige."
+          ]
+        },
+        {
+          "title": "5. Partage des données",
+          "paragraphs": [
+            "Les informations personnelles peuvent être traitées par des prestataires qui assurent l’hébergement du site, la maintenance technique, les communications par e-mail et la gestion des demandes.",
+            "Lorsque l’envoi d’e-mails est configuré, les demandes de projet sont transmises à BMYGYM par Resend, notre prestataire d’acheminement des e-mails. Ce site ne conserve pas les demandes dans une base de données applicative. Si le formulaire est indisponible, les visiteurs peuvent écrire directement à hello@bmygym.com.",
+            "Ces prestataires ne sont autorisés à traiter les informations personnelles que dans la mesure nécessaire à leurs services et conformément aux exigences applicables en matière de protection des données.",
+            "BMYGYM ne vend pas d’informations personnelles.",
+            "Les données personnelles peuvent également être divulguées lorsque la loi l’exige."
+          ]
+        },
+        {
+          "title": "6. Transferts internationaux",
+          "paragraphs": [
+            "Lorsque des prestataires traitent des informations personnelles en dehors de l’Espace économique européen, les garanties appropriées exigées par la législation applicable en matière de protection des données seront mises en œuvre."
+          ]
+        },
+        {
+          "title": "7. Conservation des données",
+          "paragraphs": [
+            "Les informations personnelles ne sont conservées que pendant la durée nécessaire pour répondre aux demandes, gérer les relations professionnelles, respecter les obligations contractuelles et se conformer aux exigences légales applicables.",
+            "Les informations qui ne sont plus nécessaires seront supprimées ou anonymisées, sauf si leur conservation reste légalement requise ou justifiée."
+          ]
+        },
+        {
+          "title": "8. Sécurité des données",
+          "paragraphs": [
+            "BMYGYM prend des mesures techniques et organisationnelles raisonnables pour protéger les informations personnelles contre l’accès non autorisé, la perte, l’utilisation abusive ou la divulgation."
+          ]
+        },
+        {
+          "title": "9. Vos droits",
+          "paragraphs": [
+            "En vertu de la législation applicable en matière de protection des données, les personnes peuvent disposer des droits suivants :",
+            "Accéder à leurs informations personnelles.\nDemander la rectification de données inexactes.\nDemander l’effacement de leurs informations personnelles.\nDemander la limitation du traitement.\nS’opposer à certaines activités de traitement.\nDemander la portabilité des données lorsque ce droit s’applique.\nRetirer leur consentement lorsque le traitement repose sur celui-ci.\nLes demandes peuvent être adressées à hello@bmygym.com.",
+            "Les personnes peuvent également déposer une réclamation auprès de l’Agence espagnole de protection des données (AEPD) : www.aepd.es."
+          ]
+        },
+        {
+          "title": "10. Sites tiers",
+          "paragraphs": [
+            "Les sites externes accessibles par des liens depuis BMYGYM peuvent disposer de leurs propres politiques de confidentialité."
+          ]
+        },
+        {
+          "title": "11. Mises à jour de la politique",
+          "paragraphs": [
+            "Cette Politique de confidentialité peut être mise à jour pour refléter les évolutions des exigences légales, des activités de l’entreprise ou des fonctionnalités du site."
+          ]
+        },
+        {
+          "title": "12. Contact",
+          "paragraphs": [
+            "Pour toute question relative à la confidentialité :",
+            "hello@bmygym.com"
+          ]
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Politique relative aux cookies",
+      "sections": [
+        {
+          "title": "1. Introduction",
+          "paragraphs": [
+            "Cette Politique relative aux cookies explique comment www.bmygym.com utilise les cookies et technologies similaires.",
+            "Le site est exploité par Bojana Pesic, exerçant sous le nom commercial BMYGYM."
+          ]
+        },
+        {
+          "title": "2. Que sont les cookies ?",
+          "paragraphs": [
+            "Les cookies sont de petits fichiers texte que les sites peuvent enregistrer sur l’appareil d’un visiteur pour assurer le fonctionnement, la sécurité, les préférences ou d’autres fonctions techniques."
+          ]
+        },
+        {
+          "title": "3. Utilisation des cookies",
+          "paragraphs": [
+            "BMYGYM vise à n’utiliser que les cookies et technologies similaires nécessaires au fonctionnement, à la sécurité et aux fonctionnalités de son site, sauf si d’autres technologies sont introduites et signalées.",
+            "Le site actuel ne dépose pas de cookies applicatifs et n’utilise ni le stockage local ni le stockage de session du navigateur. Le choix de la langue figure dans l’URL. Les polices et les images sont servies par le site lui-même.",
+            "Les technologies strictement nécessaires peuvent être utilisées sans consentement préalable lorsque la législation applicable le permet."
+          ]
+        },
+        {
+          "title": "4. Analyse et publicité",
+          "paragraphs": [
+            "Le site actuel ne charge aucun service d’analyse ou de publicité, pixel de suivi, widget social intégré ni autre technologie de suivi facultative. BMYGYM n’utilise pas de cookies pour la publicité comportementale ou le suivi publicitaire entre sites.",
+            "Si des technologies facultatives d’analyse, de marketing ou d’autres technologies soumises au consentement sont introduites, la Politique relative aux cookies sera mise à jour et des dispositifs de consentement appropriés seront proposés avant leur activation."
+          ]
+        },
+        {
+          "title": "5. Technologies de tiers",
+          "paragraphs": [
+            "L’hébergement du site, la sécurité, les contenus intégrés ou d’autres services techniques peuvent utiliser des cookies ou des technologies similaires.",
+            "Le cas échéant, leurs finalités et les informations pertinentes seront communiquées conformément aux exigences légales."
+          ]
+        },
+        {
+          "title": "6. Préférences relatives aux cookies",
+          "paragraphs": [
+            "Les visiteurs peuvent gérer ou supprimer les cookies dans les paramètres de leur navigateur.",
+            "Il n’y a actuellement aucun cookie facultatif à accepter ou à refuser. Les Paramètres des cookies dans le pied de page affichent cette situation et un lien vers la présente politique ; ils n’enregistrent aucune préférence de consentement.",
+            "Lorsque des cookies facultatifs nécessitant un consentement sont utilisés, les visiteurs disposent d’un moyen approprié pour les accepter, les refuser ou les gérer.",
+            "La désactivation de certaines technologies nécessaires peut affecter le fonctionnement du site."
+          ]
+        },
+        {
+          "title": "7. Modifications de cette politique",
+          "paragraphs": [
+            "BMYGYM peut mettre à jour cette Politique relative aux cookies lorsque les technologies du site ou les exigences légales évoluent."
+          ]
+        },
+        {
+          "title": "8. Contact",
+          "paragraphs": [
+            "Pour toute question concernant les cookies :",
+            "hello@bmygym.com"
+          ]
+        }
+      ]
+    },
+    "accessibility": {
+      "title": "Déclaration d’accessibilité",
+      "sections": [
+        {
+          "title": "1. Notre engagement",
+          "paragraphs": [
+            "BMYGYM s’engage à offrir une expérience en ligne claire, inclusive et accessible à tous les visiteurs, clients et partenaires professionnels.",
+            "Nous souhaitons que www.bmygym.com soit facile à parcourir, à comprendre et à utiliser sur différents appareils et dans différents environnements de navigation."
+          ]
+        },
+        {
+          "title": "2. Notre approche de l’accessibilité",
+          "paragraphs": [
+            "Lors du développement et de la maintenance du site, BMYGYM vise à favoriser :",
+            "Une typographie claire et lisible.\nUne navigation et une structure de page cohérentes.\nDes mises en page adaptatives pour ordinateurs, tablettes et appareils mobiles.\nDes titres pertinents et des contenus descriptifs.\nDes alternatives textuelles appropriées pour les images informatives.\nDes formulaires de contact et des éléments interactifs accessibles.\nUn contraste visuel et une lisibilité suffisants.\nUne navigation au clavier lorsqu’elle est techniquement prise en charge.\nNous utilisons les principes reconnus d’accessibilité du Web, notamment les Règles pour l’accessibilité des contenus Web (WCAG), comme référence pour nos améliorations continues."
+          ]
+        },
+        {
+          "title": "3. État actuel",
+          "paragraphs": [
+            "BMYGYM poursuit l’examen et l’amélioration de l’accessibilité de son site.",
+            "Certains contenus ou fonctionnalités peuvent ne pas encore satisfaire pleinement à toutes les recommandations d’accessibilité.",
+            "Cette déclaration ne constitue pas une certification officielle d’accessibilité."
+          ]
+        },
+        {
+          "title": "4. Retours et assistance",
+          "paragraphs": [
+            "Si vous rencontrez des difficultés pour accéder à des informations, naviguer sur le site ou soumettre une demande de projet, veuillez nous contacter.",
+            "Vos retours sont les bienvenus et nous mettrons en œuvre des efforts raisonnables pour fournir, lorsque cela est possible, les informations par un autre moyen accessible."
+          ]
+        },
+        {
+          "title": "5. Contact",
+          "paragraphs": [
+            "BMYGYM – Bojana Pesic\nE-mail : hello@bmygym.com"
+          ]
+        },
+        {
+          "title": "6. Mises à jour",
+          "paragraphs": [
+            "Cette déclaration peut être mise à jour à mesure que les fonctionnalités du site et les améliorations de son accessibilité évoluent."
+          ]
+        }
+      ]
+    }
   },
   "notFound": {"title": "Une autre direction.", "body": "La page que vous recherchez est introuvable. Découvrez les espaces de longévité sur mesure de BMYGYM ou échangeons à propos de votre projet.", "back": "Revenir à BMYGYM"}
 }

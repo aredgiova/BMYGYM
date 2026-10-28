@@ -6,13 +6,13 @@ import type { CommonCopy } from "@/i18n/types";
 
 export function LegalLayout({
   title,
-  draft = false,
+  lastUpdated,
   children,
   locale,
   copy,
 }: {
   title: string;
-  draft?: boolean;
+  lastUpdated?: string;
   children: React.ReactNode;
   locale: Locale;
   copy: CommonCopy;
@@ -22,11 +22,7 @@ export function LegalLayout({
       <Header isHome={false} locale={locale} copy={copy.nav} />
       <main id="main-content" tabIndex={-1} className="section legal-page">
         <h1>{title}</h1>
-        {draft && (
-          <p className="draft-notice">
-            {copy.legal.draft}
-          </p>
-        )}
+        {lastUpdated && <p>{lastUpdated}</p>}
         {children}
         <TextLink href={`${localePath(locale)}#enquiry`}>{copy.legal.back}</TextLink>
       </main>
