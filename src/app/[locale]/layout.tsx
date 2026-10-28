@@ -68,6 +68,22 @@ export default async function RootLayout({children, params}: Readonly<{children:
   const {common} = await getDictionary(locale);
   return (
     <html lang={locale} className={`${bodoni.variable} ${manrope.variable}`}>
+      <head>
+        {/* Google tag (gtag.js) */}
+        {/* eslint-disable-next-line @next/next/next-script-for-ga -- Keep the supplied Google tag in the document head. */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZH4R52182" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5ZH4R52182');
+`,
+          }}
+        />
+      </head>
       <body>
         <a href="#main-content" className="skip-link">{common.nav.skip}</a>
         <LocaleProvider locale={locale} common={common}>
