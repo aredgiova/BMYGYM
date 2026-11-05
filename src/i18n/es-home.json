@@ -1,4 +1,8 @@
 {
+  "welcome": {
+    "enter": "Descubrir BMYGYM",
+    "close": "Cerrar bienvenida"
+  },
   "hero": {
     "imageAlt": "Fitness Wall BMYGYM de nogal integrada en la arquitectura interior, con accesorios de fitness, esterilla marfil y vistas al mar",
     "title": "Diseñado en torno a usted.",

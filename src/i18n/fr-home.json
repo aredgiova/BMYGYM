@@ -1,4 +1,8 @@
 {
+  "welcome": {
+    "enter": "Découvrir BMYGYM",
+    "close": "Fermer la fenêtre de bienvenue"
+  },
   "hero": {
     "imageAlt": "Fitness Wall BMYGYM en noyer intégrée à l’architecture intérieure, avec accessoires de fitness, tapis ivoire et vue sur la mer",
     "title": "Pensés pour vous.",

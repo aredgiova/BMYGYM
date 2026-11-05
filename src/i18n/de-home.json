@@ -1,4 +1,8 @@
 {
+  "welcome": {
+    "enter": "BMYGYM entdecken",
+    "close": "Willkommensfenster schließen"
+  },
   "hero": {
     "imageAlt": "BMYGYM Fitness Wall aus Walnussholz, in die Innenarchitektur integriert, mit Trainingszubehör, elfenbeinfarbener Matte und Meerblick",
     "title": "Auf Sie abgestimmt.",

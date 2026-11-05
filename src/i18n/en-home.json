@@ -1,4 +1,8 @@
 {
+  "welcome": {
+    "enter": "Discover BMYGYM",
+    "close": "Close welcome"
+  },
   "hero": {
     "imageAlt": "Walnut BMYGYM Fitness Wall integrated into an architectural interior, with fitness accessories, an ivory mat and sea views",
     "title": "Designed around you.",

@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/features/home/hero";
+import { BrandWelcome } from "@/features/home/brand-welcome";
 import { WorkWithUs } from "@/features/home/work-with-us";
 import { Philosophy } from "@/features/home/philosophy";
 import { Environments } from "@/features/home/environments";
@@ -19,6 +20,7 @@ export default async function HomePage({params}: {params: Promise<{locale:string
   const {common, home} = await getDictionary(locale);
   return (
     <>
+      <BrandWelcome copy={home.welcome} />
       <Header locale={locale} copy={common.nav} />
       <main id="main-content" tabIndex={-1}>
         <Hero copy={home} />
