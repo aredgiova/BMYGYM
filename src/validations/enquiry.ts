@@ -1,4 +1,5 @@
 import en from "../i18n/en-common.json" with { type: "json" };
+import enBooking from "../i18n/en-booking.json" with { type: "json" };
 import { isLocale, type Locale } from "../i18n/config.ts";
 import type { CommonCopy } from "../i18n/types.ts";
 
@@ -7,24 +8,31 @@ export type ClientType = (typeof CLIENT_TYPES)[number];
 
 export const PROJECT_TYPES = [
   "Private Residence",
-  "Superyacht / Yacht",
   "Luxury Hospitality",
+  "Superyacht",
   "Private Aviation",
-  "Other Bespoke Project",
+  "Professional Partnership",
 ] as const;
 
 export type ProjectType = (typeof PROJECT_TYPES)[number];
+export const PROJECT_STAGES = ["Concept", "Planning", "Development", "Refit", "Other"] as const;
+export type ProjectStage = (typeof PROJECT_STAGES)[number];
+export const ENQUIRY_INTENTS = ["private-commission", "retreat", "private-consultation"] as const;
+export type EnquiryIntent = (typeof ENQUIRY_INTENTS)[number];
 
 export type Enquiry = {
   fullName: string;
   email: string;
-  clientType: ClientType;
+  intent: EnquiryIntent;
+  clientType?: ClientType;
   locale: Locale;
-  projectType: ProjectType;
+  projectType?: ProjectType;
+  location?: string;
+  projectStage?: ProjectStage;
   message: string;
   privacy: true;
   company?: string;
-  location?: string;
+  expectedTimeline?: string;
 };
 
 export type EnquiryField = keyof Enquiry | "website";
@@ -51,6 +59,7 @@ export function isEmailAddress(value: string): boolean {
 export function validateEnquiry(
   input: unknown,
   messages: CommonCopy["validation"] = en.validation,
+  intentMessage: string = enBooking.validationIntent,
 ): EnquiryValidation {
   if (typeof input !== "object" || input === null || Array.isArray(input)) {
     return {
@@ -66,12 +75,14 @@ export function validateEnquiry(
 
   const fullName = text("fullName");
   const email = text("email");
-  const clientType = text("clientType");
+  const intent = values.intent === undefined ? "private-commission" : text("intent");
   const locale = values.locale === undefined ? "en" : values.locale;
   const projectType = text("projectType");
+  const projectStage = text("projectStage");
   const message = text("message");
   const company = text("company");
   const location = text("location");
+  const expectedTimeline = text("expectedTimeline");
 
   if (
     fullName.length < 2 ||
@@ -83,14 +94,22 @@ export function validateEnquiry(
   if (!isEmailAddress(email)) {
     errors.email = messages.email;
   }
-  if (!CLIENT_TYPES.some((type) => type === clientType)) {
-    errors.clientType = messages.clientType;
+  if (!ENQUIRY_INTENTS.some((candidate) => candidate === intent)) {
+    errors.intent = intentMessage;
   }
   if (typeof locale !== "string" || !isLocale(locale)) {
     errors.locale = messages.locale;
   }
-  if (!PROJECT_TYPES.some((type) => type === projectType)) {
-    errors.projectType = messages.projectType;
+  if (intent === "private-commission") {
+    if (!PROJECT_TYPES.some((type) => type === projectType)) {
+      errors.projectType = messages.projectType;
+    }
+    if (location.length < 2 || location.length > 160 || hasControlCharacter(location)) {
+      errors.location = messages.location;
+    }
+    if (!PROJECT_STAGES.some((stage) => stage === projectStage)) {
+      errors.projectStage = messages.projectStage;
+    }
   }
   if (
     message.length < 20 ||
@@ -103,7 +122,7 @@ export function validateEnquiry(
     errors.privacy = messages.privacy;
   }
 
-  for (const field of ["company", "location"] as const) {
+  for (const field of ["company", "expectedTimeline"] as const) {
     if (
       (values[field] !== undefined && typeof values[field] !== "string") ||
       text(field).length > 160 ||
@@ -125,13 +144,20 @@ export function validateEnquiry(
     data: {
       fullName,
       email,
-      clientType: clientType as ClientType,
+      intent: intent as EnquiryIntent,
+      // The category is the single visitor-facing choice; ignore any supplied
+      // legacy profile so mail notifications cannot contain conflicting values.
       locale: locale as Locale,
-      projectType: projectType as ProjectType,
+      ...(intent === "private-commission" ? {
+        clientType: (projectType === "Professional Partnership" ? "Professional Partner" : "Private Client") as ClientType,
+        projectType: projectType as ProjectType,
+        location,
+        projectStage: projectStage as ProjectStage,
+        ...(company ? { company } : {}),
+      } : {}),
       message,
       privacy: true,
-      ...(company ? { company } : {}),
-      ...(location ? { location } : {}),
+      ...(expectedTimeline ? { expectedTimeline } : {}),
     },
   };
 }

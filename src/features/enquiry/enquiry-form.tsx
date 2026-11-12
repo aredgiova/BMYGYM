@@ -6,15 +6,15 @@ import { Arrow } from "@/components/ui/arrow";
 import { localePath, type Locale } from "@/i18n/config";
 import type { CommonCopy } from "@/i18n/types";
 import {
-  CLIENT_TYPES,
+  PROJECT_STAGES,
   PROJECT_TYPES,
   validateEnquiry,
-  type ClientType,
+  type ProjectType,
   type EnquiryErrors,
   type EnquiryField,
 } from "@/validations/enquiry";
 import {
-  clientTypeForProfile,
+  projectTypeForProfile,
   getProfileSelection,
   getServerProfileSelection,
   subscribeProfileSelection,
@@ -52,15 +52,15 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
     getServerProfileSelection,
   );
   const selectionToken = `${profileSelection.revision}:${profileSelection.profile ?? ""}`;
-  const [manualProfile, setManualProfile] = useState<{
+  const [manualCategory, setManualCategory] = useState<{
     token: string;
-    value: ClientType | "";
+    value: ProjectType | "";
   } | null>(null);
   // A manual choice survives ordinary renders and section links. A deliberate
   // profile CTA or history traversal creates a new token and reapplies the URL.
-  const clientType = manualProfile?.token === selectionToken
-    ? manualProfile.value
-    : clientTypeForProfile(profileSelection.profile);
+  const projectType = manualCategory?.token === selectionToken
+    ? manualCategory.value
+    : projectTypeForProfile(profileSelection.profile);
   const [status, setStatus] = useState<FormStatus>({
     kind: "idle",
     message: "",
@@ -68,20 +68,20 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
   const [fieldErrors, setFieldErrors] = useState<EnquiryErrors>({});
   const statusRef = useRef<HTMLDivElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
-  const clientTypeRef = useRef<HTMLSelectElement>(null);
+  const projectTypeRef = useRef<HTMLSelectElement>(null);
   const submittingRef = useRef(false);
 
   useEffect(() => {
     if (profileSelection.source !== "cta" || submittingRef.current) return;
     const frame = requestAnimationFrame(() => {
-      const control = nameRef.current?.value ? clientTypeRef.current : nameRef.current;
+      const control = nameRef.current?.value ? projectTypeRef.current : nameRef.current;
       control?.focus({ preventScroll: true });
     });
     return () => cancelAnimationFrame(frame);
   }, [profileSelection.revision, profileSelection.source]);
 
   function validationProps(field: EnquiryField, hint?: string) {
-    const error = field === "clientType" && clientType ? undefined : fieldErrors[field];
+    const error = field === "projectType" && projectType ? undefined : fieldErrors[field];
     return {
       "aria-invalid": error ? true : undefined,
       "aria-describedby": [hint, error ? `${field}-error` : undefined]
@@ -104,11 +104,12 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
     const input = {
       fullName: data.get("fullName"),
       email: data.get("email"),
-      clientType: data.get("clientType"),
       company: data.get("company"),
       projectType: data.get("projectType"),
       location: data.get("location"),
+      projectStage: data.get("projectStage"),
       message: data.get("message"),
+      expectedTimeline: data.get("expectedTimeline"),
       privacy: data.get("privacy") === "on",
       website: data.get("website"),
       locale,
@@ -171,10 +172,11 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
           result.message ||
           copy.api.success,
       });
+      window.dispatchEvent(new CustomEvent("bmygym:enquiry-success", {detail: {intent: "private-commission"}}));
       form.reset();
       // Reset to the profile expressed by the current URL, just as a new visit
       // would; the remaining fields are cleared only after confirmed success.
-      setManualProfile(null);
+      setManualCategory(null);
     } catch {
       setStatus({
         kind: "error",
@@ -224,50 +226,6 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
             <FieldError field="fullName" message={fieldErrors.fullName} />
           </div>
           <div className="form-field">
-            <label htmlFor="email">
-              {content.email} <span>*</span>
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              placeholder={content.emailPlaceholder}
-              required
-              maxLength={254}
-              {...validationProps("email")}
-            />
-            <FieldError field="email" message={fieldErrors.email} />
-          </div>
-        </div>
-        <div className="form-row">
-          <div className="form-field">
-            <label htmlFor="clientType">
-              {content.clientType} <span>*</span>
-            </label>
-            <select
-              id="clientType"
-              ref={clientTypeRef}
-              name="clientType"
-              required
-              value={clientType}
-              {...validationProps("clientType")}
-              onChange={(event) => {
-                setManualProfile({
-                  token: selectionToken,
-                  value: event.currentTarget.value as ClientType | "",
-                });
-                validationProps("clientType").onChange();
-              }}
-            >
-              <option value="" disabled>{content.clientPlaceholder}</option>
-              {CLIENT_TYPES.map((type, index) => (
-                <option key={type} value={type}>{content.clientOptions[index]}</option>
-              ))}
-            </select>
-            <FieldError field="clientType" message={clientType ? undefined : fieldErrors.clientType} />
-          </div>
-          <div className="form-field">
             <label htmlFor="company">
               {content.company}{" "}
               <span className="optional">{content.optional}</span>
@@ -285,15 +243,39 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
         </div>
         <div className="form-row">
           <div className="form-field">
+            <label htmlFor="email">
+              {content.email} <span>*</span>
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              placeholder={content.emailPlaceholder}
+              required
+              maxLength={254}
+              {...validationProps("email")}
+            />
+            <FieldError field="email" message={fieldErrors.email} />
+          </div>
+          <div className="form-field">
             <label htmlFor="projectType">
               {content.projectType} <span>*</span>
             </label>
             <select
               id="projectType"
+              ref={projectTypeRef}
               name="projectType"
               required
-              defaultValue=""
+              value={projectType}
               {...validationProps("projectType")}
+              onChange={(event) => {
+                setManualCategory({
+                  token: selectionToken,
+                  value: event.currentTarget.value as ProjectType | "",
+                });
+                validationProps("projectType").onChange();
+              }}
             >
               <option value="" disabled>
                 {content.projectPlaceholder}
@@ -304,20 +286,42 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
                 </option>
               ))}
             </select>
-            <FieldError field="projectType" message={fieldErrors.projectType} />
+            <FieldError field="projectType" message={projectType ? undefined : fieldErrors.projectType} />
           </div>
+        </div>
+        <div className="form-row">
           <div className="form-field">
             <label htmlFor="location">
-              {content.location} <span className="optional">{content.optional}</span>
+              {content.location} <span>*</span>
             </label>
             <input
               id="location"
               name="location"
               placeholder={content.locationPlaceholder}
+              required
+              minLength={2}
               maxLength={160}
               {...validationProps("location")}
             />
             <FieldError field="location" message={fieldErrors.location} />
+          </div>
+          <div className="form-field">
+            <label htmlFor="projectStage">
+              {content.projectStage} <span>*</span>
+            </label>
+            <select
+              id="projectStage"
+              name="projectStage"
+              required
+              defaultValue=""
+              {...validationProps("projectStage")}
+            >
+              <option value="" disabled>{content.stagePlaceholder}</option>
+              {PROJECT_STAGES.map((stage, index) => (
+                <option key={stage} value={stage}>{content.stageOptions[index]}</option>
+              ))}
+            </select>
+            <FieldError field="projectStage" message={fieldErrors.projectStage} />
           </div>
         </div>
         <div className="form-field">
@@ -336,6 +340,20 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
           />
           <p id="message-hint" className="form-hint">{content.messageHint}</p>
           <FieldError field="message" message={fieldErrors.message} />
+        </div>
+        <div className="form-field">
+          <label htmlFor="expectedTimeline">
+            {content.expectedTimeline}{" "}
+            <span className="optional">{content.optional}</span>
+          </label>
+          <input
+            id="expectedTimeline"
+            name="expectedTimeline"
+            placeholder={content.timelinePlaceholder}
+            maxLength={160}
+            {...validationProps("expectedTimeline")}
+          />
+          <FieldError field="expectedTimeline" message={fieldErrors.expectedTimeline} />
         </div>
         <div className="honeypot" aria-hidden="true">
           <label htmlFor="website">{content.honeypot}</label>

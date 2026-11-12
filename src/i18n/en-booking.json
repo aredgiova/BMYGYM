@@ -1,0 +1,32 @@
+{
+  "back": "Return to BMYGYM",
+  "validationIntent": "Please choose a supported enquiry type.",
+  "retreat": {
+    "title": "BMYGYM Retreats",
+    "subtitle": "Enquiries & reservations",
+    "intro": "For information about BMYGYM Retreats in Valencia, share your interests and preferred dates with us.",
+    "availability": "Ask us for the current Valencia programmes, prices and availability. Your reservation is confirmed directly with BMYGYM after the details have been agreed.",
+    "formTitle": "Request a Valencia reservation",
+    "message": "Your Valencia Retreat Request",
+    "messagePlaceholder": "Tell us about your interests, preferred dates and any questions…",
+    "timelineLabel": "Preferred retreat dates",
+    "timelinePlaceholder": "Your preferred dates or month",
+    "messageValidation": "Please write your enquiry in 20–5,000 characters.",
+    "submit": "REQUEST A RESERVATION",
+    "success": "Thank you for your enquiry. We will be in touch with further details and availability. Your reservation is not confirmed until agreed directly with BMYGYM."
+  },
+  "private-consultation": {
+    "title": "Private Consultation",
+    "subtitle": "A considered conversation about your project.",
+    "intro": "Share a brief introduction to your project and your preferred timing for a private conversation with BMYGYM.",
+    "availability": "Consultations are arranged individually following an initial review. Appointment details will be confirmed directly with you.",
+    "formTitle": "Request a private consultation",
+    "message": "Your Consultation Request",
+    "messagePlaceholder": "Introduce your project and tell us what you would like to discuss…",
+    "timelineLabel": "Preferred consultation dates",
+    "timelinePlaceholder": "Your preferred dates or availability",
+    "messageValidation": "Please write your enquiry in 20–5,000 characters.",
+    "submit": "REQUEST A PRIVATE CONSULTATION",
+    "success": "Thank you for your request. We will review your enquiry and be in touch should a private consultation be appropriate. An appointment is confirmed only once agreed directly with BMYGYM."
+  }
+}

@@ -1,14 +1,133 @@
 {
-  "meta": {"title": "Maßgeschneiderte Longevity-Umgebungen für Land, See und Luft", "description": "BMYGYM konzipiert und integriert maßgeschneiderte Longevity-Umgebungen für außergewöhnliche Residenzen, Superyachten, luxuriöse Hospitality-Projekte und die Privatluftfahrt."},
-  "nav": {"home": "BMYGYM Startseite", "main": "Hauptnavigation", "mobile": "Mobile Navigation", "open": "Navigation öffnen", "close": "Navigation schließen", "language": "Sprache auswählen", "philosophy": "Philosophie", "environments": "Umgebungen", "approach": "Unser Ansatz", "vision": "Signature Concepts", "enquiry": "Projektanfrage", "tagline": "Auf Sie abgestimmt. Für außergewöhnliche Räume geschaffen.", "skip": "Zum Inhalt springen"},
-  "footer": {"tagline": "Maßgeschneiderte Longevity-Umgebungen", "location": "Valencia, Spanien", "top": "Zurück nach oben", "rights": "© 2026 BMYGYM. Alle Rechte vorbehalten.", "legalNav": "Rechtliche Informationen", "legal": "Impressum", "privacy": "Datenschutzerklärung", "cookies": "Cookie-Richtlinie", "accessibility": "Barrierefreiheit", "cookieSettings": "Cookie-Einstellungen", "cookieTitle": "Ihre Privatsphäre ist Teil unseres Konzepts.", "cookieBody": "Wir verwenden keine Analyse- oder Werbe-Cookies. Wenn Sie diesen Hinweis schließen, speichern wir Ihre Einstellung für 180 Tage auf diesem Gerät.", "cookieLink": "Cookie-Richtlinie lesen"},
-  "cookieNotice": {"title":"Cookies & Datenschutz","body":"Wir verwenden keine Analyse- oder Werbe-Cookies. Wenn Sie diesen Hinweis schließen, speichern wir Ihre Einstellung für 180 Tage auf diesem Gerät.","policy":"Cookie-Richtlinie lesen","dismiss":"Verstanden"},
-  "enquiry": {"title": "Ihre Vision", "emphasis": "beginnt hier.", "intro": "Erzählen Sie uns von Ihrem Objekt, Ihren Vorstellungen und der Umgebung, die Sie schaffen möchten.", "audience": "Wir begleiten Privatkunden und professionelle Partner – von einzelnen Residenzen und Superyachten bis hin zu Immobilienentwicklungen und luxuriösen Hospitality-Projekten.", "commission": "Die Gestaltung beginnt mit einem formell beauftragten, vergüteten Private Longevity Blueprint. Leistungsumfang, Ergebnisse und Honorar werden vor Arbeitsbeginn vereinbart.", "founder": "Gründerin · BMYGYM"},
-  "form": {"label": "Projektanfrage", "required": "Mit * gekennzeichnete Felder sind Pflichtfelder.", "legend": "Ihre Kontakt- und Projektdaten", "fullName": "Vollständiger Name", "namePlaceholder": "Ihr vollständiger Name", "email": "E-Mail-Adresse", "emailPlaceholder": "sie@beispiel.de", "clientType": "Ich frage an als", "clientPlaceholder": "Ihr Profil auswählen", "clientOptions": ["Privatkunde", "Professioneller Partner"], "company": "Unternehmen / Organisation", "companyPlaceholder": "Unternehmen oder Organisation", "optional": "(optional)", "projectType": "Projektart", "projectPlaceholder": "Ihre Projektart auswählen", "projectOptions": ["Private Residenz", "Superyacht / Yacht", "Luxuriöses Hospitality-Projekt", "Privatluftfahrt", "Anderes maßgeschneidertes Projekt"], "location": "Projektstandort", "locationPlaceholder": "Stadt, Land oder Destination", "message": "Erzählen Sie uns von Ihrem Projekt", "messagePlaceholder": "Ihr Raum, Ihre Vision und was Sie schaffen möchten …", "messageHint": "20–5.000 Zeichen. Bitte übermitteln Sie keine sensiblen Gesundheitsdaten.", "honeypot": "Dieses Feld bitte leer lassen", "privacyBefore": "Ich habe die", "privacyLink": "Datenschutzerklärung (öffnet in einem neuen Tab)", "privacyAfter": "gelesen und nehme zur Kenntnis, dass meine Angaben zur Beantwortung dieser Anfrage verarbeitet werden.", "submit": "Projektanfrage senden", "sending": "Anfrage wird gesendet …", "sendingStatus": "Ihre Projektanfrage wird gesendet …", "emailFallback": "E-Mail an hello@bmygym.com", "noScript": "Um eine Anfrage ohne JavaScript zu senden, schreiben Sie bitte an hello@bmygym.com."},
-  "validation": {"fullName": "Bitte geben Sie Ihren Namen ein (2–120 Zeichen).", "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.", "clientType": "Bitte wählen Sie aus, ob Sie als Privatkunde oder professioneller Partner anfragen.", "projectType": "Bitte wählen Sie eine Projektart aus.", "message": "Bitte beschreiben Sie Ihr Projekt in 20–5.000 Zeichen.", "privacy": "Bitte bestätigen Sie die Kenntnisnahme der Datenschutzhinweise, um Ihre Anfrage zu senden.", "company": "Bitte verwenden Sie höchstens 160 Zeichen.", "location": "Bitte verwenden Sie höchstens 160 Zeichen.", "website": "Diese Anfrage kann nicht verarbeitet werden. Bitte wenden Sie sich an hello@bmygym.com.", "locale": "Bitte wählen Sie eine der verfügbaren Sprachen aus."},
-  "api": {"unavailable": "Unser Anfrageservice ist vorübergehend nicht verfügbar. Bitte wenden Sie sich an hello@bmygym.com.", "tooLong": "Ihre Anfrage ist zu lang. Bitte kürzen Sie sie und versuchen Sie es erneut.", "invalid": "Ihre Anfrage konnte nicht gelesen werden. Bitte füllen Sie das Formular aus und versuchen Sie es erneut.", "origin": "Bitte senden Sie Ihre Anfrage über das Formular auf dieser Website.", "validation": "Bitte überprüfen Sie die markierten Felder.", "delivery": "Wir konnten die Zustellung nicht bestätigen. Bitte versuchen Sie es erneut oder wenden Sie sich direkt an hello@bmygym.com.", "success": "Vielen Dank für Ihre Anfrage. Ihre Nachricht wurde an BMYGYM gesendet. Wir freuen uns darauf, Ihre Vision kennenzulernen."},
+  "meta": {
+    "title": "Maßgeschneiderte Longevity-Umgebungen für Land, See und Luft",
+    "description": "BMYGYM konzipiert und integriert maßgeschneiderte Longevity-Umgebungen für außergewöhnliche Residenzen, Superyachten, luxuriöse Hospitality-Projekte und die Privatluftfahrt."
+  },
+  "nav": {
+    "home": "BMYGYM Startseite",
+    "main": "Hauptnavigation",
+    "mobile": "Mobile Navigation",
+    "open": "Navigation öffnen",
+    "close": "Navigation schließen",
+    "language": "Sprache auswählen",
+    "philosophy": "Philosophie",
+    "environments": "Umgebungen",
+    "approach": "Unser Ansatz",
+    "vision": "Signature Concepts",
+    "enquiry": "Private Projekte",
+    "tagline": "Außergewöhnliche Räume verdienen einen außergewöhnlichen Ansatz für Longevity.",
+    "skip": "Zum Inhalt springen",
+    "retreats": "BMYGYM Retreats"
+  },
+  "footer": {
+    "tagline": "Maßgeschneiderte Longevity-Umgebungen",
+    "location": "Valencia, Spanien",
+    "top": "Zurück nach oben",
+    "rights": "© 2026 BMYGYM. Alle Rechte vorbehalten.",
+    "legalNav": "Rechtliche Informationen",
+    "legal": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "cookies": "Cookie-Richtlinie",
+    "accessibility": "Barrierefreiheit",
+    "cookieSettings": "Cookie-Einstellungen",
+    "cookieTitle": "Ihre Privatsphäre ist Teil unseres Konzepts.",
+    "cookieBody": "Mit Ihrer Erlaubnis nutzen wir Google Analytics, um Besuche und das Interesse an unseren Dienstleistungen zu verstehen. Sie können der Analyse zustimmen oder nur mit notwendigen Einstellungen fortfahren. Wir speichern Ihre Wahl für 180 Tage.",
+    "cookieLink": "Cookie-Richtlinie lesen",
+    "retreats": "BMYGYM Retreats",
+    "consultation": "Ein persönliches Beratungsgespräch anfragen"
+  },
+  "cookieNotice": {
+    "title": "Cookies & Datenschutz",
+    "body": "Mit Ihrer Erlaubnis nutzen wir Google Analytics, um Besuche und das Interesse an unseren Dienstleistungen zu verstehen. Sie können der Analyse zustimmen oder nur mit notwendigen Einstellungen fortfahren. Wir speichern Ihre Wahl für 180 Tage.",
+    "policy": "Cookie-Richtlinie lesen",
+    "dismiss": "Nur notwendige",
+    "accept": "Analyse erlauben"
+  },
+  "enquiry": {
+    "title": "PRIVATE PROJEKTE",
+    "emphasis": "Außergewöhnliche Projekte beginnen mit einem durchdachten Gespräch.",
+    "intro": "BMYGYM übernimmt eine bewusst begrenzte Anzahl individueller Aufträge, damit jedes Projekt die volle kreative Aufmerksamkeit erhält.",
+    "audience": "Wir freuen uns über Anfragen von Privatkunden, Architekten, Projektentwicklern, Yachtdesignern und Hospitality-Experten, deren Projekte zu unserem Ansatz passen.",
+    "commission": "Nach einer ersten Prüfung laden wir Interessenten mit passenden Projekten zu einem persönlichen Beratungsgespräch ein.",
+    "founder": "Gründerin, BMYGYM"
+  },
+  "form": {
+    "label": "Private Anfrage",
+    "required": "Mit * gekennzeichnete Felder sind Pflichtfelder.",
+    "legend": "Ihre Kontakt- und Projektdaten",
+    "fullName": "Vollständiger Name",
+    "namePlaceholder": "Ihr vollständiger Name",
+    "email": "E-Mail-Adresse",
+    "emailPlaceholder": "sie@beispiel.de",
+    "clientType": "Ich frage an als",
+    "clientPlaceholder": "Ihr Profil auswählen",
+    "clientOptions": [
+      "Privatkunde",
+      "Professioneller Partner"
+    ],
+    "company": "Unternehmen / Organisation",
+    "companyPlaceholder": "Unternehmen oder Organisation",
+    "optional": "(optional)",
+    "projectType": "Projektkategorie",
+    "projectPlaceholder": "Projektkategorie auswählen",
+    "projectOptions": [
+      "Private Residenz",
+      "Luxuriöses Hospitality-Projekt",
+      "Superyacht",
+      "Privatluftfahrt",
+      "Professionelle Partnerschaft"
+    ],
+    "location": "Projektstandort",
+    "locationPlaceholder": "Stadt, Land oder Destination",
+    "message": "Kurze Projektbeschreibung",
+    "messagePlaceholder": "Ihr Raum, Ihre Vision und was Sie schaffen möchten …",
+    "messageHint": "20–5.000 Zeichen. Bitte übermitteln Sie keine sensiblen Gesundheitsdaten.",
+    "honeypot": "Dieses Feld bitte leer lassen",
+    "privacyBefore": "Ich habe die",
+    "privacyLink": "Datenschutzerklärung (öffnet in einem neuen Tab)",
+    "privacyAfter": "gelesen und nehme zur Kenntnis, dass meine Angaben zur Beantwortung dieser Anfrage verarbeitet werden.",
+    "submit": "PRIVATE ANFRAGE SENDEN",
+    "sending": "Anfrage wird gesendet …",
+    "sendingStatus": "Ihre private Anfrage wird gesendet…",
+    "emailFallback": "E-Mail an hello@bmygym.com",
+    "noScript": "Um eine Anfrage ohne JavaScript zu senden, schreiben Sie bitte an hello@bmygym.com.",
+    "projectStage": "Projektphase",
+    "stagePlaceholder": "Projektphase auswählen",
+    "stageOptions": [
+      "Konzept",
+      "Planung",
+      "Entwicklung",
+      "Refit / Modernisierung",
+      "Sonstige"
+    ],
+    "expectedTimeline": "Vorgesehener Zeitrahmen",
+    "timelinePlaceholder": "Ihr geplanter Zeitrahmen"
+  },
+  "validation": {
+    "fullName": "Bitte geben Sie Ihren Namen ein (2–120 Zeichen).",
+    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "clientType": "Bitte wählen Sie aus, ob Sie als Privatkunde oder professioneller Partner anfragen.",
+    "projectType": "Bitte wählen Sie eine Projektkategorie aus.",
+    "message": "Bitte beschreiben Sie Ihr Projekt in 20–5.000 Zeichen.",
+    "privacy": "Bitte bestätigen Sie die Kenntnisnahme der Datenschutzhinweise, um Ihre Anfrage zu senden.",
+    "company": "Bitte verwenden Sie höchstens 160 Zeichen.",
+    "location": "Bitte geben Sie den Projektstandort an (2–160 Zeichen).",
+    "website": "Diese Anfrage kann nicht verarbeitet werden. Bitte wenden Sie sich an hello@bmygym.com.",
+    "locale": "Bitte wählen Sie eine der verfügbaren Sprachen aus.",
+    "projectStage": "Bitte wählen Sie eine Projektphase aus.",
+    "expectedTimeline": "Bitte verwenden Sie höchstens 160 Zeichen."
+  },
+  "api": {
+    "unavailable": "Unser Anfrageservice ist vorübergehend nicht verfügbar. Bitte wenden Sie sich an hello@bmygym.com.",
+    "tooLong": "Ihre Anfrage ist zu lang. Bitte kürzen Sie sie und versuchen Sie es erneut.",
+    "invalid": "Ihre Anfrage konnte nicht gelesen werden. Bitte füllen Sie das Formular aus und versuchen Sie es erneut.",
+    "origin": "Bitte senden Sie Ihre Anfrage über das Formular auf dieser Website.",
+    "validation": "Bitte überprüfen Sie die markierten Felder.",
+    "delivery": "Wir konnten die Zustellung nicht bestätigen. Bitte versuchen Sie es erneut oder wenden Sie sich direkt an hello@bmygym.com.",
+    "success": "Vielen Dank für Ihre Anfrage. Ihr Projekt wurde zur ersten Prüfung übermittelt. Wir melden uns bei Ihnen, wenn weitere Informationen oder ein persönliches Beratungsgespräch sinnvoll sind."
+  },
   "legal": {
-    "lastUpdated": "Zuletzt aktualisiert: 28. Oktober 2026",
+    "lastUpdated": "Letzte Aktualisierung: 11. November 2026",
     "back": "Zurück zur Projektanfrage",
     "legal": {
       "title": "Impressum",
@@ -101,8 +220,8 @@
           "title": "2. Erhobene Informationen",
           "paragraphs": [
             "Wenn Besucher BMYGYM kontaktieren oder eine Projektanfrage übermitteln, können folgende Informationen erhoben werden:",
-            "Das Formular für Projektanfragen erfordert Ihren vollständigen Namen, Ihre E-Mail-Adresse, Ihre Kundenkategorie, die Projektart und eine Nachricht. Unternehmen und Projektstandort sind optional. Die ausgewählte Websitesprache und Ihre Bestätigung der Kenntnisnahme der Datenschutzerklärung werden mit der Anfrage übermittelt.",
-            "Name und E-Mail-Adresse.\nUnternehmen oder berufliche Zugehörigkeit, sofern angegeben.\nKundenkategorie und Projektart.\nProjektstandort und allgemeine Projektdetails.\nFreiwillig in Nachrichten oder Korrespondenz übermittelte Informationen.\nFür die Funktionalität und Sicherheit der Website erforderliche technische Informationen.\nBesucher werden gebeten, keine sensiblen personenbezogenen Daten über das allgemeine Kontaktformular zu übermitteln."
+            "Das Formular für private Anfragen erfordert Ihren vollständigen Namen, Ihre E-Mail-Adresse, die Projektkategorie, den Projektstandort, die Projektphase und eine kurze Projektbeschreibung. Unternehmen oder Organisation sowie der vorgesehene Zeitrahmen sind optional. Die ausgewählte Website-Sprache und Ihre Bestätigung, die Datenschutzerklärung gelesen zu haben, werden mit der Anfrage übermittelt. Anfragen zu Retreats und privaten Beratungsgesprächen erfordern Ihren vollständigen Namen, Ihre E-Mail-Adresse und eine Nachricht; Ihr bevorzugter Zeitraum ist optional. Auch mit diesen Anfragen werden die ausgewählte Sprache und die Bestätigung der Datenschutzerklärung übermittelt.",
+            "Name und E-Mail-Adresse.\nUnternehmen oder berufliche Zugehörigkeit, sofern angegeben.\nProjektkategorie, Standort und Phase.\nVorgesehener Zeitrahmen, sofern angegeben, und allgemeine Projektdetails.\nFreiwillig in Nachrichten oder Korrespondenz mitgeteilte Informationen.\nTechnische Informationen, die für die Funktionalität und Sicherheit der Website erforderlich sind.\nBesucher werden gebeten, über das allgemeine Kontaktformular keine sensiblen personenbezogenen Daten zu übermitteln."
           ]
         },
         {
@@ -197,15 +316,15 @@
           "title": "3. Verwendung von Cookies",
           "paragraphs": [
             "BMYGYM verfolgt das Ziel, nur solche Cookies und ähnlichen Technologien zu verwenden, die für den Betrieb, die Sicherheit und die Funktionalität seiner Website erforderlich sind, sofern nicht weitere Technologien eingeführt und offengelegt werden.",
-            "Die aktuelle Website setzt keine Anwendungs-Cookies und verwendet keinen Sitzungsspeicher des Browsers. Beim Schließen des Informationshinweises wird das Schließdatum im lokalen Browserspeicher unter dem Schlüssel bmygym.cookie-notice.v1 gespeichert, um diese Einstellung 180 Tage lang zu merken. Dieser technische Eintrag dient weder dem Tracking noch als Einwilligung in optionale Dienste. Die Sprachauswahl wird in der URL abgebildet. Schriftarten und Bilder werden von der Website selbst bereitgestellt.",
+            "Wir speichern Ihre Entscheidung zur Analyse für 180 Tage im lokalen Browserspeicher unter bmygym.cookie-consent.v2. Die Begrüßung speichert ihr Schließdatum für 180 Tage unter bmygym.welcome.v1, damit sie wiederkehrende Besuche nicht unterbricht. Diese Einstellungen werden nicht für Werbung verwendet. Die Sprachauswahl wird in der URL abgebildet. Schriftarten und Bilder werden von der Website selbst bereitgestellt.",
             "Unbedingt erforderliche Technologien können ohne vorherige Einwilligung eingesetzt werden, soweit das geltende Recht dies zulässt."
           ]
         },
         {
           "title": "4. Analyse und Werbung",
           "paragraphs": [
-            "Die aktuelle Website lädt keine Analyse- oder Werbedienste, Tracking-Pixel, eingebetteten Social-Media-Widgets oder sonstigen optionalen Tracking-Technologien. BMYGYM verwendet keine Cookies für verhaltensbasierte Werbung oder websiteübergreifendes Werbetracking.",
-            "Werden optionale Analyse-, Marketing- oder andere einwilligungspflichtige Technologien eingeführt, wird die Cookie-Richtlinie aktualisiert, und vor der Aktivierung dieser Technologien werden geeignete Einwilligungsmöglichkeiten bereitgestellt."
+            "Mit Ihrer Einwilligung misst Google Analytics Website-Besuche, Klicks auf Projekt- und Kontaktlinks sowie Anfragen, deren Übermittlung unser E-Mail-Anbieter bestätigt hat. Unsere Anfrageereignisse enthalten weder Ihren Namen noch Ihre E-Mail-Adresse, Projektbeschreibung oder andere Formularinhalte. Google kann Nutzungs- und Gerätedaten verarbeiten und Analyse-Cookies setzen. Wir verwenden keine Werbe-Cookies.",
+            "Google Analytics wird erst geladen, nachdem Sie die Analyse erlaubt haben. Über die Cookie-Einstellungen in der Fußzeile können Sie Ihre Einwilligung verweigern oder widerrufen. Der Widerruf beendet weitere Analysemessungen und entfernt die von dieser Website aus zugänglichen Google-Analytics-Cookies."
           ]
         },
         {
@@ -219,9 +338,9 @@
           "title": "6. Cookie-Einstellungen",
           "paragraphs": [
             "Besucher können Cookies und den lokalen Websitespeicher über ihre Browsereinstellungen verwalten oder löschen.",
-            "Derzeit gibt es keine optionalen Cookies, die akzeptiert oder abgelehnt werden können. Über die Cookie-Einstellungen in der Fußzeile lassen sich der Informationshinweis und sein Link zu dieser Richtlinie erneut öffnen. Beim Schließen des Hinweises wird nur diese Einstellung gespeichert. Dies stellt keine Einwilligung in Analyse-, Werbe- oder sonstige optionale Dienste dar.",
+            "Im Hinweis können Sie die Analyse erlauben oder ausschließlich mit notwendigen Einstellungen fortfahren. Die Cookie-Einstellungen in der Fußzeile öffnen diese Auswahl erneut, damit Sie Ihre Entscheidung jederzeit ändern oder Ihre Einwilligung zur Analyse widerrufen können.",
             "Werden optionale, einwilligungspflichtige Cookies verwendet, erhalten Besucher eine geeignete Möglichkeit, diese Cookies zu akzeptieren, abzulehnen oder zu verwalten.",
-            "Der Hinweis erscheint nach 180 Tagen erneut, ebenso wenn der lokale Websitespeicher gelöscht wird oder sich die Version des Hinweises ändert. Blockiert der Browser den lokalen Speicher, kann die Einstellung nicht gespeichert werden."
+            "Ihre Entscheidung wird für 180 Tage gespeichert. Der Hinweis erscheint nach Ablauf dieser Frist erneut, ebenso wenn der lokale Websitespeicher gelöscht wird oder sich die Version der Einwilligung ändert. Blockiert der Browser den lokalen Speicher, wird Ihre Wahl nur für die aktuelle Seite berücksichtigt."
           ]
         },
         {
@@ -286,5 +405,9 @@
       ]
     }
   },
-  "notFound": {"title": "Ein anderer Weg.", "body": "Die gesuchte Seite konnte nicht gefunden werden. Entdecken Sie die maßgeschneiderten Longevity-Umgebungen von BMYGYM oder sprechen Sie mit uns über Ihr Projekt.", "back": "Zurück zu BMYGYM"}
+  "notFound": {
+    "title": "Ein anderer Weg.",
+    "body": "Die gesuchte Seite konnte nicht gefunden werden. Entdecken Sie die maßgeschneiderten Longevity-Umgebungen von BMYGYM oder sprechen Sie mit uns über Ihr Projekt.",
+    "back": "Zurück zu BMYGYM"
+  }
 }

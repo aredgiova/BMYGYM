@@ -11,8 +11,9 @@ import {
 } from "react";
 import { localePath } from "@/i18n/config";
 import { useLocale } from "@/i18n/provider";
+import { Analytics } from "./analytics";
 
-const preferenceKey = "bmygym.cookie-notice.v1";
+const preferenceKey = "bmygym.cookie-consent.v2";
 const preferenceLifetime = 180 * 24 * 60 * 60 * 1000;
 const preferenceEvent = "bmygym:cookie-notice";
 let memoryPreference: string | null = null;
@@ -22,8 +23,8 @@ function isCurrentPreference(value: string | null, now = Date.now()) {
   try {
     const preference: unknown = JSON.parse(value);
     if (!preference || typeof preference !== "object") return false;
-    const { version, dismissedAt } = preference as Record<string, unknown>;
-    return version === 1 && typeof dismissedAt === "number" &&
+    const { version, dismissedAt, analytics } = preference as Record<string, unknown>;
+    return version === 2 && typeof analytics === "boolean" && typeof dismissedAt === "number" &&
       Number.isFinite(dismissedAt) && dismissedAt <= now &&
       now - dismissedAt < preferenceLifetime;
   } catch {
@@ -60,7 +61,7 @@ const CookieNoticeContext = createContext<{
   visible: boolean;
 } | null>(null);
 
-export function CookieNoticeProvider({ children }: { children: React.ReactNode }) {
+export function CookieNoticeProvider({ children, analyticsEnabled = false }: { children: React.ReactNode; analyticsEnabled?: boolean }) {
   const { locale, common } = useLocale();
   const preference = useSyncExternalStore(subscribe, readPreference, () => undefined);
   const [reopened, setReopened] = useState(false);
@@ -69,6 +70,21 @@ export function CookieNoticeProvider({ children }: { children: React.ReactNode }
   const triggerRef = useRef<HTMLButtonElement>(null);
   const visible = reopened || (preference !== undefined && !isCurrentPreference(preference));
   const copy = common.cookieNotice;
+  const analyticsAllowed = !!preference && isCurrentPreference(preference) && JSON.parse(preference).analytics === true;
+
+  useEffect(() => {
+    if (!preference || !isCurrentPreference(preference)) return;
+    const remaining = JSON.parse(preference).dismissedAt + preferenceLifetime - Date.now();
+    // Browsers cap a timer at about 24 days; recheck long-lived open tabs daily.
+    const timer = setInterval(() => {
+      if (!isCurrentPreference(preference)) {
+        memoryPreference = null;
+        try { window.localStorage.removeItem(preferenceKey); } catch { /* Storage may be blocked. */ }
+        window.dispatchEvent(new Event(preferenceEvent));
+      }
+    }, Math.min(remaining + 1, 24 * 60 * 60 * 1000));
+    return () => clearInterval(timer);
+  }, [preference]);
 
   useEffect(() => {
     if (!visible || !noticeRef.current) return;
@@ -108,8 +124,8 @@ export function CookieNoticeProvider({ children }: { children: React.ReactNode }
     headingRef.current?.focus({ preventScroll: true });
   }
 
-  function dismissNotice() {
-    memoryPreference = JSON.stringify({ version: 1, dismissedAt: Date.now() });
+  function dismissNotice(analytics = false) {
+    memoryPreference = JSON.stringify({ version: 2, dismissedAt: Date.now(), analytics });
     try {
       window.localStorage.setItem(preferenceKey, memoryPreference);
     } catch {
@@ -126,6 +142,7 @@ export function CookieNoticeProvider({ children }: { children: React.ReactNode }
 
   return (
     <CookieNoticeContext.Provider value={{ openNotice, visible }}>
+      <Analytics allowed={analyticsAllowed} enabled={analyticsEnabled} />
       {children}
       {visible && (
         <section
@@ -148,7 +165,8 @@ export function CookieNoticeProvider({ children }: { children: React.ReactNode }
             </div>
             <div className="cookie-notice-actions">
               <Link href={localePath(locale, "cookies")} className="cookie-notice-policy">{copy.policy}</Link>
-              <button type="button" className="cookie-notice-dismiss" onClick={dismissNotice}>{copy.dismiss}</button>
+              <button type="button" className="cookie-notice-dismiss" onClick={() => dismissNotice(false)}>{copy.dismiss}</button>
+              <button type="button" className="cookie-notice-dismiss" onClick={() => dismissNotice(true)}>{copy.accept}</button>
             </div>
           </div>
         </section>

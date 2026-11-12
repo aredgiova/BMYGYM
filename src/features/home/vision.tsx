@@ -11,9 +11,8 @@ export function Vision({ copy }: { copy: HomeCopy }) {
           <div>
             <h2 id="vision-title">
               {content.title}
-              <br />
-              <em>{content.titleEmphasis}</em>
             </h2>
+            <p className="section-subtitle"><em>{content.titleEmphasis}</em></p>
           </div>
           <div className="vision-intro">
             {content.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}

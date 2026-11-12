@@ -74,3 +74,9 @@ Original Latin binary source URLs:
 - Manrope: `https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2`
 
 All font files are served locally. Latin faces are loaded with `next/font/local`; Cyrillic faces use local `@font-face` declarations with `font-display: swap`. There is no runtime font request to Google Fonts.
+
+## Additional LAND architectural reference — 11 November 2026
+
+`/images/land-classic-european.webp` is derived from the user-supplied `C:/Users/User/Downloads/30BA5F00-AD17-4D2A-BF49-C40399B24D17.jpeg`. It introduces classical European architecture as a second reference within the existing LAND area on the homepage. The contemporary LAND image and all other existing imagery remain in place.
+
+The delivery asset preserves the full 1536 × 1024 composition and the original colour profile, with no crop, retouching or generated additions. It is encoded as WebP at quality 90 (368,990 bytes; source JPEG: 515,840 bytes). Decorative mouldings, arched windows and integrated fitness equipment illustrate an architectural direction; the image is labelled as a concept visualisation and does not identify a completed project or specific property. Existing product names are unchanged.

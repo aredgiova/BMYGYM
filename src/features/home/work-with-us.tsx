@@ -27,7 +27,9 @@ export function WorkWithUs({ copy }: { copy: HomeCopy }) {
               />
               <div className="client-path-copy">
                 <h3 id={`client-${profile.type}-title`}>{client.title}</h3>
+                <p className="client-path-lead">{client.lead}</p>
                 <p>{client.description}</p>
+                <p>{client.detail}</p>
                 <ProfileLink profile={profile.type} className="button button-dark">
                   {client.action}
                   <Arrow diagonal />

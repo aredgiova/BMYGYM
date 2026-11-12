@@ -1,4 +1,18 @@
-# Aviso informativo de cookies
+# Aviso de cookies y consentimiento
+
+## Configuración vigente — 11 de noviembre de 2026
+
+El aviso ofrece dos elecciones con el mismo estilo: preferencias esenciales o permitir Google Analytics. La elección se guarda en `bmygym.cookie-consent.v2` con `{version: 2, dismissedAt, analytics}` durante 180 días. El registro antiguo de cierre no cuenta como consentimiento. La preferencia se sincroniza entre pestañas; si el almacenamiento está bloqueado, dura únicamente en memoria durante la página. Escape equivale a continuar solo con preferencias esenciales.
+
+La etiqueta existente `G-5ZH4R52182` solo se inserta tras aceptar y cuando `isIndexingEnabled` identifica producción aprobada; nunca en desarrollo ni en previews. Se deshabilitan funciones publicitarias. Se miden `private_commission_click`, `contact_email_click` y `generate_lead`, este último únicamente tras respuesta satisfactoria de la API con `form_name` limitado a `private_commission`, `retreat` o `private_consultation`. No se añaden al evento datos personales ni contenido del formulario. Las URLs propias de eventos omiten query y fragmento.
+
+Cookie Settings permite cambiar la decisión. La revocación activa `ga-disable-G-5ZH4R52182`, actualiza el consentimiento, retira los listeners de eventos propios y elimina las cookies `_ga`/`_ga_*` accesibles para el dominio. No borra mediciones que ya se hubieran recibido. El aviso y la política están adaptados a EN, DE, ES, FR, RU e IT. La introducción usa por separado `bmygym.welcome.v1`, con la fecha de cierre durante 180 días.
+
+El comportamiento local se comprobó en [Validación](validation.md). La propiedad Google Analytics y la medición mejorada deben revisarse en su cuenta antes del lanzamiento para evitar duplicar conversiones de formularios. Referencias: [consentimiento básico de Google](https://developers.google.com/tag-platform/security/guides/consent?consentmode=basic), [evento generate_lead](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#generate_lead).
+
+## Historial anterior
+
+El contenido siguiente documenta la versión informativa anterior del 28 de octubre y queda sustituido por la configuración vigente descrita arriba.
 
 Implementación local del 28 de octubre de 2026. La solución propia y ligera informa del estado actual de BMYGYM: sin analítica, publicidad ni seguimiento opcional. No incorpora CMP, servicios externos ni nuevas dependencias. Cerrar el aviso recuerda su cierre y no otorga consentimiento a seguimiento.
 

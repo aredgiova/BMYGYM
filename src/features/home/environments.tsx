@@ -28,7 +28,7 @@ export function Environments({ copy }: { copy: HomeCopy }) {
         </p>
       </div>
       <div className="environments-grid">
-        <article className="environment">
+        <article id="land" className="environment environment-land" aria-labelledby="land-title">
           <a
             className="environment-image-link"
             href="#enquiry"
@@ -44,7 +44,7 @@ export function Environments({ copy }: { copy: HomeCopy }) {
           </a>
           <div className="environment-copy">
             <div className="environment-title">
-              <h3>
+              <h3 id="land-title">
                 <a className="environment-heading-link" href="#enquiry">
                   {content.land.name}
                   <Arrow diagonal />
@@ -53,7 +53,14 @@ export function Environments({ copy }: { copy: HomeCopy }) {
               <span>{content.land.audience}</span>
             </div>
             <p>{content.land.description}</p>
-            <p>{content.land.detail}</p>
+            <p>{content.land.architecturalContext}</p>
+            <ConceptImage
+              className="land-classic-image"
+              src="/images/land-classic-european.webp"
+              alt={content.land.classicImageAlt}
+              caption={content.land.classicImageCaption}
+              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 34vw"
+            />
           </div>
         </article>
         <article className="environment">
@@ -80,7 +87,6 @@ export function Environments({ copy }: { copy: HomeCopy }) {
               <span>{content.sea.audience}</span>
             </div>
             <p>{content.sea.description}</p>
-            <p>{content.sea.detail}</p>
           </div>
         </article>
         <article className="environment">

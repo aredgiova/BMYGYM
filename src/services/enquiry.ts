@@ -34,18 +34,23 @@ export function readEnquiryMailConfig(
 
 export function enquiryMailText(enquiry: Enquiry): string {
   return [
-    "New BMYGYM project enquiry",
+    `New BMYGYM ${enquiry.intent === "retreat" ? "retreat enquiry" : enquiry.intent === "private-consultation" ? "private consultation request" : "private enquiry"}`,
     "",
     `Name: ${enquiry.fullName}`,
     `Email: ${enquiry.email}`,
-    `Client profile: ${enquiry.clientType}`,
+    `Enquiry intent: ${enquiry.intent}`,
     `Website language: ${enquiry.locale}`,
-    `Project: ${enquiry.projectType}`,
-    `Company: ${enquiry.company || "Not provided"}`,
-    `Location: ${enquiry.location || "Not provided"}`,
+    ...(enquiry.intent === "private-commission" ? [
+      `Client profile: ${enquiry.clientType}`,
+      `Project category: ${enquiry.projectType}`,
+      `Company: ${enquiry.company || "Not provided"}`,
+      `Project location: ${enquiry.location}`,
+      `Project stage: ${enquiry.projectStage}`,
+    ] : []),
+    `Expected timeline: ${enquiry.expectedTimeline || "Not provided"}`,
     "Privacy notice accepted: Yes",
     "",
-    "Project details:",
+    enquiry.intent === "private-commission" ? "Project details:" : "Request details:",
     enquiry.message,
   ].join("\n");
 }
@@ -66,7 +71,11 @@ export async function sendEnquiry(
         from: `BMYGYM <${config.from}>`,
         to: [config.to],
         reply_to: enquiry.email,
-        subject: `BMYGYM project enquiry · ${enquiry.projectType}`,
+        subject: enquiry.intent === "retreat"
+          ? "BMYGYM Retreats · Enquiry"
+          : enquiry.intent === "private-consultation"
+            ? "BMYGYM · Private consultation request"
+            : `BMYGYM private enquiry · ${enquiry.projectType}`,
         text: enquiryMailText(enquiry),
       }),
       signal: AbortSignal.timeout(8000),

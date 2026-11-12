@@ -48,10 +48,11 @@ export async function generateMetadata({params}: {params: Promise<{locale:string
     title: {default: title, template: "%s | BMYGYM"},
     description: common.meta.description,
     applicationName: siteConfig.name,
+    verification: process.env.GOOGLE_SITE_VERIFICATION ? {google: process.env.GOOGLE_SITE_VERIFICATION} : undefined,
     alternates: {canonical:path, languages: Object.fromEntries([...locales.map(l => [l, localePath(l)]), ["x-default", "/"]])},
     robots: {index:isIndexingEnabled, follow:isIndexingEnabled},
     openGraph: {title, description:common.meta.description, url:path, siteName:siteConfig.name,
-      locale: {en:"en_GB",de:"de_DE",fr:"fr_FR",es:"es_ES",ru:"ru_RU"}[locale], type:"website",
+      locale: {en:"en_GB",de:"de_DE",es:"es_ES",fr:"fr_FR",ru:"ru_RU",it:"it_IT"}[locale], type:"website",
       images:[{url:"/images/fitness-wall-walnut.webp",width:1402,height:1122,alt:home.hero.imageAlt}]},
     twitter:{card:"summary_large_image",title,description:common.meta.description,images:["/images/fitness-wall-walnut.webp"]}
   };
@@ -68,26 +69,10 @@ export default async function RootLayout({children, params}: Readonly<{children:
   const {common} = await getDictionary(locale);
   return (
     <html lang={locale} className={`${bodoni.variable} ${manrope.variable}`}>
-      <head>
-        {/* Google tag (gtag.js) */}
-        {/* eslint-disable-next-line @next/next/next-script-for-ga -- Keep the supplied Google tag in the document head. */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5ZH4R52182" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5ZH4R52182');
-`,
-          }}
-        />
-      </head>
       <body>
         <a href="#main-content" className="skip-link">{common.nav.skip}</a>
         <LocaleProvider locale={locale} common={common}>
-          <CookieNoticeProvider>{children}</CookieNoticeProvider>
+          <CookieNoticeProvider analyticsEnabled={isIndexingEnabled}>{children}</CookieNoticeProvider>
         </LocaleProvider>
       </body>
     </html>

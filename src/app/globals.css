@@ -823,7 +823,7 @@ summary {
   font-size: var(--text-body);
   margin-bottom: 14px;
 }
-.blueprint-details ul {
+.blueprint-details ol {
   list-style: none;
   padding: 0;
   margin: 27px 0 22px;
@@ -832,15 +832,22 @@ summary {
   font-size: var(--text-body);
   border-top: 1px solid var(--line);
   padding: 15px 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  align-items: center;
+  display: block;
   line-height: 1.6;
 }
 .blueprint-details li:last-child {
   border-bottom: 1px solid var(--line);
 }
+.blueprint-details .blueprint-steps h3 {
+  font-family: var(--font-manrope), "BMYGYM Cyrillic Sans", Arial, sans-serif;
+  font-size: var(--text-small);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.blueprint-steps p { color: var(--stone-ink); }
 
 .blueprint-details > .blueprint-note {
   font-size: var(--text-small) !important;
@@ -1152,6 +1159,10 @@ summary {
   accent-color: var(--ink);
   margin: 2px 0 0;
 }
+.privacy-check > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .privacy-check a {
   color: var(--ink);
   text-decoration: underline;
@@ -1318,6 +1329,7 @@ summary {
   max-width: 40%;
   font-size: var(--text-small);
   line-height: 1.6;
+  flex-wrap: wrap;
 }
 .cookie-notice-policy {
   display: inline-flex;
@@ -1425,6 +1437,36 @@ summary {
 .environment-copy {
   max-width: 48ch;
   min-width: 0;
+}
+
+.environment-land .land-classic-image {
+  margin-top: 32px;
+}
+
+.environment-land .land-classic-image .image-frame {
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+
+.environment-land .land-classic-image img {
+  object-fit: contain;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .environment-land {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .environment-land .environment-copy {
+    max-width: none;
+  }
+  .environment-land .environment-copy > p {
+    max-width: 60ch;
+  }
+  .environment-land .land-classic-image {
+    width: 80%;
+    max-width: 32rem;
+    margin-left: auto;
+  }
 }
 
 .environment-heading-link {
@@ -1931,7 +1973,7 @@ summary {
   }
   .footer-top {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     align-items: end;
     gap: 22px;
     padding-bottom: 30px;
@@ -1941,7 +1983,7 @@ summary {
     grid-column: 1 / -1;
   }
   .footer-wordmark {
-    font-size: 3rem;
+    font-size: min(3rem, calc((100vw - var(--page-gutter) * 2) / 5.5));
   }
   .back-top {
     font-size: var(--text-small);
@@ -2081,3 +2123,33 @@ h1, h2, h3, .button, .text-link, .environment-title > span { overflow-wrap: anyw
 @media (max-width: 600px) {
   .header-enquiry { display: none; }
 }
+
+/* November copy refinement: retain the existing architectural layout and scale. */
+.hero-positioning { margin-top: 24px; }
+.hero-service { margin-top: 22px; }
+.client-path p { margin-bottom: 20px; }
+.client-path .client-path-lead { color: var(--ink); }
+.client-path .button { margin-top: auto; }
+.client-path-copy > p:last-of-type { margin-bottom: 30px; }
+.section-subtitle,
+.blueprint-intro > .section-subtitle,
+.enquiry-intro > .enquiry-subtitle {
+  font-family: var(--font-bodoni), "BMYGYM Cyrillic Serif", Georgia, serif;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--accent);
+  max-width: 36ch;
+  margin-block: 22px 28px;
+}
+.blueprint h2, .enquiry h2 { margin-bottom: 0; }
+.form-status.success { white-space: pre-line; }
+.cookie-notice-actions { gap: 12px; }
+.cookie-notice-policy { flex-basis: 100%; justify-content: flex-end; }
+@media (max-width: 1023px) {
+  .cookie-notice-policy { justify-content: flex-start; }
+}
+.booking-page { min-height: 70svh; }
+.booking-intro h1 { font-size: clamp(2.75rem, 4.6vw, 4.75rem); line-height: 1.15; }
+.booking-intro .text-link { display: flex; width: fit-content; margin-top: 28px; }
+.booking-form h2 { font-size: clamp(1.75rem, 2.4vw, 2.5rem); margin-bottom: 24px; }

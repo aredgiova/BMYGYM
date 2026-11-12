@@ -1,0 +1,32 @@
+{
+  "back": "Revenir à BMYGYM",
+  "validationIntent": "Veuillez choisir un type de demande disponible.",
+  "retreat": {
+    "title": "BMYGYM Retreats",
+    "subtitle": "Renseignements et réservations",
+    "intro": "Pour en savoir plus sur BMYGYM Retreats à Valence, faites-nous part de vos centres d’intérêt et des dates qui vous conviendraient.",
+    "availability": "Renseignez-vous sur les programmes, tarifs et disponibilités actuels à Valence. Votre réservation est confirmée directement avec BMYGYM après accord sur les détails.",
+    "formTitle": "Demander une réservation à Valence",
+    "message": "Votre demande pour une retraite à Valence",
+    "messagePlaceholder": "Présentez-nous vos centres d’intérêt, vos dates souhaitées et vos éventuelles questions…",
+    "timelineLabel": "Dates souhaitées pour la retraite",
+    "timelinePlaceholder": "Vos dates ou votre mois de préférence",
+    "messageValidation": "Veuillez rédiger votre demande en 20 à 5 000 caractères.",
+    "submit": "DEMANDER UNE RÉSERVATION",
+    "success": "Merci pour votre demande. Nous vous contacterons avec davantage d’informations et les disponibilités. Votre réservation ne sera confirmée qu’après accord direct avec BMYGYM."
+  },
+  "private-consultation": {
+    "title": "Consultation privée",
+    "subtitle": "Un échange attentif autour de votre projet.",
+    "intro": "Présentez-nous brièvement votre projet et indiquez-nous vos disponibilités pour un échange privé avec BMYGYM.",
+    "availability": "Les consultations sont organisées individuellement après un premier examen de la demande. Les modalités du rendez-vous seront confirmées directement avec vous.",
+    "formTitle": "Demander une consultation privée",
+    "message": "Votre demande de consultation",
+    "messagePlaceholder": "Présentez votre projet et les sujets que vous aimeriez aborder…",
+    "timelineLabel": "Dates souhaitées pour la consultation",
+    "timelinePlaceholder": "Vos dates préférées ou vos disponibilités",
+    "messageValidation": "Veuillez rédiger votre demande en 20 à 5 000 caractères.",
+    "submit": "DEMANDER UNE CONSULTATION PRIVÉE",
+    "success": "Merci pour votre demande. Nous l’examinerons et vous contacterons si une consultation privée semble appropriée. Le rendez-vous ne sera confirmé qu’après accord direct avec BMYGYM."
+  }
+}

@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 import { Arrow } from "@/components/ui/arrow";
 import type { HomeCopy } from "@/i18n/types";
 
-const sessionKey = "bmygym.welcome.v1";
+const preferenceKey = "bmygym.welcome.v1";
+const preferenceLifetime = 180 * 24 * 60 * 60 * 1000;
 let dismissedInMemory = false;
 
 export function BrandWelcome({ copy }: { copy: HomeCopy["welcome"] }) {
@@ -26,7 +27,10 @@ export function BrandWelcome({ copy }: { copy: HomeCopy["welcome"] }) {
     // Direct links to a project enquiry or another section retain their destination.
     if (!dialog || dismissedInMemory || (window.location.hash && window.location.hash !== "#home")) return;
     try {
-      if (window.sessionStorage.getItem(sessionKey) === "dismissed") return;
+      const dismissedAt = Number(window.localStorage.getItem(preferenceKey));
+      if (dismissedAt > 0 && dismissedAt <= Date.now() && Date.now() - dismissedAt < preferenceLifetime) return;
+      // Preserve dismissal from visits made before the persistent preference existed.
+      if (window.sessionStorage.getItem(preferenceKey) === "dismissed") return;
     } catch {
       // A blocked storage API must never prevent entry to the site.
     }
@@ -51,7 +55,7 @@ export function BrandWelcome({ copy }: { copy: HomeCopy["welcome"] }) {
     if (!dialog?.open || dialog.dataset.closing) return;
     dismissedInMemory = true;
     try {
-      window.sessionStorage.setItem(sessionKey, "dismissed");
+      window.localStorage.setItem(preferenceKey, String(Date.now()));
     } catch {
       // The in-memory fallback lasts for this page when storage is unavailable.
     }

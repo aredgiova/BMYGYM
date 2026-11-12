@@ -1,0 +1,32 @@
+{
+  "back": "Zurück zu BMYGYM",
+  "validationIntent": "Bitte wählen Sie eine verfügbare Anfrageart.",
+  "retreat": {
+    "title": "BMYGYM Retreats",
+    "subtitle": "Anfragen und Reservierungen",
+    "intro": "Wenn Sie mehr über BMYGYM Retreats in Valencia erfahren möchten, teilen Sie uns Ihre Interessen und Wunschtermine mit.",
+    "availability": "Fragen Sie uns nach den aktuellen Programmen, Preisen und Verfügbarkeiten in Valencia. Ihre Reservierung wird nach Abstimmung der Details direkt mit BMYGYM bestätigt.",
+    "formTitle": "Eine Reservierung für Valencia anfragen",
+    "message": "Ihre Anfrage für ein Retreat in Valencia",
+    "messagePlaceholder": "Erzählen Sie uns von Ihren Interessen, Wunschterminen und offenen Fragen…",
+    "timelineLabel": "Bevorzugte Retreat-Termine",
+    "timelinePlaceholder": "Ihre Wunschtermine oder Ihr bevorzugter Monat",
+    "messageValidation": "Bitte formulieren Sie Ihre Anfrage in 20–5.000 Zeichen.",
+    "submit": "RESERVIERUNG ANFRAGEN",
+    "success": "Vielen Dank für Ihre Anfrage. Wir melden uns mit weiteren Informationen und Angaben zur Verfügbarkeit. Ihre Reservierung ist erst nach direkter Vereinbarung mit BMYGYM bestätigt."
+  },
+  "private-consultation": {
+    "title": "Privates Beratungsgespräch",
+    "subtitle": "Ein aufmerksames Gespräch über Ihr Projekt.",
+    "intro": "Stellen Sie uns Ihr Projekt kurz vor und nennen Sie uns Ihren bevorzugten Zeitraum für ein privates Gespräch mit BMYGYM.",
+    "availability": "Beratungsgespräche werden nach einer ersten Prüfung individuell vereinbart. Die Termindetails stimmen wir direkt mit Ihnen ab.",
+    "formTitle": "Ein privates Beratungsgespräch anfragen",
+    "message": "Ihre Beratungsanfrage",
+    "messagePlaceholder": "Stellen Sie Ihr Projekt vor und beschreiben Sie, was Sie besprechen möchten…",
+    "timelineLabel": "Bevorzugte Beratungstermine",
+    "timelinePlaceholder": "Ihre Wunschtermine oder Verfügbarkeit",
+    "messageValidation": "Bitte formulieren Sie Ihre Anfrage in 20–5.000 Zeichen.",
+    "submit": "PRIVATES BERATUNGSGESPRÄCH ANFRAGEN",
+    "success": "Vielen Dank für Ihre Anfrage. Wir prüfen Ihr Anliegen und melden uns, wenn ein privates Beratungsgespräch sinnvoll erscheint. Ein Termin ist erst nach direkter Vereinbarung mit BMYGYM bestätigt."
+  }
+}

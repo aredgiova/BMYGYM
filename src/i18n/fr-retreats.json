@@ -1,0 +1,36 @@
+{
+  "metaDescription": "Découvrez BMYGYM Retreats à Valence : un cadre intime au bord de la Méditerranée pour prendre du temps pour vous. Renseignez-vous sur les programmes, tarifs et réservations en cours.",
+  "title": "BMYGYM Retreats",
+  "heroLead": "Valence. Du temps pour vous.",
+  "heroText": "Une retraite intime et féminine au bord de la Méditerranée. Un rythme plus doux, des détails soignés et un espace pour vous retrouver.",
+  "explore": "Découvrir Valence",
+  "requestReservation": "Demander une réservation",
+  "valenciaTitle": "Une pause méditerranéenne.",
+  "valenciaText": "Une lumière chaleureuse, la mer toute proche et un peu de recul sur le quotidien. Valence accueille une expérience BMYGYM plus personnelle, où le temps pour vous prend toute sa place.",
+  "programmesTitle": "Votre expérience à Valence",
+  "programmesText": "Contactez-nous pour connaître les programmes, tarifs et dates actuellement disponibles. Nous vous présenterons personnellement les détails de chaque expérience.",
+  "programmesNote": "Le programme, le tarif et la disponibilité sont convenus directement avec BMYGYM avant la confirmation de votre réservation.",
+  "galleryTitle": "Le plaisir d’être ici.",
+  "yachtTitle": "Yacht Retreats — Coming 2027",
+  "yachtText": "Une nouvelle collection d’expériences exclusives à bord de yachts se prépare pour 2027. Un chapitre distinct de BMYGYM Retreats, avec ses propres programmes et tarifs.",
+  "yachtNote": "Les réservations ne sont pas encore ouvertes.",
+  "reservationTitle": "Votre retraite à Valence",
+  "reservationText": "Parlez-nous de vos envies et de vos dates préférées. Utilisez le formulaire ou écrivez-nous pour connaître les programmes, tarifs et modalités de réservation actuels.",
+  "images": {
+    "beachCircle": "Des femmes réunies sur une plage au lever du soleil, avec des sacs BMYGYM Retreats et des rafraîchissements.",
+    "welcomeTable": "Un sac BMYGYM Retreats près d’une eau aux agrumes, de jus et de verrines de petit-déjeuner sur une table à la plage.",
+    "promenade": "Des palmiers le long de la promenade du front de mer de Valence, dans une lumière chaleureuse.",
+    "deepReset": "Des femmes reposant sous des couvertures sur des tapis éclairés en rouge, au bord de la mer au coucher du soleil.",
+    "journal": "Un carnet BMYGYM ivoire avec un stylo doré sur une surface en pierre.",
+    "yacht": "Une femme utilisant un appareil d’entraînement à résistance beige et doré à bord d’un yacht.",
+    "pool": "Une piscine extérieure ensoleillée, entourée de palmiers et de chaises longues."
+  },
+  "captions": {
+    "beachCircle": "Des instants de calme au bord de la mer.",
+    "welcomeTable": "L’attention portée à chaque détail.",
+    "promenade": "La lumière de Valence.",
+    "deepReset": "Un instant de sérénité.",
+    "journal": "De la place pour vos pensées.",
+    "pool": "Un rythme plus doux."
+  }
+}

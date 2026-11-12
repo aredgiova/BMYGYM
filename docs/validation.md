@@ -1,5 +1,26 @@
 # Validación
 
+## Private Commissions, italiano y solicitudes — 11 de noviembre de 2026
+
+Se conservan imágenes, fuentes, paleta y estructura de la portada. Se actualizaron los textos, el Blueprint de tres fases y el formulario; se añadió italiano conservando ruso y se crearon las páginas de Retreats y consulta privada tras la confirmación del usuario. Los nombres actuales de conceptos se mantienen pendientes de revisión; AERO ONE sigue identificado como concepto sin certificación. No se publicaron contenidos editoriales ni el Private Longevity Circle.
+
+| Comprobación | Resultado |
+| --- | --- |
+| ESLint, TypeScript, `git diff --check` | Aprobados |
+| `npm test` | 28 pruebas aprobadas; validación, contratos, correo simulado, intenciones y paridad de seis idiomas |
+| Compilación de producción | 49 páginas generadas, sin errores |
+| Portada | 30 combinaciones de seis idiomas × 320, 390, 768, 1024 y 1440 px, sin desbordamiento horizontal |
+| Pop-up | Apariencia conservada; cabe en 320, 390 y 1440 px; el cierre persiste al abrir otra pestaña |
+| Formularios | Principal validado en seis idiomas; 12 recorridos de Retreats/consulta con error que conserva datos y éxito simulado; no se envió correo real |
+| Enlaces y SEO | Anclas existentes, cabeceras sin solapamientos, 36 páginas auxiliares/de solicitudes con HTTP 200, canonical/hreflang y ruso/italiano presentes |
+| Previews | `noindex, nofollow`; sin Google Analytics incluso tras aceptar analítica |
+| Analítica aislada | Flag de producción activado solo en respuesta interceptada local: sin carga antes de aceptar, cola oficial `arguments`, una carga diferida, clic de comisión y tres intenciones de lead distintas; revocar desactiva eventos y borra cookies accesibles |
+| Errores JavaScript | Ninguno en ambos recorridos |
+
+Recorrido inicial en desarrollo y final contra la compilación de producción local. Evidencias locales excluidas de Git: `artifacts/commission-preview-qa.cjs`, `artifacts/commission-final-qa.cjs`, `artifacts/commissions-2026-11-11/report.json`, `final-report.json` y capturas. La prueba de analítica intercepta el script externo; acredita nuestra lógica de consentimiento y eventos, no su recepción en Google. Se excluyeron `artifacts/` y `tmp/` de TypeScript porque contienen copias históricas ajenas a la aplicación actual.
+
+Pendientes externos: configuración de Resend y prueba de recepción autorizada, datos reales de retiros y reservas, propiedad/verificación en Search Console y aprobación editorial. No se hizo push ni despliegue. Las secciones siguientes conservan evidencia histórica; sus afirmaciones sobre cinco idiomas o ausencia de analítica corresponden a versiones anteriores.
+
 ## Aviso informativo de cookies — 28 de octubre de 2026
 
 Se incorporó un aviso propio y ligero, fijo en la parte inferior y no modal, en los cinco idiomas. Incluye enlace a la política, botón de cierre y reapertura desde “Cookie Settings” en el pie. Mantiene el sistema visual existente. No añade analítica, publicidad, CMP ni servicios externos. El cierre guarda únicamente la preferencia técnica descrita en [Aviso de cookies](cookie-notice.md); no consiente seguimiento.

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
-import { locales, localePath } from "../src/i18n/config.ts";
+import { isLocale, languageNames, locales, localePath } from "../src/i18n/config.ts";
 
 function shape(value: unknown): unknown {
   if (Array.isArray(value)) return value.map(shape);
@@ -11,7 +11,16 @@ function shape(value: unknown): unknown {
   return "string";
 }
 
-for (const category of ["common","home"]) {
+test("six languages retain Russian and expose Italian in the requested order", () => {
+  assert.deepEqual(locales, ["en", "de", "es", "fr", "ru", "it"]);
+  assert.equal(languageNames.ru, "Русский");
+  assert.equal(languageNames.it, "Italiano");
+  assert.ok(isLocale("ru"));
+  assert.ok(isLocale("it"));
+  assert.equal(isLocale("IT"), false);
+});
+
+for (const category of ["common","home","booking","retreats"]) {
   test(`every ${category} translation covers the full English content`, () => {
     const english = JSON.parse(readFileSync(new URL(`../src/i18n/en-${category}.json`,import.meta.url),"utf8"));
     for (const locale of locales) {

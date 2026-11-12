@@ -7,12 +7,14 @@ import {
   type EnquiryErrors,
 } from "../../../../validations/enquiry.ts";
 import { getCommonCopy } from "../../../../i18n/common.ts";
+import { getBookingCopy } from "../../../../i18n/booking.ts";
 import { isLocale } from "../../../../i18n/config.ts";
 import type { CommonCopy } from "../../../../i18n/types.ts";
 
 export const runtime = "nodejs";
 
-const MAX_BODY_BYTES = 32 * 1024;
+// Accommodate all validated fields even when non-Latin text is JSON-escaped.
+const MAX_BODY_BYTES = 40 * 1024;
 
 function failure(
   status: number,
@@ -133,7 +135,8 @@ async function readBoundedBody(
 
 export async function POST(request: Request): Promise<Response> {
   const requestedLocale = request.headers.get("x-bmygym-locale") || "en";
-  let copy = getCommonCopy(isLocale(requestedLocale) ? requestedLocale : "en");
+  let locale = isLocale(requestedLocale) ? requestedLocale : "en";
+  let copy = getCommonCopy(locale);
   const origins = trustedOrigins(request);
   if (!origins.size)
     return failure(503, "SERVICE_UNAVAILABLE", copy.api.unavailable);
@@ -173,9 +176,16 @@ export async function POST(request: Request): Promise<Response> {
     typeof input === "object" && input !== null && !Array.isArray(input) &&
     "locale" in input && typeof input.locale === "string" && isLocale(input.locale)
   ) {
+    locale = input.locale;
     copy = getCommonCopy(input.locale);
   }
-  const validation = validateEnquiry(input, copy.validation);
+  const booking = getBookingCopy(locale);
+  const intent = typeof input === "object" && input !== null && !Array.isArray(input) && "intent" in input
+    ? input.intent : undefined;
+  const validationMessages = intent === "retreat" || intent === "private-consultation"
+    ? {...copy.validation, message: booking[intent].messageValidation}
+    : copy.validation;
+  const validation = validateEnquiry(input, validationMessages, booking.validationIntent);
   if (!validation.success) {
     return failure(
       400,
@@ -201,7 +211,9 @@ export async function POST(request: Request): Promise<Response> {
     {
       success: true,
       data: { submitted: true },
-      message: copy.api.success,
+      message: validation.data.intent === "private-commission"
+        ? copy.api.success
+        : booking[validation.data.intent].success,
       error: null,
     },
     {

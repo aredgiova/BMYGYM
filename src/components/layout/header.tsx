@@ -64,6 +64,7 @@ export function Header({ isHome = true, locale, copy }: { isHome?: boolean; loca
               {link.label}
             </a>
           ))}
+          <a href={localePath(locale, "retreats")}>{copy.retreats}</a>
         </nav>
         <div className="header-actions">
           <LanguageSelector locale={locale} label={copy.language} />
@@ -104,6 +105,7 @@ export function Header({ isHome = true, locale, copy }: { isHome?: boolean; loca
             <Arrow />
           </a>
         ))}
+        <a href={localePath(locale, "retreats")} onClick={() => setOpen(false)}>{copy.retreats}<Arrow /></a>
         <a href={`${prefix}#enquiry`} onClick={() => setOpen(false)}>
           {copy.enquiry}
           <Arrow diagonal />

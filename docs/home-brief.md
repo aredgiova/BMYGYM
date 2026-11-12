@@ -1,5 +1,15 @@
 # Home direction
 
+## LAND reference addition — 11 November 2026
+
+Within the existing LAND article, retain the contemporary `longevity-suite-ivory.webp` as the primary image and add the user-supplied `land-classic-european.webp` as a smaller second visual below the text. Its full 3:2 composition shows classical European architecture and is explicitly captioned as a concept visualisation. A short additional sentence explains the architectural dialogue across contemporary, classical and historic properties, localised in all six current languages (EN, DE, ES, FR, RU, IT). Existing descriptions and other concepts remain unchanged; embedded product lettering is not a naming decision or evidence of completed work.
+
+Desktop preserves the existing asymmetric image/copy row. LAND alone stacks between 768 and 1023px, with a right-aligned secondary image at 80% width capped at 32rem, preventing a narrow text column and thumbnail-sized reference. Below 768px both images use the available width in the reading order: contemporary reference, LAND text, classical reference. Both photographs keep their full 3:2 ratios. No new section, carousel or image interaction is added. The new `#land` anchor provides direct preview navigation; SEA and AIR keep their article order and layout.
+
+Validation: lint, typecheck, 29 tests and production build passed. Six home locales checked at 320, 390, 768, 1024 and 1440px; both LAND images load, keep 3:2 ratios, and introduce no horizontal overflow. The original three environment articles and original LAND/SEA/AIR sources remain. Desktop/tablet/mobile captures and runtime evidence are in `artifacts/land-2026-11-11/`. No publication is performed as part of this addition.
+
+## Prior direction record
+
 Mode: Persuade. One landing page in English, German, French, Spanish and Russian. English is primary at `/`; the other home variants use `/de`, `/fr`, `/es` and `/ru`. Updated 22 October 2026 for an authorised refinement of the existing site. This brief records the implementation, not deployment or completed runtime verification. The user requested a local preview before any repository upload.
 
 Pinned direction: an architectural portfolio for a creator and integrator of bespoke longevity environments, serving private clients and professional partners. The user requested luminous, elegant and minimal luxury associated with Aman and Four Seasons, with the first supplied visual reference taking priority. Neutral ivory (`#faf9f6`), pale beige (`#eeece7`), Bodoni Moda headings and restrained Manrope navigation refine the established visual language without a yellow cast. Cyrillic Manrope and Cormorant Garamond normal/italic serif fallbacks support Russian locally. Photography leads and generous editorial whitespace follows. No catalogue, prices or equipment cards.

@@ -1,0 +1,32 @@
+{
+  "back": "Torna a BMYGYM",
+  "validationIntent": "Scegliere una tipologia di richiesta disponibile.",
+  "retreat": {
+    "title": "BMYGYM Retreats",
+    "subtitle": "Informazioni e prenotazioni",
+    "intro": "Per saperne di più su BMYGYM Retreats a Valencia, ci racconti i suoi interessi e le date che preferisce.",
+    "availability": "Ci contatti per conoscere programmi, prezzi e disponibilità attuali a Valencia. La prenotazione viene confermata direttamente con BMYGYM dopo aver concordato i dettagli.",
+    "formTitle": "Richiedi una prenotazione a Valencia",
+    "message": "La sua richiesta per un retreat a Valencia",
+    "messagePlaceholder": "Ci racconti i suoi interessi, le date preferite e le eventuali domande…",
+    "timelineLabel": "Date preferite per il retreat",
+    "timelinePlaceholder": "Le date o il mese che preferisce",
+    "messageValidation": "Descriva la sua richiesta utilizzando da 20 a 5.000 caratteri.",
+    "submit": "RICHIEDI UNA PRENOTAZIONE",
+    "success": "Grazie per la sua richiesta. La contatteremo con maggiori dettagli e informazioni sulla disponibilità. La prenotazione sarà confermata solo dopo un accordo diretto con BMYGYM."
+  },
+  "private-consultation": {
+    "title": "Consulenza privata",
+    "subtitle": "Un dialogo attento intorno al suo progetto.",
+    "intro": "Ci presenti brevemente il suo progetto e ci indichi il periodo preferito per un colloquio privato con BMYGYM.",
+    "availability": "Le consulenze vengono organizzate individualmente dopo una prima valutazione. I dettagli dell’appuntamento saranno confermati direttamente con lei.",
+    "formTitle": "Richiedi una consulenza privata",
+    "message": "La sua richiesta di consulenza",
+    "messagePlaceholder": "Ci presenti il suo progetto e gli aspetti che desidera approfondire…",
+    "timelineLabel": "Date preferite per la consulenza",
+    "timelinePlaceholder": "Le date preferite o la sua disponibilità",
+    "messageValidation": "Descriva la sua richiesta utilizzando da 20 a 5.000 caratteri.",
+    "submit": "RICHIEDI UNA CONSULENZA PRIVATA",
+    "success": "Grazie per la sua richiesta. La valuteremo e la contatteremo qualora una consulenza privata sia appropriata. L’appuntamento sarà confermato solo dopo un accordo diretto con BMYGYM."
+  }
+}

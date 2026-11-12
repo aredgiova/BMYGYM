@@ -1,4 +1,4 @@
-import { CLIENT_TYPES, type ClientType } from "../../validations/enquiry.ts";
+import { CLIENT_TYPES, type ClientType, type ProjectType } from "../../validations/enquiry.ts";
 
 export type ClientProfile = "private" | "professional";
 export const PROFILE_SELECTION_EVENT = "bmygym:profile-selection";
@@ -7,6 +7,12 @@ export function clientTypeForProfile(profile: string | null): ClientType | "" {
   if (profile === "private") return CLIENT_TYPES[0];
   if (profile === "professional") return CLIENT_TYPES[1];
   return "";
+}
+
+export function projectTypeForProfile(profile: string | null): ProjectType | "" {
+  // A private commission can concern land, sea or air, so leave its category
+  // open. The professional path has a dedicated category in the enquiry form.
+  return profile === "professional" ? "Professional Partnership" : "";
 }
 
 export function profileSelectionHref(location: string, profile: ClientProfile): string {

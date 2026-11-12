@@ -16,8 +16,8 @@ export function Hero({ copy }: { copy: HomeCopy }) {
               <br />
               <em>{content.titleEmphasis}</em>
             </h1>
-            <p className="hero-service">{content.service}</p>
             <p className="hero-positioning">{content.positioning}</p>
+            <p className="hero-service">{content.service}</p>
             <div className="hero-actions">
               <a className="button button-dark" href="#enquiry">
                 {content.enquiry}

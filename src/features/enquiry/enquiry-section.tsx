@@ -9,7 +9,8 @@ export function EnquirySection({locale, copy}: {locale: Locale; copy: CommonCopy
   return (
     <section id="enquiry" className="section enquiry" aria-labelledby="enquiry-title">
       <div className="enquiry-intro">
-        <h2 id="enquiry-title">{text.title}<br /><em>{text.emphasis}</em></h2>
+        <h2 id="enquiry-title">{text.title}</h2>
+        <p className="enquiry-subtitle">{text.emphasis}</p>
         <p>{text.intro}</p>
         <p className="enquiry-audience">{text.audience}</p>
         <p>{text.commission}</p>

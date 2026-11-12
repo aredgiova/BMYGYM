@@ -1,0 +1,32 @@
+{
+  "back": "Volver a BMYGYM",
+  "validationIntent": "Seleccione un tipo de consulta disponible.",
+  "retreat": {
+    "title": "BMYGYM Retreats",
+    "subtitle": "Información y reservas",
+    "intro": "Para conocer más sobre BMYGYM Retreats en Valencia, comparta con nosotros sus intereses y las fechas que prefiere.",
+    "availability": "Consúltenos los programas, precios y disponibilidad actuales en Valencia. Su reserva se confirma directamente con BMYGYM una vez acordados los detalles.",
+    "formTitle": "Solicitar una reserva en Valencia",
+    "message": "Su solicitud para un retiro en Valencia",
+    "messagePlaceholder": "Cuéntenos sus intereses, las fechas que prefiere y cualquier duda…",
+    "timelineLabel": "Fechas preferidas para el retiro",
+    "timelinePlaceholder": "Las fechas o el mes que prefiere",
+    "messageValidation": "Escriba su consulta utilizando entre 20 y 5.000 caracteres.",
+    "submit": "SOLICITAR UNA RESERVA",
+    "success": "Gracias por su consulta. Nos pondremos en contacto con usted para ampliar la información y comunicarle la disponibilidad. Su reserva solo quedará confirmada cuando se acuerde directamente con BMYGYM."
+  },
+  "private-consultation": {
+    "title": "Consulta privada",
+    "subtitle": "Una conversación atenta sobre su proyecto.",
+    "intro": "Preséntenos brevemente su proyecto e indíquenos cuándo preferiría mantener una conversación privada con BMYGYM.",
+    "availability": "Las consultas se organizan de forma individual tras una primera valoración. Los detalles de la cita se confirmarán directamente con usted.",
+    "formTitle": "Solicitar una consulta privada",
+    "message": "Su solicitud de consulta",
+    "messagePlaceholder": "Presente su proyecto y cuéntenos qué le gustaría tratar…",
+    "timelineLabel": "Fechas preferidas para la consulta",
+    "timelinePlaceholder": "Las fechas que prefiere o su disponibilidad",
+    "messageValidation": "Escriba su consulta utilizando entre 20 y 5.000 caracteres.",
+    "submit": "SOLICITAR UNA CONSULTA PRIVADA",
+    "success": "Gracias por su solicitud. Revisaremos su consulta y nos pondremos en contacto con usted si procede una conversación privada. La cita solo quedará confirmada cuando se acuerde directamente con BMYGYM."
+  }
+}

@@ -10,7 +10,7 @@ export function Footer({locale, copy, homeLabel}: {locale: Locale; copy: CommonC
     <footer className="site-footer">
       <div className="footer-top">
         <div><Link href={home + "#home"} className="footer-wordmark" aria-label={homeLabel}>BMYGYM</Link><p>{copy.tagline}</p></div>
-        <div className="footer-contact"><span>{copy.location}</span><a href="mailto:hello@bmygym.com">hello@bmygym.com<Arrow diagonal /></a></div>
+        <div className="footer-contact"><span>{copy.location}</span><a href="mailto:hello@bmygym.com">hello@bmygym.com<Arrow diagonal /></a><Link href={localePath(locale, "retreats")}>{copy.retreats}<Arrow diagonal /></Link><Link href={localePath(locale, "private-consultation")}>{copy.consultation}<Arrow diagonal /></Link></div>
         <Link href={home + "#home"} className="back-top">{copy.top}<Arrow diagonal /></Link>
       </div>
       <div className="footer-bottom">

@@ -18,15 +18,6 @@ export function Philosophy({ copy }: { copy: HomeCopy }) {
         </h2>
         <p className="philosophy-lead">{content.lead}</p>
         <p>{content.opening}</p>
-        <p className="philosophy-statement">{content.statement}</p>
-        <p className="personal-line">
-          {content.personalLines.map((line, index) => (
-            <span key={line}>
-              {index > 0 && <br />}
-              {line}
-            </span>
-          ))}
-        </p>
         <p>{content.body}</p>
         <p>{content.collaboration}</p>
         <TextLink href="#blueprint">{content.link}</TextLink>
