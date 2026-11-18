@@ -1,7 +1,13 @@
 {
   "welcome": {
     "enter": "Scopri BMYGYM",
-    "close": "Chiudi la presentazione"
+    "close": "Chiudi la presentazione",
+    "identityLanguage": "en",
+    "title": "House of Luxury",
+    "titleEmphasis": "Longevity",
+    "service": "Bespoke Longevity Environments",
+    "disciplines": ["Fitness", "Recovery", "Wellness Integration"],
+    "worlds": ["LAND", "SEA", "AIR"]
   },
   "hero": {
     "imageAlt": "ORVÉA™ Architectural Integration Wall in noce integrata in un interno architettonico, con accessori per l’allenamento, un tappetino color avorio e vista sul mare",

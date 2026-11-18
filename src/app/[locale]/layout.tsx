@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { isIndexingEnabled, siteConfig } from "@/config/site";
 import "../globals.css";
 import { notFound } from "next/navigation";
-import { isLocale, locales, localePath } from "@/i18n/config";
+import { isLocale, locales, localePath, localeDirection } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { LocaleProvider } from "@/i18n/provider";
 import { CookieNoticeProvider } from "@/components/privacy/cookie-notice";
@@ -23,7 +23,7 @@ const bodoni = localFont({
   ],
   variable: "--font-bodoni",
   display: "swap",
-  fallback: ["BMYGYM Cyrillic Serif", "Georgia"],
+  fallback: ["BMYGYM Cyrillic Serif", "BMYGYM Arabic Serif", "Georgia"],
   adjustFontFallback: false,
 });
 const manrope = localFont({
@@ -31,7 +31,7 @@ const manrope = localFont({
   weight: "200 800",
   variable: "--font-manrope",
   display: "swap",
-  fallback: ["BMYGYM Cyrillic Sans", "Arial"],
+  fallback: ["BMYGYM Cyrillic Sans", "BMYGYM Arabic Sans", "Arial"],
   adjustFontFallback: false,
 });
 
@@ -52,7 +52,7 @@ export async function generateMetadata({params}: {params: Promise<{locale:string
     alternates: {canonical:path, languages: Object.fromEntries([...locales.map(l => [l, localePath(l)]), ["x-default", "/"]])},
     robots: {index:isIndexingEnabled, follow:isIndexingEnabled},
     openGraph: {title, description:common.meta.description, url:path, siteName:siteConfig.name,
-      locale: {en:"en_GB",de:"de_DE",es:"es_ES",fr:"fr_FR",ru:"ru_RU",it:"it_IT"}[locale], type:"website",
+      locale: {en:"en_GB",de:"de_DE",es:"es_ES",fr:"fr_FR",ru:"ru_RU",it:"it_IT",ar:"ar_AR"}[locale], type:"website",
       images:[{url:"/images/fitness-wall-walnut.webp",width:1402,height:1122,alt:home.hero.imageAlt}]},
     twitter:{card:"summary_large_image",title,description:common.meta.description,images:["/images/fitness-wall-walnut.webp"]}
   };
@@ -68,7 +68,7 @@ export default async function RootLayout({children, params}: Readonly<{children:
   if (!isLocale(locale)) notFound();
   const {common} = await getDictionary(locale);
   return (
-    <html lang={locale} className={`${bodoni.variable} ${manrope.variable}`}>
+    <html lang={locale} dir={localeDirection(locale)} className={`${bodoni.variable} ${manrope.variable}`}>
       <body>
         <a href="#main-content" className="skip-link">{common.nav.skip}</a>
         <LocaleProvider locale={locale} common={common}>

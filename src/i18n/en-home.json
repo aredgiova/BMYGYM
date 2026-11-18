@@ -1,7 +1,13 @@
 {
   "welcome": {
     "enter": "Discover BMYGYM",
-    "close": "Close welcome"
+    "close": "Close welcome",
+    "identityLanguage": "en",
+    "title": "House of Luxury",
+    "titleEmphasis": "Longevity",
+    "service": "Bespoke Longevity Environments",
+    "disciplines": ["Fitness", "Recovery", "Wellness Integration"],
+    "worlds": ["LAND", "SEA", "AIR"]
   },
   "hero": {
     "imageAlt": "Walnut ORVÉA™ Architectural Integration Wall integrated into an architectural interior, with fitness accessories, an ivory mat and sea views",

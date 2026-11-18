@@ -4,11 +4,12 @@ import es from "./es-retreats.json" with { type: "json" };
 import fr from "./fr-retreats.json" with { type: "json" };
 import ru from "./ru-retreats.json" with { type: "json" };
 import it from "./it-retreats.json" with { type: "json" };
+import ar from "./ar-retreats.json" with { type: "json" };
 import type { Locale } from "./config.ts";
 
 export type RetreatsCopy = typeof en;
 
-const retreatsCopy: Record<Locale, RetreatsCopy> = { en, de, es, fr, ru, it };
+const retreatsCopy: Record<Locale, RetreatsCopy> = { en, de, es, fr, ru, it, ar };
 
 export function getRetreatsCopy(locale: Locale): RetreatsCopy {
   return retreatsCopy[locale];

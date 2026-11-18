@@ -1,6 +1,23 @@
 @import "tailwindcss";
 
 @font-face {
+  font-family: "BMYGYM Arabic Sans";
+  src: url("/fonts/noto-sans-arabic-variable.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: "BMYGYM Arabic Serif";
+  src: url("/fonts/noto-naskh-arabic-variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
   font-family: "BMYGYM Cyrillic Sans";
   src: url("/fonts/manrope-cyrillic-variable.woff2") format("woff2");
   font-weight: 200 800;
@@ -138,7 +155,7 @@ summary {
 }
 .skip-link {
   position: fixed;
-  left: 20px;
+  inset-inline-start: 20px;
   top: -100px;
   z-index: 100;
   padding: 12px 20px;
@@ -292,7 +309,7 @@ summary {
 .brand-welcome-close {
   position: absolute;
   top: 12px;
-  right: 12px;
+  inset-inline-end: 12px;
   display: grid;
   place-items: center;
   width: 44px;
@@ -452,7 +469,7 @@ summary {
   display: flex;
   align-items: center;
   gap: 28px;
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 .desktop-nav a {
   display: inline-flex;
@@ -471,12 +488,12 @@ summary {
   bottom: 8px;
   height: 1px;
   background: var(--accent);
-  left: 0;
-  right: 100%;
-  transition: right 0.25s;
+  inset-inline-start: 0;
+  inset-inline-end: 100%;
+  transition: inset-inline-end 0.25s;
 }
 .desktop-nav a:hover::after {
-  right: 0;
+  inset-inline-end: 0;
 }
 .header-actions {
   display: flex;
@@ -560,7 +577,7 @@ summary {
   font-size: var(--text-small);
   line-height: 1.6;
   color: var(--muted);
-  text-align: right;
+  text-align: end;
 }
 .hero-bottom {
   display: flex;
@@ -587,7 +604,7 @@ summary {
   .hero h1 { font-size: 3.5rem; }
   .hero-visual { grid-row: 1; }
   .hero-image { max-height: 600px; object-fit: contain; }
-  .hero-caption { text-align: left; }
+  .hero-caption { text-align: start; }
 }
 @media (max-width: 767px) {
   .hero { padding-top: 16px; }
@@ -597,7 +614,7 @@ summary {
   .hero h1 { font-size: clamp(2.5rem, 9.5vw, 3.5rem); }
   .hero-service { margin-top: 24px; letter-spacing: 0.08em; }
   .hero-positioning { margin-top: 12px; }
-  .hero-caption { text-align: left; }
+  .hero-caption { text-align: start; }
   .hero-bottom { flex-wrap: wrap; gap: 12px; margin-top: 32px; padding-block: 16px; }
   .hero-bottom > span { gap: 14px; }
   .hero-bottom a { gap: 14px; }
@@ -680,7 +697,7 @@ summary {
   font-size: 2rem;
   line-height: 1.35;
   margin-top: 28px;
-  padding-left: 0;
+  padding-inline-start: 0;
   text-align: center;
 }
 .philosophy-motto {
@@ -770,7 +787,7 @@ summary {
   line-height: 1.7;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  text-align: left;
+  text-align: start;
   display: block;
   color: var(--accent);
 }
@@ -841,8 +858,8 @@ summary {
   margin-top: 42px;
 }
 .blueprint-details {
-  border-left: 1px solid #cecac2;
-  padding-left: clamp(40px, 5vw, 80px);
+  border-inline-start: 1px solid #cecac2;
+  padding-inline-start: clamp(40px, 5vw, 80px);
 }
 .blueprint-details h3 {
   font-size: clamp(2rem, 2.6vw, 2.75rem);
@@ -1089,8 +1106,8 @@ summary {
 .enquiry-form {
   padding-top: 8px;
   min-width: 0;
-  border-left: 1px solid var(--line);
-  padding-left: clamp(32px, 4vw, 64px);
+  border-inline-start: 1px solid var(--line);
+  padding-inline-start: clamp(32px, 4vw, 64px);
 }
 .enquiry-form fieldset {
   padding: 0;
@@ -1419,7 +1436,7 @@ summary {
   text-underline-offset: 4px;
 }
 .legal-page ul {
-  padding-left: 22px;
+  padding-inline-start: 22px;
   color: var(--muted);
 }
 .legal-page .text-link {
@@ -1496,7 +1513,7 @@ summary {
   .environment-land .land-classic-image {
     width: 80%;
     max-width: 32rem;
-    margin-left: auto;
+    margin-inline-start: auto;
   }
 }
 
@@ -1605,8 +1622,8 @@ summary {
     display: block;
     position: absolute;
     top: calc(var(--header-height) - 1px);
-    left: 0;
-    right: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     background: var(--header-surface);
     padding: 25px var(--page-gutter) 35px;
     border-bottom: 1px solid var(--line);
@@ -1648,7 +1665,7 @@ summary {
   }
   .image-note {
     font-size: 1.875rem;
-    padding-left: 0;
+    padding-inline-start: 0;
   }
   .philosophy-motto {
     padding: 72px 0 20px;
@@ -1671,7 +1688,7 @@ summary {
     margin-bottom: 24px;
   }
   .environment-title > span {
-    text-align: left;
+    text-align: start;
     font-size: var(--text-small);
   }
   .blueprint-inner {
@@ -1679,7 +1696,7 @@ summary {
     gap: 36px;
   }
   .blueprint-details {
-    padding-left: 36px;
+    padding-inline-start: 36px;
   }
   .blueprint-details h3 {
     font-size: 2rem;
@@ -1761,7 +1778,7 @@ summary {
     gap: 36px;
   }
   .enquiry-form {
-    padding-left: 30px;
+    padding-inline-start: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -1888,7 +1905,7 @@ summary {
     margin-bottom: 14px;
   }
   .environment-title > span {
-    text-align: left;
+    text-align: start;
   }
   .environment-copy > p {
     font-size: var(--text-body);
@@ -1906,7 +1923,7 @@ summary {
     font-size: var(--text-body);
   }
   .blueprint-details {
-    border-left: 0;
+    border-inline-start: 0;
     border-top: 1px solid #cecac2;
     padding: 36px 0 0;
   }
@@ -1988,7 +2005,7 @@ summary {
   .enquiry-form {
     padding-top: 25px;
     border-top: 1px solid var(--line);
-    border-left: 0;
+    border-inline-start: 0;
     padding: 36px 0 0;
   }
   .form-row {
@@ -2125,7 +2142,7 @@ summary {
 .language-selector summary::-webkit-details-marker { display: none; }
 .language-selector[open] summary svg { transform: rotate(180deg); }
 .language-selector nav {
-  position: absolute; top: calc(100% + 10px); right: 0;
+  position: absolute; top: calc(100% + 10px); inset-inline-end: 0;
   width: 190px; padding: 10px 16px; background: var(--paper);
   border: 1px solid var(--line); z-index: 30;
 }
@@ -2192,6 +2209,37 @@ h1, h2, h3, .button, .text-link, .environment-title > span { overflow-wrap: anyw
   color: var(--accent);
   max-width: 36ch;
   margin-block: 22px 28px;
+}
+
+/* Arabic keeps the established imagery and Latin brand faces. Its connected
+   script uses local Noto companions, natural spacing and room for diacritics. */
+html:lang(ar) {
+  font-synthesis: none;
+}
+html:lang(ar) body {
+  line-height: 1.9;
+}
+html[lang="ar"][dir="rtl"] :is(h1, h2, h3, h4, p, span, a, button, label, summary, figcaption, small, em):where(:not(:lang(en), .wordmark, .footer-wordmark)) {
+  letter-spacing: normal;
+  text-transform: none;
+}
+html:lang(ar) :is(h1, h2, h3, .philosophy-statement, .philosophy-motto, .image-note) {
+  line-height: 1.5;
+}
+html:lang(ar) em:lang(ar) {
+  font-style: normal;
+}
+html:lang(ar) .retreats-hero h1 {
+  line-height: 1.08;
+}
+html[dir="rtl"] .form-field [dir="auto"]:placeholder-shown {
+  text-align: right;
+}
+html[dir="rtl"] .directional-arrow {
+  scale: -1 1;
+}
+html[dir="rtl"] :is(.button, .text-link, .environment-heading-link):hover .directional-arrow {
+  transform: translateX(-4px);
 }
 .blueprint h2, .enquiry h2 { margin-bottom: 0; }
 .form-status.success { white-space: pre-line; }

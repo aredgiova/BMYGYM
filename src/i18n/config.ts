@@ -1,8 +1,11 @@
-export const locales = ["en", "de", "es", "fr", "ru", "it"] as const;
+export const locales = ["en", "de", "es", "fr", "ru", "it", "ar"] as const;
 export type Locale = (typeof locales)[number];
 export const languageNames: Record<Locale, string> = {
-  en: "English", de: "Deutsch", es: "Español", fr: "Français", ru: "Русский", it: "Italiano",
+  en: "English", de: "Deutsch", es: "Español", fr: "Français", ru: "Русский", it: "Italiano", ar: "العربية",
 };
+export function localeDirection(locale: Locale): "rtl" | "ltr" {
+  return locale === "ar" ? "rtl" : "ltr";
+}
 export function isLocale(value: string): value is Locale {
   return locales.some((locale) => locale === value);
 }

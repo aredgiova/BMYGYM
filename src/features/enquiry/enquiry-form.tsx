@@ -214,6 +214,7 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
             </label>
             <input
               id="fullName"
+              dir="auto"
               ref={nameRef}
               name="fullName"
               autoComplete="name"
@@ -232,6 +233,7 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
             </label>
             <input
               id="company"
+              dir="auto"
               name="company"
               autoComplete="organization"
               placeholder={content.companyPlaceholder}
@@ -250,6 +252,7 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
               id="email"
               name="email"
               type="email"
+              dir="ltr"
               autoComplete="email"
               placeholder={content.emailPlaceholder}
               required
@@ -296,6 +299,7 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
             </label>
             <input
               id="location"
+              dir="auto"
               name="location"
               placeholder={content.locationPlaceholder}
               required
@@ -330,6 +334,7 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
           </label>
           <textarea
             id="message"
+            dir="auto"
             name="message"
             rows={4}
             placeholder={content.messagePlaceholder}
@@ -348,6 +353,7 @@ export function EnquiryForm({ locale, copy }: { locale: Locale; copy: CommonCopy
           </label>
           <input
             id="expectedTimeline"
+            dir="auto"
             name="expectedTimeline"
             placeholder={content.timelinePlaceholder}
             maxLength={160}

@@ -52,11 +52,12 @@ export function Header({ isHome = true, locale, copy }: { isHome?: boolean; loca
       <div className="header-inner">
         <a
           className="wordmark"
+          dir="ltr"
           href={`${prefix}#home`}
           aria-label={copy.home}
           onClick={() => setOpen(false)}
         >
-          BMYGYM
+          <bdi lang="en" dir="ltr">BMYGYM</bdi>
         </a>
         <nav className="desktop-nav" aria-label={copy.main}>
           {links.map((link) => (

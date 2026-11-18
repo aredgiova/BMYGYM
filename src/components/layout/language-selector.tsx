@@ -57,7 +57,7 @@ export function LanguageSelector({ locale, label }: { locale: Locale; label: str
             onClick={() => {
               if (disclosure.current) disclosure.current.open = false;
             }}>
-            <span>{languageNames[language]}</span><span aria-hidden="true">{language.toUpperCase()}</span>
+            <bdi>{languageNames[language]}</bdi><span aria-hidden="true" dir="ltr">{language.toUpperCase()}</span>
           </a>
         ))}
       </nav>

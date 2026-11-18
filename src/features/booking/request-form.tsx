@@ -105,24 +105,24 @@ export function RequestForm({ locale, copy, booking, intent }: {
         <div className="form-row">
           <div className="form-field">
             <label htmlFor="fullName">{copy.form.fullName} <span>*</span></label>
-            <input id="fullName" name="fullName" autoComplete="name" placeholder={copy.form.namePlaceholder} required minLength={2} maxLength={120} {...fieldProps("fullName")} />
+            <input id="fullName" name="fullName" dir="auto" autoComplete="name" placeholder={copy.form.namePlaceholder} required minLength={2} maxLength={120} {...fieldProps("fullName")} />
             {fieldError("fullName")}
           </div>
           <div className="form-field">
             <label htmlFor="email">{copy.form.email} <span>*</span></label>
-            <input id="email" name="email" type="email" autoComplete="email" placeholder={copy.form.emailPlaceholder} required maxLength={254} {...fieldProps("email")} />
+            <input id="email" name="email" type="email" dir="ltr" autoComplete="email" placeholder={copy.form.emailPlaceholder} required maxLength={254} {...fieldProps("email")} />
             {fieldError("email")}
           </div>
         </div>
         <div className="form-field">
           <label htmlFor="message">{content.message} <span>*</span></label>
-          <textarea id="message" name="message" rows={5} required minLength={20} maxLength={5000} placeholder={content.messagePlaceholder} {...fieldProps("message", "message-hint")} />
+          <textarea id="message" name="message" dir="auto" rows={5} required minLength={20} maxLength={5000} placeholder={content.messagePlaceholder} {...fieldProps("message", "message-hint")} />
           <p id="message-hint" className="form-hint">{copy.form.messageHint}</p>
           {fieldError("message")}
         </div>
         <div className="form-field">
           <label htmlFor="expectedTimeline">{content.timelineLabel} <span className="optional">{copy.form.optional}</span></label>
-          <input id="expectedTimeline" name="expectedTimeline" maxLength={160} placeholder={content.timelinePlaceholder} {...fieldProps("expectedTimeline")} />
+          <input id="expectedTimeline" name="expectedTimeline" dir="auto" maxLength={160} placeholder={content.timelinePlaceholder} {...fieldProps("expectedTimeline")} />
           {fieldError("expectedTimeline")}
         </div>
         <div className="honeypot" aria-hidden="true">

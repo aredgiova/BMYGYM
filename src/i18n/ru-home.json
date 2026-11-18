@@ -1,7 +1,13 @@
 {
   "welcome": {
     "enter": "Открыть для себя BMYGYM",
-    "close": "Закрыть приветственное окно"
+    "close": "Закрыть приветственное окно",
+    "identityLanguage": "en",
+    "title": "House of Luxury",
+    "titleEmphasis": "Longevity",
+    "service": "Bespoke Longevity Environments",
+    "disciplines": ["Fitness", "Recovery", "Wellness Integration"],
+    "worlds": ["LAND", "SEA", "AIR"]
   },
   "hero": {
     "imageAlt": "ORVÉA™ Architectural Integration Wall из орехового дерева, интегрированная в интерьер, с аксессуарами для тренировок, ковриком цвета слоновой кости и видом на море",

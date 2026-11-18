@@ -1,10 +1,12 @@
-# Viabilidad del árabe como séptimo idioma
+# Viabilidad del árabe como séptimo idioma — evaluación histórica
 
-Evaluación del repositorio BMYGYM, 18 de noviembre de 2026. Es una propuesta de alcance y estimación; no se ha incorporado árabe, contratado servicios ni publicado cambios.
+**Estado actualizado, 18 de noviembre de 2026:** la usuaria autorizó posteriormente implementar el árabe. AR ya está incorporado como séptimo idioma y se ha verificado en local. El alcance realizado y su evidencia se encuentran en [arabic-implementation-2026-11-18.md](arabic-implementation-2026-11-18.md). Este documento conserva la evaluación previa: sus tareas previstas, horas y plazos no son trabajo pendiente, una cotización vigente, horas realmente consumidas ni una factura. No acredita publicación ni contratación de un traductor humano.
+
+La evaluación inicial que sigue describe el repositorio antes de esa autorización. En ese momento, el árabe todavía no se había incorporado y no se habían contratado servicios ni publicado cambios derivados de esta evaluación.
 
 **La plataforma actual permite una versión completa en árabe estándar moderno dentro del mismo sitio.** La aplicación utiliza Next.js App Router con rutas por idioma y diccionarios propios. Se puede añadir `/ar`, `/ar/retreats`, `/ar/private-consultation` y las páginas legales correspondientes, manteniendo EN · DE · ES · FR · RU · IT y añadiendo AR · العربية al selector. No se identifica una necesidad técnica de otra web, dominio, plataforma o sistema de reservas. Esta conclusión se basa en la arquitectura observada y en la [documentación oficial de internacionalización de Next.js](https://nextjs.org/docs/app/guides/internationalization).
 
-## Alcance técnico previsto
+## Alcance técnico previsto en la evaluación inicial
 
 | Área | Estado observado y trabajo necesario |
 | --- | --- |
@@ -16,11 +18,11 @@ Evaluación del repositorio BMYGYM, 18 de noviembre de 2026. Es una propuesta de
 | Formularios | Los formularios y la API ya reciben `locale` y usan mensajes localizados. La validación admite texto Unicode; el listado de idiomas todavía rechaza `ar`. Adaptar etiquetas, opciones y mensajes; campos libres con dirección automática y correo con dirección LTR. Probar nombres, ubicaciones y mensajes árabes, textos mixtos, foco, casillas, errores, envío y conservación de datos tras fallo. Mantener el proveedor y el funcionamiento actual de consultas. |
 | Móvil y accesibilidad | Comprobar AR en 320, 375/390, 768, 1024 y 1440 px; menú, selector, aviso de cookies, formularios, lectura, teclado, foco, zoom y ausencia de desbordamiento. La cabecera cambia a navegación amplia a 1440 px. La revisión debe incluir también regresión de los seis idiomas actuales. |
 
-## Traducción y presupuesto orientativo
+## Traducción y presupuesto orientativo históricos
 
 La inspección inicial contabilizó aproximadamente **4.000 palabras inglesas en 408 cadenas**, repartidas entre los cuatro diccionarios. Es una medida bruta con repeticiones, anterior a cerrar los refinamientos de esta entrega; el presupuesto de traducción debe usar el texto definitivo. Se propone traducción y revisión por un profesional de árabe estándar moderno, con glosario de marca, tono arquitectónico discreto y revisión en contexto. Las condiciones de desarrollo, certificación y reservas pendientes deben conservar su significado.
 
-Estimación de planificación para el alcance actual:
+Estimación original de planificación para el alcance examinado entonces:
 
 | Trabajo | Dedicación técnica estimada |
 | --- | ---: |
@@ -36,10 +38,10 @@ Esto equivale a **4–6 jornadas técnicas de 8 horas**, con un plazo de calenda
 
 El alcance presupuestado conserva las consultas actuales y excluye programas, precios, Stripe, nuevos pagos, nueva fotografía y publicación sin revisión de la usuaria.
 
-## Coherencia de los seis idiomas y verificación pendiente
+## Coherencia de los seis idiomas y verificación pendiente en aquel momento
 
 La inspección de `header.tsx`, `footer.tsx`, `language-selector.tsx` y `localePath` confirma que navegación, enlaces legales, Retreats y consulta privada utilizan el idioma elegido. Las marcas compartidas en inglés son deliberadas. `tests/i18n.test.ts` comprueba el orden de seis idiomas, rutas y estructura de las **cuatro** categorías de diccionarios; esa comprobación no demuestra calidad lingüística ni correcta presentación visual.
 
 Se detectaron y comunicaron dos incoherencias de partida: el título `Yacht Retreats — Coming 2027` repetido en los seis idiomas y su marca fija `lang="en"`. Al cerrar esta evaluación, la entrega actual ya contiene los nuevos títulos localizados y ha retirado esa marca inglesa. La documentación vigente de diccionarios también se ha ajustado de tres a cuatro categorías.
 
-No se ha validado una versión árabe en navegador porque aún no existe. La aceptación futura requiere comprobar las siete páginas principales por idioma —portada, Retreats, consulta y cuatro documentos legales—, la página de error, formularios y mensajes, y una revisión humana de árabe en la composición final. La evidencia anterior del proyecto documenta revisión lingüística por agentes, no aprobación por un traductor humano nativo.
+En la evaluación inicial no se había validado una versión árabe en navegador porque aún no existía. Se propuso comprobar las siete páginas principales por idioma —portada, Retreats, consulta y cuatro documentos legales—, la página de error, formularios y mensajes, y realizar una revisión humana de árabe en la composición final. La implementación posterior ya aporta las comprobaciones locales de rutas, composición y funcionamiento descritas en el informe enlazado al inicio. La revisión lingüística realizada es de agentes; no se presenta como aprobación por un traductor humano nativo.

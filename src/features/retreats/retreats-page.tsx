@@ -25,7 +25,7 @@ export function RetreatsPage({ locale, copy, booking, retreats }: {
       <main id="main-content" tabIndex={-1} className="retreats-page">
         <section className="section retreats-hero" aria-labelledby="retreats-title">
           <div className="retreats-hero-copy">
-            <h1 id="retreats-title">BMYGYM <em>Retreats</em></h1>
+            <h1 id="retreats-title"><bdi dir="ltr" lang="en">BMYGYM</bdi> <em lang="en"><bdi dir="ltr">Retreats</bdi></em></h1>
             <p className="retreats-lead">{retreats.heroLead}</p>
             <p className="retreats-body">{retreats.heroText}</p>
             <div className="retreats-actions">

@@ -2,11 +2,11 @@
 
 Sitio de presentación de BMYGYM como creador e integrador de entornos de longevidad a medida para residencias, superyates, hospitality y aviación privada. Combina sus propios Signature Concepts con productos premium seleccionados de fabricantes especializados y se dirige tanto a clientes particulares como a colaboradores profesionales.
 
-La revisión del 11 de noviembre de 2026 conserva la estructura, las imágenes y la identidad visual del sitio. El inglés sigue siendo el idioma principal; la interfaz, los contenidos, las páginas informativas y los formularios están disponibles en seis idiomas, en este orden: EN · DE · ES · FR · RU · IT. El Private Longevity Blueprint se presenta como un servicio profesional independiente y remunerado, con tres etapas de desarrollo conceptual; su ejecución posterior requiere un acuerdo separado. AERO ONE conserva la imagen facilitada y se identifica como un concepto en desarrollo, sin certificación ni disponibilidad comercial, sujeto a los requisitos aeronáuticos aplicables.
+La revisión del 18 de noviembre de 2026 conserva la estructura, las imágenes y la identidad visual del sitio. El inglés sigue siendo el idioma principal; la interfaz, los contenidos, las páginas informativas y los formularios están disponibles en siete idiomas, en este orden: EN · DE · ES · FR · RU · IT · AR. La versión árabe usa lectura de derecha a izquierda y fuentes árabes locales. El Private Longevity Blueprint se presenta como un servicio profesional independiente y remunerado, con tres etapas de desarrollo conceptual; su ejecución posterior requiere un acuerdo separado. AERO ONE conserva únicamente la última imagen facilitada y se identifica como un concepto en desarrollo, sin certificación ni disponibilidad comercial, sujeto a los requisitos aeronáuticos aplicables.
 
 Private Commissions, BMYGYM Retreats y las solicitudes de consulta privada tienen recorridos de contacto separados. Las nuevas páginas de Retreats y consulta permiten solicitar información o coordinación de una reserva; no publican fechas, disponibilidad, precios ni confirmaciones automáticas de reserva.
 
-El código se mantiene en [aredgiova/BMYGYM](https://github.com/aredgiova/BMYGYM). Esta revisión se prepara para aprobación en vista previa: no se ha realizado push ni despliegue. El correo local permanece sin configurar y no se ha comprobado ninguna entrega real. Las instrucciones de despliegue de este documento describen la configuración que debe comprobarse antes de publicar; no acreditan el estado actual del hosting.
+El código se mantiene en [aredgiova/BMYGYM](https://github.com/aredgiova/BMYGYM), con `main` como rama de publicación. El correo local permanece sin configurar y las pruebas automatizadas no comprueban entregas reales. Las instrucciones de despliegue de este documento describen la configuración que debe comprobarse al publicar; no acreditan por sí solas el estado actual del hosting. El alcance y la validación del árabe se documentan en [Implementación árabe](docs/arabic-implementation-2026-11-18.md).
 
 ## Desarrollo local
 
@@ -31,7 +31,7 @@ Abrir [localhost:3000](http://localhost:3000). El sitio puede visualizarse sin c
 | `npm run dev`       | Iniciar el servidor de desarrollo                                        |
 | `npm run lint`      | Comprobar las reglas de ESLint, sin advertencias permitidas              |
 | `npm run typecheck` | Generar tipos de rutas y comprobar TypeScript                            |
-| `npm test`          | Ejecutar las 28 pruebas de consultas, reservas, API, correo simulado y localización |
+| `npm test`          | Ejecutar las 30 pruebas de consultas, reservas, API, correo simulado y localización |
 | `npm run build`     | Crear la compilación de producción                                       |
 | `npm start`         | Servir una compilación de producción ya creada                           |
 
@@ -43,7 +43,7 @@ En integración continua, usar `npm ci` con el archivo de bloqueo versionado. La
 - TypeScript con `strict: true` y alias `@/` para `src/`.
 - Tailwind CSS y estilos globales para el sistema visual y la adaptación a distintos tamaños de pantalla.
 - Componentes de servidor por defecto, con componentes de cliente para navegación móvil, selector de idioma, presentación de bienvenida, consentimiento de analítica y formularios.
-- Páginas bajo `src/app/[locale]/`; `src/proxy.ts` sirve el inglés en URLs sin prefijo. Los otros idiomas usan `/de`, `/es`, `/fr`, `/ru` y `/it`, sin cambiar automáticamente el idioma del visitante.
+- Páginas bajo `src/app/[locale]/`; `src/proxy.ts` sirve el inglés en URLs sin prefijo. Los otros idiomas usan `/de`, `/es`, `/fr`, `/ru`, `/it` y `/ar`, sin cambiar automáticamente el idioma del visitante.
 - Diccionarios tipados `src/i18n/{idioma}-home.json`, `{idioma}-common.json` y `{idioma}-booking.json`. `dictionaries.ts` carga el contenido principal; `common.ts` proporciona mensajes de API; `booking.ts` proporciona los textos de solicitudes de Retreats y consultas privadas; `config.ts` define idiomas y rutas. Los nombres de marca existentes se conservan hasta su revisión editorial.
 - Sharp para la optimización de imágenes. Las imágenes conceptuales se entregan desde `public/images/`; Bodoni Moda y Manrope se sirven localmente desde `public/fonts/`.
 - La API de Resend se invoca con `fetch` del servidor; las claves y la configuración de correo permanecen privadas.
@@ -73,7 +73,7 @@ docs/                    Guías de configuración, recursos y publicación
 | Ruta                   | Contenido                                                             |
 | ---------------------- | --------------------------------------------------------------------- |
 | `/`                    | Inicio, filosofía, entornos, Blueprint, proceso, conceptos y consulta |
-| `/de`, `/es`, `/fr`, `/ru`, `/it` | La misma experiencia en alemán, español, francés, ruso e italiano |
+| `/de`, `/es`, `/fr`, `/ru`, `/it`, `/ar` | La misma experiencia en alemán, español, francés, ruso, italiano y árabe |
 | `/retreats`             | BMYGYM Retreats y solicitud de información o reserva                  |
 | `/private-consultation` | Solicitud de consulta privada, pendiente de coordinación             |
 | `/legal`               | Aviso legal y datos profesionales de Bojana Pesic                     |
@@ -83,9 +83,9 @@ docs/                    Guías de configuración, recursos y publicación
 | `GET /api/health`      | Estado básico del servidor; no comprueba la entrega de correo         |
 | `POST /api/v1/contact` | Validación de la consulta y envío mediante Resend                     |
 
-Las seis páginas auxiliares tienen equivalentes en los otros cinco idiomas, por ejemplo `/de/privacy`, `/ru/legal`, `/es/retreats` o `/it/private-consultation`. Las URLs públicas del inglés permanecen sin `/en`; este segmento se usa para resolver las rutas internas. La navegación mantiene el ruso e incorpora el italiano en el selector de seis idiomas.
+Las seis páginas auxiliares tienen equivalentes en los otros seis idiomas, por ejemplo `/de/privacy`, `/ru/legal`, `/es/retreats` o `/ar/private-consultation`. Las URLs públicas del inglés permanecen sin `/en`; este segmento se usa para resolver las rutas internas. La navegación ofrece los siete idiomas y conserva la página, la consulta y el ancla al cambiar de idioma.
 
-Next.js también genera `robots.txt` y `sitemap.xml` según la configuración del sitio. Los metadatos incluyen idioma, URL canónica y alternativas lingüísticas. El sitemap incorpora inicio, Retreats y consultas privadas en los seis idiomas cuando se habilita la indexación; las cuatro páginas legales permanecen excluidas de indexación en sus metadatos.
+Next.js también genera `robots.txt` y `sitemap.xml` según la configuración del sitio. Los metadatos incluyen idioma, URL canónica y alternativas lingüísticas. El sitemap incorpora inicio, Retreats y consultas privadas en los siete idiomas cuando se habilita la indexación; las cuatro páginas legales permanecen excluidas de indexación en sus metadatos.
 
 ## Variables de entorno
 

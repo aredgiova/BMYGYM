@@ -93,18 +93,18 @@ export function BrandWelcome({ copy }: { copy: HomeCopy["welcome"] }) {
           <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" strokeWidth="1.2" />
         </svg>
       </button>
-      <div className="brand-welcome-identity" lang="en">
-        <p className="brand-welcome-wordmark">BMYGYM</p>
+      <div className="brand-welcome-identity" lang={copy.identityLanguage} dir={copy.identityLanguage === "ar" ? "rtl" : "ltr"}>
+        <p className="brand-welcome-wordmark" lang="en" dir="ltr">BMYGYM</p>
         <h2 id="brand-welcome-title" ref={titleRef} tabIndex={-1}>
-          House of Luxury <em>Longevity</em>
+          {copy.title} <em>{copy.titleEmphasis}</em>
         </h2>
         <span className="brand-welcome-rule" aria-hidden="true" />
         <div id="brand-welcome-description" className="brand-welcome-description">
-          <p className="brand-welcome-service">Bespoke Longevity Environments</p>
+          <p className="brand-welcome-service">{copy.service}</p>
           <p className="brand-welcome-disciplines">
-            <span>Fitness</span><span aria-hidden="true"> · </span><span>Recovery</span><span aria-hidden="true"> · </span><span>Wellness Integration</span>
+            <span>{copy.disciplines[0]}</span><span aria-hidden="true"> · </span><span>{copy.disciplines[1]}</span><span aria-hidden="true"> · </span><span>{copy.disciplines[2]}</span>
           </p>
-          <p className="brand-welcome-worlds">LAND <span>·</span> SEA <span>·</span> AIR</p>
+          <p className="brand-welcome-worlds">{copy.worlds[0]} <span>·</span> {copy.worlds[1]} <span>·</span> {copy.worlds[2]}</p>
         </div>
       </div>
       <button type="button" className="brand-welcome-enter text-link" onClick={dismiss}>

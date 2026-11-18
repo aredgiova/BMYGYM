@@ -14,7 +14,7 @@ export function EnquirySection({locale, copy}: {locale: Locale; copy: CommonCopy
         <p>{text.intro}</p>
         <p className="enquiry-audience">{text.audience}</p>
         <p>{text.commission}</p>
-        <a className="enquiry-email" href="mailto:hello@bmygym.com">hello@bmygym.com<Arrow diagonal /></a>
+        <a className="enquiry-email" href="mailto:hello@bmygym.com"><bdi dir="ltr">hello@bmygym.com</bdi><Arrow diagonal /></a>
         <div className="founder-profile">
           <Image
             className="founder-portrait"
@@ -24,7 +24,7 @@ export function EnquirySection({locale, copy}: {locale: Locale; copy: CommonCopy
             height={973}
             unoptimized
           />
-          <p className="founder-signature">Bojana Pesic<span>{text.founder}</span></p>
+          <p className="founder-signature"><bdi dir="ltr" lang="en">Bojana Pesic</bdi><span>{text.founder}</span></p>
         </div>
       </div>
       <EnquiryForm locale={locale} copy={copy} />

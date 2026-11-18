@@ -1,6 +1,6 @@
 # BMYGYM asset manifest
 
-Prepared on 16 October 2026; updated on 22 October 2026 for the supplied architectural wellness imagery and a lighter, neutral visual direction. The AERO ONE replacement and five-language typography were added on 20 October 2026.
+Prepared on 16 October 2026; updated on 22 October 2026 for the supplied architectural wellness imagery and a lighter, neutral visual direction. The AERO ONE replacement and five-language typography were added on 20 October 2026. Updated on 18 November 2026 for the latest AERO ONE image and the locally served Arabic companion fonts; this record does not by itself confirm deployment.
 
 ## Image provenance and treatment
 
@@ -8,7 +8,7 @@ Prepared on 16 October 2026; updated on 22 October 2026 for the supplied archite
 
 The user supplied `C:/Users/User/Downloads/388C1ED7-8C01-4725-9AC6-43081BD8BF91.jpeg` (1670 × 941 pixels, 671,942 bytes) for the additional bespoke interpretation inside AIR. It is encoded as `/images/aero-one-bespoke-private-aviation.webp` (1670 × 941 pixels, 377,824 bytes), using Sharp WebP quality 90 and effort 6, with the colour profile retained. No retouching, generated content or crop was applied. The display preserves the complete composition and source aspect ratio on desktop and mobile.
 
-After reviewing the published pair, the user requested that AIR show only the latest supplied image. `/images/aero-one-bespoke-private-aviation.webp` is now the sole AIR visual and links to the existing Private Commissions form. The former `/images/aero-one-private-aviation.webp` remains in the repository but is no longer displayed in AIR. The active image has a concept caption and descriptive alternative text in EN, DE, ES, FR, RU and IT. It is a design visualisation, not a completed installation, certified product or country-exclusive edition; the existing visible development and aviation certification notice remains.
+After reviewing the published pair, the user requested that AIR show only the latest supplied image. `/images/aero-one-bespoke-private-aviation.webp` is now the sole AIR visual and links to the existing Private Commissions form. The former `/images/aero-one-private-aviation.webp` remains in the repository but is no longer displayed in AIR. The active image has a concept caption and descriptive alternative text in EN, DE, ES, FR, RU, IT and AR. It is a design visualisation, not a completed installation, certified product or country-exclusive edition; the existing visible development and aviation certification notice remains.
 
 SHA-256 of the supplied JPEG: `54e9292158316977c7219717247be3791f762c817420618831eca15de8e808fe`. SHA-256 of the delivered WebP: `9278c52535469f0264a4c04a3870c2a1e86a18eed41ea1e86150ebe66389535a`.
 
@@ -70,10 +70,12 @@ Font binaries come from Google Fonts' official delivery service. Source projects
 | `/fonts/manrope-cyrillic-variable.woff2`          | Cyrillic; normal; weight 200–800          | 14,500 bytes |
 | `/fonts/cormorant-garamond-cyrillic.woff2`         | Cyrillic; normal; weight 400              | 12,776 bytes |
 | `/fonts/cormorant-garamond-cyrillic-italic.woff2`  | Cyrillic; italic; weight 400              | 12,720 bytes |
+| `/fonts/noto-naskh-arabic-variable.woff2`         | Arabic; normal; weight 400–700            | 94,032 bytes |
+| `/fonts/noto-sans-arabic-variable.woff2`          | Arabic; normal; weight 400–600            | 165,960 bytes |
 
-The Latin subsets serve the English, German, French and Spanish text. Russian uses the local Manrope Cyrillic subset for sans-serif text. Bodoni Moda does not provide Cyrillic coverage, so Cormorant Garamond supplies the Cyrillic serif normal and italic styles through the `BMYGYM Cyrillic Serif` fallback. CSS `unicode-range` limits these supplemental faces to their supported characters. The original Bodoni Moda / Manrope pairing is retained for Latin text and brand names.
+The Latin subsets serve the English, German, French, Spanish and Italian text. Russian uses the local Manrope Cyrillic subset for sans-serif text. Bodoni Moda does not provide Cyrillic coverage, so Cormorant Garamond supplies the Cyrillic serif normal and italic styles through the `BMYGYM Cyrillic Serif` fallback. Arabic headings use `BMYGYM Arabic Serif` (Noto Naskh Arabic); Arabic body and interface text uses `BMYGYM Arabic Sans` (Noto Sans Arabic). CSS `unicode-range` limits these supplemental faces to their supported characters. The original Bodoni Moda / Manrope pairing is retained for Latin text and brand names. Arabic companion faces precede system fonts in the fallback lists.
 
-SIL Open Font License 1.1 notices are included as `/fonts/Bodoni-Moda-OFL.txt`, `/fonts/Manrope-OFL.txt` and `/fonts/Cormorant-Garamond-OFL.txt`.
+SIL Open Font License 1.1 notices are included as `/fonts/Bodoni-Moda-OFL.txt`, `/fonts/Manrope-OFL.txt`, `/fonts/Cormorant-Garamond-OFL.txt`, `/fonts/Noto-Naskh-Arabic-OFL.txt` and `/fonts/Noto-Sans-Arabic-OFL.txt`. Both Noto notices identify The Noto Project Authors and the [official Arabic font project](https://github.com/notofonts/arabic).
 
 Original Latin binary source URLs:
 
@@ -81,7 +83,14 @@ Original Latin binary source URLs:
 - Bodoni Moda italic: `https://fonts.gstatic.com/s/bodonimoda/v28/aFTS7PxzY382XsXX63LUYJSPeKrcWw.woff2`
 - Manrope: `https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2`
 
-All font files are served locally. Latin faces are loaded with `next/font/local`; Cyrillic faces use local `@font-face` declarations with `font-display: swap`. There is no runtime font request to Google Fonts.
+Arabic binary source URLs, recorded in `artifacts/arabic-google-fonts.css` from the official Google Fonts CSS response:
+
+- [Noto Naskh Arabic, Arabic subset](https://fonts.gstatic.com/s/notonaskharabic/v44/RrQKbpV-9Dd1b1OAGA6M9PkyDuVBeN2DHV20Lg.woff2)
+- [Noto Sans Arabic, Arabic subset](https://fonts.gstatic.com/s/notosansarabic/v33/nwpCtLGrOAZMl5nJ_wfgRg3DrWFZWsnVBJ_sS6tlqHHFlj4wv4r4xA.woff2)
+
+SHA-256 of the local Noto Naskh Arabic binary: `2a10d33e1f7129ab2b6ec76666e82ac5b509fbcfa7b4a3a1289bff42d2d64cd7`. SHA-256 of the local Noto Sans Arabic binary: `ce85091f020920b65762b387b194ef59457ea5b25b760f2dcc35240a94bb8669`.
+
+All font files are served locally. Latin faces are loaded with `next/font/local`; Cyrillic and Arabic faces use local `@font-face` declarations with `font-display: swap`. There is no runtime font request to Google Fonts. The Arabic layout verification used Chrome DevTools Protocol to confirm that Noto Naskh Arabic and Noto Sans Arabic actually render the Arabic heading and body text; see [arabic-implementation-2026-11-18.md](arabic-implementation-2026-11-18.md).
 
 ## Additional LAND architectural reference — 11 November 2026
 

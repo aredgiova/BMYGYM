@@ -57,8 +57,8 @@ export default async function InformationPage({params}: Props) {
         <h2>{section.title}</h2>
         {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph.split(/(hello@bmygym\.com|www\.aepd\.es|\n)/).map((part,index) => {
           if (part === "\n") return <br key={index} />;
-          if (part === "hello@bmygym.com") return <a key={index} href="mailto:hello@bmygym.com">{part}</a>;
-          if (part === "www.aepd.es") return <a key={index} href="https://www.aepd.es/">{part}</a>;
+          if (part === "hello@bmygym.com") return <a key={index} href="mailto:hello@bmygym.com"><bdi dir="ltr">{part}</bdi></a>;
+          if (part === "www.aepd.es") return <a key={index} href="https://www.aepd.es/"><bdi dir="ltr">{part}</bdi></a>;
           return part;
         })}</p>)}
       </section>)}

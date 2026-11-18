@@ -7,7 +7,7 @@ export function Arrow({
 }) {
   return (
     <svg
-      className={className}
+      className={`directional-arrow ${className}`.trim()}
       width="20"
       height="20"
       viewBox="0 0 24 24"
