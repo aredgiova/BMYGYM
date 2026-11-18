@@ -91,34 +91,19 @@ export function Environments({ copy }: { copy: HomeCopy }) {
           </div>
         </article>
         <article id="air" className="environment environment-air" aria-labelledby="air-title">
-          <div className="air-visuals">
-            <a
-              className="environment-image-link"
-              href="#enquiry"
-              aria-label={content.air.enquiryAria}
-            >
-              <ConceptImage
-                className="air-image"
-                src="/images/aero-one-private-aviation.webp"
-                alt={content.air.imageAlt}
-                caption={content.air.imageCaption}
-                sizes="(max-width: 767px) 100vw, 55vw"
-              />
-            </a>
-            <a
-              className="environment-image-link"
-              href="#enquiry"
-              aria-label={content.air.enquiryAria}
-            >
-              <ConceptImage
-                className="air-bespoke-image"
-                src="/images/aero-one-bespoke-private-aviation.webp"
-                alt={content.air.bespokeImageAlt}
-                caption={content.air.bespokeImageCaption}
-                sizes="(max-width: 767px) 100vw, 55vw"
-              />
-            </a>
-          </div>
+          <a
+            className="environment-image-link"
+            href="#enquiry"
+            aria-label={content.air.enquiryAria}
+          >
+            <ConceptImage
+              className="air-bespoke-image"
+              src="/images/aero-one-bespoke-private-aviation.webp"
+              alt={content.air.bespokeImageAlt}
+              caption={content.air.bespokeImageCaption}
+              sizes="(max-width: 767px) 100vw, 55vw"
+            />
+          </a>
           <div className="environment-copy">
             <div className="environment-title">
               <h3 id="air-title">

@@ -2148,15 +2148,7 @@ summary {
 .client-path p { max-width: 48ch; margin-bottom: 30px; color: var(--muted); }
 .client-path .button { margin-top: auto; }
 .environment-copy > .environment-status { padding-top: 20px; border-top: 1px solid var(--line); margin-top: 24px; font-size: var(--text-small); line-height: 1.75; }
-.environment .air-image .image-frame { aspect-ratio: 3 / 2; height: auto; }
-.environment .air-image img { object-position: center; }
 .environment-air { align-items: start; }
-.air-visuals {
-  display: grid;
-  gap: 32px;
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
 .environment .air-bespoke-image .image-frame {
   aspect-ratio: 1670 / 941;
   height: auto;
