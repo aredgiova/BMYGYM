@@ -7,12 +7,17 @@
   "requestReservation": "Request a reservation",
   "valenciaTitle": "A Mediterranean pause.",
   "valenciaText": "Warm light, the sea close by and a little distance from the everyday. Valencia is the setting for a more personal BMYGYM experience, where time for yourself takes centre stage.",
+  "experienceTitle": "An experience, entirely personal.",
+  "experienceText": "An intimate retreat for a limited number of women, combining individual guidance, mindful movement, personalised fitness and nutrition, and moments of Mediterranean stillness.",
+  "experienceGuidance": "Thoughtfully curated in Valencia. Personally guided by the founder of BMYGYM.",
   "programmesTitle": "Your experience in Valencia",
   "programmesText": "Contact us for current programmes, prices and available dates. We will share the details of each experience with you personally.",
   "programmesNote": "Programme, price and availability are agreed directly with BMYGYM before your reservation is confirmed.",
   "galleryTitle": "The feeling of being here.",
-  "yachtTitle": "Yacht Retreats — Coming 2027",
-  "yachtText": "A new collection of exclusive experiences on board yachts is planned for 2027. A separate chapter of BMYGYM Retreats, with its own programmes and prices.",
+  "yachtTitle": "A New Horizon. 2027.",
+  "yachtText": "BMYGYM Retreats will extend beyond the shore with a new collection of intimate experiences at sea.",
+  "yachtDescription": "A more private expression of movement, wellbeing and Mediterranean living.",
+  "yachtSchedule": "Yacht Retreats · Planned for 2027",
   "yachtNote": "Reservations are not yet open.",
   "reservationTitle": "Your retreat in Valencia",
   "reservationText": "Tell us what you are looking for and your preferred dates. Use the form or write to us for current programmes, prices and reservation details.",
@@ -28,9 +33,6 @@
   "captions": {
     "beachCircle": "Quiet moments by the sea.",
     "welcomeTable": "Care in the smallest details.",
-    "promenade": "The light of Valencia.",
-    "deepReset": "A moment of stillness.",
-    "journal": "Space for your thoughts.",
-    "pool": "A slower rhythm."
+    "journal": "Space for your thoughts."
   }
 }

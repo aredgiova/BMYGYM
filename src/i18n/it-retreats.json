@@ -7,12 +7,17 @@
   "requestReservation": "Richiedi una prenotazione",
   "valenciaTitle": "Una pausa mediterranea.",
   "valenciaText": "La luce calda, il mare vicino e un po’ di distanza dalla quotidianità. Valencia è la cornice di un’esperienza BMYGYM più personale, in cui il tempo per te è al centro di tutto.",
+  "experienceTitle": "Un’esperienza, interamente personale.",
+  "experienceText": "Un ritiro intimo per un numero limitato di donne, che unisce accompagnamento individuale, movimento consapevole, allenamento e nutrizione personalizzati e momenti di quiete mediterranea.",
+  "experienceGuidance": "Concepito con cura a Valencia. Guidato personalmente dalla fondatrice di BMYGYM.",
   "programmesTitle": "La tua esperienza a Valencia",
   "programmesText": "Contattaci per conoscere i programmi, i prezzi e le date attualmente disponibili. Ti illustreremo personalmente i dettagli di ogni esperienza.",
   "programmesNote": "Il programma, il prezzo e la disponibilità vengono concordati direttamente con BMYGYM prima della conferma della prenotazione.",
   "galleryTitle": "La sensazione di essere qui.",
-  "yachtTitle": "Yacht Retreats — Coming 2027",
-  "yachtText": "Per il 2027 stiamo preparando una nuova collezione di esperienze esclusive a bordo di yacht. Un capitolo indipendente di BMYGYM Retreats, con programmi e prezzi dedicati.",
+  "yachtTitle": "Un nuovo orizzonte. 2027.",
+  "yachtText": "BMYGYM Retreats si estenderà oltre la costa con una nuova collezione di esperienze intime in mare.",
+  "yachtDescription": "Un’espressione più riservata del movimento, del benessere e dello stile di vita mediterraneo.",
+  "yachtSchedule": "Ritiri in yacht · Previsti per il 2027",
   "yachtNote": "Le prenotazioni non sono ancora aperte.",
   "reservationTitle": "Il tuo ritiro a Valencia",
   "reservationText": "Raccontaci i tuoi desideri e le date che preferisci. Usa il modulo o scrivici per conoscere i programmi, i prezzi e i dettagli di prenotazione attuali.",
@@ -28,9 +33,6 @@
   "captions": {
     "beachCircle": "Momenti di quiete in riva al mare.",
     "welcomeTable": "Cura in ogni dettaglio.",
-    "promenade": "La luce di Valencia.",
-    "deepReset": "Un momento di quiete.",
-    "journal": "Spazio per i tuoi pensieri.",
-    "pool": "Un ritmo più lento."
+    "journal": "Spazio per i tuoi pensieri."
   }
 }

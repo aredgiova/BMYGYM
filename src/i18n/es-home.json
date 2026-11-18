@@ -4,7 +4,7 @@
     "close": "Cerrar bienvenida"
   },
   "hero": {
-    "imageAlt": "Fitness Wall BMYGYM de nogal integrada en la arquitectura interior, con accesorios de fitness, esterilla marfil y vistas al mar",
+    "imageAlt": "ORVÉA™ Architectural Integration Wall de nogal integrada en la arquitectura interior, con accesorios de fitness, esterilla marfil y vistas al mar",
     "title": "Los espacios excepcionales merecen",
     "titleEmphasis": "una visión excepcional de la longevidad.",
     "service": "PROYECTOS PRIVADOS · TIERRA / MAR / AIRE",
@@ -30,7 +30,7 @@
         "title": "Clientes privados",
         "description": "BMYGYM concibe entornos de longevidad a medida para residencias privadas, superyates y espacios personales singulares.",
         "action": "Hablemos de su proyecto privado",
-        "imageAlt": "Concepto de residencia costera con Fitness Wall BMYGYM, cinta de correr, zona de recuperación y piscina junto al mar",
+        "imageAlt": "Concepto de residencia costera con ORVÉA™ Architectural Integration Wall, cinta de correr, zona de recuperación y piscina junto al mar",
         "imageCaption": "Visualización conceptual de BMYGYM",
         "lead": "Para quienes esperan más de los espacios que habitan.",
         "detail": "Cada encargo se aborda con discreción, sensibilidad arquitectónica y una profunda comprensión de las preferencias individuales."
@@ -59,7 +59,15 @@
     "imageNote": "Un espacio que siente",
     "imageNoteEmphasis": "enteramente suyo.",
     "motto": "BMYGYM no vende equipamiento.",
-    "mottoEmphasis": "BMYGYM crea entornos."
+    "mottoEmphasis": "BMYGYM crea entornos.",
+    "craftsmanship": {
+      "title": "Artesanía europea. Diseño a medida.",
+      "paragraphs": [
+        "BMYGYM crea entornos excepcionales de longevidad mediante un diseño original, materiales refinados y una atención meticulosa al detalle.",
+        "Reunimos a especialistas europeos en artesanía cuidadosamente seleccionados y a socios tecnológicos de reconocimiento internacional para materializar conceptos a medida para residencias privadas, superyates y propiedades excepcionales."
+      ],
+      "closing": "Diseñados con intención. Desarrollados con precisión. Creados para la longevidad."
+    }
   },
   "environments": {
     "title": "Una forma excepcional de vivir.",
@@ -72,7 +80,7 @@
       "name": "Tierra",
       "audience": "Residencias privadas y hospitalidad de lujo",
       "enquiryAria": "Consultar un proyecto residencial o de hospitalidad",
-      "imageAlt": "Entorno BMYGYM en tonos marfil con Fitness Wall, Recovery Capsule, reformer de pilates y piscina interior",
+      "imageAlt": "Entorno BMYGYM en tonos marfil con ORVÉA™ Architectural Integration Wall, LUMERA™ Recovery Capsule, reformer de pilates y piscina interior",
       "imageCaption": "Visualización conceptual de BMYGYM",
       "description": "Entornos de longevidad a medida, diseñados para formar parte integral de residencias excepcionales, hoteles boutique y destinos de hospitalidad de lujo.",
       "architecturalContext": "Desde residencias contemporáneas hasta propiedades clásicas e históricas, cada concepto se concibe en diálogo con la arquitectura existente.",
@@ -83,7 +91,7 @@
       "name": "Mar",
       "audience": "Superyates y entornos marítimos privados",
       "enquiryAria": "Consultar un proyecto para un superyate o yate privado",
-      "imageAlt": "Una BMYGYM Fitness Wall de madera oscura y un concepto de recuperación integrados en un yate con vistas al mar",
+      "imageAlt": "Una ORVÉA™ Architectural Integration Wall de madera oscura y un concepto de recuperación integrados en un yate con vistas al mar",
       "imageCaption": "Visualización conceptual de BMYGYM",
       "description": "Conceptos de fitness y recuperación integrados en la arquitectura, desarrollados teniendo en cuenta los requisitos espaciales y técnicos de los yates de lujo."
     },
@@ -91,13 +99,23 @@
       "name": "Aire",
       "audience": "Aviación privada y recuperación a bordo",
       "enquiryAria": "Consultar un concepto para aviación privada",
-      "imageAlt": "Concepto AERO ONE: un sillón transformable de recuperación en cuero color crema dentro de una aeronave privada, con reposapiés extendido y paneles iluminados integrados",
-      "imageCaption": "BMYGYM AERO ONE · Visualización conceptual",
-      "subtitle": "AERO ONE — Longevidad por encima de las nubes.",
+      "imageAlt": "Concepto AERO ONE™: un sillón transformable de recuperación en cuero color crema dentro de una aeronave privada, con reposapiés extendido y paneles iluminados integrados",
+      "imageCaption": "BMYGYM AERO ONE™ · Visualización conceptual",
+      "subtitle": "AERO ONE™ — Longevidad por encima de las nubes.",
       "description": "Exploramos el futuro de los entornos de longevidad y recuperación a medida para la aviación privada, con conceptos cuyo desarrollo contempla futuras evaluaciones de viabilidad técnica y certificación.",
-      "status": "Concepto en desarrollo. AERO ONE no está certificado ni disponible comercialmente. Su desarrollo e integración están sujetos a los requisitos de viabilidad técnica, seguridad y certificación aeronáutica específicos de cada aeronave.",
+      "status": "Únicamente una visualización conceptual. AERO ONE está en desarrollo y no está certificado ni disponible comercialmente. La integración en aeronaves y el funcionamiento a bordo están sujetos a la viabilidad técnica, los requisitos de seguridad y la certificación aeronáutica aplicable.",
       "detailsLabel": "Explore nuestra visión para la aviación",
-      "detail": "Concebido en diálogo con la arquitectura de la cabina, AERO ONE explora cómo un asiento de diseño refinado podría transformarse en un entorno dedicado a la recuperación personal, con la participación de especialistas en aviación a medida que evoluciona el concepto."
+      "detail": "Concebido en diálogo con la arquitectura de la cabina, AERO ONE explora cómo un asiento de diseño refinado podría transformarse en un entorno dedicado a la recuperación personal, con la participación de especialistas en aviación a medida que evoluciona el concepto.",
+      "bespokeTitle": "Entornos de aviación privada a medida",
+      "bespokeLead": "Una visión elevada de la longevidad por encima de las nubes.",
+      "bespokeImageAlt": "Concepto AERO ONE™: sillón de recuperación acolchado en color crema con cubierta elevada y paneles de luz roja, junto a las ventanas de una aeronave privada con interior de madera oscura",
+      "bespokeImageCaption": "AERO ONE™ · Interpretación a medida · Visualización conceptual",
+      "bespokeParagraphs": [
+        "AERO ONE explora la transformación de un refinado sillón de descanso para aviación privada en un entorno de recuperación personalizado.",
+        "Concebido para interiores de aeronaves a medida, el concepto explora la relajación en posición de gravedad cero, la tecnología de luz roja integrada y funciones de recuperación individual dentro de un entorno arquitectónico cuidadosamente pensado.",
+        "Cada entorno se concibe en torno a la aeronave, su diseño interior y las preferencias individuales de su propietario."
+      ],
+      "conceptEnquiryLabel": "Visualización conceptual · Consultas sobre proyectos privados"
     }
   },
   "blueprint": {
@@ -158,21 +176,21 @@
       "Cada concepto refleja nuestro compromiso con el diseño individual, la calidad de los materiales y una integración espacial cuidadosamente estudiada."
     ],
     "wall": {
-      "name": "BMYGYM Fitness Wall",
-      "label": "Signature Concepts · Concepto de diseño",
-      "imageAlt": "Fitness Wall BMYGYM en acabado marfil con accesorios de entrenamiento y vistas al mar",
-      "imageCaption": "BMYGYM Fitness Wall · Visualización conceptual",
-      "description": "Un concepto arquitectónico de fitness que explora cómo el movimiento y el entrenamiento pueden formar parte integral de un entorno residencial excepcional."
+      "name": "ORVÉA™ Architectural Integration Wall",
+      "label": "Signature Concepts · En desarrollo",
+      "imageAlt": "ORVÉA™ Architectural Integration Wall en acabado marfil con accesorios de entrenamiento y vistas al mar",
+      "imageCaption": "ORVÉA™ Architectural Integration Wall · Visualización conceptual",
+      "description": "Nuestro concepto insignia de fitness y movimiento, concebido para integrarse arquitectónicamente en residencias privadas, superyates y otros espacios excepcionales."
     },
     "capsule": {
-      "name": "BMYGYM Recovery Capsule",
-      "label": "Signature Concepts · Concepto de diseño",
-      "imageAlt": "Concepto BMYGYM Recovery Capsule integrado en un interior arquitectónico cálido con vistas al mar",
-      "imageCaption": "BMYGYM Recovery Capsule · Visualización conceptual",
-      "description": "Un concepto de diseño que explora una experiencia de recuperación dedicada y personalizada dentro de un entorno privado de longevidad."
+      "name": "LUMERA™ Recovery Capsule",
+      "label": "Signature Concepts · En desarrollo",
+      "imageAlt": "Concepto LUMERA™ Recovery Capsule integrado en un interior arquitectónico cálido con vistas al mar",
+      "imageCaption": "LUMERA™ Recovery Capsule · Visualización conceptual",
+      "description": "Nuestro concepto insignia de longevidad y recuperación, desarrollado alrededor de una experiencia individual de recuperación integrada en el entorno arquitectónico."
     },
     "futureLabel": "Un horizonte de posibilidades",
-    "aeroOneName": "BMYGYM AERO ONE",
+    "aeroOneName": "BMYGYM AERO ONE™",
     "aeroOneDescription": "Un concepto de sillón transformable de recuperación y longevidad para aeronaves privadas, concebido para pasar de un asiento de diseño refinado a un entorno de recuperación más íntimo.",
     "aeroSignatureName": "BMYGYM AERO SIGNATURE",
     "aeroSignatureDescription": "Un concepto futuro que explora una cápsula de longevidad y recuperación a medida, completamente cerrada, para interiores de aeronaves VIP de mayor tamaño.",

@@ -1,5 +1,6 @@
 import { ConceptImage } from "@/components/shared/concept-image";
 import { Arrow } from "@/components/ui/arrow";
+import { TextLink } from "@/components/ui/text-link";
 import type { HomeCopy } from "@/i18n/types";
 
 export function Environments({ copy }: { copy: HomeCopy }) {
@@ -89,23 +90,38 @@ export function Environments({ copy }: { copy: HomeCopy }) {
             <p>{content.sea.description}</p>
           </div>
         </article>
-        <article className="environment">
-          <a
-            className="environment-image-link"
-            href="#enquiry"
-            aria-label={content.air.enquiryAria}
-          >
-            <ConceptImage
-              className="air-image"
-              src="/images/aero-one-private-aviation.webp"
-              alt={content.air.imageAlt}
-              caption={content.air.imageCaption}
-              sizes="(max-width: 767px) 100vw, 55vw"
-            />
-          </a>
+        <article id="air" className="environment environment-air" aria-labelledby="air-title">
+          <div className="air-visuals">
+            <a
+              className="environment-image-link"
+              href="#enquiry"
+              aria-label={content.air.enquiryAria}
+            >
+              <ConceptImage
+                className="air-image"
+                src="/images/aero-one-private-aviation.webp"
+                alt={content.air.imageAlt}
+                caption={content.air.imageCaption}
+                sizes="(max-width: 767px) 100vw, 55vw"
+              />
+            </a>
+            <a
+              className="environment-image-link"
+              href="#enquiry"
+              aria-label={content.air.enquiryAria}
+            >
+              <ConceptImage
+                className="air-bespoke-image"
+                src="/images/aero-one-bespoke-private-aviation.webp"
+                alt={content.air.bespokeImageAlt}
+                caption={content.air.bespokeImageCaption}
+                sizes="(max-width: 767px) 100vw, 55vw"
+              />
+            </a>
+          </div>
           <div className="environment-copy">
             <div className="environment-title">
-              <h3>
+              <h3 id="air-title">
                 <a className="environment-heading-link" href="#enquiry">
                   {content.air.name}
                   <Arrow diagonal />
@@ -121,8 +137,14 @@ export function Environments({ copy }: { copy: HomeCopy }) {
                 {content.air.detailsLabel}
                 <Arrow />
               </summary>
+              <h4 className="aviation-bespoke-title">{content.air.bespokeTitle}</h4>
+              <p>{content.air.bespokeLead}</p>
+              {content.air.bespokeParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
               <p>{content.air.detail}</p>
             </details>
+            <TextLink href="#enquiry">{content.air.conceptEnquiryLabel}</TextLink>
           </div>
         </article>
       </div>

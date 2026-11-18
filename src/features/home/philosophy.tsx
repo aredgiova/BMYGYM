@@ -34,6 +34,15 @@ export function Philosophy({ copy }: { copy: HomeCopy }) {
           <em>{content.imageNoteEmphasis}</em>
         </p>
       </div>
+      <div className="philosophy-craftsmanship" aria-labelledby="craftsmanship-title">
+        <h3 id="craftsmanship-title">{content.craftsmanship.title}</h3>
+        <div>
+          {content.craftsmanship.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          <p className="craftsmanship-closing">{content.craftsmanship.closing}</p>
+        </div>
+      </div>
       <div className="philosophy-motto">
         {content.motto}
         <br />

@@ -7,12 +7,17 @@
   "requestReservation": "Demander une réservation",
   "valenciaTitle": "Une pause méditerranéenne.",
   "valenciaText": "Une lumière chaleureuse, la mer toute proche et un peu de recul sur le quotidien. Valence accueille une expérience BMYGYM plus personnelle, où le temps pour vous prend toute sa place.",
+  "experienceTitle": "Une expérience, entièrement personnelle.",
+  "experienceText": "Une retraite intime pour un nombre limité de femmes, associant un accompagnement individuel, le mouvement en pleine conscience, une préparation physique et une nutrition personnalisées, ainsi que des moments de quiétude méditerranéenne.",
+  "experienceGuidance": "Conçue avec soin à Valence. Accompagnée personnellement par la fondatrice de BMYGYM.",
   "programmesTitle": "Votre expérience à Valence",
   "programmesText": "Contactez-nous pour connaître les programmes, tarifs et dates actuellement disponibles. Nous vous présenterons personnellement les détails de chaque expérience.",
   "programmesNote": "Le programme, le tarif et la disponibilité sont convenus directement avec BMYGYM avant la confirmation de votre réservation.",
   "galleryTitle": "Le plaisir d’être ici.",
-  "yachtTitle": "Yacht Retreats — Coming 2027",
-  "yachtText": "Une nouvelle collection d’expériences exclusives à bord de yachts se prépare pour 2027. Un chapitre distinct de BMYGYM Retreats, avec ses propres programmes et tarifs.",
+  "yachtTitle": "Un nouvel horizon. 2027.",
+  "yachtText": "BMYGYM Retreats s’étendra au-delà du rivage avec une nouvelle collection d’expériences intimistes en mer.",
+  "yachtDescription": "Une expression plus privée du mouvement, du bien-être et de l’art de vivre méditerranéen.",
+  "yachtSchedule": "Retraites en yacht · Prévues pour 2027",
   "yachtNote": "Les réservations ne sont pas encore ouvertes.",
   "reservationTitle": "Votre retraite à Valence",
   "reservationText": "Parlez-nous de vos envies et de vos dates préférées. Utilisez le formulaire ou écrivez-nous pour connaître les programmes, tarifs et modalités de réservation actuels.",
@@ -28,9 +33,6 @@
   "captions": {
     "beachCircle": "Des instants de calme au bord de la mer.",
     "welcomeTable": "L’attention portée à chaque détail.",
-    "promenade": "La lumière de Valence.",
-    "deepReset": "Un instant de sérénité.",
-    "journal": "De la place pour vos pensées.",
-    "pool": "Un rythme plus doux."
+    "journal": "De la place pour vos pensées."
   }
 }

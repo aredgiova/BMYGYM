@@ -4,7 +4,7 @@
     "close": "Fermer la fenêtre de bienvenue"
   },
   "hero": {
-    "imageAlt": "Fitness Wall BMYGYM en noyer intégrée à l’architecture intérieure, avec accessoires de fitness, tapis ivoire et vue sur la mer",
+    "imageAlt": "ORVÉA™ Architectural Integration Wall en noyer intégrée à l’architecture intérieure, avec accessoires de fitness, tapis ivoire et vue sur la mer",
     "title": "Les espaces d’exception méritent",
     "titleEmphasis": "une approche d’exception de la longévité.",
     "service": "PROJETS PRIVÉS · TERRE / MER / AIR",
@@ -30,7 +30,7 @@
         "title": "Clients privés",
         "description": "BMYGYM conçoit des environnements de longévité sur mesure pour des résidences privées, des superyachts et des espaces personnels d’exception.",
         "action": "Parlons de votre projet privé",
-        "imageAlt": "Concept de résidence côtière avec Fitness Wall BMYGYM, tapis de course, espace de récupération et piscine face à la mer",
+        "imageAlt": "Concept de résidence côtière avec ORVÉA™ Architectural Integration Wall, tapis de course, espace de récupération et piscine face à la mer",
         "imageCaption": "Visualisation conceptuelle BMYGYM",
         "lead": "Pour ceux qui attendent davantage des espaces qu’ils habitent.",
         "detail": "Chaque projet est abordé avec discrétion, sensibilité architecturale et une compréhension approfondie des préférences individuelles."
@@ -59,7 +59,15 @@
     "imageNote": "Un espace qui vous",
     "imageNoteEmphasis": "ressemble pleinement.",
     "motto": "BMYGYM ne vend pas d’équipement.",
-    "mottoEmphasis": "BMYGYM crée des environnements."
+    "mottoEmphasis": "BMYGYM crée des environnements.",
+    "craftsmanship": {
+      "title": "Savoir-faire européen. Le sur-mesure par essence.",
+      "paragraphs": [
+        "BMYGYM crée des espaces de longévité d’exception grâce à un design original, des matériaux raffinés et une attention méticuleuse portée aux détails.",
+        "Nous réunissons des spécialistes européens de l’artisanat soigneusement sélectionnés et des partenaires technologiques de renommée internationale pour réaliser des concepts sur mesure destinés aux résidences privées, aux superyachts et aux propriétés d’exception."
+      ],
+      "closing": "Pensés avec intention. Développés avec précision. Façonnés pour la longévité."
+    }
   },
   "environments": {
     "title": "Vivre l’exception.",
@@ -72,7 +80,7 @@
       "name": "Terre",
       "audience": "Résidences privées et hôtellerie de luxe",
       "enquiryAria": "Parler d’un projet de résidence privée ou d’hospitalité",
-      "imageAlt": "Un espace BMYGYM aux tons ivoire avec Fitness Wall, Recovery Capsule, reformer Pilates et piscine intérieure",
+      "imageAlt": "Un espace BMYGYM aux tons ivoire avec ORVÉA™ Architectural Integration Wall, LUMERA™ Recovery Capsule, reformer Pilates et piscine intérieure",
       "imageCaption": "Visualisation conceptuelle BMYGYM",
       "description": "Des environnements de longévité sur mesure, conçus pour faire partie intégrante de résidences d’exception, d’hôtels-boutiques et de destinations hôtelières de luxe.",
       "architecturalContext": "Des résidences contemporaines aux demeures classiques et historiques, chaque concept est conçu en dialogue avec l’architecture existante.",
@@ -83,7 +91,7 @@
       "name": "Mer",
       "audience": "Superyachts et environnements maritimes privés",
       "enquiryAria": "Parler d’un projet de superyacht ou de yacht privé",
-      "imageAlt": "Une BMYGYM Fitness Wall en bois sombre et un concept de récupération intégrés dans un yacht avec vue sur la mer",
+      "imageAlt": "Une ORVÉA™ Architectural Integration Wall en bois sombre et un concept de récupération intégrés dans un yacht avec vue sur la mer",
       "imageCaption": "Visualisation conceptuelle BMYGYM",
       "description": "Des concepts de fitness et de récupération intégrés à l’architecture, développés en tenant compte des exigences spatiales et techniques des yachts de luxe."
     },
@@ -91,13 +99,23 @@
       "name": "Air",
       "audience": "Aviation privée et récupération en cabine",
       "enquiryAria": "Parler d’un concept pour l’aviation privée",
-      "imageAlt": "Concept AERO ONE : un fauteuil de récupération transformable en cuir crème dans un avion privé, avec repose-jambes déployé et panneaux lumineux intégrés",
-      "imageCaption": "BMYGYM AERO ONE · Visualisation conceptuelle",
-      "subtitle": "AERO ONE — La longévité au-dessus des nuages.",
+      "imageAlt": "Concept AERO ONE™ : un fauteuil de récupération transformable en cuir crème dans un avion privé, avec repose-jambes déployé et panneaux lumineux intégrés",
+      "imageCaption": "BMYGYM AERO ONE™ · Visualisation conceptuelle",
+      "subtitle": "AERO ONE™ — La longévité au-dessus des nuages.",
       "description": "Nous explorons l’avenir des environnements de longévité et de récupération sur mesure pour l’aviation privée, à travers des concepts développés en vue de futures évaluations de faisabilité technique et de certification.",
-      "status": "Concept en cours de développement. AERO ONE n’est ni certifié ni commercialisé. Son développement et son intégration sont soumis aux exigences de faisabilité technique, de sécurité et de certification aéronautique propres à chaque aéronef.",
+      "status": "Visualisation conceptuelle uniquement. AERO ONE est en cours de développement et n’est ni certifié ni commercialisé. L’intégration dans un aéronef et le fonctionnement à bord sont soumis à la faisabilité technique, aux exigences de sécurité et à la certification aéronautique applicable.",
       "detailsLabel": "Découvrir notre vision de l’aviation",
-      "detail": "Pensé en dialogue avec l’architecture de la cabine, AERO ONE explore la manière dont un espace d’assise raffiné pourrait se transformer en un lieu dédié à la récupération personnelle, avec l’intervention de partenaires spécialisés de l’aviation au fil du développement du concept."
+      "detail": "Pensé en dialogue avec l’architecture de la cabine, AERO ONE explore la manière dont un espace d’assise raffiné pourrait se transformer en un lieu dédié à la récupération personnelle, avec l’intervention de partenaires spécialisés de l’aviation au fil du développement du concept.",
+      "bespokeTitle": "Des environnements sur mesure pour l’aviation privée",
+      "bespokeLead": "Une approche de la longévité qui prend de la hauteur, au-dessus des nuages.",
+      "bespokeImageAlt": "Concept AERO ONE™ : fauteuil de récupération matelassé crème avec auvent relevé et panneaux lumineux rouges, près des hublots d’un avion privé à l’intérieur habillé de bois sombre",
+      "bespokeImageCaption": "AERO ONE™ · Interprétation sur mesure · Visualisation conceptuelle",
+      "bespokeParagraphs": [
+        "AERO ONE explore la transformation d’un fauteuil de détente raffiné pour l’aviation privée en un environnement de récupération personnalisé.",
+        "Pensé pour des intérieurs d’aéronefs sur mesure, le concept explore la relaxation en position zéro gravité, la technologie de lumière rouge intégrée et des fonctionnalités de récupération individuelles dans un cadre architectural soigneusement étudié.",
+        "Chaque environnement est imaginé en fonction de l’aéronef, de son aménagement intérieur et des préférences individuelles de son propriétaire."
+      ],
+      "conceptEnquiryLabel": "Visualisation conceptuelle · Demandes de projets privés"
     }
   },
   "blueprint": {
@@ -158,21 +176,21 @@
       "Chaque concept témoigne de notre engagement en faveur du design individuel, de la qualité des matériaux et d’une intégration spatiale soigneusement pensée."
     ],
     "wall": {
-      "name": "BMYGYM Fitness Wall",
-      "label": "Signature Concepts · Concept de design",
-      "imageAlt": "Fitness Wall BMYGYM en finition ivoire avec accessoires d’entraînement et vue sur la mer",
-      "imageCaption": "BMYGYM Fitness Wall · Visualisation conceptuelle",
-      "description": "Un concept architectural de fitness qui explore la manière dont le mouvement et l’entraînement peuvent devenir partie intégrante d’un cadre de vie d’exception."
+      "name": "ORVÉA™ Architectural Integration Wall",
+      "label": "Signature Concepts · En développement",
+      "imageAlt": "ORVÉA™ Architectural Integration Wall en finition ivoire avec accessoires d’entraînement et vue sur la mer",
+      "imageCaption": "ORVÉA™ Architectural Integration Wall · Visualisation conceptuelle",
+      "description": "Notre concept phare dédié au fitness et au mouvement, pensé pour s’intégrer à l’architecture des résidences privées, des superyachts et d’autres espaces d’exception."
     },
     "capsule": {
-      "name": "BMYGYM Recovery Capsule",
-      "label": "Signature Concepts · Concept de design",
-      "imageAlt": "Un concept BMYGYM Recovery Capsule intégré dans un intérieur architectural chaleureux avec vue sur la mer",
-      "imageCaption": "BMYGYM Recovery Capsule · Visualisation conceptuelle",
-      "description": "Un concept de design qui explore une expérience de récupération dédiée et personnalisée au sein d’un espace privé de longévité."
+      "name": "LUMERA™ Recovery Capsule",
+      "label": "Signature Concepts · En développement",
+      "imageAlt": "Un concept LUMERA™ Recovery Capsule intégré dans un intérieur architectural chaleureux avec vue sur la mer",
+      "imageCaption": "LUMERA™ Recovery Capsule · Visualisation conceptuelle",
+      "description": "Notre concept phare dédié à la longévité et à la récupération, développé autour d’une expérience individuelle de récupération intégrée à son environnement architectural."
     },
     "futureLabel": "Un horizon de possibles",
-    "aeroOneName": "BMYGYM AERO ONE",
+    "aeroOneName": "BMYGYM AERO ONE™",
     "aeroOneDescription": "Un concept de fauteuil transformable dédié à la récupération et à la longévité dans les avions privés, imaginé pour passer d’un espace d’assise raffiné à un lieu de récupération plus intime.",
     "aeroSignatureName": "BMYGYM AERO SIGNATURE",
     "aeroSignatureDescription": "Un concept futur explorant une capsule de longévité et de récupération sur mesure, entièrement fermée, destinée aux intérieurs de grands avions VIP.",

@@ -46,7 +46,6 @@ export function RetreatsPage({ locale, copy, booking, retreats }: {
           <figure className="retreats-promenade">
             <Image src="/images/retreats/valencia-promenade.webp" alt={retreats.images.promenade}
               width={1231} height={1536} sizes="(max-width: 767px) 100vw, 43vw" />
-            <figcaption>{retreats.captions.promenade}</figcaption>
           </figure>
           <div className="retreats-valencia-copy">
             <h2 id="valencia-title">{retreats.valenciaTitle}</h2>
@@ -56,6 +55,14 @@ export function RetreatsPage({ locale, copy, booking, retreats }: {
                 width={1122} height={1402} sizes="(max-width: 767px) 78vw, 31vw" />
               <figcaption>{retreats.captions.welcomeTable}</figcaption>
             </figure>
+          </div>
+        </section>
+
+        <section className="section retreats-experience" aria-labelledby="experience-title">
+          <h2 id="experience-title">{retreats.experienceTitle}</h2>
+          <div>
+            <p className="retreats-body">{retreats.experienceText}</p>
+            <p className="retreats-body">{retreats.experienceGuidance}</p>
           </div>
         </section>
 
@@ -74,7 +81,6 @@ export function RetreatsPage({ locale, copy, booking, retreats }: {
             <figure className="retreats-ritual">
               <Image src="/images/retreats/deep-reset.webp" alt={retreats.images.deepReset}
                 width={1122} height={1402} sizes="(max-width: 767px) 100vw, 38vw" />
-              <figcaption>{retreats.captions.deepReset}</figcaption>
             </figure>
             <figure className="retreats-journal">
               <Image src="/images/retreats/journal.webp" alt={retreats.images.journal}
@@ -84,7 +90,6 @@ export function RetreatsPage({ locale, copy, booking, retreats }: {
             <figure className="retreats-pool">
               <Image src="/images/retreats/pool.webp" alt={retreats.images.pool}
                 width={766} height={1536} sizes="(max-width: 767px) 49vw, 20vw" />
-              <figcaption>{retreats.captions.pool}</figcaption>
             </figure>
           </div>
         </section>
@@ -95,8 +100,10 @@ export function RetreatsPage({ locale, copy, booking, retreats }: {
               width={1047} height={1536} sizes="(max-width: 767px) 58vw, 24vw" />
           </figure>
           <div>
-            <h2 id="yacht-retreats-title" lang="en">{retreats.yachtTitle}</h2>
+            <h2 id="yacht-retreats-title">{retreats.yachtTitle}</h2>
             <p className="retreats-body">{retreats.yachtText}</p>
+            <p className="retreats-body">{retreats.yachtDescription}</p>
+            <p className="retreats-note">{retreats.yachtSchedule}</p>
             <p className="retreats-note">{retreats.yachtNote}</p>
           </div>
         </section>

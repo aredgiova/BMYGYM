@@ -698,6 +698,37 @@ summary {
   color: var(--accent);
 }
 
+.philosophy-craftsmanship {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: inherit;
+  row-gap: 24px;
+  margin-top: 64px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.philosophy-craftsmanship h3 {
+  max-width: 22ch;
+}
+.philosophy-craftsmanship p {
+  max-width: 60ch;
+  color: var(--muted);
+}
+.philosophy-craftsmanship p + p {
+  margin-top: 18px;
+}
+.philosophy-craftsmanship .craftsmanship-closing {
+  color: var(--ink);
+}
+
+@media (max-width: 767px) {
+  .philosophy-craftsmanship {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 48px;
+  }
+}
+
 .environments {
   padding-top: var(--section-space);
   padding-bottom: var(--section-space);
@@ -1486,6 +1517,19 @@ summary {
   margin-top: 24px;
 }
 
+.aviation-bespoke-title {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  margin-top: 24px;
+  font-weight: 500;
+}
+.environment-air .text-link {
+  margin-top: 16px;
+  font-size: var(--text-small);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
 .blueprint-details > .commission-caption {
   font-size: var(--text-small);
   text-transform: uppercase;
@@ -2106,6 +2150,21 @@ summary {
 .environment-copy > .environment-status { padding-top: 20px; border-top: 1px solid var(--line); margin-top: 24px; font-size: var(--text-small); line-height: 1.75; }
 .environment .air-image .image-frame { aspect-ratio: 3 / 2; height: auto; }
 .environment .air-image img { object-position: center; }
+.environment-air { align-items: start; }
+.air-visuals {
+  display: grid;
+  gap: 32px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.environment .air-bespoke-image .image-frame {
+  aspect-ratio: 1670 / 941;
+  height: auto;
+}
+.environment .air-bespoke-image img {
+  object-fit: contain;
+  object-position: center;
+}
 .form-hint { margin-top: 8px; font-size: var(--text-small); color: var(--muted); }
 .form-field, .section-heading > *, .blueprint-intro, .blueprint-details { min-width: 0; }
 h1, h2, h3, .button, .text-link, .environment-title > span { overflow-wrap: anywhere; }
@@ -2153,3 +2212,33 @@ h1, h2, h3, .button, .text-link, .environment-title > span { overflow-wrap: anyw
 .booking-intro h1 { font-size: clamp(2.75rem, 4.6vw, 4.75rem); line-height: 1.15; }
 .booking-intro .text-link { display: flex; width: fit-content; margin-top: 28px; }
 .booking-form h2 { font-size: clamp(1.75rem, 2.4vw, 2.5rem); margin-bottom: 24px; }
+
+/* Allow enlarged mobile text to reflow within the existing editorial columns. */
+@media (max-width: 767px) {
+  .philosophy,
+  .approach-body,
+  .enquiry {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .philosophy > *,
+  .approach-body > *,
+  .enquiry > *,
+  .section-heading > * {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .approach-stages li {
+    grid-template-columns: 22px minmax(0, 1fr);
+  }
+  .approach .section-heading .text-link {
+    white-space: normal;
+  }
+  .enquiry-email {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .environment-copy {
+    overflow-wrap: anywhere;
+  }
+}

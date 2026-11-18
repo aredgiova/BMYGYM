@@ -4,6 +4,14 @@ Prepared on 16 October 2026; updated on 22 October 2026 for the supplied archite
 
 ## Image provenance and treatment
 
+### Additional AERO ONE interpretation · 18 November 2026
+
+The user supplied `C:/Users/User/Downloads/388C1ED7-8C01-4725-9AC6-43081BD8BF91.jpeg` (1670 × 941 pixels, 671,942 bytes) for the additional bespoke interpretation inside AIR. It is encoded as `/images/aero-one-bespoke-private-aviation.webp` (1670 × 941 pixels, 377,824 bytes), using Sharp WebP quality 90 and effort 6, with the colour profile retained. No retouching, generated content or crop was applied. The display preserves the complete composition and source aspect ratio on desktop and mobile.
+
+The original `/images/aero-one-private-aviation.webp` remains first and primary. Both visuals link to the existing Private Commissions form. The new image has a concept caption and descriptive alternative text in EN, DE, ES, FR, RU and IT. It is a design visualisation, not a completed installation, certified product or country-exclusive edition; the existing visible development and aviation certification notice remains.
+
+SHA-256 of the supplied JPEG: `54e9292158316977c7219717247be3791f762c817420618831eca15de8e808fe`. SHA-256 of the delivered WebP: `9278c52535469f0264a4c04a3870c2a1e86a18eed41ea1e86150ebe66389535a`.
+
 The environment and product images are supplied BMYGYM concept visualisations. They must not be described as photographs of completed installations or client projects. The original seven selected images and the four additions below were encoded as WebP at quality 90 with effort 6 using Sharp. The AERO ONE replacement is also delivered as WebP, preserving the source dimensions and artwork. Layout crops belong to the presentation layer; the conversions do not add, remove or generate image content.
 
 Source files remain in the user's Downloads directory. The duplicate recovery image ending in ` (1).jpeg` is intentionally omitted.
