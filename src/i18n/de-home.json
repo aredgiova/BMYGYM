@@ -10,6 +10,12 @@
     "worlds": ["LAND", "SEA", "AIR"]
   },
   "hero": {
+    "video": {
+      "description": "BMYGYM-Film ohne Ton mit maßgeschneiderten Fitness- und Regenerationskonzepten in architektonischen Räumen und auf Yachten.",
+      "play": "Film abspielen",
+      "pause": "Film pausieren",
+      "unavailable": "Der Film konnte nicht geladen werden."
+    },
     "imageAlt": "ORVÉA™ Architectural Integration Wall aus Walnussholz, in die Innenarchitektur integriert, mit Trainingszubehör, elfenbeinfarbener Matte und Meerblick",
     "title": "Außergewöhnliche Räume verdienen",
     "titleEmphasis": "einen außergewöhnlichen Ansatz für Longevity.",

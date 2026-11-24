@@ -10,6 +10,12 @@
     "worlds": ["LAND", "SEA", "AIR"]
   },
   "hero": {
+    "video": {
+      "description": "Video senza audio di BMYGYM che presenta concept di fitness e recupero su misura in spazi architettonici e a bordo di yacht.",
+      "play": "Riproduci il video",
+      "pause": "Metti in pausa il video",
+      "unavailable": "Impossibile caricare il video."
+    },
     "imageAlt": "ORVÉA™ Architectural Integration Wall in noce integrata in un interno architettonico, con accessori per l’allenamento, un tappetino color avorio e vista sul mare",
     "title": "Spazi straordinari meritano",
     "titleEmphasis": "un approccio altrettanto straordinario alla longevità.",

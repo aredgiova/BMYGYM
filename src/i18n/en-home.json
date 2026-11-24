@@ -10,6 +10,12 @@
     "worlds": ["LAND", "SEA", "AIR"]
   },
   "hero": {
+    "video": {
+      "description": "Silent BMYGYM film showing bespoke fitness and recovery concepts in architectural and yacht settings.",
+      "play": "Play film",
+      "pause": "Pause film",
+      "unavailable": "The film could not be loaded."
+    },
     "imageAlt": "Walnut ORVÉA™ Architectural Integration Wall integrated into an architectural interior, with fitness accessories, an ivory mat and sea views",
     "title": "Exceptional spaces deserve",
     "titleEmphasis": "an exceptional approach to longevity.",

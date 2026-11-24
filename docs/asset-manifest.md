@@ -97,3 +97,13 @@ All font files are served locally. Latin faces are loaded with `next/font/local`
 `/images/land-classic-european.webp` is derived from the user-supplied `C:/Users/User/Downloads/30BA5F00-AD17-4D2A-BF49-C40399B24D17.jpeg`. It introduces classical European architecture as a second reference within the existing LAND area on the homepage. The contemporary LAND image and all other existing imagery remain in place.
 
 The delivery asset preserves the full 1536 × 1024 composition and the original colour profile, with no crop, retouching or generated additions. It is encoded as WebP at quality 90 (368,990 bytes; source JPEG: 515,840 bytes). Decorative mouldings, arched windows and integrated fitness equipment illustrate an architectural direction; the image is labelled as a concept visualisation and does not identify a completed project or specific property. Existing product names are unchanged.
+
+## Hero film — 24 November 2026
+
+The user-supplied `C:/Users/User/Downloads/71492210-B376-4627-8032-B0985BEB6506.mov` is the source for `/videos/bmygym-hero-film-v1.mp4` and `/images/bmygym-hero-film-poster.webp`. It depicts BMYGYM fitness and recovery concepts in architectural and yacht settings. The visible caption continues to identify a concept visualisation, not a completed installation.
+
+Source: HEVC, 1080 × 1920, approximately 29.1 seconds, 829 variable-rate frames, 58,350,369 bytes, no audio stream. Source SHA-256: `2d777b228a1de69cb896ae0a4c0dfb2f4ae1f6c9d1908c34958b529228356675`.
+
+Web export: H.264 High / yuv420p, CRF 17, slow preset, MP4 fast-start, 22,332,424 bytes. It retains the 1080 × 1920 resolution, all 829 frames and the original timestamps (`-fps_mode passthrough -enc_time_base 1:600 -video_track_timescale 60000`). Full-range source values are mapped to limited-range BT.709 for the web export without an artistic color change. No crop, scaling, sharpening, generated detail or extra blur was applied. The source montage's blurred bands remain. MP4 SHA-256: `130907eb3454c27d0a00b70ae075465661a5c4e68cf13e581eee9643bb90eda6`.
+
+The poster is the first source frame encoded at its original 1080 × 1920 resolution as WebP quality 94 (101,848 bytes). The original MOV remains in Downloads and is not duplicated into the repository. The versioned MP4 filename can be replaced with a new version when a different master is supplied. The existing walnut image continues to serve the social preview.

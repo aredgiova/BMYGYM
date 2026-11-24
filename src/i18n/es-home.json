@@ -10,6 +10,12 @@
     "worlds": ["LAND", "SEA", "AIR"]
   },
   "hero": {
+    "video": {
+      "description": "Video sin sonido de BMYGYM que muestra conceptos de fitness y recuperación a medida en espacios arquitectónicos y yates.",
+      "play": "Reproducir video",
+      "pause": "Pausar video",
+      "unavailable": "No se pudo cargar el video."
+    },
     "imageAlt": "ORVÉA™ Architectural Integration Wall de nogal integrada en la arquitectura interior, con accesorios de fitness, esterilla marfil y vistas al mar",
     "title": "Los espacios excepcionales merecen",
     "titleEmphasis": "una visión excepcional de la longevidad.",

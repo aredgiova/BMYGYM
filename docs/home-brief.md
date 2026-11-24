@@ -1,5 +1,13 @@
 # Home direction
 
+## Hero film — 24 November 2026
+
+The supplied portrait film replaces only the hero photograph. Keep the existing live Bodoni Moda / Manrope typography and copy alongside it, with an ivory surround and no text over the footage. The desktop grid uses `1.1fr / 0.9fr`; the film remains at its full 9:16 composition, capped at 380px wide. Below 1024px it precedes the copy at a maximum of 320px; mobile also limits it to 33.75svh wide (60svh tall). No crop, stretching, artificial upscaling or CSS blur is applied. Blurred bands already present in the supplied montage remain part of the original composition.
+
+Use the self-hosted 1080 × 1920 H.264 MP4 and matching first-frame WebP poster. Playback is silent, inline and looping, with one localized 44px pause/play button below the picture. The poster appears immediately and remains available if playback is denied or fails. Request video only after the welcome closes and the hero is visible. Pause offscreen or in hidden tabs, retain the visitor's explicit pause, and default to the poster for reduced-motion or data-saving preferences until the visitor chooses Play. Description, playback controls and failure feedback cover EN, DE, ES, FR, RU, IT and AR. The image used by social metadata remains unchanged.
+
+The user authorized implementation and upload to `aredgiova/BMYGYM`, branch `main`, using `aredgiova`. Asset provenance and exact export settings are in `docs/asset-manifest.md`; validation is recorded in `docs/hero-film-validation-2026-11-24.md`.
+
 ## LAND reference addition — 11 November 2026
 
 Within the existing LAND article, retain the contemporary `longevity-suite-ivory.webp` as the primary image and add the user-supplied `land-classic-european.webp` as a smaller second visual below the text. Its full 3:2 composition shows classical European architecture and is explicitly captioned as a concept visualisation. A short additional sentence explains the architectural dialogue across contemporary, classical and historic properties, localised in all six current languages (EN, DE, ES, FR, RU, IT). Existing descriptions and other concepts remain unchanged; embedded product lettering is not a naming decision or evidence of completed work.

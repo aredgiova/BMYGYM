@@ -10,6 +10,12 @@
     "worlds": ["LAND", "SEA", "AIR"]
   },
   "hero": {
+    "video": {
+      "description": "Film sans son de BMYGYM présentant des concepts de fitness et de récupération sur mesure dans des espaces architecturaux et à bord de yachts.",
+      "play": "Lire le film",
+      "pause": "Mettre le film en pause",
+      "unavailable": "Le film n’a pas pu être chargé."
+    },
     "imageAlt": "ORVÉA™ Architectural Integration Wall en noyer intégrée à l’architecture intérieure, avec accessoires de fitness, tapis ivoire et vue sur la mer",
     "title": "Les espaces d’exception méritent",
     "titleEmphasis": "une approche d’exception de la longévité.",
