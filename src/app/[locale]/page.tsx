@@ -13,6 +13,8 @@ import { EnquirySection } from "@/features/enquiry/enquiry-section";
 import { notFound } from "next/navigation";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { siteConfig } from "@/config/site";
+import { homeStructuredData, serializeStructuredData } from "@/config/structured-data";
 
 export default async function HomePage({params}: {params: Promise<{locale:string}>}) {
   const {locale} = await params;
@@ -20,6 +22,16 @@ export default async function HomePage({params}: {params: Promise<{locale:string
   const {common, home} = await getDictionary(locale);
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: serializeStructuredData(homeStructuredData({
+          url: siteConfig.url,
+          name: siteConfig.name,
+          email: siteConfig.email,
+          locale,
+          description: common.meta.description,
+        }))}}
+      />
       <BrandWelcome copy={home.welcome} />
       <Header locale={locale} copy={common.nav} />
       <main id="main-content" tabIndex={-1}>

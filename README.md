@@ -31,7 +31,7 @@ Abrir [localhost:3000](http://localhost:3000). El sitio puede visualizarse sin c
 | `npm run dev`       | Iniciar el servidor de desarrollo                                        |
 | `npm run lint`      | Comprobar las reglas de ESLint, sin advertencias permitidas              |
 | `npm run typecheck` | Generar tipos de rutas y comprobar TypeScript                            |
-| `npm test`          | Ejecutar las 30 pruebas de consultas, reservas, API, correo simulado y localización |
+| `npm test`          | Ejecutar las 32 pruebas de consultas, reservas, API, correo simulado, localización y datos estructurados |
 | `npm run build`     | Crear la compilación de producción                                       |
 | `npm start`         | Servir una compilación de producción ya creada                           |
 
@@ -113,6 +113,8 @@ El aviso permite aceptar Google Analytics o continuar solo con preferencias esen
 Se mantiene el identificador de Google Analytics existente, `G-5ZH4R52182`. La biblioteca solo se carga con consentimiento afirmativo y `isIndexingEnabled=true`: requiere `ENABLE_INDEXING=true`, ejecución de producción y, en Vercel, entorno Production. No se carga en desarrollo ni en previews de Vercel. La medición contempla visitas, interés en los botones de contacto y solicitudes confirmadas por el proveedor; los eventos propios no incluyen nombres, correos ni contenido de formularios. La revocación desactiva la medición posterior y elimina las cookies de Analytics accesibles para el sitio.
 
 El soporte del token `GOOGLE_SITE_VERIFICATION` está preparado, pero esta revisión no verifica la propiedad en Search Console ni confirma la indexación o la recepción de eventos en la cuenta de Analytics. El comportamiento del aviso se documenta en [Consentimiento de cookies](docs/cookie-notice.md); las comprobaciones locales, en [Validación](docs/validation.md).
+
+La [revisión SEO del 24 de noviembre de 2026](docs/seo-search-console.md) detectó inicialmente un bloqueo de indexación y un sitemap vacío en producción. El código incorpora datos estructurados `Organization` y `WebSite` en las siete portadas. La guía recoge la activación en Vercel, las comprobaciones y el procedimiento de Search Console; la propiedad de la cuenta y el envío del sitemap requieren verificación independiente en Google.
 
 ## Preparar la publicación
 
